@@ -2,7 +2,8 @@
 #include <stdio.h>
 int main()
 {
-	printf("hello1");
+	printf("hello2");
+	int a;
 
 
 
