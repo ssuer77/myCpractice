@@ -22,30 +22,58 @@
 //	}
 //	return 0;
 //}
-int APP(int x, int y)
-{
-	int z = 0;
-	z = x + y;
-	return z;
-
-}
-
-
-
+//int APP(int x, int y)
+//{
+//	int z = 0;
+//	z = x + y;
+//	return z;
+//
+//}
+//
+//
+//
+//int main()
+//{
+//	int a, b;
+//	scanf("%d %d", &a, &b);
+//	int c = APP(a,b);
+//	printf("a+b=%d\n", c);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//	return 0;
+//}
+//int main()
+//{
+//	char ch[] = {'1','2','3','4','d'};
+//	int i = 0;
+//	while (i <= 4)
+//	{
+//		printf("%d\n", ch[i]);
+//		i++;
+//	}
 int main()
 {
-	int a, b;
-	scanf("%d %d", &a, &b);
-	int c = APP(a,b);
-	printf("a+b=%d\n", c);
-
-
-
-
-
+	printf("     **\n     **\n************\n************\n    *  *\n    *  *");
 
 
 
 
 	return 0;
 }
+
+
+
+
+
+
+
+
+
+
