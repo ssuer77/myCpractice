@@ -137,6 +137,12 @@
 //
 //	return 0;
 //}
+int main()
+{
+	int x = 11;
+	cout << (++x);
+	return 0;
+}
 
 
 
