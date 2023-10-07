@@ -1,6 +1,10 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
 //int main()
 //{
 //	int line = 0;
@@ -140,14 +144,46 @@
 //int main()
 //{
 //	int x = 11;
-//	cout << (++x);
+//	std::cout << (++x);
+//	cout << "hello world!\n"<<"abc";
 //	return 0;
 //}
 //
 //?test
 //?test2
+//int main()
+//{
+//	double a = 7 / 2.0;
+//	printf("%lf", a);
+//
+//	return 0;
+//}
+//int main()
+//{
+//	double a, b, c, x1, x2, dlt;
+//	cout << "请输入方程的三个系数：" << endl;
+//	cin >> a >> b >> c;
+//	dlt = b * b - 4 * a * c;
+//	x1 = (-b + sqrt(dlt)) / (2 * a);
+//	x2 = (-b - sqrt(dlt)) / (2*a);
+//	cout << "x1=" << x1 << "   x2=" << x2 << endl;
+//
+//	return 0;
+//}
+//int main()
+//{
+//	double a = 1.234567;
+//	printf("%09.2lf", a);
+//
+//
+//	return 0;
+//}
+int main()
+{
+	int arr[10] = {1,2};
+	printf("%d",sizeof(arr[0]));
 
-
-
+	return 0;
+}
 
 
