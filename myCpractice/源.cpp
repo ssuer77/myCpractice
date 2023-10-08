@@ -178,12 +178,39 @@ using namespace std;
 //
 //	return 0;
 //}
-int main()
-{
-	int arr[10] = {1,2};
-	printf("%d",sizeof(arr[0]));
-
-	return 0;
-}
-
-
+//int main()
+//{
+//	int arr[10] = {1,2};
+//	printf("%d",sizeof(arr[0]));
+//
+//	return 0;
+//}
+//int main()
+//{
+//	//char c1, c2;
+//	//c1 = 97;
+//	//c2 = 98;
+//	//int b1, b2;
+//	//b1 = 97;
+//	//b2 = 98;
+//	//cout << c1 << " " << c2 << endl;
+//	//cout << (int)c1 << " " << (int)c2<<endl;
+//	//printf("%d %c\n", c1,c1);
+//	//cout << b1 << " " << b2 << endl;
+//	//cout << (char)b1 << " " << (char)b2 << endl;
+//
+//	//char a1, a2;
+//	//int x1, x2;
+//	//a1 = 'a';
+//	//a2 = 'b';
+//	//x1 = a1 - 32;
+//	//x2 = a2 - 32;
+//	//cout << a1 << " " << a2<<endl;
+//	//cout << x1 << " " << x2;
+//	//cout << (char)x1 << " " << (char)x2;
+//
+//	//printf("\a");
+//	//cout << '\a';
+//	return 0;
+//}
+//
