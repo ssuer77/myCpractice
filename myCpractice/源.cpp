@@ -213,3 +213,61 @@ using namespace std;
 //	//cout << '\a';
 //	return 0;
 //}
+//struct Stu
+//{
+//	char namep[20];
+//	int age;
+//	char sex[20];
+//	char tele[20];
+//
+//
+//
+//
+//};
+//int main()
+//{
+//	struct Stu s = { "abc",23,"male","21345432" };
+//	printf("%s %d %s %s\n"£¬s.name, s.age, s.sex, s.tele);
+//
+//
+//
+//	return 0;
+//}
+
+ int main()
+{
+	int a = 5, b = 4, c = 3, d = 2;
+	if (a > b > c)
+		cout << d;
+	else if ((c - 1 >= d) == 1)
+		cout << d + 1;
+	else
+		cout << d + 2;
+
+}
+//int main()
+//{
+//	int day;
+//	scanf("%d", &day);
+//	switch (day)
+//	{
+//	case 1:
+//	case 2:
+//	case 3:
+//	case 4:
+//	case 5:
+//		printf("weekday");
+//		break;
+//	case 6:
+//	case 7:
+//		printf("weekend");
+//		break;
+//	default:
+//		printf("±¨´í");
+//		break;
+//	}  
+//	return 0;
+//}
+
+
+
