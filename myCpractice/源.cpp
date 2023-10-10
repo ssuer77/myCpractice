@@ -227,31 +227,31 @@ using namespace std;
 //int main()
 //{
 //	struct Stu s = { "abc",23,"male","21345432" };
-//	printf("%s %d %s %s\n"£¬s.name, s.age, s.sex, s.tele);
+//	printf("%s %d %s %s\n",s.namep,s.age,s.sex,s.tele);
 //
 //
 //
 //	return 0;
 //}
 
- int main()
-{
-	int a = 5, b = 4, c = 3, d = 2;
-	if (a > b > c)
-		cout << d;
-	else if ((c - 1 >= d) == 1)
-		cout << d + 1;
-	else
-		cout << d + 2;
-
-}
+//main()
+//{
+//	int a = 5, b = 4, c = 3, d = 2;
+//	if (a > b > c)
+//		cout << d;
+//	else if ((c - 1 >= d) == 1)
+//		cout << d + 1;
+//	else
+//		cout << d + 2;
+//
+//}
 //int main()
 //{
 //	int day;
 //	scanf("%d", &day);
 //	switch (day)
 //	{
-//	case 1:
+//	case '0':
 //	case 2:
 //	case 3:
 //	case 4:
@@ -268,6 +268,70 @@ using namespace std;
 //	}  
 //	return 0;
 //}
-
-
-
+//int main()
+//{
+//	//char ch[] = {"st\0r"};
+//	//int a = strlen(ch);
+//	//printf("%d", a);
+//	//printf(ch);
+//	//string k = { "abcdefg" };
+//	//cout << k;
+//	//printf("%s", k);
+//	int ch = 0;
+//	while ((ch = getchar()) != EOF)
+//	{
+//		putchar(ch);
+//	}
+//
+//
+//	return 0;
+//}
+//int main()
+//{
+//	printf("ÇëÊäÈëÃÜÂë£º");
+//	char password[20];
+//	scanf("%s", password);
+//	//getchar();
+//	int k;
+//	while ((k = getchar()) != '\n')
+//		getchar();
+//	printf("ÇëÈ·ÈÏÃÜÂë£¨Y/N£©");
+//	char in;
+//	scanf("%c", &in);
+//	//int in = getchar();
+//	if (in == 'Y')
+//		printf("YES");
+//	else
+//		printf("NO");
+//
+//	return 0;
+//}
+//int main()
+//{
+//	int ch;
+//	while ((ch = getchar()) != EOF)
+//	{
+//		if (ch < '0' || ch>'9')
+//			continue;
+//		putchar(ch);
+//	}
+//	return 0;
+//}
+//int main()
+//{
+//	int year, month, day;
+//	scanf("%4d%2d%2d", &year, &month, &day);
+//	printf("year=%d\n", year);
+//	printf("month=%02d\n", month);
+//	printf("day=%02d\n", day);
+//
+//	return 0;
+//}
+//int main()
+//{
+//	int weight, height;
+//	scanf("%d %d", &weight, &height);
+//	float r = weight / (height / 100.0) / (height / 100.0);
+//	printf("%.2f\n", r);
+//	return 0;
+//}
