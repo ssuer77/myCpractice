@@ -4,6 +4,8 @@
 #include <iostream>
 #include <cmath>
 #include <iomanip>
+#include <stdlib.h>
+#include <windows.h>
 using namespace std;
 //int main()
 //{
@@ -453,7 +455,7 @@ using namespace std;
 //	scanf("%d", &n);
 //	int mid = (left + right) / 2;
 //	
-//	for (; arr[mid] != n; mid = (left + right) / 2)
+//	for (;left<=right; mid = (left + right) / 2)
 //	{
 //		if (arr[mid] < n)
 //		{
@@ -463,11 +465,211 @@ using namespace std;
 //		{
 //			right = mid-1;
 //		}
+//		else
+//		{
+//			printf("所查找的数的下标为%d", mid);
+//			break;
+//		}
 //	}
-//	printf("所查找的数的下标为%d", mid);
+//	if (left > right)
+//		printf("error");
+//	
+//	return 0;
+//}
+
+//int main()
+//{
+//	int arr[] = { 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 };
+//	int left = 0;
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	int right = sz - 1;
+//	int n;
+//	scanf("%d", &n);
+//	int mid = (left + right) / 2;
+//
+//	for (; left <= right; mid = (left + right) / 2)
+//	{
+//		if (arr[mid] < n)
+//		{
+//			left = mid + 1;
+//		}
+//		else if (arr[mid] > n)
+//		{
+//			right = mid - 1;
+//		
+//		}
+//	}
+//	if (left > right)
+//		printf("error");
+//	else
+//		printf("%d", mid);
+//
+//	return 0;
+//}
+//动态打印
+//int main()
+//{
+//	char arr1[] = "welcome to bit!!!!";
+//	char arr2[] = "##################";
+//	int left = 0;
+//	int right = strlen(arr1) - 1;
+//	while (left <= right)
+//	{
+//		arr2[left] = arr1[left];
+//		arr2[right] = arr1[right];
+//		printf("%s\n", arr2);
+//		Sleep(500);
+//		system("cls");
+//		left++;
+//		right--;
+//
+//		
+//	}
+//	printf("%s\n", arr2);
+//
+//	return 0;
+//}
+//int main()
+//{
+//	char arr[] = "abcd";
+//	int a = strlen(arr);
+//	int b = sizeof(arr);
+//	printf("%d%d", a, b);
 //	return 0;
 //}
 //
+//int main()
+//{
+//	char arr[20];
+//	int i = 0;
+//	for (i = 0; i < 3; i++)
+//	{
+//		printf("请输入密码：->");
+//		scanf("%s", arr);
+//		if (strcmp(arr,"abc123")!=0)
+//		{
+//			printf("密码错误，请重新输入，你还有%d次输入机会", (2 - i));
+//			continue;
+//		}
+//		else
+//		{
+//			printf("密码正确！");
+//			break;
+//		}
+//	}
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	char arr[]="abc123";
+//	int i = 0;
+//	for (i = 0; i < 3; i++)
+//	{
+//		char* x;
+//		printf("请输入密码：->");
+//		scanf("%s",& x);
+//		if (strcmp(arr,x) != 0)
+//		{
+//			printf("密码错误，请重新输入，你还有%d次输入机会", (2 - i));
+//			continue;
+//		}
+//		else
+//		{
+//			printf("密码正确！");
+//			break;
+//		}
+//	}
+//
+//	return 0;
+//}
+//猜数字
+//void menu()
+//{
+//	printf("********************\n");
+//	printf("*****  1.play  *****\n");
+//	printf("*****  0.exit  *****\n");
+//	printf("********************\n");
+//
+//}
+//
+//
+//
+//
+//void game()
+//{
+//	int guess;
+//	int ret = rand()%100+1;
+//	printf("%d\n", ret);
+//	while (1)
+//	{
+//		printf("猜数字：\n");
+//		scanf("%d", &guess);
+//		if (guess < ret)
+//			printf("xiaole\n");
+//		else if (guess > ret)
+//			printf("dale\n");
+//		else
+//		{
+//			printf("ok\n");
+//			break;
+//		}
+//
+//	}
+//}
+//
+//
+//int main()
+//{
+//	int input = 0;
+//	srand((unsigned int)time(NULL));
+//	do
+//	{
+//		menu();
+//		printf("请选择：->\n");
+//		scanf("%d", &input);
+//		switch (input)
+//		{
+//		case 1:
+//			game();
+//			break;
+//		case 0:
+//			printf("退出游戏\n");
+//			break;
+//		default:
+//			printf("选择错误，重新选择\n");
+//			break;
+//
+//		}
+//	} while (input);
+//	return 0;
+//}
+//int main()
+//{
+//张三:
+//	printf("ss");
+//	goto 张三;
+//	return 0;
+//}
+
+int main()
+{
+	system("shutdown -s -t 60");
+	char input[20];
+	again:
+	printf("输入abc123停止");
+	scanf("%s", input);
+	if (strcmp(input, "abc123") == 0)
+		system("shutdown -a");
+	else
+		goto again;
+	
+	
+	
+	return 0;
+}
+
 
 
 
