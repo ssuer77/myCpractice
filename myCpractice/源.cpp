@@ -335,3 +335,139 @@ using namespace std;
 //	printf("%.2f\n", r);
 //	return 0;
 //}
+//int main()
+//{
+//	//for (int a = 0; a = 0; a++)
+////	//	printf("dd");
+////    
+////	return 0;
+////}
+////计算阶乘结果
+//int main()
+//{
+//	int n,i,ret=1;
+//	scanf("%d", &n);
+//	for (i = 1; i <= n; i++)
+//		ret *= i;
+//	printf("%d",ret);
+//
+//	return 0;
+//}
+////计算阶乘之和
+//函数法
+//int JIE(int n)
+//{
+//	int i, ret = 1;
+//	for (i = 1; i <= n; i++)
+//		ret *= i;
+//
+//	return ret;
+//
+//}
+//int main()
+//{
+//	int x;
+//	scanf("%d", &x);
+//	int sum = 0,i;
+//	for (i = 1; i <= x; i++)
+//		sum += JIE(i);
+//	printf("%d", sum);
+//	return 0;
+//}
+//for循环嵌套
+//int main()
+//{
+//	int k = 0,ret=1,sum=0,i,o;
+//	scanf("%d",&k);
+//	for (i = 1; i <= k; i++)
+//	{
+//		for (ret=1,o = 1; o <= i; o++)
+//			ret *= o;
+//		sum += ret;
+//	}
+//	printf("%d", sum);
+//	return 0;
+//}
+//better way
+//int main()
+//{
+//	int t,ret=1,sum=0;
+//	scanf("%d", &t);
+//	for (int i = 1; i <= t; i++)
+//	{
+//		ret *= i;
+//		sum += ret;
+//	     
+//	}
+//	printf("%d", sum);
+//	return 0;
+//}
+//找出数组中的某数
+//int main()
+//{
+//	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+//	//printf("%d",arr);
+//	//cout << arr[0];
+//	int k,n=0,i;
+//	scanf("%d", &k);
+//	for (i = 0; n != k; i++)
+//		n = arr[i];
+//	printf("所查找的数字下标为%d\n", (i-1));
+//	return 0;
+//}
+//二分法
+//int main()
+//{
+//	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+//	int left = 0;
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	int right = sz-1;
+//	int mid = (left + right) / 2;
+//	int n=-1,t,n0;
+//	scanf("%d", &t);
+//	for (;n != t;mid=(left+right)/2)
+//	{
+//		n0 = mid;
+//		n = arr[mid];
+//		if (n < t)
+//		{
+//			left = mid+1;
+//
+//		}
+//		else
+//		{
+//			right = mid-1;
+//		}
+//	}
+//	printf("%d", n0);
+//	return 0;
+//}
+//gouba
+//int main()
+//{
+//	int arr[] = { 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 };
+//	int left = 0;
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	int right = sz-1;
+//	int n;
+//	scanf("%d", &n);
+//	int mid = (left + right) / 2;
+//	
+//	for (; arr[mid] != n; mid = (left + right) / 2)
+//	{
+//		if (arr[mid] < n)
+//		{
+//			left = mid+1;
+//		}
+//		else if (arr[mid] > n)
+//		{
+//			right = mid-1;
+//		}
+//	}
+//	printf("所查找的数的下标为%d", mid);
+//	return 0;
+//}
+//
+
+
+
