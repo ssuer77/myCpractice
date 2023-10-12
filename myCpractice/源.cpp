@@ -653,23 +653,117 @@ using namespace std;
 //	return 0;
 //}
 
-int main()
-{
-	system("shutdown -s -t 60");
-	char input[20];
-	again:
-	printf("输入abc123停止");
-	scanf("%s", input);
-	if (strcmp(input, "abc123") == 0)
-		system("shutdown -a");
-	else
-		goto again;
-	
-	
-	
-	return 0;
-}
+//int main()
+//{
+//	system("shutdown -s -t 60");
+//	char input[20];
+//	again:
+//	printf("输入abc123停止");
+//	scanf("%s", input);
+//	if (strcmp(input, "abc123") == 0)
+//		system("shutdown -a");
+//	else
+//		goto again;
+//	
+//	
+//	
+//	return 0;
+//}
+//int main()
+//{
+//	//int b;
+//	//int a = b = 2;
+//	//printf("%d%d", a, b);
+//
+//	printf("%d",sizeof(int));
+//	printf("%d", sizeof(float));
+//	printf("%d", sizeof(long long));
+//	printf("%d", sizeof(double));
+//	printf("%d", sizeof(char));
+//	printf("%d", sizeof(int));
+//	char a = cin.get();
+//	printf("%c", a);
+//
+//
+//	return 0;
+//}
 
+//平均分
+//int main()
+//{
+//	float a, b, c;
+//	scanf("%f %f %f", &a, &b, &c);
+//	float x = (a + b + c) / 3.0;
+//	printf("%.2f", x);
+//	return 0;
+//}
+//数列和
+//int main()
+//{
+//	int N;
+//	scanf("%d", &N);
+//	int x = N + N * (N - 1) / 2.0;
+//	printf("%d", x);
+//
+//	return 0;
+//}
+//求矩形面积和周长
+//int main()
+//{
+//	int a, b;
+//	scanf("%d %d", &a, &b);
+//	int S = a * b;
+//	int P = 2 * (a + b);
+//	printf("%d %d", S, P);
+//	return 0;
+//}
+//分支简单
+//int main()
+//{
+//	char ch;
+//	scanf("%c", &ch);
+//	if (ch == '0')
+//		ch = '9';
+//	else if (ch == '1')
+//		ch = '8';
+//	else if (ch == '2')
+//		ch = '7';
+//	else if (ch == '3')
+//		ch = '6';
+//	else if (ch == '4')
+//		ch = '5';
+//	else if (ch == '5')
+//		ch = '4';
+//	else if (ch == '6')
+//		ch = '3';
+//	else if (ch == '7')
+//		ch = '2';
+//	else if (ch == '8')
+//		ch = '1';
+//	else if (ch == '9')
+//		ch = '0';
+//	else
+//		;
+//	printf("%c", ch);
+//
+//	return 0;
+//}
+//int main()
+//{
+//	char ch;
+//	scanf("%c", &ch);
+//	if (ch >= 48 && ch <= 57)
+//	{
+//		char x = 105 - ch;
+//		printf("%c", x);
+//
+//
+//	}
+//	else
+//		printf("%c", ch);
+//		
+//	return 0;
+//}
 
 
 
