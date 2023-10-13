@@ -764,6 +764,248 @@ using namespace std;
 //		
 //	return 0;
 //}
+//int main()
+//{
+//	int arr[] = {0};
+//	//scanf("%d", arr);
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	//printf("%d", sz);
+//	
+//	int i=0;
+//	//for (i = 0;; i++)
+//	//{
+//	//	if (arr[i] <= 0)
+//	//		break;
+//
+//	//}
+//	while ((scanf("%d", arr[i])) != EOF)
+//	{
+//		i++;
+//	}
+//	scanf("%d", i);
+//	return 0;
+//}
+//int main()
+//{
+//	int arr[30];
+//	int a;
+//	scanf("%d", &a);
+//	printf("%d", a);
+//
+//
+//	return 0;
+//}
+//int main()
+//{
+//	int a, b, max, min, i;
+//	scanf("%d", &a);
+//	max = a;
+//	min = a;
+//	i = 1;
+//	while (i <= a)
+//	{
+//		scanf("%d", &b);
+//		if (b > max)
+//			max = b;
+//		else if (b < min)
+//			min = b;
+//		i++;
+//	}
+//	printf("max=%d,min=%d", max, min);
+//	return 0;
+//}
+//int main()
+//{
+//	printf("si");
+//	int a;
+//	scanf("%d", &a);
+//	printf("%d", a);
+//	return 0;
+//}
+//工资标准
+//int main()
+//{
+//	int time,sal;
+//	scanf("%d", &time);
+//	if (time <= 160)
+//		sal = time * 10;
+//	else
+//		sal = 160 * 10 + 30 * (time - 160);
+//	printf("%d", sal);
+//
+//
+//	return 0;
+//}
+//
+//解二元一次方程
+//int main()
+//{
+//	int a, b, c;
+//	scanf("%d %d %d", &a, &b, &c);
+//	float j = sqrt(b * b - 4.0 * a * c);
+//	float x1, x2;
+//	x1 = (-b + j) / 2.0 / a;
+//	x2 = (-b - j) / 2.0 / a;
+//	if (x1 >= x2)
+//		printf("%.2f %.2f", x1, x2);
+//	else
+//		printf("%.2f %.2f", x2, x1);
+//
+//
+//	return 0;
+//}
+//
+//字母表顺序
+//int main()
+//{
+//	char ch[64];
+//	int i;
+//	scanf("%s", ch);
+//	int temp;
+//	int x = ch[0];
+//	int y = ch[1];
+//	int z = ch[2];
+//	if (x>y)
+//	{
+//		temp = y;
+//		y = x;
+//		x = temp;
+//
+//	}
+//	if (x > z)
+//	{
+//		temp = z;
+//		z = x;
+//		x = temp;
+//
+//
+//	}
+//	if (y > z)
+//	{
+//		temp = z;
+//		z = y;
+//		y = temp;
+//
+//	}
+//	printf("%c%c%c", x, y, z);
+//
+//
+//
+//	return 0;
+//}
+//int main()
+//{
+//	int b,i = 0;
+//	for (i = 0; i < 4; i++)
+//	{
+//		scanf("%d",& b);
+//		printf("%d", b);
+//	}
+//	return 0;
+//}
+//
+//int main()
+//{
+//	int a;
+//	scanf("%d", &a);
+//	if (a % 2 == 1)
+//		printf("%d is odd", a);
+//	else
+//		printf("%d is even", a);
+//	return 0;
+//}
+//int main()
+//{
+//	int i,sum=0,num=0;
+//
+//	int ch[20];
+//	for (i = 0; i < 20; i++)
+//	{
+//		scanf("%d",& ch[i]);
+//		num += ch[i];
+//		if (ch[i] < 0)
+//			num++;
+//	}
+//	float ave = (float)sum / 20.0;
+//	printf("%d %.1f", num, ave);
+//
+//	return 0;
+//}
+//int main()
+//{
+//	int ch[20];
+//	scanf("%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d", ch[0],ch[1],ch[2],ch[3],ch[4],  ch[5], ch[6], ch[7], ch[8], ch[9], ch[10], ch[11], ch[12], ch[13], ch[14], ch[15], ch[16], ch[17], ch[18], ch[19]);
+//	int i,sum=0,num=0;
+//	for (i = 0; i < 20; i++)
+//	{
+//		if (ch[i] < 0)
+//			num++;
+//		sum += ch[i];
+//
+//	}
+//	float ave = sum / 20.0;
+//	printf("%d %.1f", num, sum);
+//
+//
+//	return 0;
+//}
+//int main()
+//{
+//	int T,i;
+//	int m, n,max,min,ji=0,ou=0;
+//	scanf("%d", &T);
+//	for (i = 0; i < T; i++)
+//	{
+//		scanf("%d %d",& m,& n);
+//		if (m > n)
+//		{
+//			max = m;
+//			min = n;
+//		}
+//		else
+//		{
+//			max = n;
+//			min = m;
+//		}
+//		int k = min;
+//		for (; k <= max; k++)
+//		{
+//			if (k % 2 == 1)
+//				ji = ji + k * k * k;
+//			else
+//				ou = ou + k * k ;
+//		}
+//		printf("%d %d\n", ou, ji);
+//		
+//	}
+//	return 0;
+//}
+#include <stdio.h>
+
+int main() {
+    int num, count = 0;
+    int sum = 0;
+    float average;
+
+
+    for (int i = 0; i < 20; i++) {
+        scanf("%d", &num);
+        if (num < 0) {
+            count++;
+        }
+        sum += num;
+    }
+
+    average = (float)sum / 20;
+
+    printf("%d %.1f\n", count,average);
+
+    return 0;
+}
+
+
+
+
 
 
 
