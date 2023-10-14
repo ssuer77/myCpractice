@@ -980,30 +980,34 @@ using namespace std;
 //	}
 //	return 0;
 //}
-#include <stdio.h>
+//#include <stdio.h>
+//
+//int main() {
+//    int num, count = 0;
+//    int sum = 0;
+//    float average;
+//
+//
+//    for (int i = 0; i < 20; i++) {
+//        scanf("%d", &num);
+//        if (num < 0) {
+//            count++;
+//        }
+//        sum += num;
+//    }
+//
+//    average = (float)sum / 20;
+//
+//    printf("%d %.1f\n", count,average);
+//
+//    return 0;
+//}
+//
+int main()
+{
 
-int main() {
-    int num, count = 0;
-    int sum = 0;
-    float average;
-
-
-    for (int i = 0; i < 20; i++) {
-        scanf("%d", &num);
-        if (num < 0) {
-            count++;
-        }
-        sum += num;
-    }
-
-    average = (float)sum / 20;
-
-    printf("%d %.1f\n", count,average);
-
-    return 0;
+	return 0;
 }
-
-
 
 
 
