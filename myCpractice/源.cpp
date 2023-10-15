@@ -1003,11 +1003,170 @@ using namespace std;
 //    return 0;
 //}
 //
+//void _max(int *x, int *y)
+//{
+//	int temp=*y;
+//	*y = *x;
+//	*x = temp;
+//
+//}
+//void pri()
+//{
+//	printf("hello");
+//}
+//int main()
+//{
+//	//int a = 10,b;
+//	//int i = (a == 10 ? a = 1: b = 2);
+//	//printf("%d", i);
+//	int a, b;
+//	scanf("%d %d", &a, &b);
+//	pri();
+//	_max(&a,& b);
+//	printf("%d %d",a,b);
+//	return 0;
+//}
+//int main()
+//{
+//	int i,j,jud,num=0;
+//	for (i = 100; i <= 200; i++)
+//	{
+//		for (jud=1,j = 2; j <= i - 1; j++)
+//		{
+//			if (i % j == 0)
+//			{
+//				jud = 0;
+//				break;
+//			}
+//		}
+//		if (jud == 1)
+//		{
+//			printf("%d", i);
+//			num++;
+//		}
+//
+//	}
+//	printf("%d", num);
+//	return 0;
+//}
+////
+//int main()
+//{
+//	int i,sum=0;
+//
+//	int ch[64];
+//	for (i = 0; i < 20; i++)
+//	{
+//		scanf("%d",& ch[i]);
+//		if (ch[i] > 0)
+//		{
+//			if (ch[i] % 2 == 0)
+//			{
+//				sum += ch[i];
+//			}
+//			else
+//				;
+//		}
+//		else
+//			break;
+//	}
+//	printf("%d", sum);
+//
+//	return 0;
+//}
+//#include <stdio.h>
+//int main()
+//{
+//	int b, s;
+//
+//	s = 0;
+//
+//	b = 2;
+//	while (b > 0)
+//	{
+//		scanf("%d", &b);
+//		if (b % 2 == 0)
+//			s += b;
+//	}
+//
+//
+//	printf("%d", s);
+//	return 0;
+//
+//}
+//int main()
+//{
+//	int i,sum=0;
+//
+//	int ch[64];
+//	for (i = 0; i < 20; i++)
+//	{
+//		scanf("%d",& ch[i]);
+//		if (ch[i] > 0)
+//		{
+//			if (ch[i] % 2 == 0)
+//			{
+//				sum += ch[i];
+//			}
+//			else
+//				;
+//		}
+//		else
+//			break;
+//	}
+//	printf("%d", sum);
+//
+//	return 0;
+//}
+//int main()
+//{
+//	int sum=0,x;
+//	do
+//	{
+//		scanf("%d", &x);
+//		if (x > 0)
+//		{
+//			if (x % 2 == 0)
+//			{
+//				sum += x;
+//			}
+//			else
+//				;
+//		}
+//		else
+//			;
+//
+//	} 
+//	while (x > 0);
+//	printf("%d", sum);
+//	return 0;
+//}
+
+int judge(int x)
+{
+	int i,p=1;
+	for (i = 2; i <= sqrt(x); i ++)
+	{
+		if (x % i == 0)
+		{
+			p = 0;
+			break;
+		}
+		else
+			;
+	}
+	return (p == 1 ? 1 : 0);
+}
 int main()
 {
-
+	int m;
+	scanf("%d", &m);
+	printf("%d", judge(m));
 	return 0;
 }
+
+
+
 
 
 
