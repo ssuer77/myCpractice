@@ -1141,32 +1141,90 @@ using namespace std;
 //	printf("%d", sum);
 //	return 0;
 //}
+//ÅĞ¶ÏËØÊı
+//int judge(int x)
+//{
+//	int i,p=1;
+//	for (i = 2; i <= sqrt(x); i ++)
+//	{
+//		if (x % i == 0)
+//		{
+//			p = 0;
+//			break;
+//		}
+//		else
+//			;
+//	}
+//	return (p == 1 ? 1 : 0);
+//}
+//int main()
+//{
+//	int m;
+//	scanf("%d", &m);
+//	printf("%d", judge(m));
+//	return 0;
+//}
+//int main()
+//{
+//	//int len = strlen("abc\n");
+//	//printf("%d", len);
+//	//cout << len;
+//	//cout << strlen("abc");
+//	char tr[] = { "abc" };
+//	printf("%s", tr);
+//	printf("%d", strlen(tr));
+//	
+//
+//
+//
+//	return 0;
+//}
 
-int judge(int x)
+//int my_strlen(char str[])
+int my_strlen(char* str)
 {
-	int i,p=1;
-	for (i = 2; i <= sqrt(x); i ++)
-	{
-		if (x % i == 0)
-		{
-			p = 0;
-			break;
-		}
-		else
-			;
-	}
-	return (p == 1 ? 1 : 0);
+	//int count = 0;
+	//while (*str != '\0')
+	//{
+	//	count++;
+	//	str++;
+	//}
+	//return count;
+	if (*str != '\0')
+		return (1 + my_strlen(str + 1));
+	else
+		return 0;
+
+
+
+
+
+
+
+
 }
+
+
+
 int main()
 {
-	int m;
-	scanf("%d", &m);
-	printf("%d", judge(m));
+
+	char string[20];
+	scanf("%s", string);
+	
+	int len = my_strlen(string);
+	printf("%d", len);
+
 	return 0;
 }
-
-
-
+//int main()
+//{
+//	char string[20];
+//	scanf("%s", string);
+//	//printf("%d", strlen(string));
+//	cout << strlen(string);
+//	return 0;
+//}
 
 
 
