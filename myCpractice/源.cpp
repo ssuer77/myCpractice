@@ -1181,52 +1181,398 @@ using namespace std;
 //}
 
 //int my_strlen(char str[])
-int my_strlen(char* str)
-{
-	//int count = 0;
-	//while (*str != '\0')
-	//{
-	//	count++;
-	//	str++;
-	//}
-	//return count;
-	if (*str != '\0')
-		return (1 + my_strlen(str + 1));
-	else
-		return 0;
-
-
-
-
-
-
-
-
-}
-
-
-
-int main()
-{
-
-	char string[20];
-	scanf("%s", string);
-	
-	int len = my_strlen(string);
-	printf("%d", len);
-
-	return 0;
-}
+//int my_strlen(char* str)
+//{
+//	//int count = 0;
+//	//while (*str != '\0')
+//	//{
+//	//	count++;
+//	//	str++;
+//	//}
+//	//return count;
+//	if (*str != '\0')
+//		return (1 + my_strlen(str + 1));
+//	else
+//		return 0;
+//
+//
+//
+//
+//
+//
+//
+//
+//}
+//
+//
+//
 //int main()
 //{
+//
 //	char string[20];
 //	scanf("%s", string);
-//	//printf("%d", strlen(string));
-//	cout << strlen(string);
+//	
+//	int len = my_strlen(string);
+//	printf("%d", len);
+//
+//	return 0;
+//}
+////int main()
+////{
+////	char string[20];
+////	scanf("%s", string);
+////	//printf("%d", strlen(string));
+////	cout << strlen(string);
+////	return 0;
+////}
+//int Fib(int x)
+//{
+//	if (x <= 2)
+//		return 1;
+//	else
+//		return Fib(x - 1) + Fib(x - 2);
+//
+//}
+//int main()
+//{
+//	int n;
+//	scanf("%d", &n);
+//	int ret = Fib(n);
+//	printf("%d", ret);
+//	return 0;
+//}
+//int main()
+//{
+//	int ch[20];
+//	scanf("%d", ch);
+//	printf("%d", ch[0]);
+//
+//	return 0;
+//}
+// 二分法
+//int main()
+//{
+//	int i = 0;
+//	int ch[] = { 1,2,3,4,5,6,7,8,9,10 };
+//	//while (ch[i] != 11)
+//	//{
+//	//	i++;
+//	//	if (i > 9)
+//	//	{
+//	//		printf("zhaobudao");
+//	//		break;
+//	//	}
+//	//}
+//	//if(i<=9)
+//	//printf("找到下标%d", i);
+//	int sz = sizeof(ch) / sizeof(ch[0]);
+//	int left = 0;
+//	int right = sz - 1;
+//	int mid = (left + right) / 2;
+//	int k;
+//	scanf("%d", &k);
+//	while (ch[mid] != k)
+//	{
+//		if (ch[mid] <k)
+//		{
+//			left = mid + 1;
+//			mid = (left + right) / 2;
+//		}
+//		else if (ch[mid] > k)
+//		{
+//			right = mid - 1;
+//			mid = (left + right) / 2;
+//		}
+//		if (left > right)
+//		{
+//			printf("找不到");
+//			break;
+//		}
+//	}
+//	if (left <= right)
+//		printf("找到下标%d", mid);
+//	return 0;
+//}
+//
+//int x = 2;
+//int y = 5;
+//void test(int *a,int* b)
+//{
+//	/*ch[0] = 1;
+//	ch[1] = 3;*/
+//	*a = 1;
+//	*b = 3;
+//	x = 4;
+//	y = 8;
+//}
+//int main()
+//{
+//	//int ch[2];
+//	//test(ch);
+//	//printf("%d %d", ch[0], ch[1]);
+//	int a, b;
+//	test(&a, &b);
+//	printf("%d %d\n", a, b);
+//	printf("%d %d", x, y);
+//	return 0;
+//}
+//void exchange(int* x, int* y)
+//{
+//	int tmp;
+//	tmp =* x;
+//	*x = *y;
+//	*y = tmp;
+//}
+//int main()
+//{
+//	int a = 1;
+//	int b = 6;
+//	exchange(&a,& b);
+//	printf("%d %d", a, b);
+//	return 0;
+//}
+//int main()
+//{
+//	int a = 2;
+//	int b = 5;
+//	double x;
+//	x = (double)a / b;
+//	printf("%.2lf", x);
+//	return 0;
+//}
+//int main()
+//{
+//	char ch[4] = { "abc" };
+//	printf("%d", strlen(ch));
+//	return 0;
+//}
+
+//int main()
+//{
+//	int sum = 0;
+//	int i;
+//	char x;
+//	for (i = 0; i < 3; i++)
+//	{
+//		scanf("%c", &x);
+//		sum += x;
+//		getchar();
+//	}
+//	double ave = sum / 3.0;
+//	int shang = sum / 3;
+//	int yv = sum % 3;
+//	printf("%.6lf %d %d", ave, shang, yv);
+//	return 0;
+//}
+//int main()
+//{
+//	int sum = 0;
+//	char a, b, c;
+//	scanf("%c %c %c", &a, &b, &c);
+//	sum = a + b + c;
+//	double ave = sum / 3.0;
+//	int shang = sum / 3;
+//	int yv = sum % 3;
+//	printf("%.6lf %d %d", ave, shang, yv);
+//	return 0;
+//}
+//#include <stdio.h>
+//
+//int main() {
+//    char c1, c2, c3;
+//    int sum, avg, remainder;
+//
+//    scanf("%c\n%c\n%c", &c1, &c2, &c3);
+//
+//    sum = c1 + c2 + c3;
+//
+//    avg = sum / 3;
+//    remainder = sum % 3;
+//
+//    printf("%.6f %d %d\n", (float)sum / 3, avg, remainder);
+//
+//    return 0;
+//}
+
+//int main()
+//{
+//	float x1, y1, x2, y2;
+//	scanf("%f %f %f %f", &x1,& y1,& x2,& y2);
+//	float x = sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
+//	printf("%.2f", x);
+//	return 0;
+//}
+//int main()
+//{
+//	int t;
+//	scanf("%d", &t);
+//	int d, h, m, s;
+//	d = t / 86400;
+//	h = (t % 86400) / 3600;
+//	m = ((t % 86400) % 3600) / 60;
+//	s = ((t % 86400) % 3600) % 60;
+//	printf("%d days %d:%d:%d", d, h, m, s);
+//	return 0;
+//}
+//int main()
+//{
+//	float huashi, sheshi;
+//	scanf("%f", &huashi);
+//	sheshi = (huashi - 32) * 5 / 9;
+//	printf("%.1f", sheshi);
+//	return 0;
+//}
+int main()
+{
+	int m,i;
+	float p1, p2, p3, p4,w1,w2,w3,w4;
+	scanf("%d", &m);
+	getchar();
+	char types;
+	float nums;
+	for (i = 0; i < m; i++)
+	{
+		scanf("%c", &types);
+		getchar();
+		scanf("%f", &nums);
+		getchar();
+		if (types == 'a')
+		{
+			p1 = 1.5 * nums;
+			w1 = nums;
+		}
+		if (types == 'o')
+		{
+			p2 = 1.4 * nums;
+			w2 = nums;
+		}
+		if (types == 'b')
+		{
+			p3 = 1.48 * nums;
+			w3 = nums;
+		}
+		if (types == 'p')
+		{
+			p4 = 1.08 * nums;
+			w4 = nums;
+		}
+		//scanf("%c", &types[i]);
+		//getchar();
+		//scanf("%d", nums[i]);
+		//getchar();
+	}
+	printf("       apple  orange banana pineapple sum\nprice  %-7.2f%-7.2f%-7.2f%-10.2f%-7.2f  \nweight %-7.2f%-7.2f%-7.2f%-10.2f%-7.2f  ",p1,p2,p3,p4,p1+p2+p3+p4,w1,w2,w3,w4,w1+w2+w3+w4);
+	return 0;
+}
+//
+//int main()
+//{
+//	char ch[20];
+//	scanf("%c", ch);
+//	printf("%c", ch[1]);
 //	return 0;
 //}
 
 
+
+//
+////
+//#include <stdio.h>
+//
+//void calculate_price(char code, float weight) {
+//    char fruit_name[10];
+//    float price = 0.0;
+//    
+//    switch(code) {
+//        case 'a':
+//            strcpy(fruit_name, "apple");
+//            price = 1.5;
+//            break;
+//        case 'o':
+//            strcpy(fruit_name, "orange");
+//            price = 1.4;
+//            break;
+//        case 'b':
+//            strcpy(fruit_name, "banana");
+//            price = 1.48;
+//            break;
+//        case 'p':
+//            strcpy(fruit_name, "pineapple");
+//            price = 1.08;
+//            break;
+//    }
+//    
+//    float total_price = price * weight;
+//    
+//    printf("%-7s  %-10.2f  %-7.2f\n", fruit_name, price, total_price);
+//    printf("%-9s  %-7.2f  %-7.2f\n", "price", price, total_price);
+//    printf("%-9s  %-7.2f  %-7.2f\n\n", "weight", weight, total_price);
+//}
+//
+//int main() {
+//    int m;
+//    char code;
+//    float weight;
+//    
+//    while(scanf("%d", &m) != EOF) {
+//        for(int i = 0; i < m; i++) {
+//            scanf(" %c %f", &code, &weight);
+//            calculate_price(code, weight);
+//        }
+//        printf("\n");
+//    }
+//    
+//    return 0;
+//}
+//#include <stdio.h>
+//#include <string.h>
+//
+//void calculate_price(char code, float weight) {
+//    char fruit_name[10];
+//    float price = 0.0;
+//
+//    switch (code) {
+//    case 'a':
+//        strcpy(fruit_name, "apple");
+//        price = 1.5;
+//        break;
+//    case 'o':
+//        strcpy(fruit_name, "orange");
+//        price = 1.4;
+//        break;
+//    case 'b':
+//        strcpy(fruit_name, "banana");
+//        price = 1.48;
+//        break;
+//    case 'p':
+//        strcpy(fruit_name, "pineapple");
+//        price = 1.08;
+//        break;
+//    }
+//
+//    float total_price = price * weight;
+//
+//    printf("%-7s  %-10.2f  %-7.2f\n", fruit_name, price, total_price);
+//}
+//
+//int main() {
+//    int m;
+//    char code;
+//    float weight;
+//
+//    while (scanf("%d", &m) != EOF) {
+//        printf("       apple  orange banana pineapple sum\n");
+//        printf("price  %-7.2f  %-7.2f  %-7.2f  %-7.2f  %-7.2f\n", 1.5, 1.4, 1.48, 1.08, 0.0);
+//        printf("weight %-7.2f  %-7.2f  %-7.2f  %-7.2f  %-7.2f\n", 0.0, 0.0, 0.0, 0.0, 0.0);
+//        for (int i = 0; i < m; i++) {
+//            scanf(" %c %f", &code, &weight);
+//            calculate_price(code, weight);
+//        }
+//        printf("\n");
+//    }
+//
+//    return 0;
+//}
 
 
 
