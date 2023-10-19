@@ -1422,48 +1422,48 @@ using namespace std;
 //	printf("%.1f", sheshi);
 //	return 0;
 //}
-int main()
-{
-	int m,i;
-	float p1, p2, p3, p4,w1,w2,w3,w4;
-	scanf("%d", &m);
-	getchar();
-	char types;
-	float nums;
-	for (i = 0; i < m; i++)
-	{
-		scanf("%c", &types);
-		getchar();
-		scanf("%f", &nums);
-		getchar();
-		if (types == 'a')
-		{
-			p1 = 1.5 * nums;
-			w1 = nums;
-		}
-		if (types == 'o')
-		{
-			p2 = 1.4 * nums;
-			w2 = nums;
-		}
-		if (types == 'b')
-		{
-			p3 = 1.48 * nums;
-			w3 = nums;
-		}
-		if (types == 'p')
-		{
-			p4 = 1.08 * nums;
-			w4 = nums;
-		}
+//int main()
+//{
+//	int m,i;
+//	float p1, p2, p3, p4,w1,w2,w3,w4;
+//	scanf("%d", &m);
+//	getchar();
+//	char types;
+//	float nums;
+//	for (i = 0; i < m; i++)
+//	{
+//		scanf("%c", &types);
+//		getchar();
+//		scanf("%f", &nums);
+//		getchar();
+//		if (types == 'a')
+//		{
+//			p1 = 1.5 * nums;
+//			w1 = nums;
+//		}
+//		if (types == 'o')
+//		{
+//			p2 = 1.4 * nums;
+//			w2 = nums;
+//		}
+//		if (types == 'b')
+//		{
+//			p3 = 1.48 * nums;
+//			w3 = nums;
+//		}
+//		if (types == 'p')
+//		{
+//			p4 = 1.08 * nums;
+//			w4 = nums;
+//		}
 		//scanf("%c", &types[i]);
 		//getchar();
 		//scanf("%d", nums[i]);
 		//getchar();
-	}
-	printf("       apple  orange banana pineapple sum\nprice  %-7.2f%-7.2f%-7.2f%-10.2f%-7.2f  \nweight %-7.2f%-7.2f%-7.2f%-10.2f%-7.2f  ",p1,p2,p3,p4,p1+p2+p3+p4,w1,w2,w3,w4,w1+w2+w3+w4);
-	return 0;
-}
+//	}
+//	printf("       apple  orange banana pineapple sum\nprice  %-7.2f%-7.2f%-7.2f%-10.2f%-7.2f  \nweight %-7.2f%-7.2f%-7.2f%-10.2f%-7.2f  ",p1,p2,p3,p4,p1+p2+p3+p4,w1,w2,w3,w4,w1+w2+w3+w4);
+//	return 0;
+//}
 //
 //int main()
 //{
@@ -1573,6 +1573,312 @@ int main()
 //
 //    return 0;
 //}
+//int leap_year(int x)
+//{
+//	if ((x / 4 == 0) && (x / 100 != 0) || (x / 400 == 0))
+//		return 1;
+//	else
+//		return 0;
+//
+//}
+//
+//
+//int main()
+//{
+//	int dayx,year, month, day, time,t;
+//	scanf("%d %d %d %d", &year, &month, &day, &time);
+//	int mid = month + time;
+//	if (mid > 13)
+//	{
+//		t = mid / 12;
+//		month = mid - 12*t;
+//		year += t;
+//	}
+//	else
+//		month = mid;
+//	switch (month)
+//	{
+//	case 1:
+//	case 3:
+//	case 5:
+//	case 7:
+//	case 8:
+//	case 10:
+//	case 12:
+//	{
+//		dayx = 31;
+//		break;
+//	}
+//	case 2:
+//	{
+//		if (leap_year(year) == 1)
+//			dayx = 29;
+//		else
+//			dayx = 28;
+//		break;
+//	}
+//	default:
+//	{
+//		dayx = 30;
+//		break;
+//	}
+//	}
+//	if (day > dayx)
+//		day = dayx;
+//	printf("%d %d %d", year, month, day);
+//	return 0;
+//}
+//#include <stdio.h>
+//
+//int isLeapYear(int year) {
+//    if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+//        return 1;
+//    }
+//    else {
+//        return 0;
+//    }
+//}
+//
+//int getLastDayOfMonth(int year, int month) {
+//    int lastDay;
+//
+//    switch (month) {
+//    case 2:
+//        if (isLeapYear(year)) {
+//            lastDay = 29;
+//        }
+//        else {
+//            lastDay = 28;
+//        }
+//        break;
+//    case 4:
+//    case 6:
+//    case 9:
+//    case 11:
+//        lastDay = 30;
+//        break;
+//    default:
+//        lastDay = 31;
+//        break;
+//    }
+//
+//    return lastDay;
+//}
+//
+//void calculateMaturityDate(int year, int month, int day, int term) {
+//    int newYear = year;
+//    int newMonth = month + term;
+//    int newDay = day;
+//
+//    if (newMonth > 12) {
+//        newYear += (newMonth - 1) / 12;
+//        newMonth = (newMonth - 1) % 12 + 1;
+//    }
+//
+//    int lastDayOfMonth = getLastDayOfMonth(newYear, newMonth);
+//    if (newDay > lastDayOfMonth) {
+//        newDay = lastDayOfMonth;
+//    }
+//
+//    printf("%d %d %d\n", newYear, newMonth, newDay);
+//}
+//
+//int main() {
+//    int year, month, day, term;
+//    scanf("%d %d %d %d", &year, &month, &day, &term);
+//
+//    calculateMaturityDate(year, month, day, term);
+//
+//    return 0;
+//}
+//int main()
+//{
+//	int x,y;
+//	scanf("%d %d", &x, &y);
+//	int result=pow(x,y);
+//	int t = result % 1000;
+//	printf("%d",t );
+//	return 0;
+//}
+
+//int main()
+//{
+//	int i,n;
+//	scanf("%d", &n);
+//	float sum = 0,t;
+//	for (i = 1; i <= n; i++)
+//	{
+//		if ((i % 5 == 0) || (i % 9 == 0))
+//		{
+//			t = 1.0 / i;
+//			sum += t;
+//		}
+//	}
+//	printf("%.6f", sum);
+//
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	int n,i;
+//	int sum = 0;
+//	scanf("%d", &n);
+//	for (i = 2; i < n; i++)
+//	{
+//		if (n % i == 0)
+//		{
+//			sum += i;
+//		}
+//	}
+//	printf("%d", sum);
+//	return 0;
+//}
+//
+//int main()
+//{
+//	float result,a, b;
+//	char x;
+//	scanf("%f %f %c",& a,& b,&x);
+//	switch (x)
+//	{
+//	case '+':
+//		result = a + b;
+//		printf("%.1f", result);
+//
+//		break;
+//	case '-':
+//		result = a - b;
+//		printf("%.1f", result);
+//
+//		break;
+//	case '*':
+//		result = a * b;
+//		printf("%.1f", result);
+//
+//		break;
+//	case '/':
+//		if (b == 0)
+//		{
+//			printf("Wrong!");
+//			break;
+//		}
+//		result = a / b;
+//		printf("%.1f", result);
+//
+//		break;
+//	}
+//	return 0;
+//}
+//int main()
+//{
+//    double a, b, result;
+//    char op;
+//
+//    scanf("%lf %lf\n%c", &a, &b, &op);
+//
+//    switch (op)
+//    {
+//    case '+':
+//        result = a + b;
+//        printf("%.1lf\n", result);
+//        break;
+//    case '-':
+//        result = a - b;
+//        printf("%.1lf\n", result);
+//        break;
+//    case '*':
+//        result = a * b;
+//        printf("%.1lf\n", result);
+//        break;
+//    case '/':
+//        if (b == 0)
+//        {
+//            printf("Wrong!\n");
+//        }
+//        else
+//        {
+//            result = a / b;
+//            printf("%.1lf\n", result);
+//        }
+//        break;
+//    }
+//
+//    return 0;
+//
+//}
+////
+//#include <stdio.h>
+//
+//int main() {
+//    float a, b;
+//    char op;
+//
+//    scanf("%f %f", &a, &b);
+//    getchar(); // 用于清除输入缓冲区中的换行符
+//    scanf("%c", &op);
+//
+//    switch (op) {
+//    case '+':
+//        printf("%.1f", a + b);
+//        break;
+//    case '-':
+//        printf("%.1f", a - b);
+//        break;
+//    case '*':
+//        printf("%.1f", a * b);
+//        break;
+//    case '/':
+//        if (b != 0) {
+//            printf("%.1f", a / b);
+//        }
+//        else {
+//            printf("Wrong!");
+//        }
+//        break;
+//    default:
+//        printf("Wrong!");
+//    }
+//
+//    return 0;
+//}
+void exch(int* x, int* y)
+{
+	int tmp=*x;
+	*x = *y;
+	*y = tmp;
+
+}
+void bubble_sort(int arr[], int sz)
+{
+	int i, j;
+	for (i = 0; sz - 1; i++)
+	{
+		for (j = 0; j < sz-1-i; j++)
+		{
+			if (arr[j] < arr[j + 1])
+				exch(&arr[j], &arr[j + 1]);
+		}
+	}
+	;
+}
 
 
+
+int main()
+{
+	int i;
+	int arr[10] = { 0,1,2,3,4,5,6,7,8,9 };
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	bubble_sort(arr,sz);
+	for (i = 0; i < sz; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+
+
+
+	return 0;
+}
 
