@@ -1740,7 +1740,7 @@ using namespace std;
 //{
 //	float result,a, b;
 //	char x;
-//	scanf("%f %f %c",& a,& b,&x);
+//	scanf("%f %f\n%c",& a,& b,&x);
 //	switch (x)
 //	{
 //	case '+':
@@ -1843,42 +1843,499 @@ using namespace std;
 //
 //    return 0;
 //}
-void exch(int* x, int* y)
-{
-	int tmp=*x;
-	*x = *y;
-	*y = tmp;
+//void exch(int* x, int* y)
+//{
+//	int tmp=*x;
+//	*x = *y;
+//	*y = tmp;
+//
+//}
+//void bubble_sort(int arr[], int sz)
+//{
+//	int i, j;
+//	for (i = 0; i<sz - 1; i++)
+//	{
+//		for (j = 0; j < sz-1-i; j++)
+//		{
+//			if (arr[j] < arr[j + 1])
+//			{
+//				exch(&arr[j], &arr[j + 1]);
+//			}
+//		}
+//	}
+//	;
+//}
+//
+//
+//
+//int main()
+//{
+//	int i;
+//	int arr[] = { 0,1,2,3,4,5,6,7,8};
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	bubble_sort(arr,sz);
+//	for (i = 0; i < sz; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//
+//
+//
+//	return 0;
+//}
 
-}
-void bubble_sort(int arr[], int sz)
-{
-	int i, j;
-	for (i = 0; sz - 1; i++)
-	{
-		for (j = 0; j < sz-1-i; j++)
-		{
-			if (arr[j] < arr[j + 1])
-				exch(&arr[j], &arr[j + 1]);
-		}
-	}
-	;
-}
+//int main()
+//{
+//	int t,DD,HH,MM,SS;
+//	scanf("%d", &t);
+//	if (t < 10)
+//	{
+//		printf("%d", t);
+//	}
+//	else if (t >= 10 && t < 60)
+//	{
+//		SS = t;
+//		printf("%d", SS);
+//	}
+//	else if (t >= 60 && t < 3600)
+//	{
+//		MM = t / 60;
+//		SS = t % 60;
+//		printf("%02d:%02d", MM, SS);
+//	}
+//	else if (t >= 3600 && t < 86400)
+//	{
+//		HH = t / 3600;
+//		MM = (t % 3600) / 60;
+//		SS = (t % 3600) % 60;
+//		printf("%02d:%02d:%02d", HH, MM, SS);
+//	}
+//	else if (t >= 86400 && t < 2 * 86400)
+//	{
+//		HH = (t % 86400) / 3600;
+//		MM = ((t % 86400) % 3600) / 60;
+//		SS = ((t % 86400) % 3600) % 60;
+//		printf("1 day %02d:%02d:%02d", HH, MM, SS);
+//	}
+//	else
+//	{
+//		DD = t / 86400;
+//		HH = (t % 86400) / 3600;
+//		MM = ((t % 86400) % 3600) / 60;
+//		SS = ((t % 86400) % 3600) % 60;
+//		printf("%d days %02d:%02d:%02d",DD, HH, MM, SS);
+//	}
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	int x;
+//	float a, b,r;
+//	scanf("%f %f %d", &a, &b, &x);
+//	switch (x)
+//	{
+//	case 1:
+//	{
+//		r = a + b;
+//		printf("%.2f", r);
+//		break;
+//	}
+//	case 2:
+//	{
+//		r = a - b;
+//		printf("%.2f", r);
+//		break;
+//	}
+//	case 3:
+//	{
+//		r = a * b;
+//		printf("%.2f", r);
+//		break;
+//	}
+//	case 4:
+//	{
+//		if (b == 0)
+//		{
+//			printf("error!");
+//			break;
+//		}
+//		r = a / b;
+//		printf("%.2f", r);
+//		break;
+//	}
+//	}
+//	return 0;
+//}
+//
+
+//int main()
+//{
+//	int x;
+//	scanf("%d", &x);
+//	if (x >= 90 && x <= 100)
+//		printf("A");
+//	else if (80 <= x && x <= 89)
+//		printf("B");
+//	else if (70 <= x && x <= 79)
+//		printf("C");
+//	else if (60 <= x && x <= 69)
+//		printf("D");
+//	else if (0 <= x && x <= 59)
+//		printf("E");
+//	else
+//		printf("Score is error!");
+//	return 0;
+//}
+//int leap_year(int x)
+//{
+//	if (x % 4 == 0 && x % 100 != 0 || x % 400 == 0)
+//		return 1;
+//	else
+//		return 0;
+//}
+//
+//int main()
+//{
+//	int m1, m2, y1, y2;
+//	scanf("%d %d %d %d", &m1, &y1, &m2, &y2);
+//	switch (m1)
+//	{
+//	case 4:
+//	case 6:
+//	case 9:
+//	case 11:
+//		printf("30\n");
+//		break;
+//	case 2:
+//	{
+//		if (leap_year(y1))
+//			printf("29\n");
+//		else
+//			printf("28\n");
+//		break;
+//	}
+//	default:
+//		printf("31\n");
+//		break;
+//	}
+//
+//	switch (m2)
+//	{
+//	case 4:
+//	case 6:
+//	case 9:
+//	case 11:
+//		printf("30");
+//		break;
+//	case 2:
+//	{
+//		if (leap_year(y2))
+//			printf("29");
+//		else
+//			printf("28");
+//		break;
+//	}
+//	default:
+//		printf("31");
+//		break;
+//	}
+//
+//
+//
+//
+//	return 0;
+//}
+//#include <stdio.h>
+//
+//int isLeapYear(int year) {
+//    if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+//        return 1;
+//    }
+//    return 0;
+//}
+//
+//int main() {
+//    int m, y;
+//    scanf("%d %d", &y, &m);
+//        switch (m) {
+//        case 2:
+//            if (isLeapYear(y)) {
+//                printf("29\n");
+//            }
+//            else {
+//                printf("28\n");
+//            }
+//            break;
+//        case 4:
+//        case 6:
+//        case 9:
+//        case 11:
+//            printf("30\n");
+//            break;
+//        default:
+//            printf("31\n");
+//            break;
+//        }
+//    return 0;
+//}
+
+//int main()
+//{
+//	char x;
+//	while (scanf("%c", &x) != EOF)
+//	{
+//		getchar();
+//		printf("%d\n", x);
+//	}
+//	return 0;
+//}
+//int main()
+//{
+//	int i,n;
+//	int arr[20];
+//	scanf("%d", &n);
+//	for (i = 0; i < n; i++)
+//	{
+//		int k;
+//		for (k = 0; k < 5; k++)
+//		{
+//			scanf("%d", &arr[k]);
+//		}
+//		printf("%d %d %d %d %d %d\n", arr[0], arr[1], arr[2], arr[3], arr[4], arr[0] + arr[1] + arr[2] + arr[3] + arr[4]);
+//	}
+//	return 0;
+//}
+
+//int main()
+//{
+//	int i, n;
+//	int arr[20];
+//	scanf("%d", &n);
+//	for (i = 0; i < n; i++)
+//	{
+//		int k;
+//		for (k = 0; k < 2; k++)
+//		{
+//			scanf("%d", &arr[k]);
+//		}
+//		printf("%d\n", arr[0] + arr[1] );
+//	}
+//	return 0;
+//}
+//
+
+//int main()
+//{
+//	int n;
+//	while (scanf("%d", &n) != EOF)
+//	{
+//		long long x = pow(2, n) - 1;
+//		printf("%lld\n",x);
+//
+//	}
+//	return 0;
+//}
+
+
+//void exch(int* x, int* y)
+//{
+//	int tmp = *x;
+//	*x = *y;
+//	*y = tmp;
+//}
+
+
+//int main()
+//{
+//	int n,i;
+//	scanf("%d", &n);
+//	int arr[50];
+//	for (i = 0; i < n; i++)
+//	{
+//		scanf("%d", &arr[i]);
+//
+//	}
+//	int max = arr[0];
+//	for (i = 0; i < n; i++)
+//	{
+//		if (arr[i] > max)
+//			max = arr[i];
+//
+//	}
+//	printf("%d", max);
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	char x;
+//	while (scanf("%c", &x) != EOF)
+//	{
+//		//getchar();
+//		if (x >= 65 && x <= 90)
+//		{
+//			x += 32;
+//			printf("%c\n", x);
+//		}
+//		else if (x >= 97 && x <= 122)
+//		{
+//
+//			x -= 32;
+//			printf("%c\n", x);
+//		}
+//
+//
+//	}
+//
+//	return 0;
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 int main()
 {
-	int i;
-	int arr[10] = { 0,1,2,3,4,5,6,7,8,9 };
-	int sz = sizeof(arr) / sizeof(arr[0]);
-	bubble_sort(arr,sz);
-	for (i = 0; i < sz; i++)
+	float exp, weight, fare;
+	double sum;
+	while (scanf("%f %f %f", &exp, &weight, &fare) != EOF)
 	{
-		printf("%d ", arr[i]);
+		getchar();
+		if (fare < 250&&fare>=0)
+			sum = exp * weight * fare;
+		else if (fare>=250&&fare<500)
+			sum = exp * weight * fare*0.98;
+		else if (fare>=500&&fare<1000)
+			sum = exp * weight * fare*0.92;
+		else if (fare>=1000&&fare<2000)
+			sum = 0.9*exp * weight * fare;
+		else
+			sum =0.85* exp * weight * fare;
+		printf("%.2lf\n", sum);
 	}
-
-
-
 	return 0;
 }
-
+//#include <stdio.h>
+//
+//float calculateDiscount(float distance) {
+//    if (distance < 250) {
+//        return 0.0;
+//    }
+//    else if (distance < 500) {
+//        return 0.02;
+//    }
+//    else if (distance < 1000) {
+//        return 0.08;
+//    }
+//    else if (distance < 2000) {
+//        return 0.10;
+//    }
+//    else {
+//        return 0.15;
+//    }
+//}
+//
+//int main() {
+//    float price, weight, distance;
+//    while (scanf("%f %f %f", &price, &weight, &distance) != EOF) {
+//        double discount = calculateDiscount(distance);
+//        double totalCost = price * weight * distance * (1 - discount);
+//        printf("%.2f\n", totalCost);
+//    }
+//    return 0;
+//}
+//#include <stdio.h>
+//
+//typedef struct {
+//    double start;
+//    double end;
+//    double discount;
+//} DiscountLevel;
+//
+//double noDiscount(double distance) {
+//    return 0.0;
+//}
+//
+//double discount2percent(double distance) {
+//    return 0.02;
+//}
+//
+//double discount8percent(double distance) {
+//    return 0.08;
+//}
+//
+//double discount10percent(double distance) {
+//    return 0.10;
+//}
+//
+//double discount15percent(double distance) {
+//    return 0.15;
+//}
+//
+//DiscountLevel discountLevels[] = {
+//    {0, 250, noDiscount},
+//    {250, 500, discount2percent},
+//    {500, 1000, discount8percent},
+//    {1000, 2000, discount10percent},
+//    {2000, -1, discount15percent}
+//};
+//
+//int main() {
+//    double price, weight, distance;
+//    while (scanf("%lf %lf %lf", &price, &weight, &distance) != EOF) {
+//        int i;
+//        for (i = 0; i < sizeof(discountLevels) / sizeof(DiscountLevel); i++) {
+//            if (distance >= discountLevels[i].start && (distance < discountLevels[i].end || discountLevels[i].end == -1)) {
+//                double discount = discountLevels[i].discount(distance);
+//                double freight = price * weight * distance * (1 - discount);
+//                printf("%.2lf\n", freight);
+//                break;
+//            }
+//        }
+//    }
+//    return 0;
+//}
+//#include <stdio.h>
+//
+//struct Discount {
+//    float distance;
+//    float discount;
+//};
+//
+//struct Discount discounts[] = {
+//    {250, 0.00},
+//    {500, 0.02},
+//    {1000, 0.08},
+//    {2000, 0.10},
+//    {1000000, 0.15} // 设立一个足够大的数，以覆盖所有可能的距离
+//};
+//
+//int main() {
+//    float price, weight, distance;
+//    while (scanf("%lf %lf %lf", &price, &weight, &distance) != EOF) {
+//        float discount = 0.0;
+//        for (int i = 0; i < sizeof(discounts) / sizeof(discounts[0]); i++) {
+//            if (distance < discounts[i].distance) {
+//                break;
+//            }
+//            discount = discounts[i].discount;
+//        }
+//        float totalCost = price * weight * distance * (1 - discount);
+//        printf("%.2lf\n", totalCost);
+//    }
+//    return 0;
+//}
