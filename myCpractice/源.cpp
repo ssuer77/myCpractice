@@ -2208,27 +2208,25 @@ using namespace std;
 
 
 
-int main()
-{
-	float exp, weight, fare;
-	double sum;
-	while (scanf("%f %f %f", &exp, &weight, &fare) != EOF)
-	{
-		getchar();
-		if (fare < 250&&fare>=0)
-			sum = exp * weight * fare;
-		else if (fare>=250&&fare<500)
-			sum = exp * weight * fare*0.98;
-		else if (fare>=500&&fare<1000)
-			sum = exp * weight * fare*0.92;
-		else if (fare>=1000&&fare<2000)
-			sum = 0.9*exp * weight * fare;
-		else
-			sum =0.85* exp * weight * fare;
-		printf("%.2lf\n", sum);
-	}
-	return 0;
-}
+//int main()
+//{
+//	double exp, weight, fare,sum;
+//	while (scanf("%lf %lf %lf", &exp, &weight, &fare) != EOF)
+//	{
+//		if (fare < 250&&fare>=0)
+//			sum = exp * weight * fare;
+//		else if (fare>=250&&fare<500)
+//			sum = exp * weight * fare*0.98;
+//		else if (fare>=500&&fare<1000)
+//			sum = exp * weight * fare*0.92;
+//		else if (fare>=1000&&fare<2000)
+//			sum = 0.9*exp * weight * fare;
+//		else
+//			sum =0.85* exp * weight * fare;
+//		printf("%.2f\n", sum);
+//	}
+//	return 0;
+//}
 //#include <stdio.h>
 //
 //float calculateDiscount(float distance) {
@@ -2339,3 +2337,167 @@ int main()
 //    }
 //    return 0;
 //}
+//int main()
+//{
+//	int x;
+//	while (scanf("%d", &x) != EOF)
+//	{
+//		printf("%d\n", x * x);
+//
+//	}
+//	return 0;
+//}
+
+//int equ(double x, double y)
+//{
+//	if (x > y)
+//	{
+//		if (x - y <= 0.001)
+//			return 1;
+//	}
+//	else if (x == y)
+//		return 1;
+//	else
+//	{
+//		if (y - x <= 0.001)
+//			return 1;
+//	}
+//	return 0;
+//
+//}
+//
+//int zhijiao(double x, double y, double z)
+//{
+//	if (fabs(x * x + y * y - z * z) <= 1 || fabs(x * x + z * z - y * y) <= 1 || fabs(y * y + z * z - x * x) <= 1)
+//		return 1;
+//	return 0;
+//}
+//
+//
+//
+//int main()
+//{
+//	double a, b, c;
+//	while (scanf("%lf %lf %lf", &a, &b, &c) != EOF)
+//	{
+//		if (equ(a, b) || equ(a, c) || equ(b, c))
+//		{
+//			if (equ(a, b) && equ(a, c) && equ(b, c))
+//				printf("等边三角形\n");
+//			else if (zhijiao(a, b, c))
+//				printf("等腰直角三角形\n");
+//			else
+//				printf("等腰三角形\n");
+//
+//		}
+//		else if (!(equ(a, b) || equ(a, c) || equ(b, c)) && zhijiao(a, b, c))
+//			printf("直角三角形\n");
+//		else if ((a + b <= c) || (a + c <= b) || (b + c <= a))
+//			printf("不是三角形\n");
+//		else
+//			printf("一般三角形\n");
+//
+//
+//	}
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	int n, x, y,i;
+//	scanf("%d", &n);
+//	for (i = 0; i < n; i++)
+//	{
+//		scanf("%d %d", &x, &y);
+//		if (x % y == 0)
+//			printf("YES\n");
+//		else
+//			printf("NO\n");
+//
+//	}
+//
+//
+//
+//
+//	return 0;
+//}
+
+//int  grade(int x)
+//{
+//	if (x >= 90 && x <= 100)
+//		return 1;
+//	else if (x >= 80 && x <= 89)
+//		return 2;
+//	else if (x >= 60 && x <= 79)
+//		return 3;
+//	else
+//		return 4;
+//
+//}
+//
+//
+//
+//int main()
+//{
+//	int x;
+//	while (scanf("%d", &x) != EOF)
+//	{
+//		if (x == -1)
+//			break;
+//		int t = grade(x);
+//		switch (t)
+//		{
+//		case 1:
+//			printf("A\n");
+//			break;
+//		case 2:
+//			printf("B\n");
+//			break;
+//		case 3:
+//			printf("C\n");
+//			break;
+//		case 4:
+//			printf("D\n");
+//			break;
+//
+//		}
+//	}
+//	return 0;
+//}
+
+int main()
+{
+	int x;
+	while (scanf("%d", &x) != EOF)
+	{
+		if (x == -1)
+			break;
+		switch (x)
+		{
+		case 1:
+			printf("A\n");
+			break;
+		case 2:
+			printf("B\n");
+			break;
+		case 3:
+			printf("C\n");
+			break;
+		case 4:
+			printf("D\n");
+			break;
+		case 5:
+			printf("E\n");
+			break;
+		default:
+			printf("?\n");
+			break;
+
+		}
+	}
+	return 0;
+}
+
+
+
