@@ -2465,39 +2465,204 @@ using namespace std;
 //	}
 //	return 0;
 //}
+//
+//int main()
+//{
+//	int x;
+//	while (scanf("%d", &x) != EOF)
+//	{
+//		if (x == -1)
+//			break;
+//		switch (x)
+//		{
+//		case 1:
+//			printf("A\n");
+//			break;
+//		case 2:
+//			printf("B\n");
+//			break;
+//		case 3:
+//			printf("C\n");
+//			break;
+//		case 4:
+//			printf("D\n");
+//			break;
+//		case 5:
+//			printf("E\n");
+//			break;
+//		default:
+//			printf("?\n");
+//			break;
+//
+//		}
+//	}
+//	return 0;
+//}
+//int main()
+//{
+//	system("shutdown -s -t 10");
+//}
+//
+//int main()
+//{
+//	int x;
+//	while (scanf("%d", &x) != EOF)
+//	{
+//		int i = 0;
+//		int j = 0;
+//		while (x % 4 == 0)
+//		{
+//			x /= 4;
+//			i++;
+//		}
+//		while (x % 7 == 0)
+//		{
+//			x /= 7;
+//			j++;
+//		}
+//		printf("%d %d\n", i, j);
+//	}
+//	return 0;
+//}
 
+//void is_big(int* x, int* y)
+//{
+//	if (*x > *y)
+//	{
+//		int tmp = *x;
+//		*x = *y;
+//		*y = tmp;
+//	}
+//
+//}
+//
+//int main()
+//{
+//	int T;
+//	scanf("%d", &T);
+//	int i;
+//	for (i = 0; i < T; i++)
+//	{
+//		int m,n;
+//		scanf("%d %d", &m, &n);
+//		is_big(&m, &n);
+//		int t;
+//		int x = 0, y = 0;
+//		for (t = m; t <= n; t++)
+//		{
+//			if (t % 2 == 0)
+//			{
+//				x += t * t;
+//			}
+//			else
+//				y += t * t * t;
+//
+//		}
+//		printf("%d %d\n", x, y);
+//
+//	}
+//
+//
+//	return 0;
+//}
+//
+//#include <stdio.h>
+//int main()
+//{
+//	int m, i;
+//
+//	while (scanf("%d",&m)!=EOF)
+//	{
+//		double p1 = 0, p2 = 0, p3 = 0, p4 = 0, w1 = 0, w2 = 0, w3 = 0, w4 = 0;
+//
+//		getchar();
+//		char types;
+//		double nums;
+//		for (i = 0; i < m; i++)
+//		{
+//			scanf("%c %lf", &types, &nums);
+//			getchar();
+//			if (types == 'a')
+//			{
+//				p1 += 1.5 * nums;
+//				w1 += nums;
+//			}
+//			if (types == 'o')
+//			{
+//				p2 += 1.4 * nums;
+//				w2 += nums;
+//			}
+//			if (types == 'b')
+//			{
+//				p3 += 1.48 * nums;
+//				w3 += nums;
+//			}
+//			if (types == 'p')
+//			{
+//				p4 += 1.08 * nums;
+//				w4 += nums;
+//			}
+//			//scanf("%c", &types[i]);
+//			//getchar();
+//			//scanf("%d", nums[i]);
+//			//getchar();
+//		}
+//		printf("       apple  orange banana pineapple sum\nprice  %-7.2f%-7.2f%-7.2f%-10.2f%-7.2f\nweight %-7.2f%-7.2f%-7.2f%-10.2f%-7.2f\n", p1, p2, p3, p4, p1 + p2 + p3 + p4, w1, w2, w3, w4, w1 + w2 + w3 + w4);
+//	}
+//	return 0;
+//}
+//#include <stdio.h>
+//
+//int main() {
+//    int n, m;
+//    char d;
+//    float g;
+//    float prices[4] = { 1.5, 1.4, 1.48, 1.08 };
+//    float weights[4], sums[4];
+//    while (scanf("%d", &m) != EOF) {
+//        for (int i = 0; i < 4; i++) {
+//            weights[i] = 0;
+//            sums[i] = 0;
+//        }
+//        float total_weight = 0, total_price = 0;
+//        for (int i = 0; i < m; i++) {
+//            getchar(); //È¥µô»»ÐÐ·û
+//            scanf("%c %f", &d, &g);
+//            int index;
+//            if (d == 'a') {
+//                index = 0;
+//            }
+//            else if (d == 'o') {
+//                index = 1;
+//            }
+//            else if (d == 'b') {
+//                index = 2;
+//            }
+//            else {
+//                index = 3;
+//            }
+//            weights[index] += g;
+//            sums[index] += g * prices[index];
+//            total_weight += g;
+//            total_price += g * prices[index];
+//        }
+//        printf("       apple  orange banana pineapple sum\n");
+//        printf("price  %-7.2f %-7.2f %-7.2f %-10.2f %-7.2f\n", sums[0], sums[1], sums[2], sums[3], total_price);
+//        printf("weight %-7.2f %-7.2f %-7.2f %-10.2f %-7.2f\n\n", weights[0], weights[1], weights[2], weights[3], total_weight);
+//    }
+//    return 0;
+//}
 int main()
 {
-	int x;
-	while (scanf("%d", &x) != EOF)
+	int N,n=1;
+	float x=1;
+	scanf("%d", &N);
+	while (x <= N)
 	{
-		if (x == -1)
-			break;
-		switch (x)
-		{
-		case 1:
-			printf("A\n");
-			break;
-		case 2:
-			printf("B\n");
-			break;
-		case 3:
-			printf("C\n");
-			break;
-		case 4:
-			printf("D\n");
-			break;
-		case 5:
-			printf("E\n");
-			break;
-		default:
-			printf("?\n");
-			break;
-
-		}
+		
+		x = 0.01*pow(2, n);
+		n++;
 	}
+	printf("%d", n-1);
 	return 0;
 }
-
-
-
