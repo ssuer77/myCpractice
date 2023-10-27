@@ -2652,17 +2652,608 @@ using namespace std;
 //    }
 //    return 0;
 //}
+//int main()
+//{
+//	int N,n=1;
+//	float x=1;
+//	scanf("%d", &N);
+//	while (x <= N)
+//	{
+//		
+//		x = 0.01*pow(2, n);
+//		n++;
+//	}
+//	printf("%d", n-1);
+//	return 0;
+//}
+
+//int main()
+//{
+//	int M;
+//	scanf("%d", &M);
+//	int ch[50],i;
+//	for (i = 0; i < M; i++)
+//	{
+//		scanf("%d", &ch[i]);
+//	}
+//	int max=ch[0], min=ch[0], ave=0,sum=0;
+//	for (i = 0; i < M; i++)
+//	{
+//		if (ch[i] > max)
+//			max = ch[i];
+//		if (ch[i] < min)
+//			min = ch[i];
+//		sum += ch[i];
+//	}
+//	ave = sum / M;
+//	printf("%d %d %d", max, min, ave);
+//
+//
+//
+//	return 0;
+//}
+
+//char stage(int x)
+//{
+//	if (90 <= x && x <= 100)
+//		return 'a';
+//	else if (80 <= x && x <= 89)
+//		return 'b';
+//	else if (70 <= x && x <= 79)
+//		return 'c';
+//	else if (60 <= x && x <= 69)
+//		return 'd';
+//	else
+//		return 'e';
+//
+//
+//}
+//
+////void sort()
+////{
+////	int p, q;
+////	for (p = 0; p < sz; p++)
+////	{
+////		for (q = sz - 1; q > p; q--)
+////		{
+////			if (chA[q] > chA[q - 1])
+////			{
+////				int tmp = chA[q];
+////				chA[q] = chA[q - 1];
+////				chA[q - 1] = tmp;
+////			}
+////
+////		}
+////
+////	}
+////
+////}
+//
+//int main()
+//{
+//	int n,i;
+//	int A=0, B=0, C=0, D=0, E=0;
+//	int chA[1000], chB[1000], chC[1000], chD[1000], chE[1000];
+//	scanf("%d", &n);
+//	getchar();
+//	for (i = 0; i < n; i++)
+//	{
+//		int x;
+//		scanf("%d", &x);
+//		getchar();
+//		switch (stage(x))
+//		{
+//		case 'a':
+//			chA[A] = x;
+//			A++;
+//			break;
+//		case 'b':
+//			chB[B] = x;
+//			B++;
+//			break;
+//		case 'c':
+//			chC[C] = x;
+//			C++;
+//			break;
+//		case 'd':
+//			chD[D] = x;
+//			D++;
+//			break;
+//		case 'e':
+//			chE[E] = x;
+//			E++;
+//			break;
+//		}
+//	}
+//		printf("%d %d %d %d %d\n", A, B, C, D, E);
+//		if (A > B && A > C && A > D && A > E)
+//		{
+//			printf("%d\n", A);
+//			int p, q;
+//			int sz = sizeof(chA) / sizeof(chA[0]);
+//			for (p = 0; p < A; p++)
+//			{
+//				for (q = A - 1; q > p; q--)
+//				{
+//					if (chA[q] > chA[q - 1])
+//					{
+//						int tmp = chA[q];
+//						chA[q] = chA[q - 1];
+//						chA[q - 1] = tmp;
+//					}
+//				}
+//			}
+//			int j;
+//			for (j = 0; j < A; j++)
+//			{
+//				if (j != A - 1)
+//					printf("%d ", chA[j]);
+//				else
+//					printf("%d", chA[j]);
+//			}
+//		}
+//		if (B > A && B >C && B > D && B > E)
+//		{
+//			printf("%d\n", B);
+//			int p, q;
+//			int sz = sizeof(chB) / sizeof(chB[0]);
+//			for (p = 0; p < B; p++)
+//			{
+//				for (q = B - 1; q > p; q--)
+//				{
+//					if (chB[q] > chB[q - 1])
+//					{
+//						int tmp = chB[q];
+//						chB[q] = chB[q - 1];
+//						chB[q - 1] = tmp;
+//					}
+//				}
+//			}
+//			int j;
+//			for (j = 0; j < B; j++)
+//			{
+//				if (j != B - 1)
+//					printf("%d ", chB[j]);
+//				else
+//					printf("%d", chB[j]);
+//			}
+//		}
+//		if (C > B && C > A && C > D && C > E)
+//		{
+//			printf("%d\n", C);
+//			int p, q;
+//			int sz = sizeof(chC) / sizeof(chC[0]);
+//			for (p = 0; p < C; p++)
+//			{
+//				for (q = C - 1; q > p; q--)
+//				{
+//					if (chC[q] > chC[q - 1])
+//					{
+//						int tmp = chC[q];
+//						chC[q] = chC[q - 1];
+//						chC[q - 1] = tmp;
+//					}
+//				}
+//			}
+//			int j;
+//			for (j = 0; j < C; j++)
+//			{
+//				if (j != C - 1)
+//					printf("%d ", chC[j]);
+//				else
+//					printf("%d", chC[j]);
+//			}
+//		}
+//		if (D > B && D > C && D > A && D > E)
+//		{
+//			printf("%d\n", D);
+//			int p, q;
+//			int sz = sizeof(chD) / sizeof(chD[0]);
+//			for (p = 0; p < D; p++)
+//			{
+//				for (q = D - 1; q > p; q--)
+//				{
+//					if (chD[q] > chD[q - 1])
+//					{
+//						int tmp = chD[q];
+//						chD[q] = chD[q - 1];
+//						chD[q - 1] = tmp;
+//					}
+//				}
+//			}
+//			int j;
+//			for (j = 0; j < D; j++)
+//			{
+//				if (j != D - 1)
+//					printf("%d ", chD[j]);
+//				else
+//					printf("%d", chD[j]);
+//			}
+//		}
+//		if (E > B && E > C && E > D && E > A)
+//		{
+//			printf("%d\n", E);
+//			int p, q;
+//			int sz = sizeof(chE) / sizeof(chE[0]);
+//			for (p = 0; p < E; p++)
+//			{
+//				for (q = E - 1; q > p; q--)
+//				{
+//					if (chE[q] > chE[q - 1])
+//					{
+//						int tmp = chE[q];
+//						chE[q] = chE[q - 1];
+//						chE[q - 1] = tmp;
+//					}
+//				}
+//			}
+//			int j;
+//			for (j = 0; j < E; j++)
+//			{
+//				if (j != E - 1)
+//					printf("%d ", chE[j]);
+//				else
+//					printf("%d", chE[j]);
+//			}
+//		}
+//
+//
+//	
+//
+//
+//
+//	return 0;
+//}
+//
+
+
+
+
+
+//int main()
+//{
+//	int N,i,j;
+//	while (scanf("%d",&N)!=EOF)
+//	{
+//		int ch[1000] = { 0 };
+//		if (N >= 2)
+//		{
+//			for (i = 0; i < N; i++)
+//			{
+//				if (i % 2 == 1)
+//					ch[i] = 1;
+//			}
+//		}
+//		for (j = 3; j <= N; j++)
+//		{
+//			for (i = 0; i < N; i++)
+//			{
+//				if ((i + 1) % j == 0)
+//				{
+//					if (ch[i] == 0)
+//						ch[i] = 1;
+//					else
+//						ch[i] = 0;
+//				}
+//			}
+//		}
+//		for (i = 0; i < N; i++)
+//		{
+//			printf("%d", ch[i]);
+//
+//		}
+//
+//	}
+//
+//
+//	return 0;
+//}
+//
+
+
+//int is_want1 (int x)
+//{
+//	int i=0,j;
+//	int ch[100] = {0};
+//	if (x == 1)
+//		return 0;
+//	while (x != 0)
+//	{
+//		ch[i] = x % 10;
+//		x = (x - ch[i]) / 10;
+//		i++;
+//	}
+//	int t = 0;
+//	for (j = 0; j < 100; j++)
+//	{
+//		t += ch[j];
+//	}
+//	if (t % 17 == 0)
+//		return 1;
+//	else
+//		return 0;
+//
+//}
+//
+//int is_want2(int x)
+//{
+//	if (is_want1(x) )
+//		if (is_want1(x+1))
+//		return 1;
+//	else
+//		return 0;
+//}
+//
+//
+//
+//int main()
+//{
+//	int n;
+//	while (scanf("%d",&n)!=EOF)
+//	{
+//		int k = 0;
+//		int i = 1, j;
+//		while (1)
+//		{
+//			if (is_want2(i))
+//			{
+//				k++;
+//				if (k == n)
+//					break;
+//			}
+//				i++;
+//		}
+//		printf("%d\n", i);
+//	}
+//	return 0;
+//}
+//
+
+//int main()
+//{
+//	int T, N;
+//	scanf("%d", &T);
+//	int i = 0, j = 0;
+//	for (i = 0; i < T; i++)
+//	{
+//		int arr[20];
+//		scanf("%d", &N);
+//		for (j = 0; j < N; j++)
+//		{
+//			scanf("%d", &arr[j]);
+//		}
+//		int p, q;
+//		for (p = 0; p < N; p++)
+//		{
+//			for (q = N - 1; q > p; q--)
+//			{
+//				if (arr[q] < arr[q - 1])
+//				{
+//					int tmp = arr[q];
+//					arr[q] = arr[q - 1];
+//					arr[q - 1] = tmp;
+//				}
+//			}
+//		}
+//
+//		for (j = 0; j < N; j++)
+//		{
+//			if (j != N - 1)
+//				printf("%d ", arr[j]);
+//			else
+//				printf("%d", arr[j]);
+//		}
+//		printf("\n");
+//	}
+//
+//
+//
+//	return 0;
+//}
+
+//int jiecheng(int x)
+//{
+//	if (x != 1)
+//	{
+//		return x * jiecheng(x - 1);
+//	}
+//	else
+//		return 1;
+//
+//
+//
+//
+//}
+//
+//
+//int main()
+//{
+//	int N;
+//	while (scanf("%d", &N) != EOF)
+//	{
+//		printf("%d\n", jiecheng(N));
+//	}
+//	return 0;
+//}
+
+//int main()
+//{
+//	int arr[10] = { 0 };
+//	int i, j;
+//	for (i = 0; i < 10; i++)
+//	{
+//		scanf("%d", &arr[i]);
+//	}
+//	int sum=0;
+//	for (i = 0; i < 10; i++)
+//	{
+//		sum += arr[i];
+//	}
+//	float ave;
+//	ave = sum / 10.0;
+//	printf("%.1f\n", ave);
+//	for (i = 0; i < 10; i++)
+//	{
+//		if (arr[i] > ave)
+//		{
+//			printf("%d ", arr[i]);
+//		}
+//	}
+//
+//
+//
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	int S,num,current=0;
+//	while (scanf("%d", &S) != EOF)
+//	{
+//		int i,max=0;
+//		for (i = 0; i < S; i++)
+//		{
+//			current = current + S - i - 1 - i;
+//			if (current > max)
+//				max = current;
+//		}
+//		num = (S - 1) * (S - 1) / 2.0 + (S - 1) / 2.0;
+//		printf("%d %d\n", max,num);
+//	}
+//	return 0;
+//}
+//
+
+//int main()
+//{
+//	double N = 200.0;
+//	double n;
+//	while (scanf("%lf",&n)!=EOF)
+//	{
+//		int i = 0;
+//		double t;
+//
+//		while (1)
+//		{
+//			//1
+//			t = N / 50;
+//			N = N - t * 13;
+//			i++;
+//			if (N < n)
+//				break;
+//			//2
+//			t = N / 53;
+//			N = N - t * 13;
+//			i++;
+//			if (N < n)
+//				break;
+//
+//		}
+//		printf("%d\n", i);
+//	}
+//	return 0;
+//}
+
+//double Feb(int x)
+//{
+//	if (x > 1)
+//		return	1.0 / Feb(x - 1) + 1;
+//	else
+//		return 2;
+//
+//}
+//
+//
+//int main()
+//{
+//	int n;
+//	while (scanf("%d", &n) != EOF)
+//	{
+//		int i;
+//		double sum=0;
+//		for (i = 1; i <= n; i++)
+//		{
+//			sum += Feb(i);
+//		}
+//		printf("%.6lf\n", sum);
+//	}
+//
+//
+//	return 0;
+//}
+//int main()
+//{
+//	int  str[] = { 1,2,3,4,5 };
+//	//int sz = sizeof(str) / sizeof(str[0]);
+//	printf(str);
+//
+//
+//
+//	return 0;
+//}
+
+void reverse(char* str)
+{
+	char tmp = *str;
+	int len = strlen(str);
+	*str = *(str + len - 1);
+	*(str + len - 1) = '\0';
+	if (strlen(str + 1)>=2)
+	reverse(str + 1);
+	*(str + len - 1) = tmp;
+
+}
+
+
 int main()
 {
-	int N,n=1;
-	float x=1;
-	scanf("%d", &N);
-	while (x <= N)
-	{
-		
-		x = 0.01*pow(2, n);
-		n++;
-	}
-	printf("%d", n-1);
+	char arr[] = "abcdefg";
+	reverse(arr);
+	printf("%s\n",arr);
+
 	return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
