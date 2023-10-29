@@ -3216,16 +3216,214 @@ using namespace std;
 //}
 //
 
+
+//long long fac(int x)
+//{
+//	if (x != 1)
+//		return x * fac(x - 1);
+//	else
+//		return 1;
+//}
 //
+//int miner(int a, int b)
+//{
+//	if (a < b)
+//		return a;
+//	else
+//		return b;
+//
+//}
+//
+//
+//int main()
+//{
+//	int N;
+//	scanf("%d", &N);
+//	long long x = fac(N);
+//	long long y = x;
+//	int a = 0, b = 0;
+//	printf("%lld\n", x);
+//
+//	while (x % 2 == 0)
+//	{
+//		a++;
+//		x = x / 2;
+//	}
+//	while (y % 5 == 0)
+//	{
+//		b++;
+//		y = y / 5;
+//	}
+//	int ret = miner(a, b);
+//	printf("%d\n", ret);
+//	return 0;
+//}
+
+//int miner(int a, int b)
+//{
+//	return ((a > b) ? b : a);
+//}
+//int main()
+//{
+//	int a = 0, b = 0;
+//	int N,i;
+//	scanf("%d", &N);
+//	for (i = 1; i <= N; i++)
+//	{
+//		int tmp0 = i;
+//		int tmp1 = i;
+//		int tmp2 = i;
+//
+//			while (tmp1 % 2 == 0)
+//	{
+//		a++;
+//		tmp1= tmp1 / 2;
+//	}
+//	while (tmp2 % 5 == 0)
+//	{
+//		b++;
+//		tmp2 = tmp2 / 5;
+//	}
+//
+//	}
+//		int ret = miner(a, b);
+//		printf("%d", ret);
+//
+//	return 0;
+//}
+
+//int five(int x)
+//{
+//	int i = 0;
+//	int ch[100] = { 0 };
+//	while (x != 0)
+//	{
+//		ch[i] = x % 10;
+//		x = (x - ch[i]) / 10;
+//		i++;
+//	}
+//	for (i = 0; i <= 100; i++)
+//	{
+//		if (ch[i] == 5)
+//			return 1;
+//	}
+//	return 0;
+//
+//}
+//
+//
+//int main()
+//{
+//	int n;
+//	while (scanf("%d", &n) != EOF)
+//	{
+//		int num=0,i;
+//		for (i=1;i<=n;i++)
+//		{
+//			//判断是否有5
+//			if (five(i))
+//			{
+//				//判断是否能被3整除
+//				if (i % 3 == 0)
+//					num++;
+//			}
+//		}
+//		printf("%d\n", num);
+//
+//
+//	}
+//
+//	return 0;
+//}
 
 
+//int main()
+//{
+//	int L,R,sum=0;
+//	scanf("%d %d",&L,&R);
+//	int i;
+//	for (i = L; i <= R; i++)
+//	{
+//		//转化二进制
+//		int j=0;
+//		int k = i;
+//		int bi[64] = { 0 };
+//		while (k > 0)
+//		{
+//			bi[j] = k % 2;
+//			k /= 2;
+//			j++;
+//		}
+//		int ret = 0;
+//		for (j = 0; j < 64; j++)
+//		{
+//			ret += bi[j];
+//		}
+//		sum += ret;
+//	}
+//	printf("%d", sum);
+//
+//
+//
+//	return 0;
+//}
+
+//
+//int main()
+//{
+//	int N;
+//	int ch2[100] = { 0 };
+//	int k = 0;
+//	int i, j;
+//	scanf("%d", &N);
+//	for (i = 1; i <= N; i++)
+//	{
+//		int sum = 0;
+//		int ch1[100] = { 0 };
+//		for (j = 1; j < i; j++)
+//		{
+//
+//			if (i % j == 0)
+//			{
+//				sum += j;
+//			}
+//		}
+//		if (i == sum)
+//		{
+//			ch2[k] = i;
+//			k++;
+//		}
+//
+//	}
+//	//for (i = 0; i < k; i++)
+//	//{
+//	//	printf("%d\n", ch2[i]);
+//	//}
+//	//for (k = 0; k < 100; k++)
+//	//{
+//	//	if (ch2[k] != 0)
+//	//	{
+//	//		printf("%d\n", ch2[k]);
+//	//	}
+//	//}
+//
+//
+//
+//
+//	return 0;
+//}
 
 
-
-
-
-
-
+//int main()
+//{
+//	int ar[20] = { 9 };
+//	ar[7] = 1;
+//	7[ar] = 2;
+//	*(ar + 7) = 3;
+//
+//
+//	return 0;
+//}
 
 
 
