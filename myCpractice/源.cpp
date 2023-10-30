@@ -3425,32 +3425,174 @@ using namespace std;
 //	return 0;
 //}
 
+//struct Stu
+//{
+//	char name[20];
+//	int age;
+//	double score;
+//};
+//
+//void set_stu(struct Stu *ss)
+//{
+//	strcpy((*ss).name, "zhangsan");
+//	(*ss).age = 20;
+//	(*ss).score = 100.0;
+//}
+//
+//void print_stu(struct Stu ss)
+//{
+//	printf("%s %d %lf\n", ss.name, ss.age, ss.score);
+//}
+//
+//
+//int main()
+//{
+//	struct Stu s = { 0 };
+//	set_stu(&s);
+//	print_stu(s);
+//
+//	return 0;
+//}
 
 
+//int main()
+//{
+//
+//	//printf("%d", sizeof(short));
+//	//return 0;
+//	char x = 2;
+//	char y = x * 1.2;
+//	printf("%f", y);
+//}
 
 
+//#include <stdio.h>
+//#include <string.h>
+//
+//#define MAX_SENTENCES 100
+//#define MAX_LENGTH 100
+//
+//void rotateSentences(char sentences[MAX_SENTENCES][MAX_LENGTH], int count) {
+//    // 计算每个句子的长度
+//    int lengths[MAX_SENTENCES];
+//    for (int i = 0; i < count; i++) {
+//        lengths[i] = strlen(sentences[i]);
+//    }
+//
+//    // 找到最长的句子长度
+//    int maxLength = 0;
+//    for (int i = 0; i < count; i++) {
+//        if (lengths[i] > maxLength) {
+//            maxLength = lengths[i];
+//        }
+//    }
+//
+//    // 输出旋转后的句子
+//    for (int i = 0; i < maxLength; i++) {
+//        for (int j = count - 1; j >= 0; j--) {
+//            if (i < lengths[j]) {
+//                printf("%c", sentences[j][i]);
+//            }
+//            else {
+//                printf(" ");
+//            }
+//        }
+//        printf("\n");
+//    }
+//}
+//
+//int main() {
+//    char sentences[MAX_SENTENCES][MAX_LENGTH];
+//    int count = 0;
+//
+//    // 读取输入的句子
+//    char line[MAX_LENGTH];
+//    while (fgets(line, sizeof(line), stdin)) {
+//        line[strcspn(line, "\n")] = '\0';  // 去除换行符
+//        strcpy(sentences[count], line);
+//        count++;
+//    }
+//
+//    // 调用函数旋转句子并输出结果
+//    rotateSentences(sentences, count);
+//
+//    return 0;
+//}
+//int main()
+//{
+//	char a, b, c, d;
+//	scanf("%c%c%c.%c",&a, &b, &c, &d);
+//	printf("%c.%c%c%c", d, c, b, a);
+//	return 0;
+//}
+//
+
+//int main()
+//{
+//	int n;
+//
+//	while (scanf("%d", &n)!=EOF)
+//	{
+//		int i=0;
+//		int k = 0;
+//		int io[100] = {0};
+//		int ar[100] = { 0 };
+//		for (i = 0; i < n; i++)
+//		{
+//			int p;
+//			scanf("%d", &p);
+//			io[i] = p;
+//			ar[p-1]++;
+//
+//		}
+//		int max = 0;
+//		int num=0;
+//		int th[20] = { 0 };
+//		int j = 0;
+//		for (i = 0; i < 100; i++)
+//		{
+//			if (ar[i] > max)
+//			{
+//				max = ar[i];
+//			}
+//		}
+//		for (i = 0; i < 100; i++)
+//		{
+//			if (ar[i] == max)
+//			{
+//				th[i] = i + 1;
+//			}
+//		}
+//		int ret;
+//		for (i = 0; i < 100; i++)
+//		{
+//			for (j = 0; j < 20; j++)
+//			{
+//				if (io[i] == th[j])
+//					ret = io[i]+1;
+//			}
+//		}
+//
+//		printf("%d %d\n", ret, max);
+//
+//	}
+//	return 0;
+//}
+//
+
+int main()
+{
+	int a = 3;
+	int b = 4;
+	//a = a ^ b;
+	//b = a ^ b;
+	//a = a ^ b;
+	a ^= b ^= a ^= b;
+	printf("%d %d", a, b);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	return 0;
+}
 
 
 
