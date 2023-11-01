@@ -3580,19 +3580,51 @@ using namespace std;
 //}
 //
 
+//int main()
+//{
+//	int a = 3;
+//	int b = 4;
+//	//a = a ^ b;
+//	//b = a ^ b;
+//	//a = a ^ b;
+//	a ^= b ^= a ^= b;
+//	printf("%d %d", a, b);
+//
+//
+//	return 0;
+//}
+
 int main()
 {
-	int a = 3;
-	int b = 4;
-	//a = a ^ b;
-	//b = a ^ b;
-	//a = a ^ b;
-	a ^= b ^= a ^= b;
-	printf("%d %d", a, b);
-
-
+	double x = 111111111.0*111111111.0;
+	printf("%lf", x);
 	return 0;
 }
+
+
+
+
+
+
+dd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
