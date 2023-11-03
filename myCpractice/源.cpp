@@ -4695,62 +4695,331 @@ using namespace std;
 //
 //
 
-int main()
+//int tongji(float mark[], int n)
+//{
+//	int i;
+//	int count = 0;
+//	for (i = 0; i < n; i++)
+//	{
+//		if (mark[i] < 60)
+//		{
+//			count++;
+//		}
+//	}
+//	return count;
+//}
+//
+//int main()
+//
+//{
+//
+//	float mark[40];
+//
+//	int m, n, count;
+//
+//	cin >> n;
+//
+//	for (m = 0; m < n; m++)
+//
+//	{
+//
+//		cin >> mark[m];
+//
+//	}
+//
+//	count = tongji(mark, n);
+//
+//	cout << count;
+//
+//	return 0;
+//
+//}
+//
+//void swap(int** x, int** y)
+//{
+//	int tmp = **x;
+//	**x = **y;
+//	**y = tmp;
+//}
+//void sort(int* a, int* b, int* c)
+//{
+//	if (*a > *b)
+//		swap(*a,* b);
+//	if (*a > *c)
+//		swap(*a, *c);
+//	if (*b >* c)
+//		swap(*b, *c);
+//}
+//
+//int main()
+//{
+//	int T;
+//	scanf("%d", &T);
+//	int i, j;
+//	int a, b, c;
+//	for (i = 0; i < T; i++)
+//	{
+//		getchar();
+//		scanf("%c%c%c", &a, &b, &c);
+//		sort(&a, &b, &c);
+//		printf("%c %c %c\n", a, b, c);
+//
+//	}
+//
+//	return 0;
+////}
+//void swap(int** x, int** y)
+//{
+//	int tmp = **x;
+//	**x = **y;
+//	**y = tmp;
+//}
+//void sort(int* a, int* b, int* c)
+//{
+//	if (*a >* b)
+//	{
+//		int tmp = *a;
+//		*a = *b;
+//		*b = tmp;
+//	}
+//
+//	if (*a > *c)
+//	{
+//		int tmp = *a;
+//		*a = *c;
+//		*c = tmp;
+//	}
+//
+//	if (*b >* c)
+//	{
+//		int tmp = *c;
+//		*c = *b;
+//		*b = tmp;
+//	}
+//
+//}
+//
+//int main()
+//{
+//	int T;
+//	scanf("%d", &T);
+//	int i, j;
+//	int a, b, c;
+//	for (i = 0; i < T; i++)
+//	{
+//		getchar();
+//		scanf("%c%c%c", &a, &b, &c);
+//		sort(&a, &b, &c);
+//		printf("%c %c %c\n", a, b, c);
+//
+//	}
+//
+//	return 0;
+//}
+//
 
-{
+//void swap(char* x, char* y)
+//{
+//	char tmp = *x;
+//	*x = *y;
+//	*y = tmp;
+//
+//}
+//
+//
+//
+//int count_num(char arr[])
+//{
+//	int i = 0;
+//	while (*(arr + i) != '\0')
+//	{
+//		i++;
+//
+//	}
+//	return i;
+//}
+//
+//void sort(char arr[], int num)
+//{
+//	int i, j;
+//	for (i = 0; i < num - 1; i++)
+//	{
+//		for (j = 0; j < num - 1 - i; j++)
+//		{
+//			if (arr[j] > arr[j + 1])
+//				swap(&arr[j], &arr[j + 1]);
+//		}
+//	}
+//
+//}
+//
+//void print(char arr[], int num)
+//{
+//	int i;
+//	for (i = 0; i < num; i++)
+//	{
+//		printf("%c", *(arr + i));
+//	}
+//	printf("\n");
+//
+//}
+//
+//int main()
+//{
+//	char arr[100] = { '0'};
+//	while (scanf("%s", arr) != EOF)
+//	{
+//		int num = count_num(arr);
+//		//排序
+//		sort(arr,num);
+//		//输出
+//		print(arr,num);
+//
+//		//初始化
+//		memset(arr, 0, sizeof(arr));
+//	}
+//	return 0;
+//}
 
-	float mark[40];
-
-	int m, n, count;
-
-	cin >> n;
-
-	for (m = 0; m < n; m++)
-
-	{
-
-		cin >> mark[m];
-
-	}
-
-	count = tongji(mark, n);
-
-	cout >> count;
-
-	return 0;
-
-}
 
 
 
 
 
 
+//
+//
+//
+//
+//
+//#include <iostream>
+//#include <bits/stdc++.h>
+//
+//
+//using namespace std;
+//int jiecheng(int n)
+//{
+//    int i = 0;
+//    int x = 0;
+//    for (i = 1, x = 1; i <= n; i++)
+//        x = x * i;
+//
+//    return x;
+//}
+//
+//long double cifang(double x, int n)
+//{
+//    int i;
+//    double r = 1.0;
+//    for (i = 1; i <= n; i++)
+//        r = r * x;
+//    return r;
+//}
+//
+//int main() {
+//
+//    ios::sync_with_stdio(false);
+//
+//    cin.tie(0);
+//    long long n, m, k;
+//    cin >> n >> m >> k;
+//    vector<long long> p;
+//    while (n--) {
+//        long long z;
+//        cin >> z;
+//        p.emplace_back(z);
+//    }
+//    long long sum = 0;
+//    while (m--) {
+//        long long a;
+//        cin >> a;
+//        sum += a;
+//    }
+//    long long l = p.size();
+//    sum %= l;
+//    for (long long i = 0; i < l; i++) {
+//        p.emplace_back(p[i]);
+//    }
+//    if (sum < 0) sum = l + sum;
+//    for (long long i = 0; i < k; i++) {
+//        cout << p[sum + i] << ' ';
+//    }
+//    return 0;
+//}
+//
+//
 
 
 
+//int main()
+//{
+//	int n, m, k,i;
+//	int arr[100000] = { 0 };
+//	scanf("%d %d %d", &n, &m, &k);
+//	for (i = 0; i < n; i++)
+//	{
+//		scanf("%d", &arr[i]);
+//	}
+//	int sum = 0;
+//	for (i = 0; i < m; i++)
+//	{
+//		int x;
+//		scanf("%d", &x);
+//		sum += x;
+//	}
+//	int t ;
+//	if (sum >= 0)
+//		t = sum;
+//	if (sum < 0)
+//		t = n + sum;
+//	for (i = 0; i < k; i++)
+//	{
+//		if (t > n - 1)
+//			t = 0;
+//		printf("%d ", arr[t]);
+//		t++;
+//	}
+//
+//
+//	return 0;
+//}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//int main()
+//{
+//	char arr[100] = { '0' };
+//	while (scanf("%s",arr)!=EOF)
+//	{
+//		int i;
+//		int text[50] = { 0 };
+//		for (i = 0; i < 100; i++)
+//		{
+//			if ('A' <= arr[i] && arr[i] <= 'Z')
+//			{
+//				text[arr[i] - 65]++;
+//			}
+//			else if ('a' <= arr[i] && arr[i] <= 'z')
+//			{
+//				text[arr[i] - 97]++;
+//			}
+//			if (arr[i] == '!')
+//				break;
+//
+//		}
+//		//输出
+//		for (i = 0; i < 50; i++)
+//		{
+//			if (text[i] != 0)
+//			{
+//				printf("%c:%d\n", i + 65, text[i]);
+//			}
+//		}
+//
+//		//初始化
+//		memset(arr, 0, sizeof(arr));
+//	}
+//
+//	return 0;
+//}
 
 
 
