@@ -3594,11 +3594,1131 @@ using namespace std;
 //	return 0;
 //}
 
+//int main()
+//{
+//	double x = 111111111.0*111111111.0;
+//	printf("%lf", x);
+//	return 0;
+//}
+//
+//
+//
+//
+//
+//
+//dd
+//
+//
+//int main()
+//{
+//    int i;
+//    int n;
+//    while (scanf("%d", &n) != EOF)
+//    {
+//        int x, y, t, q;
+//        int ch[100] = { 0 };
+//
+//        int max = 0;
+//        int fir;
+//        for (i = 0; i < n; i++)
+//        {
+//            if (i % 2 == 0)
+//                scanf("%d", &x);
+//            if (i % 2 == 1)
+//                scanf("%d", &y);
+//            if (i == 0)
+//            {
+//                fir = x;
+//            }
+//            if (i > 0)
+//            {
+//                if (x == y)
+//                {
+//                    ch[x - 1]++;
+//
+//                }
+//                if (x != y)
+//                {
+//                    if (i % 2 == 0)
+//                        ch[y - 1] = 0;
+//                    if (i % 2 == 1)
+//                        ch[x - 1] = 0;
+//                }
+//            }
+//
+//            if (ch[x - 1] > max)
+//            {
+//                max = ch[x - 1];
+//                q = ch[x - 1]+1;
+//                t = x;
+//            }
+//
+//        }
+//        if (max == 0)
+//        {
+//            printf("%d 1\n", fir);
+//        }
+//        else
+//        printf("%d %d\n", t, q);
+//
+//
+//    }
+//
+//    return 0;
+//}
+
+//int main()
+//{
+//	void function(double val);
+//	double val;
+//	function(val);
+//	cout << val;
+//	return 0;
+//}
+//void function(double val)
+//{
+//	val = 3;
+//}
+//
+
+//void f(int* x)
+//{
+//	*x = 2;
+//}
+//int main()
+//{
+//	int x = 1;
+//	f(&x);
+//	printf("%d", x);
+//	return 0;
+//}
+
+//void f(int b[])
+//
+//{
+//
+//    int i;
+//
+//    for (i = 2; i < 6; i++)
+//
+//        b[i] *= 2;
+//
+//}
+//
+//int main()
+//
+//{
+//
+//    int a[10] = { 1,2,3,4,5,6,7,8,9,10 }, i;
+//
+//    f(a);
+//
+//    for (i = 0; i < 10; i++)
+//
+//        cout << a[i] << ",";
+//
+//    return 0;
+//
+//}
+//
+//void sortArray(char a[][8], int n)
+//{
+//    int i, j;
+//    char tmp[8];
+//    bool flag;
+//    for (i = 1; i < n; ++i) {
+//        flag = false;
+//        for (j = 0; j < n - i; j++)
+//            if (a[j + 1][0] > a[j][0]) {
+//                strcpy(tmp, a[j]);
+//                strcpy(a[j], a[j + 1]);
+//                strcpy(a[j + 1], tmp);
+//                flag = true;
+//            }
+//        if (!flag) break;
+//    }
+//}
+//int main()
+//{
+// char s[][8] = {"Twinkle","twinkle","little","star"};
+// sortArray(s,4);
+// for (int i = 0; i < 4; i++)
+//   cout << s[i] << ' ';
+// return 0;
+//}
+
+//#define N 4
+//
+//void fun(int a[][N], int b[])
+//
+//{
+//
+//    int i;
+//
+//    for (i = 0; i < N; i++) b[i] = a[i][i];
+//
+//}
+//
+//int main()
+//
+//{
+//
+//    int x[][N] = { {1,2,3}, {4}, {5,6,7,8},{9,10} }, y[N], i;
+//
+//    fun(x, y);
+//
+//    for (i = 0; i < N; i++) cout << y[i];
+//
+//    return 0;
+//
+//}
+
+//#include <stdio.h>
+//#include <math.h>
+//int equ(double x, double y)
+//{
+//	if (x > y)
+//	{
+//		if (x - y <= 0.001)
+//			return 1;
+//	}
+//	else if (x == y)
+//		return 1;
+//	else
+//	{
+//		if (y - x <= 0.001)
+//			return 1;
+//	}
+//	return 0;
+//
+//}
+//
+//int zhijiao(double x, double y, double z)
+//{
+//	if (fabs(x * x + y * y - z * z) <= 1 || fabs(x * x + z * z - y * y) <= 1 || fabs(y * y + z * z - x * x) <= 1)
+//		return 1;
+//	return 0;
+//}
+//
+//
+//
+//int main()
+//{
+//	double a, b, c;
+//	while (scanf("%lf %lf %lf", &a, &b, &c) != EOF)
+//	{
+//		if (equ(a, b) || equ(a, c) || equ(b, c))
+//		{
+//			if (equ(a, b) && equ(a, c) && equ(b, c))
+//				printf("等边三角形\n");
+//			else if (zhijiao(a, b, c))
+//				printf("等腰直角三角形\n");
+//			else
+//				printf("等腰三角形\n");
+//
+//		}
+//		else if (!(equ(a, b) || equ(a, c) || equ(b, c)) && zhijiao(a, b, c))
+//			printf("直角三角形\n");
+//		else if ((a + b <= c) || (a + c <= b) || (b + c <= a))
+//			printf("不是三角形\n");
+//		else
+//			printf("一般三角形\n");
+//
+//
+//	}
+//	return 0;
+//}
+
+
+//#include<stdio.h>
+//#include<math.h>
+//int main()
+//{
+//	double a, b, c;
+//	double max, min, middle;
+//
+//	printf("请输入三角形的三边长a,b,c\n");
+//	scanf("%lf%lf%lf", &a, &b, &c);
+//	max = min = a;
+//	max = max > b ? max : b;
+//	min = min < b ? min : b;
+//	max = max > c ? max : c;
+//	min = min < c ? min : c;
+//	middle = a + b + c - max - min;
+//	if (min + middle <= max)
+//		printf("a,b,c三边不能构成三角形");
+//	else {
+//		if (max == middle && middle == min)
+//			printf("a,b,c能构成等边三角形");
+//		else if ((max == middle || middle == min) && (fabs(min * min + middle * middle - max * max) > 0.01))
+//			printf("a,b,c能构成等腰三角形（非直角）");
+//		else if ((max == middle || middle == min) && (fabs(min * min + middle * middle - max * max) <= 0.01))
+//			printf("a,b,c能构成等腰直角三角形");
+//		else if (fabs(min * min + middle * middle - max * max) <= 0.01)
+//			printf("a,b,c能构成普通直角三角形");
+//		else
+//			printf("a,b,c能构成普通三角形");
+//
+//	}
+//}
+
+//二分查找
+//int main()
+//{
+//	int ch[] = { -1,2,4,6,8,9,12,13,15,17,81 };
+//	int target;
+//	scanf("%d", &target);
+//	int left = 0;
+//	int sz = sizeof(ch) / sizeof(ch[0]);
+//	int right = sz - 1;
+//	int mid = (left + right) / 2;
+//	while (ch[mid] != target)
+//	{
+//		if (ch[mid] < target)
+//		{
+//			left = mid + 1;
+//			mid = (left + right) / 2;
+//		}
+//		if (ch[mid] > target)
+//		{
+//			right=mid - 1;
+//			mid = (left + right) / 2;
+//		}
+//
+//	}
+//	printf("%d", mid);
+//	return 0;
+//}
+//
+//void swap(int* x, int* y)
+//{
+//	int tmp = *x;
+//	*x = *y;
+//	*y = tmp;
+//
+//}
+//void sort(int ch[], int sz)
+//{
+//	int i, j;
+//	for (i = 0; i < sz - 1; i++)
+//	{
+//		for (j = 0; j < sz - 1 - i; j++)
+//		{
+//			if (ch[j] > ch[j + 1])
+//			{
+//				//int tmp = ch[j];
+//				//ch[j] = ch[j + 1];
+//				//ch[j + 1] = tmp
+//				swap(&ch[j], &ch[j + 1]);
+//			}
+//		}
+//	}
+//
+//}
+//
+//void print(int ch[], int sz)
+//{
+//	int i;
+//	for (i = 0; i < sz; i++)
+//	{
+//		printf("%d ", ch[i]);
+//	}
+//
+//
+//}
+//
+//
+//int main()
+//{
+//	int ch[] = { 1,5,3,65,45,243,6,-1 };
+//	int sz = sizeof(ch) / sizeof(ch[0]);
+//	sort(ch, sz);
+//	print(ch,sz);
+//
+//
+//
+//	return 0;
+//}
+//
+//void swap(int* x, int* y)
+//{
+//	int tmp = *x;
+//	*x = *y;
+//	*y = tmp;
+//
+//}
+//
+//
+//void release(int ch[100], int n)
+//{
+//	int i;
+//	//if (n % 2 == 0)
+//	//{
+//		for (i = 0; i < n / 2; i++)
+//		{
+//			swap(&ch[i],& ch[n - i - 1]);
+//		}
+//	//}
+//	//else
+//	//{
+//	//	for (i = 0; i < n / 2; i++)
+//	//	{
+//	//		swap(&ch[i],&ch[])
+//	//	}
+//	//}
+//
+//}
+//
+//
+//void print(int ch[100], int n)
+//{
+//	int i;
+//	for (i = 0; i < n; i++)
+//	{
+//		printf("%d ", ch[i]);
+//
+//	}
+//
+//
+//}
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//int main()
+//{
+//	int i;
+//	int n;
+//	scanf("%d", &n);
+//	int ch[100] = { 0 };
+//	for (i = 0; i < n; i++)
+//	{
+//		scanf("%d", &ch[i]);
+//
+//	}
+//	//存放完成
+//	//开始逆序操作
+//	release(ch, n);
+//	//输出
+//	print(ch, n);
+//
+//	return 0;
+//}
+//int ret = 0;
+//
+//void swap(int* x, int* y)
+//{
+//	int tmp = *x;
+//	*x = *y;
+//	*y = tmp;
+//
+//}
+//
+//void sort(int miner[], int num_min)
+//{
+//	int i, j;
+//	for (i = 0; i < num_min - 1; i++)
+//	{
+//		for (j = 0; j < num_min - 1 - i; j++)
+//		{
+//			if (miner[j] > miner[j + 1])
+//				swap(&miner[j], &miner[j + 1]);
+//
+//		}
+//
+//	}
+//
+//}
+//
+//
+//void counter(int ch[], int L, int R)
+//{
+//	int i;
+//	int num_min = 0;
+//	int miner[100];
+//	int min = ch[L];
+//	for (i = L; i <= R; i++)
+//	{
+//		if (ch[i] <= min)
+//		{
+//			//先找min
+//			//miner[num_min] = i;
+//			//num_min++;
+//			min = ch[i];
+//		}
+//	}
+//	//再统计
+//	for (i = L; i <= R; i++)
+//	{
+//		if (ch[i] == min)
+//		{
+//			miner[num_min] = i;
+//			num_min++;
+//		}
+//		ch[i] -= min;
+//
+//	}
+//
+//	ret += min;
+//	//for (i = L; i <= R; i++)
+//	//{
+//	//	ch[i] -= min;
+//	//}
+//	//排序
+//	sort(miner, num_min);
+//
+//	//分裂
+//	for (i = 0; i < num_min; i++)
+//	{
+//		counter(ch, L, miner[i]-1);
+//		if (i != num_min - 1)
+//			counter(ch, miner[i] + 1, miner[i + 1] - 1);
+//		else
+//			counter(ch, miner[i] + 1, R);
+//	}
+//
+//}
+//
+//
+//
+//
+//int main()
+//{
+//	int n;
+//	int i;
+//	int ch[100000] = { 0 };
+//	scanf("%d", & n);
+//	for (i = 0; i < n; i++)
+//	{
+//		scanf("%d", &ch[i]);
+//
+//	}
+//	int left = 0;
+//	int right = n - 1;
+//	counter(ch, left, right);
+//	printf("%d", ret);
+//
+//
+//	return 0;
+//}
+//
+//
+//
+//
+
+//#include <stdio.h>
+//#include <string.h>
+//
+//#define MAX_SENTENCES 100
+//#define MAX_LENGTH 100
+//
+//void rotateSentences(char sentences[MAX_SENTENCES][MAX_LENGTH], int count) 
+//{
+//    // 计算每个句子的长度
+//    int lengths[MAX_SENTENCES];
+//    for (int i = 0; i < count; i++) 
+//    {
+//        lengths[i] = strlen(sentences[i]);
+//    }
+//
+//    // 找到最长的句子长度
+//    int maxLength = 0;
+//    for (int i = 0; i < count; i++) 
+//    {
+//        if (lengths[i] > maxLength)
+//        {
+//            maxLength = lengths[i];
+//        }
+//    }
+//
+//    // 输出旋转后的句子
+//    for (int i = 0; i < maxLength; i++)
+//    {
+//        for (int j = count - 1; j >= 0; j--) 
+//        {
+//            if (i < lengths[j]) 
+//            {
+//                printf("%c", sentences[j][i]);
+//            }
+//            else 
+//            {
+//                printf(" ");
+//            }
+//        }
+//        printf("\n");
+//    }
+//}
+//
+//int main()
+//{
+//    char sentences[MAX_SENTENCES][MAX_LENGTH];
+//    int count = 0;
+//
+//    // 读取输入的句子
+//    char line[MAX_LENGTH];
+//    while (fgets(line, sizeof(line), stdin)) 
+//    {
+//        line[strcspn(line, "\n")] = '\0';  // 去除换行符
+//        strcpy(sentences[count], line);
+//        count++;
+//    }
+//
+//    // 调用函数旋转句子并输出结果
+//    rotateSentences(sentences, count);
+//
+//    return 0;
+//}
+//
+//
+//
+//#include <cstdio>
+//#include <iostream>
+//#include <string.h>
+//using namespace std;
+//
+////字符串存到二维数组里面（①存到一维数组  ②一维数组转存到二维数组） 
+//int main()
+//{
+//    char str[100];
+//    while (gets_s(str)) {
+//        cout << str << endl;
+//        int  len = strlen(str), r = 0, h = 0, i;
+//        char ans[100][100];
+//
+//        //再存到一个二维数组里面
+//        for (i = 0; i < len; i++) {
+//            if (str[i] != ' ')
+//                ans[r][h++] = str[i];
+//            else {
+//                ans[r++][h] = '\0';
+//                h = 0;//h重新置0
+//            }
+//        }
+//
+//
+//        //输入二维数组
+//        for (i = 0; i <= r; i++) {
+//            printf("%s", ans[i]);
+//        }
+//        cout << endl;
+//
+//        //清空初始化数组，以下两种方式都可以
+//        //memset(ans, 0 , sizeof(ans));
+//        memset(ans, '\0', sizeof(ans));
+//    }
+//
+//    return 0;
+//}
+
+//
+//int main()
+//{
+//	int m, n,i,j;
+//	scanf("%d", &m);
+//	scanf("%d", &n);
+//	for (i = 0; i < m; i++)
+//	{
+//		int p = 0;
+//		int ar[10][10] = { 0 };
+//		for (p=0;p<n;p++)
+//		{
+//			for (j = 0; j < n; j++)
+//			{
+//				scanf("%d", &ar[p][j]);
+//			}
+//		}
+//		int a=0, b=0;
+//		int x1,y1,x2,y2;
+//		for (x1 = 0, y1 = 0, x2 = n - 1, y2 = 0; x1 < n; x1++, y1++, x2--, y2++)
+//		{
+//			a += ar[x1][y1] * ar[x2][y2];
+//		}
+//		for (x1 = 0, y1 = 0, x2 = n - 1, y2 = 0; x1 < n; x1++, y1++, x2--, y2++)
+//		{
+//			b += ar[x1][y1] / ar[x2][y2];
+//		}
+//		printf("%d %d\n", a, b);
+//
+//
+//	}
+//
+//
+//
+//	return 0;
+//}
+
+//
+//int main()
+//{
+//	int n,i,j;
+//	int x = 1;
+//	scanf("%d", &n);
+//	//for (i = 1; i <= 2 * n - 1; i++)
+//	//{
+//	//	for (j = 0; j < 2 * n - 1; j++)
+//	//	{
+//
+//	//	}
+//
+//	//}
+//	int ch[100][100] = { 0 };
+//	while (x <= n)
+//	{
+//		for (i = x - 1; i < 2 * n - x; i++)
+//	
+//
+//	{
+//			for (j = x - 1; j < 2 * n - x; j++)
+//			{
+//				ch[i][j] = x;
+//			}
+//
+//		}
+//		x++;
+//
+//
+//	}
+//	for (i = 0; i < 2 * n - 1; i++)
+//	{
+//		for (j = 0; j < 2 * n - 1; j++)
+//		{
+//			if (j < 2 * n - 2)
+//				printf("%d ", ch[i][j]);
+//			else
+//				printf("%d", ch[i][j]);
+//		}
+//		printf("\n");
+//	}
+//
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+//void calculateAverage(int a[][4], float b[], int rows, int cols) {
+//    for (int i = 0; i < rows; i++) {
+//        int sum = 0;
+//        for (int j = 0; j < cols; j++) {
+//            sum += a[i][j];
+//        }
+//        b[i] = (float)sum / cols;
+//    }
+//}
+//
+//int main() {
+//    int a[3][4];
+//    float b[3];
+//
+//    // 读取输入
+//    for (int i = 0; i < 3; i++) {
+//        for (int j = 0; j < 4; j++) {
+//            scanf("%d", &a[i][j]);
+//        }
+//    }
+//
+//    calculateAverage(a, b, 3, 4);
+//
+//    // 输出结果
+//    for (int i = 0; i < 3; i++) {
+//        printf("%g ", b[i]);
+//    }
+//
+//    return 0;
+//}
+//
+//int main()
+//{
+//	int i, j, k, p, q;
+//	int ch[3][4] = { 0 };
+//	for (i = 0; i < 3; i++)
+//	{
+//		for (j = 0; j < 4; j++)
+//		{
+//			scanf("%d", &ch[i][j]);
+//		}
+//	}
+//	int re[3] = { 0 };
+//	for (i = 0; i < 3; i++)
+//	{
+//		for (j = 0; j < 4; j++)
+//		{
+//			re[i] += ch[i][j];
+//		}
+//	}
+//	printf("%g %g %g", re[0] / 4.0, re[1] /4.0, re[2] / 4.0);
+//
+//
+//	return 0;
+//}
+//
+//
+//int main()
+//{
+//	int x,i,j;
+//	char arr[4] = { 'c','d','h','s' };
+//	while (scanf("%d",&x)!=EOF)
+//	{
+//		int t = x - 1;
+//		char y = 'c';
+//		int l = 0;
+//
+//		for (i = 0; i < 13; i++)
+//		{
+//			printf("%c ", y);
+//			if (i < 12)
+//				printf("%d ", t);
+//			else
+//				printf("%d", t);
+//			t += 4;
+//			if (t > 12)
+//			{
+//				l++;
+//				t = t - 13;
+//				y = arr[l];
+//			}
+//
+//
+//		}
+//		printf("\n");
+//
+//	}
+//
+//	
+//	return 0;
+//}
+//
+
+//int is_6num(int x)
+//{
+//	if (x == 1)
+//		return 0;
+//	int i;
+//	for (i = 2; i < x; i++)
+//	{
+//		if (x % i == 0)
+//			return 0;
+//
+//	}
+//	return 1;
+//}
+//
+//
+//
+//int main()
+//{
+//	int m, n,i;
+//	int num = 0;
+//	scanf("%d %d", &m, &n);
+//	for (i = m; i <= n; i++)
+//	{
+//
+//		if (num == 10)
+//		{
+//			printf("\n");
+//			num = 0;
+//		}
+//
+//		if (is_6num(i))
+//		{
+//			printf("%d ", i);
+//			num++;
+//		}
+//
+//	}
+//
+//	return 0;
+//}
+//
+//
+//
+//
+//
+//
+//int ctof(int x)
+//{
+//    return 32 + x * 9 / 5;
+//}
+//
+//
+//
+//
+//int main() {
+//
+//    int i, start, end;
+//
+//    cin >> start >> end;
+//
+//    for (int i = start; i <= end; i += 10) {
+//
+//        cout << i << "C=";
+//
+//        cout << ctof(i) << "F" << endl;
+//
+//    }
+//
+//    return 0;
+//
+//}
+//int ReadScore(float score[])
+//{
+//	int i,count = 0;
+//	for (i = 0; i < 40; i++)
+//	{
+//		float x;
+//		scanf("%f",& x);
+//		if (x >= 0)
+//		{
+//			score[i] = x;
+//			count++;
+//		}
+//		else
+//			break;
+//	}
+//	return count;
+//
+//}
+//
+//float Average(float score[], int n)
+//{
+//	float sum = 0;
+//	int i;
+//	for (i = 0; i < n; i++)
+//	{
+//		sum += score[i];
+//	}
+//	return sum / n;
+//
+//}
+//int AboveAverage(float score[], int n, float aver)
+//{
+//	int count = 0;
+//	int o;
+//	for (o = 0; o < n; o++)
+//	{
+//		if (score[o] > aver)
+//		{
+//			count++;
+//		}
+//	}
+//	return count;
+//}
+//
+//
+//int main()
+//
+//{
+//
+//	float score[40];
+//
+//	int n, i, count;
+//
+//	float aver;
+//
+//	n = ReadScore(score);
+//
+//	aver = Average(score, n);
+//
+//	count = AboveAverage(score, n, aver);
+//
+//	cout << count;
+//
+//	return 0;
+//
+//}
+//
+
+//int is_irre(int x)
+//{
+//	if (x == 1)
+//		return 0;
+//	int i;
+//	for (i = 2; i < x; i++)
+//	{
+//		if (x % i == 0)
+//			return 0;
+//	}
+//	return 1;
+//
+//}
+//int main()
+//{
+//	int x;
+//	while (scanf("%d", &x) != EOF)
+//	{
+//		printf("%d\n", is_irre(x));
+//
+//	}
+//	return 0;
+//}
+
+//int FindMax(int score[], int n)
+//
+//	{
+//		int max = score[0], maxer=0, i;
+//		for (i = 0; i < n; i++)
+//		{
+//			if (score[i] >max)
+//			{
+//				maxer = i;
+//				max = score[i];
+//			}
+//
+//		}
+//		return maxer;
+//	}
+//
+//
+//
+//int FindMin(int score[], int n)
+//{
+//	int min=score[0], miner=0, i;
+//	for (i = 0; i < n; i++)
+//	{
+//		if (score[i] < min)
+//		{
+//			miner = i;
+//			min = score[i];
+//		}
+//
+//	}
+//	return miner;
+//}
+//
+//void ReadScore(int score[], int n)
+//{
+//	int i;
+//	for (i = 0; i < n; i++)
+//	{
+//		scanf("%d", &score[i]);
+//	}
+//
+//
+//}
+//
+//int main()
+//
+//{
+//
+//	int i, j, a, b, n;
+//
+//	int score[50];
+//
+//	cin >> n;
+//
+//	ReadScore(score, n);
+//
+//	a = FindMax(score, n);
+//
+//	b = FindMin(score, n);
+//
+//	i = score[a];
+//
+//	score[a] = score[b];
+//
+//	score[b] = i;
+//
+//	cout << score[0];
+//
+//	for (j = 1; j < n; j++)
+//
+//		cout << " " << score[j];
+//
+//	return 0;
+//
+//}
+//
+//
+//#include<stdio.h>
+//int main(void)
+//{
+//	int m, n, t, a, b;
+//	t = 0;
+//	scanf("%d %d", &m, &n);
+//	a = m;
+//	b = n;//先把m和n分别赋值给a和b，用来求最小公倍数
+//
+//	//法(1)
+//	/*
+//	  while(t=m%n,t!=0)//限制条件有两个
+//  //求出最小公约数和最大公倍数的数值与m和n大小无关，所以不用考虑是m%n还是n%m，结果一样
+//	  {
+//		  m=n;
+//		  n=t;
+//	  }
+//	  printf("最大公约数是:%d\n",n);//最后n为最大公约数
+//	  printf("最小公倍数是:%d\n",a/n*b);
+//	 */
+//
+//	 //法(2)
+//	while (n != 0)//一个限制条件
+//	{
+//		t = m % n;//t的赋值在限制条件里面
+//		m = n;
+//		n = t;
+//	}
+//	printf("最大公约数是:%d\n", m);//最后m为最大公约数
+//	printf("最小公倍数是:%d\n", a / m * b);
+//	//最小公倍数求法和上边一样(除以n(最大公因数)变成除以m)
+//
+//
+//	return 0;
+//}
+//
+//
+
+//int main()
+//{
+//	int m, n, a, b;
+//	while (scanf("%d %d", &m, &n) != EOF)
+//	{
+//		int t=0;
+//		
+//		while (n != 0)
+//		{
+//			t = m % n;
+//			m = n;
+//			n = t;
+//
+//		}
+//		printf("%d\n", m);
+//	}
+//
+//	return 0;
+//}
+//
+//
+//
+//
+
 int main()
+
 {
-	double x = 111111111.0*111111111.0;
-	printf("%lf", x);
+
+	float mark[40];
+
+	int m, n, count;
+
+	cin >> n;
+
+	for (m = 0; m < n; m++)
+
+	{
+
+		cin >> mark[m];
+
+	}
+
+	count = tongji(mark, n);
+
+	cout >> count;
+
 	return 0;
+
 }
 
 
@@ -3606,7 +4726,125 @@ int main()
 
 
 
-dd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
