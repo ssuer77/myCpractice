@@ -5022,6 +5022,395 @@ using namespace std;
 //}
 
 
+//int main()
+//{
+//	char x1[4] = { 0 };
+//	while (scanf("%s",x1)!=EOF)
+//	{
+//		if (strcmp(x1, "Sun") == 0)
+//		{
+//			printf("Sunday\n");
+//		}
+//		if (strcmp(x1, "Mon") == 0)
+//		{
+//			printf("Monday\n");
+//		}
+//
+//		if (strcmp(x1, "Tue") == 0)
+//		{
+//			printf("Tuesday\n");
+//		}
+//
+//		if (strcmp(x1, "Wed") == 0)
+//		{
+//			printf("Wednesday\n");
+//		}
+//
+//		if (strcmp(x1, "Thu") == 0)
+//		{
+//			printf("Thursday\n");
+//		}
+//
+//		if (strcmp(x1, "Fri") == 0)
+//		{
+//			printf("Friday\n");
+//		}
+//
+//		if (strcmp(x1, "Sat") == 0)
+//		{
+//			printf("Saturday\n");
+//		}
+//
+//
+//	}
+//
+//	return 0;
+//}
+
+
+
+
+//int main()
+//{
+//	int n;
+//	scanf("%d", &n);
+//	int i,j,k;
+//	for (i = 0; i < n; i++)
+//	{
+//
+//
+//	}
+//	return 0;
+//}
+//
+//int main()
+//{
+//	char arr[20] = { 76};
+//
+//	printf("%s", arr);
+//	return 0;
+//}
+
+//int main()
+//{
+//	int n;
+//	scanf("%d", &n);
+//	int i;
+//	for (i = 0; i < n; i++)
+//	{
+//		getchar();
+//		int j = 0;
+//		char arr[80] = { 0 };
+//		int x;
+//			
+//			scanf("%[^\n]", arr);
+//		
+//		scanf("%d", &x);
+//		int count=0;
+//
+//		for (j = 0; j < 80; j++)
+//		{
+//			if (arr[j] != '\0')
+//				count++;
+//
+//		}
+//
+//		for (j = 0; j < count; j++)
+//		{
+//			if (arr[j] != '\0')
+//			{
+//				if (arr[j] >= 'a' && arr[j] <= 'z')
+//				{
+//					if (j < count - 1)
+//						printf("%d ", arr[j] - 96 + x);
+//					else
+//						printf("%d", arr[j] - 96 + x);
+//				}
+//				else if (arr[j] >= 'A' && arr[j] <= 'Z')
+//				{
+//					if (j < count - 1)
+//						printf("%d ", arr[j] - 64 + x);
+//					else
+//						printf("%d", arr[j] - 64+ x);
+//
+//				}
+//				else if (arr[j] == 32)
+//				{
+//					if (j < count - 1)
+//						printf("0 ");
+//					else
+//						printf("0");
+//
+//				}
+//				else
+//				{
+//					if (j < count - 1)
+//						printf("%d ", arr[j] +100);
+//					else
+//						printf("%d", arr[j] +100);
+//
+//				}
+//					
+//
+//
+//			}
+//		}
+//		printf("\n");
+//		memset(arr, 0, sizeof(arr));
+//
+//	}
+//
+//	return 0;
+//}
+//
+//void swap(char* x, char* y)
+//{
+//	char cmp = *x;
+//	*x = *y;
+//	*y = cmp;
+//
+//}
+//
+//
+//
+//
+//void reverse(char ch[],int n)
+//{
+//	int i;
+//	for (i = 0; i < n / 2; i++)
+//	{
+//		swap(&ch[i], &ch[n - 1 - i]);
+//
+//	}
+//
+//
+//}
+//
+//
+//int main()
+//{
+//	char arr[200] = { 0 };
+//	char ch[200] = { 0 };
+//	while (scanf("%s",arr)!=EOF)
+//	{
+//		strcpy(ch, arr);
+//		int n = strlen(ch);
+//		reverse(ch, n);
+//		if (strcmp(arr, ch) == 0)
+//			printf("Yes\n");
+//		else
+//			printf("No\n");
+//	}
+//
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	int i, j, k;
+//	char arr[100] = { 0 };
+//	while (scanf("%s", arr) != EOF)
+//	{
+//		int n = strlen(arr);
+//		for (i = 0; i < n; i++)
+//		{
+//			if (arr[i] >= '0' && arr[i] <= '9')
+//				printf("%c", (arr[i] + 49));
+//			else if (arr[i] >= 'a' && arr[i] <= 'j')
+//				printf("%c", arr[i] - 49);
+//			else
+//				printf("%c", arr[i]);
+//		}
+//
+//
+//
+//		memset(arr, 0, sizeof(arr));
+//	}
+//
+//	return 0;
+//}
+
+
+
+//int main()
+//{
+//	char arr[2000] = { 0 };
+//	int i, j;
+//	while (scanf("%s", arr) != EOF)
+//	{
+//		int count = 0;
+//
+//		int k = 0;
+//		int n = strlen(arr);
+//		for (i = 0; i < n;i++)
+//		{
+//			if (k == 1)
+//				count++;
+//
+//			if (arr[i] == '.')
+//				k = 1;
+//
+//		}
+//		printf("%d\n", count);
+//
+//
+//
+//		memset(arr, 0, sizeof(arr));
+//	}
+//
+//
+//	return 0;
+//}
+//
+//
+//
+//
+//int counter(int arr[])
+//{
+//	int n = 0,i,k=0;
+//	for (i = 99; i >-1; i--)
+//	{
+//		if (*(arr + i) != 0)
+//			break;
+//			n++;
+//	}
+//	return 100-n;
+//	
+//}
+//
+//
+//
+//int main()
+//{
+//	int m=0, n=0;
+//	while (scanf("%d %d", &m,& n) != EOF)
+//	{
+//		int arr[100] = { 0 };
+//
+//
+//		if (m == 0)
+//			printf("0");
+//		else
+//		{
+//
+//			int i = 0, j = 0, k = 0;
+//			while (m != 0)
+//			{
+//				arr[i] = m % n;
+//				m /= n;
+//				i++;
+//			}
+//			int num = counter(arr);
+//			for (i = num - 1; i > -1; i--)
+//			{
+//				if (arr[i] >= 0 && arr[i] <= 9)
+//					printf("%d", arr[i]);
+//				else if (arr[i] >= 10)
+//					printf("%c", 55 + arr[i]);
+//
+//			}
+//		}
+//		printf("\n");
+//
+//		memset(arr, 0, sizeof(arr));
+//	}
+//
+//	return 0;
+//}
+//
+//
+
+
+//int main()
+//{
+//	char tele[12] = { 0 };
+//
+//	int i;
+//	int N;
+//	int j;
+//	scanf("%d",& N);
+//	for (j=0;j<N;j++)
+//	{
+//		scanf("%s", tele);
+//		printf("6");
+//		for (i = 6; i < 11; i++)
+//			printf("%c", tele[i]);
+//		printf("\n");
+//
+//	}
+//
+//	return 0;
+//}
+//
+//
+
+//int main()
+//{
+//	char arr[1000] = { 0 };
+//	int n;
+//	scanf("%d", &n);
+//	int i,j,k;
+//	for (i = 0; i < n; i++)
+//	{
+//		int count = 0;
+//		scanf("%s", arr);
+//		int sz = strlen(arr);
+//		for (j = 0; j < sz; j++)
+//		{
+//			if (arr[j] >= 'a' && arr[j] <= 'z')
+//				count++;
+//
+//		}
+//
+//		printf("%d\n", count);
+//		memset(arr, 0, sizeof(arr));
+//	}
+//
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	int N, L, R;
+//	int arr[20] = { 0 };
+//	int i, j, k;
+//	while (scanf("%d %d %d", &N, &L, &R) != EOF)
+//	{
+//		for (i = 0; i < N; i++)
+//		{
+//			scanf("%d", &arr[i]);
+//		}
+//		int max = arr[0];
+//		int cmp = 0;
+//		for (i = L; i <= R; i++)
+//		{
+//			for (j = 0; j <=N - i; j++)
+//			{
+//				for (k = j; k < j + i; k++)
+//				{
+//					cmp += arr[k];
+//				}
+//				if (cmp > max)
+//					max = cmp;
+//				cmp = 0;
+//
+//			}
+//		}
+//		printf("%d\n", max);
+//		memset(arr, 0, sizeof(arr));
+//	}
+//
+//
+//	return 0;
+//}
+
+void reverse(char ch[], int n)
+{
+
+
+}
 
 
 
@@ -5029,48 +5418,94 @@ using namespace std;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//int main()
+//{
+//	int i, j, k;
+//	char arr[20] = { 0 };
+//	char ch[20] = { 0 };
+//	while (scanf("%s", arr) != EOF)
+//	{
+//		strcpy(ch, arr);
+//		int n = strlen(ch);
+//		reverse(ch,n);
+//		int l1 = strlen(arr);
+//		int l2 = strlen(ch);
+//		int x1 = 0, x2 = 0;
+//		for (i = 0; i < l1; i++)
+//		{
+//			x1 +=(int) arr[i] * pow(10, l1 - 1 - i);
+//		}
+//		for (i = 0; i < l2; i++)
+//		{
+//			x2 += (int)arr[i] * pow(10, l2 - 1 - i);
+//		}
+//		int sum = x1 + x2;
+//
+//
+//		printf("%s+%s=%d", arr, ch, sum);
+//
+//
+//
+//	}
+//
+//	return 0;
+//}
+//
+//long long reverse(long long x)
+//{
+//	int i = 0;
+//	int n = 0;
+//	int ch[100] = { 0 };
+//	while (x != 0)
+//	{
+//		ch[i] = x % 10;
+//		x /= 10;
+//		i++;
+//		n++;
+//	}
+//	long long ret = 0;
+//	for (i = 0; i < n; i++)
+//	{
+//		ret += ch[i] * pow(10, n - 1 - i);
+//
+//	}
+//	return ret;
+//
+//
+//}
+//
+//int is_palindromic(long long x)
+//{
+//	if (x == reverse(x))
+//		return 1;
+//	else
+//		return 0;
+//
+//}
+//
+//int main()
+//{
+//	long long x, y;
+//	while (scanf("%lld", &x) != EOF)
+//	{
+//		if (x == 0)
+//			break;
+//		again:
+//		y = reverse(x);
+//		printf("%lld+%lld=%lld\n", x, y, x + y);
+//		if (!is_palindromic(x + y))
+//		{
+//			x = x + y;
+//			goto again;
+//		}
+//		else
+//			;
+//
+//	}
+//
+//	return 0;
+//}
+//
 
 
 
