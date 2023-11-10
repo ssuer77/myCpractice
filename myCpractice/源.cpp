@@ -5406,11 +5406,11 @@ using namespace std;
 //	return 0;
 //}
 
-void reverse(char ch[], int n)
-{
-
-
-}
+//void reverse(char ch[], int n)
+//{
+//
+//
+//}
 
 
 
@@ -5466,101 +5466,566 @@ void reverse(char ch[], int n)
 //	long long ret = 0;
 //	for (i = 0; i < n; i++)
 //	{
-//		ret += ch[i] * pow(10, n - 1 - i);
+//		ret += ch[i] * (int)pow(10, n - 1 - i);
 //
 //	}
 //	return ret;
 //
 //
 //}
-//
-//int is_palindromic(long long x)
+//j
+
+//void swap(int* x, int* y)
 //{
-//	if (x == reverse(x))
-//		return 1;
-//	else
-//		return 0;
+//	int tmp = *x;
+//	*x = *y;
+//	*y = tmp;
+//}
+//
+//void sort(int x0[], int s)
+//{
+//	int  i = 0, j = 0;
+//	for (i = 0; i < s - 1; i++)
+//	{
+//		for (j = 0; j < s - 1 - i; j++)
+//		{
+//			if (x0[j] > x0[j + 1])
+//				swap(&x0[j], &x0[j + 1]);
+//
+//
+//		}
+//	}
+//
+//
+//
 //
 //}
 //
 //int main()
 //{
-//	long long x, y;
-//	while (scanf("%lld", &x) != EOF)
+//	int T;
+//	scanf("%d", &T);
+//	int i, j, k;
+//	for (i = 0; i < T; i++)
 //	{
-//		if (x == 0)
-//			break;
-//		again:
-//		y = reverse(x);
-//		printf("%lld+%lld=%lld\n", x, y, x + y);
-//		if (!is_palindromic(x + y))
+//		int n,  m;
+//		int x1[100] = { 0 };
+//		int x2[100] = { 0 };
+//		int x0[100] = { 0 };
+//		scanf("%d %d", &n, &m);
+//		for (j = 0; j < n; j++)
 //		{
-//			x = x + y;
-//			goto again;
+//			scanf("%d", &x1[j]);
+//
+//		}
+//		for (j = 0; j < m; j++)
+//		{
+//			scanf("%d", &x2[j]);
+//
+//		}
+//		int s = 0;
+//		for (j = 0; j < n; j++)
+//		{
+//			int l = 1;
+//			for (k = 0; k < m; k++)
+//			{
+//				if (x1[j] == x2[k])
+//				{
+//					l = 0;
+//					break;
+//				}
+//			}
+//			if (l == 1)
+//			{
+//				x0[s] = x1[j];
+//				s++;
+//			}
+//
+//		}
+//		//for (j = 0; j < m; j++)
+//		//{
+//		//	int l = 1;
+//		//	for (k = 0; k < n; k++)
+//		//	{
+//		//		if (x2[j] == x1[k])
+//		//		{
+//		//			l = 0;
+//		//			break;
+//		//		}
+//		//	}
+//		//	if (l == 1)
+//		//	{
+//		//		x0[s] = x2[j];
+//		//		s++;
+//		//	}
+//
+//		//}
+//		if (s == 0)
+//		{
+//			printf("NULL");
 //		}
 //		else
-//			;
+//		{
+//			sort(x0, s);
+//			for (j = 0; j < s; j++)
+//			{
+//				printf("%d ", x0[j]);
+//			}
+//			printf("\n");
+//
+//		}
+//
+//
+//
 //
 //	}
+//
+//
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	int n;
+//	while (scanf("%d", &n) != EOF)
+//	{
+//		int i, k;
+//		int arr[109] = { 0 };
+//		for (i = 0; i < n; i++)
+//		{
+//			int x;
+//			scanf("%d", &x);
+//			arr[x - 1]++;
+//
+//		}
+//		int max = 0;
+//		for (i = 0; i < 109; i++)
+//		{
+//			if (arr[i] > max)
+//				max = arr[i];
+//
+//		}
+//		int max_num[109] = { 0 };
+//		int j = 0;
+//		for (i = 0; i < 109; i++)
+//		{
+//			if (arr[i] == max)
+//			{
+//				max_num[j] = i + 1;
+//				j++;
+//			}
+//		}
+//		int min = max_num[0];
+//		for (i = 0; i < j; i++)
+//		{
+//			if (max_num[i] < min)
+//				min = max_num[i];
+//			
+//		}
+//		printf("%d\n", min);
+//
+//
+//
+//
+//
+//
+//	}
+//
+//
+//
+//	return 0;
+//}
+//
+
+//int is_square(int x)
+//{
+//	int t = sqrt(x);
+//	if (t * t == x)
+//		return 1;
+//	return 0;
+//
+//
+//}
+//
+//int is_strange(int x)
+//{
+//	int num[4];
+//	int i, j;
+//	for (i = 0; i < 4; i++)
+//	{
+//		num[i] = x % 10;
+//		x /= 10;
+//	}
+//	if (num[1] + num[3] == num[0] * num[2])
+//		return 1;
+//	return 0;
+//
+//
+//
+//}
+//
+//int main()
+//{
+//	int i, j, k;
+//	int arr[100] = { 0 };
+//	int s = 1;
+//	for (i = 1000; i < 10000; i++)
+//	{
+//		if (is_square(i) && is_strange(i))
+//		{
+//			arr[s] = i;
+//			s++;
+//		}
+//
+//	}
+//	while (scanf("%d", &k) != EOF)
+//	{
+//		printf("%d\n", arr[k]);
+//
+//	}
+//
+//
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	int t1, t2, t3, v1, v2, v3;
+//	while (scanf("%d %d %d %d %d %d", &t1, &t2, &t3, &v1, &v2, &v3)!=EOF)
+//	{
+//		int i, j, k;
+//		int g1[100] = { 0 };
+//		int g2[100] = { 0 };
+//		int g3[100] = { 0 };
+//		for (i = 0; i < 100; i++)
+//		{
+//			g1[i] = t1 * v1 + i * 24 * v1;
+//			g2[i] = t2 * v2 + i * 24 * v2;
+//			g3[i] = t3 * v3 + i * 24 * v3;
+//		}
+//		for (i = 0; i < 100; i++)
+//		{
+//			for (j = 0; j < 100; j++)
+//			{
+//				for (k = 0; k < 100; k++)
+//				{
+//					if (g1[i] == g2[j] && g2[j] == g3[k])
+//					{
+//						printf("%d", g1[i]);
+//						goto end;
+//					}
+//				}
+//			}
+//		}
+//	end:
+//		;
+//
+//
+//
+//
+//	}
+//
+//
 //
 //	return 0;
 //}
 //
 
 
+//void swap(int* x, int* y)
+//{
+//	int tmp = *x;
+//	*x = *y;
+//	*y = tmp;
+//
+//}
+//void sort(int arr[], int n)
+//{
+//	int i, j;
+//	for (i = 0; i < n - 1; i++)
+//	{
+//		for (j = 0; j < n - 1 - i; j++)
+//		{
+//			if (arr[j] < arr[j + 1])
+//			{
+//				swap(&arr[j], &arr[j + 1]);
+//			}
+//		}
+//
+//	}
+//
+//}
+//
+//int main()
+//{
+//	int i, j, k=0;
+//	int n;
+//	int arr[100] = { 0 };
+//	scanf("%d", &n);
+//	for (i = 0; i < n; i++)
+//	{
+//		scanf("%d", &arr[i]);
+//
+//	}
+//	int x = 0;
+//	int ch[100] = { 0 };
+//	sort(arr, n);
+//	for (j = n-1; j >0; j--)
+//	{
+//		arr[j -1] += arr[j];
+//		arr[j] = 0;
+//		ch[k] = arr[j - 1];
+//		sort(arr, j);
+//		k++;
+//	}
+//	int sum = 0;
+//	for (j = 0; j < 100; j++)
+//		sum += ch[j];
+//	printf("%d", sum);
+//	return 0;
+//}
+//
+//
+//
+
+
+//int main()
+//{
+//	int n;
+//	while (scanf("%d", &n) != EOF)
+//	{
+//		int x = n;
+//		int arr[100] = { 0 };
+//		int ch[100] = { 0 };
+//		int i, j, k=0;
+//		for (i = 0; i < n; i++)
+//		{
+//			scanf("%d", &arr[i]);
+//		}
+//		for (i = 0; i < n; i++)
+//		{
+//			if (is_ok(arr[i], ch))
+//			{
+//				ch[k] = arr[i];
+//				k++;
+//			}
+//			else
+//			{
+//				x--;
+//				for (j = i; j < x; j++)
+//				{
+//					arr[j] = arr[j + 1];
+//				}
+//				i--;
+//			}
+//			
+//
+//		}
+//
+//
+//
+//
+//	}
+//
+//
+//	return 0;
+//}
+//
+//
+
+//int main()
+//{
+//	int x, n;
+//	int i;
+//	int arr[100] = { 0 };
+//	scanf("%d %d ", &x, &n);
+//	for (i = 0; i < n; i++)
+//	{
+//		scanf("%d", &arr[i]);
+//	}
+//	int s = 0;
+//	for (i = 0; i < n; i++)
+//	{
+//		if (arr[i] == x)
+//		{
+//			s = 1;
+//			printf("%d", i);
+//			
+//		}
+//	}
+//	if (s == 0)
+//		printf("Not Found");
+//
+//
+//	return 0;
+//}
+//
+
+//int main()
+//{
+//	int n, m;
+//	int i;
+//	while (scanf("%d", &n) != EOF)
+//	{
+//		int arr[20] = { 0 };
+//		for (i = 0; i < n; i++)
+//		{
+//			scanf("%d", &arr[i]);
+//		}
+//		scanf("%d", &m);
+//		int s = 1;
+//		for (i = 0; i < n; i++)
+//		{
+//			if (s == 1 && arr[i] == m)
+//			{
+//				s = 0;
+//				continue;
+//			}
+//			else
+//			{
+//				if (i < n - 1)
+//					printf("%d ", arr[i]);
+//				else
+//					printf("%d", arr[i]);
+//			}
+//
+//
+//		}
+//		printf("\n");
+//
+//
+//
+//	}
+//
+//	return 0;
+//}
+//
+//void swap(int* x, int* y)
+//{
+//	int tmp = *x;
+//	*x = *y;
+//	*y = tmp;
+//
+//}
+//void sort(int arr[])
+//{
+//	int i, j;
+//	for (i = 0; i < 9; i++)
+//	{
+//		for (j = 0; j < 9 - i; j++)
+//		{
+//			if (arr[j] > arr[j + 1])
+//				swap(&arr[j], &arr[j + 1]);
+//		}
+//
+//	}
+//
+//
+//}
+//
+//int main()
+//{
+//	int arr[10] = {0,10,20,30,40,50,60,70,80};
+//	int m,i;
+//	scanf("%d", &m);
+//	arr[9] = m;
+//	sort(arr);
+//	for (i = 0; i < 10; i++)
+//	{
+//		if (i < 9)
+//			printf("%d ", arr[i]);
+//		else
+//			printf("%d", arr[i]);
+//	}
+//	printf("\n");
+//	return 0;
+//}
+
+
+//int main()
+//{
+//    int n, m;
+//    int i;
+//    while (scanf("%d", &n) != EOF)
+//    {
+//        int arr[20] = { 0 };
+//        for (i = 0; i < n; i++)
+//        {
+//            scanf("%d", &arr[i]);
+//        }
+//        int max = arr[0];
+//        for (i = 0; i < n; i++)
+//        {
+//            if (max < arr[i])
+//                max = arr[i];
+//        }
+//        for (i = 0; i < n; i++)
+//        {
+//            if (max == arr[i])
+//                printf("%d %d\n", max, i);
+//        }
+//    }
+//    return 0;
+//}
+//#include <stdio.h>
+//int is_leapyear(int x)
+//{
+//	if (x % 4 == 0 && x % 100 != 0 || x % 400 == 0)
+//		return 1;
+//	else
+//		return 0;
+//}
+//
+//
+//int main()
+//{
+//	int year, month, day;
+//	scanf("%d-%d-%d", &year, &month, &day);
+//	int days_month[12] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
+//	if (is_leapyear(year))
+//		days_month[1] = 29;
+//	int i,nums = 0;
+//	for (i = 0; i < month-1; i++)
+//	{
+//		nums += days_month[i];
+//	}
+//	nums += day;
+//	printf("%d", nums);
+//	return 0;
+//}
+typedef struct
+{
+	int year;
+	int month;
+	int day;
+}Birthday;
 
 
 
+typedef struct 
+{
+	int id;
+	char name[100];
+	int age;
+	float  score;
+	Birthday birthday;
+
+}Student;
 
 
 
+int main()
+{
+	Student stu1 = { 1001,"张三",27,100,{2021,11,2} };
+	Student stu2 = { 1002,"李四",25,99,{2000,1,3} };
+	printf("学号：%d\t姓名：%s\t年龄：%d\t%.2f\t%d-%d-%d\n", stu1.id, stu1.name, stu1.age, stu1.score, stu1.birthday.year, stu1.birthday.month, stu1.birthday.day);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	return 0;
+}
 
 
 
