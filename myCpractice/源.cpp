@@ -5995,37 +5995,239 @@ using namespace std;
 //	printf("%d", nums);
 //	return 0;
 //}
+//typedef struct
+//{
+//	int year;
+//	int month;
+//	int day;
+//}Birthday;
+//
+//
+//
+//typedef struct 
+//{
+//	int id;
+//	char name[100];
+//	int age;
+//	float  score;
+//	Birthday birthday;
+//
+//}Student;
+//
+//void printStuInfo(Student* stu1,int len)
+//{
+//	int i;
+//	for (i=0;i<len;i++)
+//	printf("学号：%d\t姓名：%s\t年龄：%d\t%.2f\t%d-%d-%d\n", (stu1+i)->id, (stu1+i)->name, (stu1+i)->age, (stu1+i)->score, (stu1+i)->birthday.year, (stu1+i)->birthday.month, (stu1+i)->birthday.day);
+//
+//}
+//
+//int main()
+//{
+//	Student students[] = { { 1001,"张三",27,100,{2021,11,2} } ,{ 1002,"李四",25,99,{2000,1,3} } };
+//
+//	//printf("学号：%d\t姓名：%s\t年龄：%d\t%.2f\t%d-%d-%d\n", stu1.id, stu1.name, stu1.age, stu1.score, stu1.birthday.year, stu1.birthday.month, stu1.birthday.day);
+//	printStuInfo(students,2);
+//
+//
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	int n;
+//	while (scanf("%d", &n) != EOF)
+//	{
+//		int arr[100] = { 0 };
+//		int i, j, k;
+//		for (i = 0; i < n; i++)
+//		{
+//			scanf("%d", &arr[i]);
+//		}
+//		int ch[100] = { 0 };
+//		int s = 0;
+//		int sw = 1;
+//		for (i = 0; i < n; i++)
+//		{
+//			sw= 1;
+//			for (j = 0; j < s; j++)
+//			{
+//				if (arr[i] == ch[j])
+//					sw = 0;
+//			}
+//			if (sw == 0)
+//			{
+//				;
+//			}
+//			else
+//			{
+//				ch[s] = arr[i];
+//				s++;
+//				if (i == 0)
+//					printf("%d", arr[i]);
+//				else
+//					printf(" %d", arr[i]);
+//			}
+//		}
+//
+//		printf("\n");
+//
+//
+//	}
+//
+//
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	int n;
+//	while (scanf("%d", &n) != EOF)
+//	{
+//		int num = 0;
+//		int sum = 0;
+//		int arr[50] = { 0 };
+//		int i, j, k;
+//		for (i = 0; i < n; i++)
+//		{
+//			scanf("%d", &arr[i]);
+//		}
+//		for (i = 1; i < n + 1; i++)//一次检测数量
+//		{
+//			for (j = 0; j < n+1 - i; j++)//检测起始位置
+//			{
+//				sum = 0;
+//				for (k = 0; k < i; k++,j++)
+//				{
+//					sum += arr[j];
+//				}
+//				if (sum % 11 == 0)
+//					num++;
+//				j -= i;
+//			}
+//
+//		}
+//		printf("%d\n", num);
+//
+//	}
+//
+//	return 0;
+//}
+//
+
+#include <stdio.h>
+
+#define N 8
+
 typedef struct
+
 {
-	int year;
-	int month;
-	int day;
-}Birthday;
+    char num[11];
+
+    double s[N];
+
+    double ave;
+
+}STREC;
 
 
 
-typedef struct 
+void fun(STREC* p)
+
 {
-	int id;
-	char name[100];
-	int age;
-	float  score;
-	Birthday birthday;
+    double sum = 0;
+    int i;
+    for (i = 0; i < 8; i++)
+    {
+        sum += *p->s + i;
+    }
+    p->ave = sum / 8.0;
 
-}Student;
+
+
+
+}
 
 
 
 int main()
+
 {
-	Student stu1 = { 1001,"张三",27,100,{2021,11,2} };
-	Student stu2 = { 1002,"李四",25,99,{2000,1,3} };
-	printf("学号：%d\t姓名：%s\t年龄：%d\t%.2f\t%d-%d-%d\n", stu1.id, stu1.name, stu1.age, stu1.score, stu1.birthday.year, stu1.birthday.month, stu1.birthday.day);
+    STREC s = { "GA005",85.5,76,69.5,85,91,72,64.5,87.5 };
 
+    int i;
 
+    scanf("%s", s.num);
 
-	return 0;
+    for (i = 0; i < N; i++)
+
+    {
+
+        scanf("%lf", &s.s[i]);
+
+    }
+
+    fun(&s);
+
+    printf("%s:%7.3f\n", s.num, s.ave);
+
+    return 0;
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
