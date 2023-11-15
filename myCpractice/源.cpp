@@ -6,6 +6,7 @@
 #include <iomanip>
 #include <stdlib.h>
 #include <windows.h>
+#include <ctype.h>
 using namespace std;
 //int main()
 //{
@@ -6117,65 +6118,235 @@ using namespace std;
 //}
 //
 
-#include <stdio.h>
+//#include <stdio.h>
+//
+//#define N 8
+//
+//typedef struct
+//
+//{
+//    char num[11];
+//
+//    double s[N];
+//
+//    double ave;
+//
+//}STREC;
+//
+//
+//
+//void fun(STREC* p)
+//
+//{
+//    double sum = 0;
+//    int i;
+//    for (i = 0; i < 8; i++)
+//    {
+//        sum += *(p->s + i);
+//    }
+//    p->ave = sum / 8.0;
+//
+//   
+//
+//
+//}
+//
+//
+//
+//int main()
+//
+//{
+//    STREC s = { "GA005",85.5,76,69.5,85,91,72,64.5,87.5 };
+//
+//    int i;
+//
+//    scanf("%s", s.num);
+//
+//    for (i = 0; i < N; i++)
+//
+//    {
+//
+//        scanf("%lf", &s.s[i]);
+//
+//    }
+//
+//    fun(&s);
+//
+//    printf("%s:%7.3f\n", s.num, s.ave);
+//
+//    return 0;
+//
+//}
+//
 
-#define N 8
+//#include <stdio.h>
 
-typedef struct
+//int main() {
+//    char str[100];
+//    char x;
+//    printf("Enter a string: ");
+//    scanf("%[^\n]%*c", str);
+//    scanf("%c", &x);
+//
+//    printf("String: %s\n", str);
+//    printf("%c", x);
+//    return 0;
+//}
 
-{
-    char num[11];
+//int main()
+//{
+//	char arr[100] = { 0 };
+//	while (scanf("%[^\n]", arr) != EOF)
+//	{
+//		getchar();
+//		int num[26] = { 0 };
+//		int i, j, k;
+//		//遍历统计
+//		for (i = 0; i < 100; i++)
+//		{
+//			if (arr[i] >= 'a' && arr[i] <= 'z')
+//			{
+//				num[arr[i] - 97]++;
+//			}
+//			else if (arr[i] >= 'A' && arr[i] <= 'Z')
+//			{
+//				num[arr[i] - 65]++;
+//			}
+//
+//
+//		}
+//		//循环找最大
+//		int p = 0;
+//		int  q = 0;
+//		int maxnum[26] = { 0 };
+//		int maxer[26] = { 0 };
+//
+//		while (1)
+//		{
+//			
+//			int max = 0;
+//			for (i = 0; i < 26; i++)
+//			{
+//				if (num[i] > max)
+//					max = num[i];
+//
+//			}
+//			if (max == 0)
+//				break;
+//			int nums = 0;
+//			for (i = 0; i < 26; i++)
+//			{
+//				if (num[i] == max)
+//				{
+//					nums++;
+//					maxer[p] = i;
+//					p++;
+//					maxnum[q] = max;
+//					q++;
+//					num[i] = 0;
+//				}
+//
+//			}
+//			//输出
+//
+//
+//		}
+//		i = 0;
+//		while (maxnum[i] != 0)
+//		{
+//			printf("%c %d\n", maxer[i] + 65, maxnum[i]);
+//			i++;
+//
+//		}
+//		memset(arr, 0, sizeof(arr));
+//
+//
+//
+//
+//
+//
+//
+//	}
+//
+//	return 0;
+//}
 
-    double s[N];
+//void delete_space(char* s)
+//{
+//	while (*s != '\0')
+//	{
+//		*s = *(s + 1);
+//		s++;
+//	}
+//	
+//}
+//
+//
+//
+//
+//int main()
+//{
+//	char* str = (char*)malloc(128);
+//	//scanf("%[^\n]",arr);
+//	//fgets(arr,sizeof(arr),stdin);
+//	char ch;
+//	int i = 0;
+//	while ((ch = getchar()) != '\n')
+//	{
+//		*(str + i++) = ch;
+//
+//	}
+//	char* begin = str;
+//	while (*str != '\0')
+//	{
+//		if (*str == ' ')
+//		{
+//			delete_space(str);
+//		}
+//		else
+//		{
+//			str++;
+//		}
+//
+//	}
+//	printf("%s\n", begin);
+//	return 0;
+//}
 
-    double ave;
-
-}STREC;
-
-
-
-void fun(STREC* p)
-
-{
-    double sum = 0;
-    int i;
-    for (i = 0; i < 8; i++)
-    {
-        sum += *p->s + i;
-    }
-    p->ave = sum / 8.0;
-
-
-
-
-}
-
+//int main()
+//{
+//	//int c;
+//	//while ((c = getchar()) != '\n' && c != EOF);
+//	//////读取一个字符，直到是\n或者是EOF停止
+//	//////等价于
+//	////scanf("*[^\n]");
+//	//int arr[20];
+//	//int x;
+//	//scanf("%s%n",arr, &x);
+//	//printf("%d", x);
+//	//char arr[20] = {2,34,12,123,32,23};
+//	//char ch[1] = { 0 };
+//	//scanf("%d", &ch[1]);
+//	//printf("%d", strcspn(ch, arr));
+//
+//
+//
+//	return 0;
+//}
 
 
-int main()
 
-{
-    STREC s = { "GA005",85.5,76,69.5,85,91,72,64.5,87.5 };
 
-    int i;
 
-    scanf("%s", s.num);
 
-    for (i = 0; i < N; i++)
 
-    {
 
-        scanf("%lf", &s.s[i]);
 
-    }
 
-    fun(&s);
 
-    printf("%s:%7.3f\n", s.num, s.ave);
 
-    return 0;
 
-}
+
 
 
 
