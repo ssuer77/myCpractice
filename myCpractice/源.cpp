@@ -11,7 +11,7 @@
 #include <stack>
 #include <queue>
 #include <set>
-//#include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 //int main()
 //{
@@ -6696,29 +6696,65 @@ using namespace std;
 //
 //
 
-
-int main()
-{
-	int N;
-	scanf("%d", &N);
-	int i;
-	vector<int> arr(N + 10, 0);
-	for (i = 0; i < N; i++)
-	{
-
-		int x;
-		scanf("%d", &x);
-		arr.push_back(x);
-	}
-	sort(arr);
-
-
-}
-
-
+//
+//int main()
+//{
+//	int N;
+//	scanf("%d", &N);
+//	int i;
+//	vector<int> arr(N + 10, 0);
+//	for (i = 0; i < N; i++)
+//	{
+//
+//		int x;
+//		scanf("%d", &x);
+//		arr.push_back(x);
+//	}
+//	sort(arr);
+//
+//
+//}
 
 
-
+//int main()
+//{
+//	//string s(100,'0');
+//	//cout << s << endl;
+//	//int a = 1;
+//	//int b = 2;
+//	//cout << a << ' ' << b;
+//	//swap(a, b);
+//	////cout << a << ' ' << b;
+//	//vector<int> arr = { 1,4,2,67,34,4,7,2,7,0 };
+//	//sort(arr.begin(), arr.end());
+//	//////for (int i = 0; i < arr.size(); i++)
+//	////	//cout << arr[i] << endl;
+//	////int pos = lower_bound(arr.begin(), arr.end(), 7) - arr.begin();
+//	////cout << pos;
+//	////reverse(arr.begin(), arr.end());
+//	////for (int i = 0; i < arr.size(); i++)
+//	////{
+//	////	cout << arr[i] << ' ';
+//	////}
+//	////for (auto ele : arr)
+//	////{
+//	////	cout << ele << endl;
+//	////}
+//	////cout << min( 2, 4, 5, 6, 0);
+//	//arr.erase(unique(arr.begin(), arr.end()),arr.end());
+//	////unique(arr.begin(), arr.end());	
+//	//for (auto ele : arr)
+//	//{
+//	//	cout << ele << ' ';
+//	//}
+//	//cout << log2(4);
+//	cout << __gcd(10, 5);
+//
+//	
+//	return 0;
+//}
+//
+//
 
 
 
