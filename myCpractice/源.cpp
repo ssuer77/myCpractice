@@ -7,6 +7,11 @@
 #include <stdlib.h>
 #include <windows.h>
 #include <ctype.h>
+#include <vector>
+#include <stack>
+#include <queue>
+#include <set>
+//#include <bits/stdc++.h>
 using namespace std;
 //int main()
 //{
@@ -6334,44 +6339,381 @@ using namespace std;
 //	return 0;
 //}
 
+//typedef struct
+//{
+//	int x;
+//	int y;
+//
+//}Star;
+//
+//
+//int main()
+//{
+//	int n;
+//	
+//	Star stars[300] = { 0 };
+//	scanf("%d", &n);
+//	int i, j, k;
+//	int current_star_num = 0;
+//	for (i = 0; i < n; i++)
+//	{
+//		int x = 0, y = 0;
+//		int judge = 1;
+//		scanf("%d %d", &x, &y);
+//		for (j = 0; j < current_star_num; j++)
+//		{
+//			if (stars[j].x == x && stars[j].y == y)
+//			{
+//				judge = 0;
+//
+//			}
+//
+//		}
+//		if (judge == 1)
+//		{
+//			stars[current_star_num].x = x;
+//			stars[current_star_num].y = y;
+//			current_star_num++;
+//		}
+//		
+//
+//
+//	}
+//
+//	printf("%d", current_star_num);
+//
+//
+//
+//
+//	return 0;
+//}
+//
+//
+
+//typedef struct
+//{
+//	char name[20];
+//	int math;
+//	int politics;
+//
+//
+//}Student;
+//
+//int main()
+//{
+//	int i, j, k;
+//	Student students[5] = { 0 };
+//	for (i = 0; i < 5; i++)
+//	{
+//		scanf("%s", students[i].name);
+//		scanf("%d %d", &students[i].math,& students[i].politics);
+//
+//	}
+//	int max_math = 0;
+//	int target_stu = 0;
+//	for (i = 0; i < 5; i++)
+//	{
+//		if (students[i].math > max_math)
+//		{
+//			max_math = students[i].math;
+//			target_stu = i;
+//
+//		}
+//
+//	}
+//
+//	for (i = 0; i < 5; i++)
+//	{
+//		printf("%s %d\n", students[i].name, (students[i].math + students[i].politics)/2);
+//
+//	}
+//	printf("%s %d %d", students[target_stu].name, students[target_stu].math, students[target_stu].politics);
+//
+//
+//
+//
+//
+//
+//	return 0;
+//}
 
 
 
 
 
+//typedef struct
+//{
+//	int id;
+//	char name[20];
+//	int year;
+//	int month;
+//	int math;
+//	int english;
+//	int C_lan;
+//
+//}Student;
+//
+//int main()
+//{
+//	int n, i, j, k;
+//	scanf("%d", &n);
+//	Student students[50] = { 0 };
+//	for (i = 0; i < n; i++)
+//	{
+//		scanf("%d %s %d %d %d %d %d", &students[i].id, students[i].name, &students[i].year, &students[i].month, &students[i].math, &students[i].english, &students[i].C_lan);
+//
+//
+//	}
+//	for (i = 0; i < n; i++)
+//	{
+//		printf("%d %s %d/%d %d %d %d %.0f\n", students[i].id, students[i].name, students[i].year, students[i].month, students[i].math, students[i].english, students[i].C_lan, (students[i].math + students[i].english + students[i].C_lan) / 3.0);
+//
+//	}
+//	return 0;
+//}
+//
+
+//#include <stdio.h>
+//
+//// 交换两个元素的值
+//void swap(int* a, int* b) {
+//    int t = *a;
+//    *a = *b;
+//    *b = t;
+//}
+//
+//// 分区函数，选择最后一个元素作为基准
+//int partition(int arr[], int low, int high) {
+//    int pivot = arr[high];  // pivot
+//    int i = (low - 1);  // Index of smaller element
+//
+//    for (int j = low; j <= high - 1; j++) {
+//        // 如果当前元素小于或等于pivot
+//        if (arr[j] <= pivot) {
+//            i++;  // 递增小于pivot的元素的索引
+//            swap(&arr[i], &arr[j]);
+//        }
+//    }
+//    swap(&arr[i + 1], &arr[high]);
+//    return (i + 1);
+//}
+//
+//// 快速排序函数
+//void quickSort(int arr[], int low, int high) {
+//    if (low < high) {
+//        // 分区索引
+//        int pi = partition(arr, low, high);
+//
+//        // 分别对分区前后的子数组进行排序
+//        quickSort(arr, low, pi - 1);
+//        quickSort(arr, pi + 1, high);
+//    }
+//}
+//
+//// 打印数组的函数
+//void printArray(int arr[], int size) {
+//    for (int i = 0; i < size; i++)
+//        printf("%d ", arr[i]);
+//    printf("\n");
+//}
+//
+//// 主函数
+//int main() {
+//    int arr[] = { 10, 7, 8, 9, 1, 5 };
+//    int n = sizeof(arr) / sizeof(arr[0]);
+//    quickSort(arr, 0, n - 1);
+//    printf("Sorted array: \n");
+//    printArray(arr, n);
+//    return 0;
+//}
+//
+
+//void swap(int* x, int* y)
+//{
+//	int tmp = *x;
+//	*x = *y;
+//	*y = tmp;
+//}
+//
+//int partition(int arr[], int low, int high)
+//{
+//	int pivot = arr[high];
+//	int i = low - 1;
+//	for (int j = low; j <= high - 1; j++)
+//	{
+//		if (arr[j] <= pivot)
+//		{
+//			i++;
+//			swap(&arr[i], &arr[j]);
+//		}
+//	}
+//	swap(&arr[i + 1], &arr[high]);
+//	return (i + 1);
+//}
+//
+//void quicksort(int arr[], int low, int high)
+//{
+//	if (low < high)
+//	{
+//		int pi = partition(arr, low, high);
+//		quicksort(arr, low, pi - 1);
+//		quicksort(arr, pi + 1, high);
+//	}
+//}
+//
+//void print(int arr[], int n)
+//{
+//	int i;
+//	for (i = 0; i < n; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//}
+//
+//int main()
+//{
+//	int arr[] = { 2,4,1,7,3,6,5,2,53,21,43,23,21,1 };
+//	int n = sizeof(arr) / sizeof(arr[0]);
+//	quicksort(arr, 0, n - 1);
+//	print(arr, n);
+//	return 0;
+//}
+//
+//#include <iostream>
+//#include <vector>
+////
+//int binarySearch(const std::vector<int>& nums, int target) {
+//    int low = 0;
+//    int high = nums.size() - 1;
+//
+//    while (low <= high) {
+//        int mid = low + (high - low) / 2;  // 避免溢出
+//        if (nums[mid] == target) {
+//            return mid;  // 找到目标值，返回索引
+//        }
+//        else if (nums[mid] < target) {
+//            low = mid + 1;  // 在右半边继续查找
+//        }
+//        else {
+//            high = mid - 1;  // 在左半边继续查找
+//        }
+//    }
+//
+//    return -1;  // 没有找到目标值，返回-1
+//}
+//
+//int main() {
+//    std::vector<int> nums = { -1, 0, 3, 5, 9, 12 };
+//    int target = 9;
+//
+//    int result = binarySearch(nums, target);
+//    if (result != -1) {
+//        std::cout << "Element found at index: " << result << std::endl;
+//    }
+//    else {
+//        std::cout << "Element not found in the array." << std::endl;
+//    }
+//
+//    return 0;
+//}
 
 
+//int binarySearch(int nums[], int target,int n)
+//{
+//	int low = 0;
+//	int high = n - 1;
+//	while (low <= high)
+//	{
+//		int mid = low + (high - low) / 2;
+//		if (nums[mid] == target)
+//			return mid;
+//		else if (nums[mid] < target)
+//			low = mid + 1;
+//		else
+//			high = mid - 1;
+//
+//	}
+//	
+//
+//	return -1;
+//}
+//
+//
+//int main()
+//{
+//    int nums[] = {-1,0,3,5,9,12};
+//    int target = 9;
+//	int n = sizeof(nums) / sizeof(nums[0]);
+//
+//    int result = binarySearch(nums,target,n);
+//	if (result != -1)
+//	{
+//		printf("%d", result);
+//	}
+//	else
+//	{
+//		printf("error");
+//	}
+//
+//
+//    return 0;
+//}
+//
+
+//int main()
+//{
+//	//vector<int> dp0(100, 1);
+//	//vector<vector<int>> dp(5, vector<int>(6, 10));
+//	//vector<vector<vector<int>>> dp2(5, vector<vector<int>>(6, vector<int>(4)));
+//	//vector<int> dp;
+//	//dp.push_back(1);
+//	//dp.push_back(2);
+//	//dp.resize(5,3);
+//	////dp.clear();
+//	//printf("%d\n", dp.size());
+//	//printf("%d\n", dp.empty());
+//	//queue<int> que;
+//	//que.push(1);
+//	//que.push(2);
+//	//printf("%d", que);
+//	//stack<int> stk;
+//	//stk.push(1);
+//	//stk.push(2);
+//	//stk.pop();
+//	//printf("%d\n", stk.front());
+//	//printf("%d", stk.top());
+//	priority_queue<int> pque;
+//	pque.push(1);
+//	printf("%d", pque.top());
+//	pque.push(4);
+//	pque.push(2);
+//	pque.push(1);
+//
+//
+//
+//	return 0;
+//}
+//
+//
 
 
+int main()
+{
+	int N;
+	scanf("%d", &N);
+	int i;
+	vector<int> arr(N + 10, 0);
+	for (i = 0; i < N; i++)
+	{
+
+		int x;
+		scanf("%d", &x);
+		arr.push_back(x);
+	}
+	sort(arr);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
