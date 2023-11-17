@@ -6756,6 +6756,306 @@ using namespace std;
 //
 //
 
+//bool cmp(int x, int y)
+//{
+//	return x > y;
+//
+//}
+//
+//int main()
+//{
+//	//vector<int> arr{ 1,3,5,6,32,54,236,54 };
+//	//sort(arr.begin(), arr.end());
+//	//sort
+//	int arr[20] = { 2,53,23,52,353,12,75 };
+//	sort(arr, arr + 4,cmp);
+//
+//	for (auto ele : arr)
+//	{
+//		cout << ele << ' ';
+//	}
+//
+//
+//
+//	return 0;
+//}
+//int num3(int* arr)
+//{
+//	return *(arr + 3);
+//}
+//
+//int main()
+//{
+//	int arr[] = { 1,2,3,4,5 };
+//	//reverse(arr, arr + 2);
+//	int x = num3(arr);
+//	return 0;
+//}
+
+
+//汉诺塔步数问题
+
+//int hanoi(int n)
+//{
+//	int step = 0;
+//	if (n == 1)
+//		return 1;
+//	else
+//		return 1 + 2*hanoi(n - 1);
+//
+//
+//}
+//
+//int main()
+//{
+//	int n, s;
+//	int i, j, k;
+//	cin >> n;
+//	s = hanoi(n);
+//	printf("%d", s);
+//
+//	return 0;
+//}
+//
+
+//int main()
+//{
+//	int n;
+//	scanf("%d", &n);
+//	int x = pow(2, n)-1;
+//	printf("%d",(int) (pow(2, n) - 1));
+//	return 0;
+//}
+
+
+//int main()
+//{
+//
+//
+//	return 0;
+//}
+//int step_hanoi(int x)
+//{
+//	return (int)(pow(2, x) - 1);
+//}
+//
+//void hanoi(int n, int m)
+//{
+//	if ()
+//
+//
+//
+//	while (n--)
+//	{
+//		if (step_hanoi(n) < m)
+//		{
+//			hanoi()
+//
+//
+//
+//			break;
+//		}
+//		else
+//			continue;
+//	}
+//
+//
+//}
+//
+//
+//int main()
+//{
+//	int n, m;
+//	while (scanf("%d %d", & n, &m) != EOF)
+//	{
+//		int max_step = step_hanoi(n);
+//		if (m > max_step)
+//		{
+//			printf("none\n");
+//			continue;
+//		}
+//		else
+//		{
+//
+//
+//
+//		}
+//
+//
+//
+//
+//
+//	}
+//
+//	return 0;
+//}
+//
+//
+
+//int jump_step(int x)
+//{
+//	if (x == 1)
+//		return 1;
+//	else if (x == 2)
+//		return 2;
+//	else
+//		return (jump_step(x - 1) + jump_step(x - 2));
+//
+//
+//
+//
+//}
+//
+//
+//
+//int main()
+//{
+//	int n;
+//	scanf("%d", &n);
+//	int t = jump_step(n);
+//
+//	printf("%d", t);
+//	return 0;
+//}
+//
+
+//int C_what(int k, int n)
+//{
+//	if (k == 0 || k == n)
+//		return 1;
+//	else
+//	{
+//		return(C_what(k, n - 1)+C_what(k - 1, n - 1));
+//
+//
+//
+//	}
+//
+//
+//
+//
+//}
+//int main()
+//{
+//	int k, n;
+//	scanf("%d %d", &k, &n);
+//	int t = C_what(k, n);
+//	printf("%d", t);
+//
+//
+//	return 0;
+//}
+//
+
+//int feb(int n, int* num)
+//{
+//	*num = *num + 1;
+//	if (n == 1)
+//		return 1;
+//	else if (n == 0)
+//		return 0;
+//	else
+//		return feb(n - 1,num) + feb(n - 2,num);
+//
+//	
+//}
+//
+//
+//
+//int main()
+//{
+//	int n;
+//	int num = 0;
+//	scanf("%d", &n);
+//	int t = feb(n, &num);
+//	printf("%d %d", t, num);
+//	return 0;
+//}
+//
+
+
+
+//int main()
+//{
+//	char arr[64];
+//	fill(arr, arr + sizeof(arr), 'a');
+//	for (int i=0;i<64;i++)
+//	{
+//		scanf("%c", &arr[i]);
+//
+//	}
+//	int i = 0;
+//	int counts = 0;
+//	while (arr[i++] != 'a')
+//	{
+//		counts++;
+//
+//	}
+//	reverse(arr, arr + counts);
+//	i = 0;
+//	while (counts--)
+//	{
+//		printf("%c", arr[i++]);
+//	}
+//
+//
+//	
+//	return 0;
+//}
+//
+
+//int main()
+//{
+//	string s;
+//	cin >> s;
+//	reverse(s.begin(),s.end());
+//	cout << s;
+//
+//
+//	return 0;
+//}
+//
+//int main()
+//{
+//	char s[20];
+//	cin >> s;
+//	reverse(s,s+20);
+//	cout << s;
+//
+//
+//	return 0;
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
