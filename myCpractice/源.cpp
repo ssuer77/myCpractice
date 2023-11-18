@@ -7029,7 +7029,651 @@ using namespace std;
 
 
 
+//void hanoi(int n, char from, char to, char aux)
+//{
+//	if (n == 1)
+//		printf("%c----%c\n", from, to);
+//	else
+//	{
+//		hanoi(n - 1, from, aux, to);
+//		printf("%c----%c\n", from, to);
+//		hanoi(n - 1, aux, to, from);
+//	}
+//
+//
+//}
+//
+//
+//
+//int main()
+//{
+//	int n;
+//	int k = 1;
+//	while (scanf("%d", &n) != EOF)
+//	{
+//		//空行实现
+//		if (k != 1)
+//			printf("\n");
+//
+//
+//		hanoi(n, 'A', 'C', 'B');
+//		printf("\n");
+//
+//
+//	}
+//
+//
+//
+//
+//	return 0;
+//}
+//
+//
+//
 
+
+
+
+//int main()
+//{
+//	int k = 1;
+//	string s1, s2, a1,a2,a3,a4;
+//	while (cin>>s1>>s2)
+//	{
+//		if (k != 1)
+//		{
+//			cout << endl;
+//		}
+//		k = 0;
+//		for (int i = 0; i < s1.size(); i++)
+//		{
+//			if (s2.find(s1[i]) != string::npos&&a2.find(s1[i])==string::npos)
+//			{
+//				a2 += s1[i];
+//			}
+//			if (a1.find(s1[i]) == string::npos)
+//			{
+//				a1 += s1[i];
+//			}
+//
+//		}
+//		for (int i = 0; i < s2.size(); i++)
+//		{
+//			if (a1.find(s2[i]) == string::npos)
+//			{
+//				a1 += s2[i];
+//			}
+//
+//		}
+//		sort(a1.begin(), a1.end());
+//		sort(a2.begin(), a2.end());
+//		string abc = "abcdefghijklmnopqrstuvwxyz";
+//		cout << "in s1 or s2:" << a1 << endl;
+//		cout << "int s1 and s2:" << a2 << endl;
+//		cout << "in s1 but not in s2 ,or in s2 but not in s1:";
+//
+//		vector<char> difference1;
+//		// 使用 set_difference 算法计算两个字符串的差异(一定要顺序)
+//		set_difference(a1.begin(),a1.end(),
+//			a2.begin(), a2.end(),
+//			back_inserter(difference1));
+//		// 输出差异的元素
+//		for (char ch : difference1) {
+//			cout << ch ;
+//		}
+//		cout <<endl;
+//		cout << "not in s1 and s2:";
+//		vector<char> difference2;
+//		// 使用 set_difference 算法计算两个字符串的差异(一定要顺序)
+//		set_difference(abc.begin(), abc.end(),
+//			a1.begin(), a1.end(),
+//			back_inserter(difference2));
+//		// 输出差异的元素
+//		for (char ch : difference2) {
+//			cout << ch;
+//		}
+//		cout << endl;
+//
+//		s1.clear();
+//		s2.clear();
+//		a1.clear();
+//		a2.clear();
+//		a3.clear();
+//		a4.clear();
+//
+//
+//
+//
+//
+//
+//	}
+//
+//
+//
+//
+//
+//
+//
+//
+//	return 0;
+//}
+//
+
+//int main()
+//{
+//	string s1, s2;
+//	cin >> s1 >> s2;
+//	if (s1.size() != s2.size())
+//	{
+//		printf("1");
+//	}
+//	else
+//	{
+//		if (s1 == s2)
+//			printf("2");
+//		else
+//		{
+//			for (int i = 0; i < s1.size();i++)
+//			{
+//				s1[i] = tolower(s1[i]);
+//				s2[i] = tolower(s2[i]);
+//			}
+//			if (s1 == s2)
+//				printf("3");
+//			else
+//				printf("4");
+//
+//
+//
+//		}
+//
+//
+//	}
+//
+//
+//	return 0;
+//}
+//
+//
+//
+//int main()
+//{
+//	string data;
+//	while (cin >> data)
+//	{
+//		int sum = 0;
+//		int left = 0, right = 0;
+//		int distance;
+//		for (int i = 0; i < data.size();i++)
+//		{
+//			if (data[i] == '+')
+//			{
+//				right = i;
+//				distance = right - left;
+//				int aux = stoi(data.substr(left, distance));
+//				sum += aux;
+//				left = i + 1;
+//
+//			}
+//			if (i==data.size()-1)
+//			{
+//				distance = data.size() - left;
+//				int aux = stoi(data.substr(left, distance));
+//				sum += aux;
+//
+//			}
+//		}
+//
+//		printf("%d\n", sum);
+//		data.clear();
+//
+//
+//
+//
+//	}
+//
+//
+//
+//	return 0;
+//}
+//
+//
+
+
+//int main()
+//{
+//	string ori;
+//	while (cin>>ori)
+//	{
+//		vector<string> str;
+//		str.push_back(ori);
+//		while (ori.size()!=1)
+//		{
+//			str.push_back(ori.erase(0,1));
+//
+//		}
+//		sort(str.begin(), str.end());
+//		for (int i = 0; i < str.size(); i++)
+//		{
+//			cout << str[i];
+//			cout << endl;
+//
+//		}
+//
+//	}
+//
+//
+//
+//	return 0;
+//}
+
+	//typedef struct
+	//{
+	//	char name[20];
+	//	int t_grade;
+	//	int c_grade;
+	//	char stu;
+	//	char west;
+	//	int paper;
+	//	int sumer;
+	//}Student;
+
+
+
+	//int main()
+	//{
+	//	int n;
+	//	int k = 1;
+	//	while (scanf("%d",&n)!=EOF)
+	//	{
+	//		if (k != 1)
+	//			printf("\n");
+	//		k = 0;
+
+	//		Student students[1000] = { 0 };
+
+	//		for (int i=0;i<n;i++)
+	//		{
+	//			scanf("%s %d %d %c %c %d"
+	//			   ,&students[i].name,&students[i].t_grade,&students[i].c_grade,&students[i].stu,&students[i].west,&students[i].paper);
+
+
+	//		}
+
+	//		for (int i = 0; i < n; i++)
+	//		{
+	//			if (students[i].t_grade > 80 && students[i].paper > 0)
+	//				students[i].sumer += 8000;
+	//			if (students[i].t_grade > 85 && students[i].c_grade > 80)
+	//				students[i].sumer += 4000;
+	//			if (students[i].t_grade > 90 )
+	//				students[i].sumer += 2000;
+	//			if (students[i].t_grade > 85 && students[i].west =='Y')
+	//				students[i].sumer += 1000;	
+	//			if (students[i].c_grade > 80 && students[i].stu =='Y')
+	//				students[i].sumer += 850;
+
+
+	//		}
+	//		int max_money = students[0].sumer;
+	//		int bester = 0;
+	//		int sums = 0;
+	//		for (int i = 0; i < n; i++)
+	//		{
+	//			if (students[i].sumer > max_money)
+	//			{
+	//				max_money = students[i].sumer;
+	//				bester = i;
+
+	//			}
+	//			sums += students[i].sumer;
+
+
+	//		}
+	//		printf("%s\n%d\n%d\n", students[bester].name, students[bester].sumer, sums);
+
+
+
+
+	//	}
+
+	//	return 0;
+	//}
+
+
+//int main()
+//{
+//	int n, x;
+//	map<int, char > a;
+//	a[0] = '0';
+//	a[1] = '1';
+//	a[2] = '2';
+//	a[3] = '3';
+//	a[4] = '4';
+//	a[5] = '5';
+//	a[6] = '6';
+//	a[7] = '7';
+//	a[8] = '8';
+//	a[9] = '9';
+//	a[10] = 'A';
+//	a[11] = 'B';
+//	a[12] = 'C';
+//	a[13] = 'D';
+//	a[14] = 'E';
+//	a[15] = 'F';
+//	a[16] = 'G';
+//	a[17] = 'H';
+//	a[18] = 'I';
+//	a[19] = 'J';
+//	while (cin >> n >> x)
+//	{
+//		vector<int> data;
+//		while (n != 0)
+//		{
+//			data.push_back(n % x);
+//			n /= x;
+//
+//		}
+//		for (int i = data.size()-1; i > -1; i--)
+//		{
+//			cout << a[data[i]];
+//
+//		}
+//
+//		cout << endl;
+//
+//	}
+//
+//
+//
+//
+//
+//	return 0;
+//}
+//
+//
+//
+
+
+//int main()
+//{
+//	int n;
+//	while (scanf("%d",&n)!=EOF)
+//	{
+//		long double x, y;
+//		cin >> x >> y;
+//		if (x == y)
+//			printf("YES\n");
+//		else
+//			printf("NO");
+//
+//
+//
+//	}
+//	return 0;
+//}
+//
+
+//int lefts(string x)
+//{
+//	return x.find_first_not_of('0');
+//
+//}
+//
+//int rights(string x)
+//{
+//	if (x.find('.') == string::npos)
+//		return x.size() - 1;
+//	else
+//	{
+//		if (x.substr(x.find('.') + 1).find_first_not_of('0') == string::npos)
+//			return x.find('.')-1;
+//		else
+//		{
+//			int i = 0;
+//			while (x[x.size() - 1-i] == '0')
+//			{
+//				i++;
+//			}
+//			return x.size()-i-1;
+//		}
+//			//return (x.substr(x.find('.') + 1)).find_first_not_of('0')+x.substr(0,x.find('.')+1).size();
+//
+//	}
+//
+//}
+//
+//int main()
+//{
+//	string s1, s2;
+//	int n;
+//	scanf("%d", &n);
+//	for (int i=0;i<n;i++)
+//	{
+//		
+//		cin >> s1 >> s2;
+//		int l1, l2, r1, r2,t1,t2;
+//		l1 = lefts(s1);
+//		l2 = lefts(s2);
+//		r1 = rights(s1);
+//		r2 = rights(s2);
+//		//r1 = t1 - l1;
+//		//r2 = t2 - l2;
+//		if (s1.substr(l1, r1 - l1 + 1) == s2.substr(l2, r2 - l2 + 1))
+//		{
+//			printf("YES\n");
+//		}
+//		else
+//			printf("NO\n");
+//		s1.clear();
+//		s2.clear();
+//
+//	}
+//
+//	return 0;
+//}
+//
+
+//
+//int main()
+//{
+//	string s;
+//	cin >> s;
+//	int a[5];
+//	 a[0] = s.find('a')+1;
+//	 a[1] = s.find('e')+1;
+//	a[2] = s.find('i')+1;
+//	a[3] = s.find('o')+1;
+//	a[4] = s.find('u')+1;
+//	int min = 9999999999;
+//	for (int i = 0; i < 5; i++)
+//	{
+//		if (a[i] < min && a[i] != 0)
+//		{
+//			min = a[i];
+//		}
+//	}
+//	printf("%d", min);
+//
+//	return 0;
+//}
+//
+
+//
+//#include <iostream>
+//#include <sstream>
+//#include <string>
+//
+//int main() {
+//	std::string input = "Hello 123 3.14 World";
+//	std::istringstream iss(input);
+//
+//	std::string word;
+//	int number;
+//	double decimal;
+//
+//	// 从字符串中提取数据
+//	iss >> word >> number >> decimal;
+//
+//	// 输出提取的数据
+//	std::cout << "Word: " << word << std::endl;
+//	std::cout << "Number: " << number << std::endl;
+//	std::cout << "Decimal: " << decimal << std::endl;
+//
+//	return 0;
+//}
+//
+//
+
+//int my_pow(int x, int y)
+//{
+//	if (y == 0)
+//		return 1;
+//	else
+//		return x * my_pow(x, y - 1);
+//
+//
+//}
+//
+//int main()
+//{
+//	map<char, int> a;
+//	a['0'] = 0;
+//	a['1'] = 1;
+//	a['2'] = 2;
+//	a['3'] = 3;
+//	a['4'] = 4;
+//	a['5'] = 5;
+//	a['6'] = 6;
+//	a['7'] = 7;
+//	a['8'] = 8;
+//	a['9'] = 9;
+//	a['A'] = 10;
+//	a['B'] = 11;
+//	a['C'] = 12;
+//	a['D'] = 13;
+//	a['E'] = 14;
+//	a['F'] = 15;
+//	a['G'] = 16;
+//	a['H'] = 17;
+//	a['I'] = 18;
+//	a['J'] = 19;
+//
+//	//映射
+//
+//	string s;
+//	int jinzhi;
+//
+//
+//	while (cin >> jinzhi >> s)
+//	{
+//		int sum = 0;
+//		int p = 0;
+//		int i=s.size()-1;
+//		while (1+i)
+//		{
+//			sum += a[s[i]] * my_pow(jinzhi, p++);
+//			i--;
+//		}
+//		printf("%d\n", sum);
+//
+//		s.clear();
+//
+//	}
+//
+//
+//
+//
+//
+//
+//
+//	return 0;
+//}
+//
+
+//int main()
+//{
+//	string s;
+//	while (cin >> s)
+//	{
+//		int ke = 1;
+//		vector<double> arr;
+//		for (int i = 0; i < s.size(); i++)
+//		{
+//			
+//			if (s[i] >= '1' && s[i] <= '9')
+//			{
+//				arr.push_back(s[i]);
+//				ke = 0;
+//
+//			}
+//		}
+//		if (ke == 1)
+//			cout << 0;
+//		else
+//		{
+//			double sum = 0;
+//			for (int i = 0; i < arr.size(); i++)
+//			{
+//				sum += 1.0 / (arr[i]-48);
+//
+//			}
+//			for (int i = 0; i < arr.size(); i++)
+//			{
+//				if (i != 0)
+//					cout << '+';
+//				cout << "1/" << (arr[i]-48);
+//
+//			}
+//			cout << '=';
+//			printf("%.2f", sum);
+//
+//
+//		}
+//		cout << endl;
+//		s.clear();
+//
+//
+//
+//	}
+//
+//
+//
+//
+//	return 0;
+//}
+//
+
+int main()
+{
+	int n;
+	while (cin >> n)
+	{
+		string s="11";
+		for (int i = 2; i < n + 1; i++)
+		{
+			for (int j = 0; j < s.size() - 1; j++)
+			{
+				if (s[j] + s[j + 1] == i+48*2)
+				{
+					s.insert(j+1,to_string(i));
+				}
+
+
+			}
+
+		}
+		cout << s << endl;
+
+
+
+
+	}
+
+
+
+	return 0;
+}
 
 
 
