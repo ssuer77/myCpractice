@@ -7644,39 +7644,46 @@ using namespace std;
 //}
 //
 
+//int main()
+//{
+//	int n;
+//	while (cin >> n)
+//	{
+//		string s="11";
+//		for (int i = 2; i < n + 1; i++)
+//		{
+//			for (int j = 0; j < s.size() - 1; j++)
+//			{
+//				if (s[j] + s[j + 1] == i+48*2)
+//				{
+//					s.insert(j+1,to_string(i));
+//				}
+//
+//
+//			}
+//
+//		}
+//		cout << s << endl;
+//
+//
+//
+//
+//	}
+//
+//
+//
+//	return 0;
+//}
+//
+
 int main()
 {
-	int n;
-	while (cin >> n)
-	{
-		string s="11";
-		for (int i = 2; i < n + 1; i++)
-		{
-			for (int j = 0; j < s.size() - 1; j++)
-			{
-				if (s[j] + s[j + 1] == i+48*2)
-				{
-					s.insert(j+1,to_string(i));
-				}
-
-
-			}
-
-		}
-		cout << s << endl;
-
-
-
-
-	}
-
-
+	long long a,b;
+	cin >> a>> b;
+	cout << a + b;
 
 	return 0;
 }
-
-
-
 
 
 
