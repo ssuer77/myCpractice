@@ -7675,44 +7675,1386 @@ using namespace std;
 //	return 0;
 //}
 //
+//
+//int main()
+//{
+//	long long a,b;
+//	cin >> a>> b;
+//	cout << a + b;
+//
+//	return 0;
+//}
+//
+
+//int main()
+//{
+//	int i;
+//	if (i = 1)
+//		cout << 'a';
+//
+//	return 0;
+//}
+//
+//
+//int main()
+//{
+//	int r;
+//	int x = 0;
+//	while (cin>>r)
+//	{
+//		if (x == 1)
+//			cout << endl;
+//		int arr[15][15] = { 0 };
+//		for (int i = 0; i < r; i++)
+//		{
+//			for (int j = 0; j < r; j++) {
+//				cin >> arr[i][j];
+//			}
+//		}
+//		for (int i = 0; i < r; i++)
+//		{
+//			for (int j = 0; j < i; j++)
+//			{
+//				if (i == j)
+//				{
+//					continue;
+//				}
+//				else
+//				{
+//					swap(arr[i][j], arr[j][i]);
+//				}
+//
+//			}
+//		}
+//		//int p = 0;
+//		for (int i = 0; i < r; i++)
+//		{
+//			/*if (p == 1)
+//				cout << endl;*/
+//			int k = 0;
+//			for (int j = 0; j < r; j++)
+//			{
+//				if (k == 0)
+//					k = 1;
+//				else
+//					cout << ' ';
+//				cout << arr[i][j];
+//
+//			}
+//			cout << endl;
+//
+//			//p = 1;
+//		}
+//		memset(arr, 0, sizeof(arr));
+//		x = 1;
+//	}
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	int p = 0;
+//	int k = 1;
+//	char arr1[110][110] = { 0 };
+//	int n, m;
+//	while (cin >> n >> m)
+//	{
+//		if (p == 1)
+//			cout << endl;
+//		if (n == 0 && m == 0)
+//			break;
+//		for (int i = 1; i <= n; i++)
+//		{
+//			for (int j = 1; j <= m; j++)
+//			{
+//				cin >> arr1[i][j];
+//
+//			}
+//		}
+//		map<char, int> a;
+//		a['*'] = 1;
+//		a['.'] = 0;
+//		int arr2[110][110] = { 0 };
+//		for (int i = 1; i <= n; i++)
+//		{
+//			for (int j = 1; j <= m; j++)
+//			{
+//				arr2[i][j] = a[arr1[i][j]];
+//			}
+//		}
+//		char arr3[110][110] = { 0 };
+//		for (int i = 1; i <= n; i++)
+//		{
+//			for (int j = 1; j <= m; j++)
+//			{
+//				if (arr2[i][j] == 1)
+//					arr3[i][j] = '*';
+//				else
+//					arr3[i][j] = arr2[i - 1][j - 1] + arr2[i - 1][j] + arr2[i - 1][j + 1] + arr2[i][j - 1] + arr2[i][j + 1] + arr2[i + 1][j - 1] + arr2[i + 1][j] + arr2[i + 1][j + 1] + 48;
+//			}
+//		}
+//		cout << "Field #" << k << ':'<<endl;
+//		//int p = 0;
+//		for (int i = 1; i <= n; i++)
+//		{
+//			//if (p == 1)
+//			//	cout << endl;
+//			for (int j = 1; j <= m; j++)
+//			{
+//				cout << arr3[i][j];
+//			}
+//			//p = 1;
+//			cout << endl;
+//		}
+//
+//		p = 1;
+//
+//		k++;
+//
+//
+//	}
+//
+//
+//
+//
+//
+//
+//
+//	return 0;
+//}
+//
+//
+
+//
+//
+//int main()
+//{
+//	vector<string> arr;
+//	string s = "000000";
+//	for (int a = 1; a < 7; a++)
+//	{
+//		s[0] = a + 48;
+//		for (int b = 1; b < 7; b++)
+//		{
+//			if (s.substr(0,1).find(b + 48) != string::npos)
+//				continue;
+//			s[1] = b + 48;
+//			for (int c = 1; c < 7; c++)
+//			{
+//				if (s.substr(0,2).find(c + 48) != string::npos)
+//					continue;
+//				s[2] = c + 48;
+//				for (int d = 1; d < 7; d++)
+//				{
+//					if (s.substr(0,3).find(d + 48) != string::npos)
+//						continue;
+//					s[3] = d + 48;
+//					for (int e = 1; e < 7; e++)
+//					{
+//						if (s.substr(0,4).find(e + 48) != string::npos)
+//							continue;
+//						s[4] =e + 48;
+//						for (int f = 1;f < 7; f++)
+//						{
+//							if (s.substr(0,5).find(f + 48) != string::npos)
+//								continue;
+//							s[5] = f + 48;
+//							int tr = 0;
+//							if (s[0] < s[1] && s[1] < s[2] && s[3] < s[4] && s[4] < s[5] && s[0] < s[3] && s[1] < s[4] && s[2] < s[5])
+//							{
+//								for (int y = 0; y < arr.size(); y++)
+//								{
+//									if (s == arr[y])
+//									{
+//										tr = 1;
+//										break;
+//									}
+//
+//								}
+//								if (tr == 0)
+//								{
+//									arr.push_back(s);
+//
+//								}
+//								else
+//								{
+//									continue;
+//								}
+//
+//							}
+//							//s.clear();
+//
+//
+//						}
+//
+//
+//					}
+//
+//
+//				}
+//
+//
+//			}
+//
+//
+//		}
+//
+//
+//	}
+//	int target;
+//	while (cin>>target)
+//	{
+//		int q = target - 1;
+//		int u = 0;
+//		for (int i = 0; i < 3; i++)
+//		{
+//			if (u == 1)
+//				cout << ' ';
+//			cout << arr[q][i];
+//
+//			u = 1;
+//		}
+//		cout << endl;
+//		u = 0;
+//		for (int i = 3; i < 6; i++)
+//		{
+//			if (u == 1)
+//				cout << ' ';
+//			cout << arr[q][i];
+//			u = 1;
+//		}
+//		cout << endl;
+//	}
+//
+//	return  0;
+//}
+
+
+
+
+
+
+//
+//
+//#include <iostream>
+//using namespace std;
+//
+//void generatePermutations(int digits[], int index) {
+//	if (index == 6) {
+//		// 输出当前生成的六位数
+//		for (int i = 0; i < 6; i++) {
+//			cout << digits[i];
+//		}
+//		cout << endl;
+//		return;
+//	}
+//
+//	for (int i = 0; i <= 9; i++) {
+//		bool isUsed = false;
+//		// 检查数字是否已经被使用过
+//		for (int j = 0; j < index; j++) {
+//			if (digits[j] == i) {
+//				isUsed = true;
+//				break;
+//			}
+//		}
+//		if (!isUsed) {
+//			digits[index] = i;
+//			generatePermutations(digits, index + 1);
+//		}
+//	}
+//}
+//
+//int main() {
+//	int digits[6];
+//	generatePermutations(digits, 0);
+//	return 0;
+//}
+//
+
+//int main()
+//{
+//	int n;
+//	cin >> n;
+//	int ns = 1;
+//	int arr[25][25] = { 0 };
+//	for (int i = 0; i < n; i++)
+//	{
+//		for (int j = 0; j < n; j++)
+//		{
+//			arr[i][j] = ns++;
+//		}
+//
+//	}
+//	for (int i = 1; i <= n; i++)
+//	{
+//		if ((i & 1) == 1)
+//		{
+//			for (int j = 0; j < n; j++)
+//			{
+//				printf("%4d", arr[i - 1][j]);
+//			}
+//
+//
+//		}
+//		else
+//		{
+//			for (int j = n - 1; j > -1; j--)
+//			{
+//				printf("%4d", arr[i - 1][j]);
+//			}
+//
+//		}
+//		cout << endl;
+//	}
+//
+//
+//
+//	return 0;
+//}
+//
+//
+//
+
+//int main()
+//{
+//	int arr[110][110] = { 0 };
+//	int row, col;
+//	cin >> row >> col;
+//	for (int i = 0; i < row; i++)
+//	{
+//		for (int j = 0; j < col; j++)
+//		{
+//			cin >> arr[i][j];
+//		}
+//	}
+//	for (int i = 1; i < row + col; i++)
+//	{
+//		for (int j=0;j<i;j++)
+//		{
+//			if (arr[j][i-1-j]!=0)
+//			cout << arr[j][i - 1 - j] << ' ';
+//
+//
+//		}
+//	}
+//
+//
+//
+//	return 0;
+//}
+
+//
+//int main()
+//{
+//	int n;
+//	int is_fir = 0;
+//	while (cin>>n)
+//	{
+//		
+//		if (is_fir == 1)
+//			cout << endl;
+//		int yess = 0;
+//
+//		int x;
+//
+//		for (int i = 1; i <= 11; i += 2)
+//		{
+//			if (i * i >= n)
+//			{
+//				x = i;
+//				break;
+//			}
+//		}
+//		int arr[11][11] = { 0 };
+//		int t = 1;
+//		while (t < n)
+//		{
+//			arr[6][6] = t;
+//			int p = 6, q = 6;
+//			for (int i = 2; i < (x - 1) / 2 + 2; i++)
+//			{
+//				p += 1;
+//				q -= 1;
+//				for (int j = 0; j < 2 * i - 2; j++)
+//				{
+//					q++;
+//					t++;
+//					arr[p][q] = t;
+//					if (t == n)
+//						goto ender;
+//
+//				}
+//				for (int j = 0; j < 2 * i - 2; j++)
+//				{
+//					p--;
+//					t++;
+//					arr[p][q] = t;
+//					if (t == n)
+//						goto ender;
+//
+//				}
+//				for (int j = 0; j < 2 * i - 2; j++)
+//				{
+//					q--;
+//					t++;
+//					arr[p][q] = t;
+//					if (t == n)
+//						goto ender;
+//
+//				}
+//				for (int j = 0; j < 2 * i - 2; j++)
+//				{
+//					p++;
+//					if (i == (x - 1) / 2 + 1)
+//					yess = 1;
+//					t++;
+//					arr[p][q] = t;
+//					if (t == n)
+//						goto ender;
+//
+//				}
+//
+//
+//			}
+//		ender:
+//			;
+//		}
+//		if (n < (x - 2) * (x - 2) + 2*x-2&&n>=12)
+//		{
+//			for (int i = 8 - (x + 1) / 2; i < 7 + (x - 1) / 2; i++)
+//			{
+//				int soi = 0;
+//
+//				for (int j = 7 - (x + 1) / 2; j < 7 + (x - 1) / 2; j++)
+//				{
+//					if (arr[i][j] != 0&&1<=arr[i][j]&&99>=arr[i][j])
+//					{
+//						if (j == 6 + (x - 1) / 2)
+//							printf("%2d", arr[i][j]);
+//						else
+//							printf("%2d ", arr[i][j]);
+//
+//						soi = 1;
+//					}
+//					else if (yess == 1 && arr[i][j] == 0)
+//						cout << "   ";
+//					else
+//					{
+//						if (j == 7 - (x + 1) / 2)
+//							;
+//						else
+//							cout << "   ";
+//					}
+//				}
+//				if (soi == 1)
+//					cout << endl;
+//			}
+//
+//		}
+//
+//
+//		else if (n < (x - 2) * (x - 2) + 2*x-2&& n <=9&&n!=10&&n!=11)
+//		{
+//			for (int i = 8 - (x + 1) / 2; i < 7 + (x - 1) / 2; i++)
+//			{
+//				int soi = 0;
+//
+//				for (int j = 7 - (x + 1) / 2; j < 7 + (x - 1) / 2; j++)
+//				{
+//					if (arr[i][j] != 0)
+//					{
+//						if (j == 6 + (x - 1) / 2)
+//							printf("%d", arr[i][j]);
+//						else
+//							printf("%d ", arr[i][j]);
+//
+//						soi = 1;
+//					}
+//					else if (yess == 1 && arr[i][j] == 0)
+//						cout << "  ";
+//					else
+//					{
+//						if (j == 7 - (x + 1) / 2)
+//							;
+//						else
+//							cout << "  ";
+//					}
+//				}
+//				if (soi == 1)
+//					cout << endl;
+//			}
+//		}
+//
+//
+//
+//
+//
+//		else if (n>=12)
+//		{
+//			for (int i = 7 - (x + 1) / 2; i < 7 + (x - 1) / 2; i++)
+//			{
+//				int soi = 0;
+//
+//				for (int j = 7 - (x + 1) / 2; j < 7 + (x - 1) / 2; j++)
+//				{
+//					if (arr[i][j] != 0)
+//					{
+//						if (j==6+(x-1)/2)
+//						printf("%2d", arr[i][j]);
+//						else
+//							printf("%2d ", arr[i][j]);
+//
+//						soi = 1;
+//					}
+//					else if (yess == 1 && arr[i][j] == 0)
+//						cout << "   ";
+//					else
+//					{
+//						if (j == 7 - (x + 1) / 2)
+//							;
+//						else
+//							cout << "   ";
+//					}
+//				}
+//				if (soi==1)
+//				cout << endl;
+//			}
+//
+//		}
+//		else if(n<=9)
+//		{
+//			for (int i = 7 - (x + 1) / 2; i < 7 + (x - 1) / 2; i++)
+//			{
+//				int soi = 0;
+//
+//				for (int j = 7 - (x + 1) / 2; j < 7 + (x - 1) / 2; j++)
+//				{
+//					if (arr[i][j] != 0)
+//					{
+//						if (j == 6 + (x - 1) / 2)
+//							printf("%d", arr[i][j]);
+//						else
+//							printf("%d ", arr[i][j]);
+//
+//						soi = 1;
+//					}
+//					else if (yess == 1 && arr[i][j] == 0)
+//						cout << "  ";
+//					else
+//					{
+//						if (j == 7 - (x + 1) / 2)
+//							;
+//						else
+//							cout << "  ";
+//					}
+//				}
+//				if (soi==1)
+//				cout << endl;
+//			}
+//
+//		}
+//		else if (n == 10)
+//		{
+//			{
+//				for (int i = 8 - (x + 1) / 2; i < 7 + (x - 1) / 2; i++)
+//				{
+//					int soi = 0;
+//
+//					for (int j = 7 - (x + 1) / 2; j < 7 + (x - 1) / 2; j++)
+//					{
+//						if (arr[i][j] != 0)
+//						{
+//							if (j == 5)
+//								printf("%2d ", arr[i][j]);
+//							else
+//							{
+//								if (j == 6 + (x - 1) / 2)
+//									printf("%d", arr[i][j]);
+//								else
+//									printf("%d ", arr[i][j]);
+//
+//							}
+//							soi = 1;
+//						}
+//						else if (yess == 1 && arr[i][j] == 0)
+//						{
+//							if (j == 5)
+//								cout << "   ";
+//							else
+//							cout << "  ";
+//						}
+//						else
+//						{
+//							if (j == 7 - (x + 1) / 2)
+//								;
+//							else
+//							{
+//								if (j == 5)
+//									cout << "   ";
+//								else
+//									cout << "  ";
+//							}
+//						}
+//					}
+//					if (soi==1)
+//					cout << endl;
+//				}
+//
+//			}
+//
+//		}
+//		else if (n == 11)
+//		{
+//			{
+//				for (int i = 8 - (x + 1) / 2; i < 7 + (x - 1) / 2; i++)
+//				{
+//					int soi = 0;
+//					for (int j = 7 - (x + 1) / 2; j < 7 + (x - 1) / 2; j++)
+//					{
+//						if (arr[i][j] != 0)
+//						{
+//							if (j == 5||j==6)
+//								printf("%2d ", arr[i][j]);
+//							else
+//							{
+//								if (j == 6 + (x - 1) / 2)
+//									printf("%d", arr[i][j]);
+//								else
+//									printf("%d ", arr[i][j]);
+//
+//							}
+//							soi = 1;
+//						}
+//						else if (yess == 1 && arr[i][j] == 0)
+//						{
+//							if (j == 5||j==6)
+//								cout << "   ";
+//							else
+//								cout << "  ";
+//						}
+//						else
+//						{
+//							if (j == 7 - (x + 1) / 2)
+//								;
+//							else
+//							{
+//								if (j == 5||j==6)
+//									cout << "   ";
+//								else
+//									cout << "  ";
+//							}
+//						}
+//					}
+//					if (soi==1)
+//					cout << endl;
+//				}
+//
+//			}
+//
+//		}
+//
+//		is_fir = 1;
+//
+//
+//	}
+//	return 0;
+//}
+//
+//#include <stdio.h>
+//#include <stdlib.h>
+//
+//int main() {
+//	int n;
+//
+//	while (scanf("%d", &n) != EOF) {
+//		int size = n % 2 == 0 ? n + 1 : n;  // 阵列的大小
+//		int** matrix = (int**)malloc(size * sizeof(int*));
+//		for (int i = 0; i < size; i++) {
+//			matrix[i] = (int*)malloc(size * sizeof(int));
+//		}
+//
+//		int num = 1;  // 当前需要填入的数字
+//		int row = 0;
+//		int col = 0;
+//
+//		while (row < size / 2) {
+//			// 从左到右填入数字
+//			for (int i = col; i < size - col; i++) {
+//				matrix[row][i] = num;
+//				num++;
+//			}
+//			// 从上到下填入数字
+//			for (int i = row + 1; i < size - row; i++) {
+//				matrix[i][size - 1 - col] = num;
+//				num++;
+//			}
+//			// 从右到左填入数字
+//			for (int i = size - 2 - col; i >= col; i--) {
+//				matrix[size - 1 - row][i] = num;
+//				num++;
+//			}
+//			// 从下到上填入数字
+//			for (int i = size - 2 - row; i > row; i--) {
+//				matrix[i][col] = num;
+//				num++;
+//			}
+//
+//			row++;
+//			col++;
+//		}
+//
+//		// 输出阵列
+//		for (int i = 0; i < size; i++) {
+//			for (int j = 0; j < size; j++) {
+//				printf("%2d ", matrix[i][j]);
+//			}
+//			printf("\n");
+//		}
+//		printf("\n");
+//
+//		// 释放内存
+//		for (int i = 0; i < size; i++) {
+//			free(matrix[i]);
+//		}
+//		free(matrix);
+//	}
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//	return 0;
+//}
+//
+//
+//
+//
+//
+//
+
+
+
+
+//int main()
+//{
+//	int a, b,c;
+//	char x;
+//	int nums = 0;
+//	while (scanf("%d%c%d%*c%d", &a, &x, &b,&c) != EOF)
+//	{
+//		getchar();
+//
+//		 if (x == '+')
+//		{
+//			if (c == a + b)
+//				nums++;
+//		}
+//		else if (x == '-')
+//		{
+//			if (c == a - b)
+//				nums++;
+//		}
+//
+//	}
+//
+//
+//	cout << nums;
+//
+//
+//
+//
+//
+//
+//	return 0;
+//}
+//
+//
+
+//int main()
+//{
+//	string s;
+//	char oper, ops1,ops2;
+//	getline(cin, s, '.');
+//	s += '.';
+//	getchar();
+//	scanf("%c %c", &oper, &ops1);
+//	if (oper != 'D') {
+//		scanf("%*c%c", &ops2);
+//	}
+//	if (oper == 'D') {
+//		if (s.find(ops1) != string::npos)
+//		{
+//			s.erase(s.find(ops1), 1);
+//			cout << s;
+//		}
+//		else
+//			cout << "指定字符不存在";
+//	}
+//	else if (oper == 'I') {
+//		if (s.find(ops1) != string::npos)
+//		{
+//			s.insert(s.rfind(ops1), 1, ops2);
+//			cout << s;
+//		}
+//		else
+//			cout << "指定字符不存在";
+//	}
+//	else if (oper == 'R') {
+//		if (s.find(ops1) != string::npos) {
+//			while (s.find(ops1) != string::npos) {
+//				string str(1, ops2);
+//				s.replace(s.find(ops1), 1,str);
+//			}
+//			cout << s;
+//
+//		}
+//		else
+//			cout << "指定字符不存在";
+//	}
+//	
+//
+//
+//
+//	return 0;
+//}
+//
+//int main()
+//{
+//	int nums = 0;
+//	vector<string> data;
+//	string sumer;
+//	getline(cin, sumer, '\n');
+//	istringstream iss(sumer);
+//	string s;
+//	while (iss >> s) {
+//		int k = 0;
+//		for (int i = 0; i < data.size(); i++) {
+//			if (data[i] == s) {
+//				k = 1;
+//				break;
+//			}
+//		}
+//		if (k == 0) {
+//			data.push_back(s);
+//			nums++;
+//		}
+//	}
+//	cout << nums;
+//
+//
+//
+//
+//
+//	return 0;
+//}
+//
+
+//int main()
+//{
+//	int T;
+//	int is_fir = 0;
+//	int times = 0;
+//	cin >> T;
+//	while (T--) {
+//		if (is_fir == 1)
+//			cout << endl;
+//		string s1, s2, s0;
+//		cin >> s1 >> s2;
+//		string more, less;
+//			more = s1.size() >= s2.size() ? s1 : s2;
+//			less = s1.size() < s2.size() ? s1 : s2;
+//			int yi = 1;
+//
+//		int ti = 0;
+//		int mid = 0;
+//		while (yi) {
+//			yi = 0;
+//			if (ti<less.size())
+//			{
+//				s0+= (more[more.size() - 1 - ti] + less[less.size() - 1 - ti] + mid-48*2) % 10+48;
+//				mid = (more[more.size() - 1 - ti] + less[less.size() - 1 - ti] + mid-48*2) / 10;
+//				yi = 1;
+//			}
+//			else if (ti >= less.size() && ti < more.size())
+//			{
+//				s0+= (more[more.size() - 1 - ti] + mid-48) % 10+48;
+//				mid = (more[more.size() - 1 - ti] + mid-48) / 10;
+//				yi = 1;
+//			}
+//			else
+//			{
+//				s0+= mid+48;
+//			}
+//			ti++;
+//		}
+//		times++;
+//		cout << "Case" << ' ' << times << ':' << endl;
+//		cout << s1 << ' ' << '+' <<' ' << s2 << ' ' << '=' << ' ';
+//		for (int i = s0.size() - 1; i > -1; i--)
+//		{
+//			if (i == s0.size() - 1 && s0[i] == 48)
+//				continue;
+//			cout << s0[i];
+//		}
+//		cout << endl;
+//
+//		is_fir = 1;
+//	}
+//	
+//
+//
+//
+//
+//
+//
+//
+//	return 0;
+//}
+//
+//int is_sue(int x)
+//{
+//	if (x == 1)
+//		return 0;
+//	if (x == 2)
+//		return 1;
+//	for (int i = 2; i < x; i++) {
+//		if (x % i == 0) {
+//			return 0;
+//		}
+//	}
+//	return 1;
+//}
+//
+//int main()
+//{
+//	int nums = 1013;
+//	vector<int> chuncui;
+//	while (chuncui.size() < 21) {
+//		int num = nums;
+//		int is_su = 1;
+//		while (num != 0) {
+//			if (is_sue(num))
+//			{
+//				string x = to_string(num);
+//				x.erase(0, 1);
+//				
+//				if (to_string(stoi(x)).size() == 1 && (is_sue(stoi(x)))) {
+//					goto next;
+//				}
+//				num = stoi(x);
+//			}
+//			else {
+//				is_su = 0;
+//				break;
+//			}
+//
+//
+//		}
+//		next:
+//		if (is_su == 1) {
+//			chuncui.push_back(nums);
+//		}
+//		nums++;
+//	}
+//	int n;
+//	while (cin>>n)
+//	{
+//		cout << chuncui[n - 1] << endl;
+//	}
+//	return 0;
+//}
+//int operation(int x)
+//{
+//	vector<int> nums;
+//	while (x != 0) {
+//		nums.push_back(x % 10);
+//		x /= 10;
+//	}
+//	for (int i = 0; i < nums.size(); i++) {
+//		x += nums[i];
+//	}
+//	if (to_string(x).size() == 1)
+//		return x;
+//	else
+//		return operation(x);
+//}
+//int main()
+//{
+//	int  n;
+//	cin >> n;
+//	while (n--) {
+//		vector<vector<int>> datas(7, vector<int>(6, 0));
+//		string s;
+//		cin >> s;
+//		int i = 0, j = 0;
+//		while (s.size() != 0) {
+//			datas[i][j] = s[0];
+//			s.erase(0, 1);
+//			if (j == 5) {
+//				i++;
+//				j = 0;
+//			}
+//			else {
+//				j++;
+//			}
+//		}
+//		vector<int> data2(6, 0);
+//		for (int i = 0; i < 6; i++) {
+//			for (int j = 0; j < 7; j++) {
+//				data2[i] += datas[j][i];
+//			}
+//		}
+//		for (int i = 0; i < 6; i++) {
+//			data2[i] = operation(data2[i]);
+//		}
+//		for (int i = 0; i < 6; i++) {
+//			cout << data2[i];
+//		}
+//		cout << endl;
+//	}
+//	return 0;
+//}
+//bool cmp(string a, string b)
+//{
+//	string x = a;
+//	string y = b;
+//	int x1 = stoi(a.substr(6, 8));
+//	int y1 = stoi(b.substr(6, 8));
+//	int x2 = stoi(a);
+//	int y2 = stoi(b);
+//	if (x1 != y1)
+//		return x1 > y1;
+//	else
+//		return a>b;
+//}
+//int main()
+//{
+//	int n;
+//	vector<string> datas;
+//	cin >> n;
+//	while (n--) {
+//		string s;
+//		cin >> s;
+//		datas.push_back(s);
+//	}
+//	sort(datas.begin(), datas.end(), cmp);
+//	for (int i = 0; i < datas.size(); i++) {
+//		cout << datas[i] << endl;
+//	}
+//	return 0;
+//}
+//typedef struct strings {
+//	string s;
+//	int times=1;
+//};
+//int main()
+//{
+//	vector<strings> st;
+//	int L;
+//	string s;
+//	cin >> L >> s;
+//	for (int i = L; i <= s.size(); i++) {
+//		for (int j = 0; j < s.size() - i + 1; j++) {
+//			strings si;
+//			si.s = s.substr(j, i);
+//			int has_in = 0;
+//			for (int k = 0; k < st.size(); k++) {
+//				if (st[k].s == si.s) {
+//					has_in = 1;
+//					st[k].times++;
+//					break;
+//				}
+//			}
+//			if (has_in == 0) {
+//				st.push_back(si);
+//			}
+//		}
+//	}
+//	int max = st[0].times;
+//	int maxer = 0;
+//	for (int i = 0; i < st.size(); i++) {
+//		if (st[i].times >= max) {
+//			max = st[i].times;
+//			maxer = i;
+//		}
+//	}
+//	cout << st[maxer].s;
+//
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	//int decimal = 10;
+//	//int n = 5;
+//	////stringstream oct_stream;
+//	////oct_stream << binary << decimal;
+//	////string oct = oct_stream.str();
+//	////cout << oct;
+//	//bitset<5> binary(decimal);
+//	//cout << binary;
+//	int n;
+//	while (cin >> n) {
+//		int is_h = 0;
+//		int is_bh = 0;
+//
+//		string x = to_string(n);
+//		reverse(x.begin(), x.end());
+//		if (to_string(n) == x) {
+//			is_h = 1;
+//		}
+//		vector<int> ke;
+//		while (n != 0) {
+//			ke.push_back(n % 2);
+//			n /= 2;
+//		}
+//		vector<int> ky;
+//		ky = ke;
+//		reverse(ke.begin(), ke.end());
+//		if (ke == ky) {
+//			is_bh = 1;
+//		}
+//		if (is_h == 1 && is_bh == 1) {
+//			cout << "Yes" << endl;
+//		}
+//		else {
+//			cout << "No" << endl;
+//		}
+//	}
+//
+//	
+//	return 0;
+//}
+
+//int main()
+//{
+//	int L, C;
+//	while (cin >> L >> C) {
+//		vector<string> strings;
+//		getchar();
+//		string s;
+//		getline(cin, s, '\n');
+//		while (s.find(' ') != string::npos) {
+//			s.erase(s.find(' '), 1);
+//		}
+//		for (int i = 0; i < s.size(); i++) {
+//			string st = s;
+//			st.erase(i, 1);
+//			int numsy = 0;
+//			if (st.find('a') != string::npos) {
+//				numsy++;
+//			}
+//			if (st.find('e') != string::npos) {
+//				numsy++;
+//			}
+//			if (st.find('i') != string::npos) {
+//				numsy++;
+//			}
+//			if (st.find('o') != string::npos) {
+//				numsy++;
+//			}
+//			if (st.find('u') != string::npos) {
+//				numsy++;
+//			}
+//			if (numsy!=0&&st.size)
+//
+//		}
+//	}
+//
+//
+//
+//
+//
+//	return 0;
+//}
+//
+//void operation(int* x) {
+//	*x += 1;
+//}
+//int main()
+//{
+//	int n = 10;
+//	operation(&n);
+//	cout << n;
+//
+//	return 0;
+//}
+//
+//
+
+//int main()
+//{
+//	int N, L;
+//	int NUMS = 0;
+//	cin >> N >> L;
+//	vector<int> datas;
+//	for (int i = 0; i < N; i++) {
+//		int x;
+//		cin >> x;
+//		datas.push_back(x);
+//	}
+//	for (int i = 0; i < N; i++) {
+//		if (datas[i] >= L)
+//			NUMS++;
+//	}
+//	cout << NUMS;
+//	return 0;
+//}
+//
+
+//int main()
+//{
+//	int N, L, R;
+//	cin >> N >> L >> R;
+//	vector<int> datas;
+//	for (int i = 0; i < N; i++) {
+//		int x;
+//		cin >> x;
+//		datas.push_back(x);
+//	}
+//	for (int i = 0; i < N; i++) {
+//		if (datas[i] <= L)
+//			datas[i] = L;
+//		else if (datas[i] >= R)
+//			datas[i] = R;
+//		
+//	}
+//	int k = 0;
+//	for (int i = 0; i < N; i++) {
+//		if (k == 1)
+//			cout << ' ';
+//		cout << datas[i];
+//		k = 1;
+//	}
+//	return 0;
+//}
+//     CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+//int main()
+//{
+//	int D;
+//	int max;
+//	cin >> D;
+//	for (int i = 0; i <= D; i++) {
+//		if (i * i >= D) {
+//			max = i;
+//			break;
+//		}
+//	}
+//	int x, y;
+//	int min = D;
+//	for ( x = 0; x <= max; x++) {
+//		for (y = 0; y <= max; y++) {
+//
+//			if (abs(x * x + y * y - D) < min) {
+//				min = abs(x * x + y * y - D);
+//			}
+//			if (min == 0) {
+//				goto next;
+//			}
+//			if (x * x + y * y > D) {
+//				break;
+//			}
+//		}
+//	}
+//	next:
+//	cout << min;
+//	return 0;
+//}
+
+//int main()
+//{
+//	int N;
+//	cin >> N;
+//	vector<vector<char>> arr(N, vector<char>(N, '0'));
+//	for (int i = 0; i < N; i++) {
+//		for (int j = 0; j < N; j++) {
+//			cin >> arr[i][j];
+//		}
+//	}
+//	vector<int> row;
+//	vector<int> col;
+//	for (int i = 0; i < N; i++) {
+//		int x = -1;
+//		int y = -1;
+//		for (int j = 0; j < N; j++) {
+//			if (arr[i][j] == 'o') {
+//				x++;
+//			}
+//			if (arr[j][i] == 'o') {
+//				y++;
+//			}
+//
+//		}
+//		row.push_back(x);
+//		col.push_back(y);
+//	}
+//	long long sum = 0;
+//	for (int i = 0; i < N; i++) {
+//		if (row[i] == 0)
+//			continue;
+//		for (int j = 0; j < N; j++) {
+//
+//			if (arr[i][j]=='o')
+//			sum += row[i] * col[j];
+//		}
+//	}
+//	cout << sum;
+//
+//	return 0;
+//}
+
+
+
+
 
 int main()
 {
-	long long a,b;
-	cin >> a>> b;
-	cout << a + b;
+	int N, Q;
+	cin >> N >> Q;
+	string s;
+	getchar();
+	getline(cin, s, '\n');
+	while (s.find(' ') != string::npos) {
+		s.erase(s.find(' '), 1);
+	}
+	vector<int> a;
+	vector<int> b;
+
+	for (int i = 0; i < Q; i++) {
+		int x, y;
+		cin >> x >> y;
+		a.push_back(x);
+		b.push_back(y);
+	}
+	for (int i=0;i<Q;i++) {
+		string str(1, b[i] + 48);
+		s.replace(a[i] - 1, 1,str);
+		for (int j = 0;; j++) {
+			if (s.find(j + 48) == string::npos) {
+				cout << j << endl;
+			}
+		}
+	}
+
 
 	return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
