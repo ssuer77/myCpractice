@@ -12,6 +12,7 @@
 #include <queue>
 #include <set>
 #include <bits/stdc++.h>
+//using ios::sync_with_stdio(false);
 using namespace std;
 //int main()
 //{
@@ -9023,16 +9024,63 @@ using namespace std;
 
 
 
+//int main()
+//{
+//	int N, Q;
+//	cin >> N >> Q;
+//	string s;
+//	getchar();
+//	getline(cin, s, '\n');
+//	while (s.find(' ') != string::npos) {
+//		s.erase(s.find(' '), 1);
+//	}
+//	vector<int> a;
+//	vector<int> b;
+//
+//	for (int i = 0; i < Q; i++) {
+//		int x, y;
+//		cin >> x >> y;
+//		a.push_back(x);
+//		b.push_back(y);
+//	}
+//	for (int i=0;i<Q;i++) {
+//		string str(1, b[i] + 48);
+//		s.replace(a[i] - 1, 1,str);
+//		string stt;
+//		stt=s;
+//		sort(stt.begin(), stt.end());
+//		for (int j = 0;; j++) {
+//			if (stt.find(j + 48) == string::npos) {
+//				cout << j << endl;
+//				break;
+//			}
+//		}
+//	}
+//
+//
+//	return 0;
+//}
+//
+//
+//
+
 int main()
 {
 	int N, Q;
 	cin >> N >> Q;
-	string s;
+	vector<long long> s;
 	getchar();
-	getline(cin, s, '\n');
-	while (s.find(' ') != string::npos) {
-		s.erase(s.find(' '), 1);
+	//输入
+	for (int i = 0; i < N; i++) {
+		int x;
+		cin >> x;
+		s.push_back(x);
 	}
+
+	//getline(cin, s, '\n');
+	//while (s.find(' ') != string::npos) {
+	//	s.erase(s.find(' '), 1);
+	//}
 	vector<int> a;
 	vector<int> b;
 
@@ -9042,20 +9090,58 @@ int main()
 		a.push_back(x);
 		b.push_back(y);
 	}
-	for (int i=0;i<Q;i++) {
-		string str(1, b[i] + 48);
-		s.replace(a[i] - 1, 1,str);
-		for (int j = 0;; j++) {
-			if (s.find(j + 48) == string::npos) {
-				cout << j << endl;
-			}
+	for (int i = 0; i < Q; i++) {
+		//替换操作
+		s[a[i] - 1] = b[i];
+		//string str(1, b[i] + 48);
+		//s.replace(a[i] - 1, 1, str);
+		vector<long long> stt;
+		stt = s;
+		sort(stt.begin(), stt.end());
+		stt.erase(unique(stt.begin(), stt.end()), stt.end());
+		//二分查找
+		// 
+		if (stt[0] != 0)
+			cout << 0 << endl;
+
+		else if (stt[stt.size()-2]==stt.size()-2&&stt[stt.size()-1]!=stt.size()-1) {
+			cout << stt.size()-1  << endl;
 		}
+		else if (stt[stt.size() - 1] == stt.size() - 1) {
+			cout << stt.size() << endl;
+		}
+		else {
+			int left = 0, right = stt.size() - 2;
+			int mid = (left+right)/2;
+			while (stt[mid] != mid || stt[mid + 1] == mid) {
+				if (stt[mid] != mid) {
+					right = mid-1;
+					mid = (left + right) / 2;
+				}
+				else {
+					left = mid+1;
+					mid = (left + right) / 2;
+				}
+			}
+			cout << mid + 1 << endl;
+		}
+		//for (int j = 0;; j++) {
+		//	//查找操作
+		//	//for (int u = 0;; u++) {
+		//	//	if (stt[u])
+
+		//	//}
+		//	//auto it = find(stt.begin(), stt.end(), j);
+		//	if (find(stt.begin(), stt.end(), j)==stt.end()) {
+		//		cout << j << endl;
+		//		break;
+		//	}
+		//}
 	}
 
 
 	return 0;
 }
-
 
 
 
