@@ -9064,84 +9064,435 @@ using namespace std;
 //
 //
 
-int main()
-{
-	int N, Q;
-	cin >> N >> Q;
-	vector<long long> s;
-	getchar();
-	//输入
-	for (int i = 0; i < N; i++) {
-		int x;
-		cin >> x;
-		s.push_back(x);
+//int main()
+//{
+//	int N, Q;
+//	cin >> N >> Q;
+//	vector<long long> s;
+//	getchar();
+//	//输入
+//	for (int i = 0; i < N; i++) {
+//		int x;
+//		cin >> x;
+//		s.push_back(x);
+//	}
+//
+//	//getline(cin, s, '\n');
+//	//while (s.find(' ') != string::npos) {
+//	//	s.erase(s.find(' '), 1);
+//	//}
+//	vector<int> a;
+//	vector<int> b;
+//
+//	for (int i = 0; i < Q; i++) {
+//		int x, y;
+//		cin >> x >> y;
+//		a.push_back(x);
+//		b.push_back(y);
+//	}
+//	for (int i = 0; i < Q; i++) {
+//		//替换操作
+//		s[a[i] - 1] = b[i];
+//		//string str(1, b[i] + 48);
+//		//s.replace(a[i] - 1, 1, str);
+//		vector<long long> stt;
+//		stt = s;
+//		sort(stt.begin(), stt.end());
+//		stt.erase(unique(stt.begin(), stt.end()), stt.end());
+//		//二分查找
+//		// 
+//		if (stt[0] != 0)
+//			cout << 0 << endl;
+//
+//		else if (stt[stt.size()-2]==stt.size()-2&&stt[stt.size()-1]!=stt.size()-1) {
+//			cout << stt.size()-1  << endl;
+//		}
+//		else if (stt[stt.size() - 1] == stt.size() - 1) {
+//			cout << stt.size() << endl;
+//		}
+//		else {
+//			int left = 0, right = stt.size() - 2;
+//			int mid = (left+right)/2;
+//			while (stt[mid] != mid || stt[mid + 1] == mid) {
+//				if (stt[mid] != mid) {
+//					right = mid-1;
+//					mid = (left + right) / 2;
+//				}
+//				else {
+//					left = mid+1;
+//					mid = (left + right) / 2;
+//				}
+//			}
+//			cout << mid + 1 << endl;
+//		}
+//		//for (int j = 0;; j++) {
+//		//	//查找操作
+//		//	//for (int u = 0;; u++) {
+//		//	//	if (stt[u])
+//
+//		//	//}
+//		//	//auto it = find(stt.begin(), stt.end(), j);
+//		//	if (find(stt.begin(), stt.end(), j)==stt.end()) {
+//		//		cout << j << endl;
+//		//		break;
+//		//	}
+//		//}
+//	}
+//
+//
+//	return 0;
+//}
+//
+
+//int main()
+//{
+//	string line;
+//	getline(cin, line);
+//	int sum = 0, x;
+//	stringstream ss(line);
+//	while (ss >> x) {
+//
+//	}
+//
+//
+//
+//
+//	return 0;
+//}
+//
+//
+
+//int main()
+//{
+//	string s;
+//	cin >> s;
+//	string si;
+//	for (int i = 0; i < s.size(); i++) {
+//		if (i == 0) {
+//			si.push_back(s[i]);
+//		}
+//		else {
+//			si.push_back(' ');
+//			si.push_back(s[i]);
+//		}
+//	}
+//	for (int i = 0; i < si.size(); i++) {
+//		cout << si[i];
+//	}
+//	return 0;
+//}
+//
+//
+
+//int main()
+//{
+//	set<int> arr;
+//	int N;
+//	cin >> N;
+//	while (N--) {
+//		int x;
+//		cin >> x;
+//		arr.insert(x);
+//	}
+//	auto it = prev(arr.end());
+//	arr.erase(it);
+//	cout << (*(prev(arr.end())));  
+//	return 0;
+//}
+//
+
+//int main()
+//{
+//	string s;
+//	vector<pair<char,long long>> characters;
+//	//cin >> s;
+//	int N;
+//	cin >> N >> s;
+//	for (int i = 0; i < N;) {
+//		char x = s[i];
+//		long long target = s.substr(i).find_first_not_of(x);
+//		if (target==-1)
+//			target=1;
+//		for (int j = 0; j < characters.size(); j++) {
+//			if (characters[j].first == x) {
+//				if (target > characters[j].second) {
+//					characters[j].second = target;
+//				}
+//				goto next;
+//			}
+//		}
+//		characters.push_back({ x,target });
+//		next:
+//		i = target + i;
+//	}
+//	long long  sum = 0;
+//	for (int i = 0; i < characters.size(); i++) {
+//		sum += characters[i].second;
+//	}
+//	cout << sum;
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	int N, M;
+//	cin >> N >> M;
+//	vector<int> can(N,0);
+//	int max = 1;
+//	int maxer;
+//	for (int i = 0; i < M; i++) {
+//		int t;
+//		cin >> t;
+//		int n = t - 1;
+//		can[n]++;
+//		if (i == 0) {
+//			maxer = n;
+//		}
+//		if (can[n] > max) {
+//			max = can[n];
+//			maxer = n;
+//		}
+//		else if (can[n] == max) {
+//			maxer = n < maxer ? n : maxer;
+//		}
+//		cout << maxer+1 << endl;
+//
+//	}
+//
+//	return 0;
+//}
+//
+//
+
+//int main()
+//{
+//	int N, M;
+//	int iso = 1;
+//	string S,T;
+//	cin >> N >> M >>  S >> T;
+//	if (T.size() == 2)
+//		goto next;
+//	for (int i = 0; i < S.size() - 1; i++) {
+//		char x = S[i];
+//		string t;
+//		string Ti = T;
+//		while (Ti.find(x) != string::npos) {
+//			if (Ti.find(x) == 0) {
+//				t += Ti[Ti.find(x) + 1];
+//			}
+//			else if (Ti.find(x) == Ti.size() - 1) {
+//				t += Ti[Ti.find(x) - 1];
+//			}
+//			else {
+//				t += Ti[Ti.find(x) - 1];
+//				t += Ti[Ti.find(x) + 1];
+//			}
+//			Ti.erase(Ti.find(x));
+//		}
+//		if (t.find(S[i + 1]) == string::npos) {
+//			cout << "No";
+//			iso = 0;
+//			break;
+//		}
+//	}
+//	next:
+//	if (iso == 1) {
+//		cout << "Yes";
+//	}
+//	return 0;
+//}
+
+//
+//#include <iostream>
+//#include <string>
+//#include <vector>
+//
+//using namespace std;
+//
+//int main() {
+//	int N;
+//	string S;
+//	cin >> N >> S;
+//	vector<char> chas;
+//	vector<int> runs(N); // stores the maximum length run for each character in S
+//	int current_run = 1; // current length of the run
+//	vector<long long> datas;
+//	int havego = 0;
+//	int situ;
+//	int repetition, havein = 0;
+//	for (int i = 1; i < N; i++) {
+//		//current_run = 1;
+//		//if (current_run == 1) {
+//		//	for (int j = 0; j < chas.size(); j++) {
+//		//		if (chas[j] == S[i]) {
+//		//			havein = 1;
+//		//			repetition = j;
+//		//			
+//		//		}
+//		//	}
+//		//}
+//		situ = current_run == 1 ? 1 : 0;
+//			if (S[i] == S[i - 1]) {
+//				if (current_run == 1) {
+//					for (int j = 0; j < chas.size(); j++) {
+//						if (chas[j] == S[i-1]) {
+//							havein = 1;
+//							repetition = j;
+//							break;
+//						}
+//					}
+//
+//					if (havein == 0) {
+//						chas.push_back(S[i]);
+//					}
+//				}
+//				havego = 1;
+//				current_run++;
+//			}
+//			//if (S[i] != S[i - 1] && havein == 1) {
+//			//	continue;
+//			//}
+//			else {
+//				if (situ==1) {
+//					for (int j = 0; j < chas.size(); j++) {
+//						if (chas[j] == S[i-1]) {
+//							havein = 1;
+//							repetition = j;
+//							break;
+//						}
+//					}
+//				}
+//				if (havein == 0 && situ == 1) {
+//					chas.push_back(S[i-1]);
+//					datas.push_back(current_run);
+//
+//				}
+//				else if (havein == 0) {
+//					datas.push_back(current_run);
+//				}
+//				else {
+//					datas[repetition] = datas[repetition] > current_run ? datas[repetition] : current_run;
+//				}
+//
+//				current_run = 1; // start a new run
+//				havein = 0;
+//				havego = 0;
+//			}
+//		}
+//		//runs[N - 1] = current_run; // store the length of the last run
+//		if (N == 1) {
+//			cout << "1";
+//		}
+//		else {
+//			int count = 0;
+//			//for (int i = 0; i < N; i++) {
+//			//	count ++; // sum up the distinct substrings for each character
+//			//}
+//			for (int i = 0; i < datas.size(); i++) {
+//				count += datas[i];
+//			}
+//			cout << count;
+//		}
+//		return 0;
+//	}
+//
+
+//#include <iostream>
+//#include <vector>
+//#include <algorithm>
+//
+//using namespace std;
+//
+//// 判断编码是否有效的函数
+//bool isValidCode(string code) {
+//	int vowels = 0;
+//	int consonants = 0;
+//
+//	// 统计编码中的元音和辅音数量
+//	for (char c : code) {
+//		if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+//			vowels++;
+//		}
+//		else {
+//			consonants++;
+//		}
+//	}
+//
+//	// 检查编码是否满足条件
+//	return vowels >= 1 && consonants >= 2 && code == string(code.rbegin(), code.rend());
+//}
+//
+//// 生成所有有效编码的函数
+//void generateCodes(int L, vector<char>& letters, string code, int pos) {
+//	if (pos == L) {
+//		// 打印有效编码
+//		if (isValidCode(code)) {
+//			cout << code << endl;
+//		}
+//		return;
+//	}
+//
+//	for (int i = 0; i < letters.size(); i++) {
+//		// 选择当前位置的字母
+//		code[pos] = letters[i];
+//		// 递归生成下一个位置的字母
+//		generateCodes(L, letters, code, pos + 1);
+//	}
+//}
+//
+//int main() {
+//	int L, C;
+//	while (cin >> L >> C) {
+//		// 读取可用的字母
+//		vector<char> letters(C);
+//		for (int i = 0; i < C; i++) {
+//			cin >> letters[i];
+//		}
+//
+//		// 对字母进行排序
+//		sort(letters.begin(), letters.end());
+//
+//		// 生成所有有效编码
+//		string code(L, ' ');
+//		generateCodes(L, letters, code, 0);
+//
+//		// 打印总数
+//		cout << endl;
+//	}
+//
+//	return 0;
+//}
+
+int main() {
+	int n, k, m;
+	cin >> n >> k >> m;
+	vector<int> ps(n, 0);
+	for (int i = 0; i < n; i++) {
+		ps[i] = i;
 	}
-
-	//getline(cin, s, '\n');
-	//while (s.find(' ') != string::npos) {
-	//	s.erase(s.find(' '), 1);
-	//}
-	vector<int> a;
-	vector<int> b;
-
-	for (int i = 0; i < Q; i++) {
-		int x, y;
-		cin >> x >> y;
-		a.push_back(x);
-		b.push_back(y);
+	int t = k+m-1;
+	while (ps.size() > 1) {
+		while (t > ps.size() - 1) {
+			t = t-ps.size();
+		}
+		ps.erase(ps.begin() +t);
+		t += m - 1;
 	}
-	for (int i = 0; i < Q; i++) {
-		//替换操作
-		s[a[i] - 1] = b[i];
-		//string str(1, b[i] + 48);
-		//s.replace(a[i] - 1, 1, str);
-		vector<long long> stt;
-		stt = s;
-		sort(stt.begin(), stt.end());
-		stt.erase(unique(stt.begin(), stt.end()), stt.end());
-		//二分查找
-		// 
-		if (stt[0] != 0)
-			cout << 0 << endl;
-
-		else if (stt[stt.size()-2]==stt.size()-2&&stt[stt.size()-1]!=stt.size()-1) {
-			cout << stt.size()-1  << endl;
-		}
-		else if (stt[stt.size() - 1] == stt.size() - 1) {
-			cout << stt.size() << endl;
-		}
-		else {
-			int left = 0, right = stt.size() - 2;
-			int mid = (left+right)/2;
-			while (stt[mid] != mid || stt[mid + 1] == mid) {
-				if (stt[mid] != mid) {
-					right = mid-1;
-					mid = (left + right) / 2;
-				}
-				else {
-					left = mid+1;
-					mid = (left + right) / 2;
-				}
-			}
-			cout << mid + 1 << endl;
-		}
-		//for (int j = 0;; j++) {
-		//	//查找操作
-		//	//for (int u = 0;; u++) {
-		//	//	if (stt[u])
-
-		//	//}
-		//	//auto it = find(stt.begin(), stt.end(), j);
-		//	if (find(stt.begin(), stt.end(), j)==stt.end()) {
-		//		cout << j << endl;
-		//		break;
-		//	}
-		//}
-	}
-
-
+	cout << ps[0];
 	return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
