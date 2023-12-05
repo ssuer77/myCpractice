@@ -9464,42 +9464,259 @@ using namespace std;
 //	return 0;
 //}
 
-int main() {
-	int n, k, m;
-	cin >> n >> k >> m;
-	vector<int> ps(n, 0);
-	for (int i = 0; i < n; i++) {
-		ps[i] = i;
-	}
-	int t = k+m-1;
-	while (ps.size() > 1) {
-		while (t > ps.size() - 1) {
-			t = t-ps.size();
+//int main() {
+//	int n, k, m;
+//	cin >> n >> k >> m;
+//	vector<int> ps(n, 0);
+//	for (int i = 0; i < n; i++) {
+//		ps[i] = i;
+//	}
+//	int t = k+m-1;
+//	while (ps.size() > 1) {
+//		while (t > ps.size() - 1) {
+//			t = t-ps.size();
+//		}
+//		ps.erase(ps.begin() +t);
+//		t += m - 1;
+//	}
+//	cout << ps[0];
+//	return 0;
+//}
+
+//int main() {
+//	vector<int> a = { 1,2,3,4,5 };
+//	cout << a[find(a.begin(), a.end(), 4)-a.begin()];
+//}
+//
+
+//int main() {
+//	int N, X;
+//	cin >> N >> X;
+//	long long sum = 0;
+//	for (int i = 0; i < N; i++) {
+//		int x;
+//		cin >> x;
+//		if (x <= X) {
+//			sum += x;
+//		}
+//	}
+//	cout << sum;
+//	return 0;
+//}
+//int main() {
+//	int N;
+//	cin >> N;
+//	long long cnt = 0;
+//	for (int i = 1; i <= N; i++) {
+//		int days;
+//		int my = 1;
+//		int dy = 1;
+//		cin >> days;
+//		string m, d;
+//		m = to_string(i);
+//
+//		for (int j = 0; j < m.size()-1; j++) {
+//			if (m[j] != m[j + 1]) {
+//				my = 0;
+//				break;
+//			}
+//		}
+//		if (my == 0) {
+//			continue;
+//		}
+//		for (int j = 1; j <= days; j++) {
+//			d = to_string(j);
+//			if (d[0] != m[0]) {
+//				continue;
+//			}
+//			for (int k = 0; k < d.size() - 1; k++) {
+//				if (d[k] != d[k + 1]) {
+//					dy = 0;
+//					break;
+//				}
+//			}
+//			if (dy == 1) {
+//				cnt++;
+//			}
+//			dy = 1;
+//		}
+//	}
+//	cout << cnt;
+//	return 0;
+//}
+//bool cmp(pair<int, int> a, pair<int, int> b) {
+//	if (a.first != b.first) {
+//		return a.first > b.first;
+//
+//	}
+//	else {
+//		return a.second < b.second;
+//	}
+//}
+//int main() {
+//	int N, Q;
+//	string S;
+//	cin >> N >> Q;
+//	cin >> S;
+//	vector<int> go(N, 0);
+//	for (int i = 0; i < N - 1; i++) {
+//		if (S[i] == S[i + 1]) {
+//			go[i] = 1;
+//		}
+//	}
+//	int lh, rh;
+//	int cnt = 0;
+//	int is_fir = 1;
+//	vector<pair<int, int>> lrs(Q, { 0,0 });
+//	for (int i = 0; i < Q; i++) {
+//		int x, y;
+//		cin >> x >> y;
+//		lrs[i].first = x;
+//		lrs[i].second = y;
+//	}
+//	sort(lrs.begin(), lrs.end(), cmp);
+//	int ti = Q-1;
+//	while (Q--) {
+//		int l, r;
+//		l = lrs[ti].first;
+//		r = lrs[ti].second;
+//		ti--;
+//		if (is_fir == 1) {
+//			for (int i = l - 1; i < r - 1; i++) {
+//				cnt += go[i];
+//
+//			}
+//		}
+//		else {
+//			if (l > lh) {
+//				for (int k = lh - 1; k < l-1; k++) {
+//					cnt -= go[k];
+//				}
+//			}
+//			else if (l < lh) {
+//				for (int k = l - 1; k < lh-1; k++) {
+//					cnt += go[k];
+//				}
+//			}
+//			if (r > rh) {
+//				for (int k = rh - 1; k < r-1; k++) {
+//					cnt += go[k];
+//				}
+//			}
+//			else if (r < rh) {
+//				for (int k = r - 1; k < rh-1; k++) {
+//					cnt -= go[k];
+//				}
+//			}
+//		}
+//		cout << cnt << endl;
+//		lh = l;
+//		rh = r;
+//		is_fir = 0;
+//	}
+//
+//	return 0;
+//}
+
+//
+//int main() {
+//	string s;
+//	cin >> s;
+//	int i=0;
+//	//int len=s.size();
+//	while (s.substr(i).find("ABC") != string::npos) {
+//		int last = s.substr(i).find("ABC")+i;
+//		s.erase(last, 3);
+//		if (last != 0)
+//			i = last - 1;
+//		else
+//			i = 0;
+//		if (i == s.size()) {
+//			break;
+//		}
+//		while (s[i] != 'A') {
+//			if (i == 0) break;
+//			i--;
+//		}
+//
+//	}
+//	cout << s;
+//	return 0;
+//}
+
+//int main() {
+//		string s;
+//	cin >> s;
+//	int i=0;
+//	//int len=s.size();
+//	while (s.substr(i).find("ABC") != string::npos) {
+//		int last = s.substr(i).find("ABC")+i;
+//		s.erase(last, 3);
+//		//if (last != 0)
+//		//	i = last - 1;
+//		//else
+//		//	i = 0;
+//		//if (i == s.size()) {
+//		//	break;
+//		//}
+//		//while (s[i] != 'A') {
+//		//	if (i == 0) break;
+//		//	i--;
+//		//}
+//
+//	}
+//	cout << s;
+//
+//	return 0;
+//}
+//
+//
+//
+//
+
+
+#include <iostream>
+#include <vector>
+
+void combinationUtil(std::vector<int>& arr, std::vector<int>& data, int start, int end, int index, int m) {
+	// 如果已经选择了 m 个元素，打印结果
+	if (index == m) {
+		for (int i = 0; i < m; i++) {
+			std::cout << data[i] << " ";
 		}
-		ps.erase(ps.begin() +t);
-		t += m - 1;
+		std::cout << std::endl;
+		return;
 	}
-	cout << ps[0];
-	return 0;
+
+	// 在当前位置选择一个元素并递归调用
+	for (int i = start; i <= end && end - i + 1 >= m - index; i++) {
+		data[index] = arr[i];
+		combinationUtil(arr, data, i + 1, end, index + 1, m);
+	}
 }
 
+void printCombinations(int n, int m) {
+	std::vector<int> arr(n);
+	std::vector<int> data(m);
 
+	// 初始化数组
+	for (int i = 0; i < n; i++) {
+		arr[i] = i + 1;
+	}
 
+	// 调用递归函数
+	combinationUtil(arr, data, 0, n - 1, 0, m);
+}
 
+int main() {
+	int n, m;
+	std::cout << "请输入 n 和 m：";
+	std::cin >> n >> m;
 
+	printCombinations(n, m);
 
-
-
-
-
-
-
-
-
-
-
-
-
+	return 0;
+}
 
 
 
