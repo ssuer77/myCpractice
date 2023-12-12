@@ -9674,64 +9674,718 @@ using namespace std;
 //
 //
 
+//
+//#include <iostream>
+//#include <vector>
+//
+//void combinationUtil(std::vector<int>& arr, std::vector<int>& data, int start, int end, int index, int m) {
+//	// 如果已经选择了 m 个元素，打印结果
+//	if (index == m) {
+//		for (int i = 0; i < m; i++) {
+//			std::cout << data[i] << " ";
+//		}
+//		std::cout << std::endl;
+//		return;
+//	}
+//
+//	// 在当前位置选择一个元素并递归调用
+//	for (int i = start; i <= end && end - i + 1 >= m - index; i++) {
+//		data[index] = arr[i];
+//		combinationUtil(arr, data, i + 1, end, index + 1, m);
+//	}
+//}
+//
+//void printCombinations(int n, int m) {
+//	std::vector<int> arr(n);
+//	std::vector<int> data(m);
+//
+//	// 初始化数组
+//	for (int i = 0; i < n; i++) {
+//		arr[i] = i + 1;
+//	}
+//
+//	// 调用递归函数
+//	combinationUtil(arr, data, 0, n - 1, 0, m);
+//}
+//
+//int main() {
+//	int n, m;
+//	std::cout << "请输入 n 和 m：";
+//	std::cin >> n >> m;
+//
+//	printCombinations(n, m);
+//
+//	return 0;
+//}
+//
 
-#include <iostream>
-#include <vector>
+//int main() {
+//	int N;
+//	cin >> N;
+//	while (N--) {
+//		string s;
+//		cin >> s;
+//		for (int i = 1; i < 9; i++) {
+//			if (i != s[1]-48) {
+//				cout << s[0] << i << endl;
+//			}
+//		}
+//		for (int i = 97; i < 105; i++) {
+//			if (i != s[0]) {
+//				printf("%c", i);
+//				cout << s[1] << endl;
+//			}
+//		}
+//	}
+//	return 0;
+//}
+//
+//
 
-void combinationUtil(std::vector<int>& arr, std::vector<int>& data, int start, int end, int index, int m) {
-	// 如果已经选择了 m 个元素，打印结果
-	if (index == m) {
-		for (int i = 0; i < m; i++) {
-			std::cout << data[i] << " ";
-		}
-		std::cout << std::endl;
-		return;
-	}
+//int main() {
+//	int N;
+//	cin >> N;
+//	while (N--) {
+//		string s;
+//		cin >> s;
+//		vector<char> target;
+//		vector<int> lower ;
+//		vector<int> upper;
+//		int sz = s.size();
+//		int curr = 0;
+//		for (int i = 0; i < sz; i++) {
+//			if (s[i] != 'b' && s[i] != 'B') {
+//				target.push_back(s[i]);
+//				if (s[i] >= 'a' && s[i] <= 'z') {
+//					lower.push_back(curr);
+//				}
+//				else  {
+//					upper.push_back(curr);
+//				}
+//				curr++;
+//
+//			}
+//			else {
+//				if (s[i] == 'b') {
+//					if (lower.size() == 0) {
+//						continue;
+//					}
+//					target[lower[lower.size() - 1]] = 48;
+//					//lower.erase(lower.begin() + lower.size() - 1);
+//					lower.pop_back();
+//					//curr--;
+//				}
+//				else {
+//					if (upper.size() == 0) {
+//						continue;
+//					}
+//					target[upper[upper.size() - 1]] = 48;
+//					upper.pop_back();
+//					//curr--;
+//				}
+//			}
+//		}
+//		for (int i = 0; i < target.size(); i++) {
+//			if (target[i]!='0')
+//			cout << target[i] ;
+//		}
+//		cout << endl;
+//	}
+//	return 0;
+//}
 
-	// 在当前位置选择一个元素并递归调用
-	for (int i = start; i <= end && end - i + 1 >= m - index; i++) {
-		data[index] = arr[i];
-		combinationUtil(arr, data, i + 1, end, index + 1, m);
-	}
-}
+//int main() {
+//	int N;
+//	cin >> N;
+//	while (N--) {
+//		int num;
+//		string s;
+//		cin >> num;
+//		char hx = '\0';
+//		int chongfu = 0;
+//		for (int i = 0; i < num; i++) {
+//			char x;
+//			cin >> x;
+//			if (x != hx && chongfu == 0) {
+//				s += x;
+//				hx = x;
+//			}
+//			else if (x == hx) {
+//				chongfu++;
+//				s += x;
+//				continue;
+//			}
+//			else {
+//				s.erase(s.size() - 1, 1);
+//				chongfu--;
+//				if (chongfu == 0) {
+//					hx = s[s.size() - 1];
+//				}
+//			}
+//		}
+//		//string sii;
+//
+//		//int findit = 0;
+//		//if (s[s.size() - 1] == s[s.size() - 2]) {
+//		//	/*for (int i = s.size() - 1; i >= 0; i--) {
+//		//		if (s[i] == s[s.size() - 1]) continue;
+//		//		else {
+//		//			findit = i;
+//		//		}
+//		//	}*/
+//		//	string si = s;
+//		//	reverse(si.begin(),si.end());
+//		//	hx = '\0';
+//		//	chongfu = 0;
+//		//	for (int i = 0; i < si.size(); i++) {
+//		//		char x;
+//		//		x = si[i];
+//		//		if (x != hx && chongfu == 0) {
+//		//			sii += x;
+//		//			hx = x;
+//		//		}
+//		//		else if (x == hx) {
+//		//			chongfu++;
+//		//			sii += x;
+//		//			continue;
+//		//		}
+//		//		else {
+//		//			sii.erase(sii.size() - 1, 1);
+//		//			chongfu--;
+//		//			if (chongfu == 0) {
+//		//				hx = sii[sii.size() - 1];
+//		//			}
+//		//		}
+//
+//		//	}
+//		//}
+//		chongfu = 0;
+//		int findit;
+//		if (s.size() == 1) {
+//			cout << 1 << endl;
+//			continue;
+//		}
+//		if (s[s.size() - 1] == s[s.size() - 2]) {
+//			for (int i = s.size() - 1; i >= 0; i--) {
+//				if (s[i] == s[s.size() - 1]) chongfu++;
+//				else {
+//					findit = i;
+//					break;
+//				}
+//			}
+//			while (chongfu > 1 || s.size() == chongfu) {
+//				s.erase(findit, 2);
+//				chongfu--;
+//				findit--;
+//				if (s.size() == chongfu) break;
+//				if (s[findit] == s[s.size() - 1]) {
+//					chongfu++;
+//					findit--;
+//				}
+//				else {
+//					;
+//				}
+//			}
+//		}
+//			int t = s.size();
+//			int st = 0;
+//
+//			for (int i = 0; i < t - 1; i += 2) {
+//				if (s[i] != s[i + 1]) {
+//					st += 2;
+//				}
+//			}
+//			cout << t - st << endl;
+//		
+//	}
+//	return 0;
+//}
+//
+//
+//
 
-void printCombinations(int n, int m) {
-	std::vector<int> arr(n);
-	std::vector<int> data(m);
 
-	// 初始化数组
-	for (int i = 0; i < n; i++) {
-		arr[i] = i + 1;
-	}
 
-	// 调用递归函数
-	combinationUtil(arr, data, 0, n - 1, 0, m);
-}
+
+
+
+
+
+
+
+
+//
+//
+//int main() {
+//	int m, n;
+//	cin >> m >> n;
+//	int x = m * n;
+//	int maxer;
+//	for (int i = 0; i < x; i++) {
+//		int t;
+//		cin >> t;
+//		if (i == 0) {
+//			maxer = t;
+//			continue;
+//		}
+//		if (t > maxer) {
+//			maxer = t;
+//		}
+//	}
+//	cout << maxer;
+//}
+//int judge(int x) {
+//	int sum = 0;
+//	for (int i = 1; i < x; i++) {
+//		if (x % i == 0) {
+//			sum += i;
+//		}
+//	}
+//	return sum;
+//}
+//
+//int main() {
+//	int x;
+//	cout << "PERFECTION OUTPUT" << endl;
+//	while ( cin>>x) {
+//		if (x == 0) {
+//			break;
+//		}
+//		int tr = judge(x);
+//		if (tr == x) {
+//			printf("%5d", x);
+//			cout << "  " << "PERFECT";
+//		}
+//		else if (tr > x) {
+//			printf("%5d", x);
+//			cout << "  " << "ABUNDANT";
+//		}
+//		else {
+//			printf("%5d", x);
+//			cout << "  " << "DEFICIENT";
+//		}
+//		cout << endl;
+//	}
+//	cout << "END OF OUTPUT";
+//	return 0;
+//}
+
+//int main() {
+//	string s;
+//	while (getline(cin,s)) {
+//		for (int i = 0; i < s.size(); i++) {
+//			s[i] -= 7;
+//			cout << s[i];
+//		}
+//		cout << endl;
+//	}
+//	return 0;
+//}
+
+//int main() {
+//	int Z, I, M, L;
+//	int num = 0;
+//	while (cin >> Z >> I >> M >> L) {
+//		if (Z == 0 && I == 0 && M == 0 && L == 0) {
+//			break;
+//		}
+//		vector<long long> s;
+//		int x=L;
+//		while (find(s.begin(),s.end(),x) == s.end()) {
+//			s.push_back( x);
+//			x = (Z * x + I) % M;
+//		}
+//		num++;
+//		int tmde = s.size() - (find(s.begin(), s.end(), x)-s.begin());
+//		cout << "Case" << ' ' << num << ':' << ' ' << tmde << endl;
+//	}
+//	return 0;
+//}
+
+//const int n = 5;
+//int sum[n];
+//int get_sum(int L, int R) {
+//	if (L != 0) return sum[R] - sum[L - 1];
+//	return sum[R];
+//}
+//
+//int main() {
+//	int arr[n] = { 1,3,7,5,2 };
+//	sum[0] = arr[0];
+//	for (int i = 1; i < n; i++) {
+//		sum[i] = sum[i - 1] + arr[i];
+//	}
+//	cout << get_sum(2, 4) << endl;
+//	return 0;
+//}
+//
+//int d[6] = { 0 };
+//void add(int l, int r, int v) {
+//	d[l] += v;
+//	d[r + 1] -= v;
+//}
+//
+//int main() {
+//	int arr[5] = {1,3,7,5,2};
+//	add(2, 4, 5);
+//	add(1, 3, 2);
+//	add(0, 2, -3);
+//	for (int i = 1; i < 5; i++) { d[i] += d[i - 1]; }
+//	for (int i = 0; i < 5; i++) {
+//		arr[i] += d[i];
+//		cout << arr[i] << " ";
+//	}
+//	return 0;
+//}
+
+//int main() {
+//	int s;
+//	cin >> s;
+//	int num = 0;
+//	while (s != 6174) {
+// 		sort(s1.begin(), s1.end());
+//		s2 = s1;
+//		reverse(s2.begin(),s2.end());
+//		int a1, a2;
+//		a1 = stoi(s1);
+//		a2 = stoi(s2);
+//		s = a2 - a1;
+//		//s = to_string(x);
+//		num++;
+//	}
+//
+//	cout << num;
+//	return 0;
+//}
+//
+//bool cmp(pair<int, int> a, pair<int, int> b) {
+//	if (a.first != b.first) return a.first < b.first;
+//	else return a.second < b.second;
+//
+//}
+//
+//int main() {
+//	vector<pair<int,int>> arr;
+//	int L, M;
+//	cin >> L >> M;
+//	while (M--) {
+//		int l, m;
+//		cin >> l >> m;
+//		arr.push_back({l,m});
+//	}
+//	sort(arr.begin(), arr.end(), cmp);
+//	int l = arr[0].first;
+//	int r = arr[0].second;
+//	long long sum = 0;
+//	sum += l;
+//	for (int i = 1; i < arr.size(); i++) {
+//		if (r >= arr[i ].first) {
+//			r = r > arr[i ].second ? r : arr[i ].second;
+//
+//		}
+//		else {
+//			sum += arr[i].first - r - 1;
+//			l = arr[i].first;
+//			r = arr[i].second;
+//		}
+//
+//	}
+//	sum += L - r;
+//	cout << sum;
+//
+//	return 0;
+//}
+//
+//
+
+//int main() {
+//	int p1, p2, p3;
+//	cin >> p1 >> p2 >> p3;
+//	string s1;
+//	cin >> s1;
+//	string answer;
+//	while (s1.find('-') != string::npos) {
+//		string then;
+//		if (s1.find('-') == 0) {
+//			then = '-';
+//			answer += then;
+//			s1.erase(0, s1.find('-') + 1);
+//			continue;
+//		}
+//
+//		if (s1.find('-') == s1.size() - 1) {
+//			break;
+//		}
+//		answer += s1.substr(0, s1.find('-'));
+//
+//		string x = s1.substr(s1.find('-')-1, 3);
+//		if (x[0] >= '0' && x[0] <= '9'&&x[2] >= '0' && x[2] <= '9') {
+//			if (x[0] >= x[2]) {
+//				then = '-';
+//			}
+//			else {
+//				for (int i = x[0] + 1; i < x[2]; i++) {
+//					for (int j = 0; j < p2; j++) {
+//						if (p1==1||p1==2)
+//						then.push_back(i);
+//						else {
+//							then.push_back('*');
+//						}
+//					}
+//				}
+//				if (p3 == 2) {
+//					reverse(then.begin(), then.end());
+//				}
+//			}
+//		}
+//		else if (x[0] >= 'a' && x[0] <= 'z'&&x[2] >= 'a' && x[2] <= 'z') {
+//			if (x[0] >= x[2]) {
+//				then = '-';
+//			}
+//			else {
+//				for (int i = x[0] + 1; i < x[2]; i++) {
+//					for (int j = 0; j < p2; j++) {
+//						if (p1 == 1 )
+//							then.push_back(i);
+//						else if (p1 == 2) {
+//							then.push_back(i - 32);
+//						}
+//						else {
+//							then.push_back('*');
+//						}
+//					}
+//				}
+//				if (p3 == 2) {
+//					reverse(then.begin(), then.end());
+//				}
+//			}
+//		}
+//		else {
+//			then = '-';
+//		}
+//
+//		answer += then;
+//		s1.erase(0, s1.find('-') + 1);
+//	}
+//	answer += s1;
+//
+//
+//
+//	cout << answer;
+//	return 0;
+//}
+
+//int main() {
+//	int N;
+//	cin >> N;
+//	map<int, string> tt;
+//	while (N--) {
+//		int n;
+//		string s;
+//		vector<char> ch;
+//		vector<int> nu;
+//		cin >> n >>  s;
+//		string si;
+//		vector<char> fir;
+//		int numf = 0;
+//		int nume = 0;
+//		int is_fi = 1;
+//		while (n--) {
+//			if (is_fi==1)
+//			getchar();
+//			is_fi = 0;
+//			getline(cin, si);
+//			if (si[0] == 'F') {
+//				fir.push_back('F');
+//				numf++;
+//				ch.push_back(si[2]);
+//				if (si[4] == 'n') nu.push_back(0);
+//				else if (si[6] == 'n') nu.push_back(1);
+//				else nu.push_back(0);
+//			}
+//			else if (si[0] == 'E') {
+//				nume++;
+//				fir.push_back('E');
+//
+//			}
+//		}
+//		if (numf != nume) cout << "ERR";
+//		vector<char> current;
+//		int txt = 0, exe = -1;
+//		vector<int> curr;
+//		int now;
+//		char last = '0';
+//		for (int i = 0; i < fir.size(); i++) {
+//			if (fir[i] == 'F') {
+//				if (find(current.begin(), current.end(), ch[txt]) != current.end()) {
+//					cout << "ERR";
+//					break;
+//				}
+//				current.push_back(ch[txt]);
+//				txt++;
+//				if () {
+//					curr[curr.size() - 1] += nu[exe];
+//				}
+//				else {
+//					exe++;
+//					curr.push_back(nu[exe]);
+//				}
+//				last = 'F';
+//				
+//			}
+//			else if (fir[i] == 'E') {
+//				current.pop_back();
+//				last = 'E';
+//			}
+//		}
+//
+//
+//
+//
+//
+//
+//
+//	}
+//	return 0;
+//}
+//
+//
+
+//int main() {
+//	int N, K, S;
+//	int sum = 0;
+//	cin >> N >> S >> K;
+//	while (N--) {
+//		int P, Q;
+//		cin >> P >> Q;
+//		sum += P * Q;
+//	}
+//	if (sum >= S)cout << sum;
+//	else cout << sum + K;
+//	return 0;
+//}
+
+//int main() {
+//	int K, G, M;
+//	cin >> K >> G >> M;
+//	int g = 0, m = 0;
+//	int times = 0;
+//	while (K--) {
+//				 if (g == G) {
+//					g = 0;
+//					continue;
+//		}
+//
+//		else if (m == 0) {
+//			m = M;
+//			continue;
+//		}
+//		else {
+//			if (m >= (G - g)) {
+//				m -= (G - g);
+//				g = G;
+//
+//			}
+//			else {
+//				g += m;
+//				m = 0;
+//			}
+//		}
+//	}
+//	cout << g << ' ' << m;
+//
+//	return 0;
+//}
+//
+
+//int main() {
+//	int N, M;
+//	string S;
+//	cin >> N >> M >> S;
+//	int num=0, max = 0;
+//	int curr1 = M;
+//	for (int i = 0; i < N; i++) {
+//		if (S[i] == '0') {
+//			if (num > max) max = num;
+//			S[S.find('0')] = -1;
+//			num = 0;
+//			curr1 = M;
+//
+//		}
+//		else {
+//			if (S[i] == '2') {
+//				num++;
+//			}
+//			else {
+//				curr1--;
+//				if (curr1 == 0) {
+//					if (S.find('0') == string::npos) {
+//						int x = S.size() - 1 - i;
+//						num += x;
+//						break;
+//					}
+//					else {
+//						int x = S.find('0') - 1 - i;
+//						num += x;
+//						if (num > max) max = num;
+//						i = S.find('0');
+//						S[S.find('0')] = -1;
+//						num = 0;
+//						curr1 = M;
+//					}
+//				}
+//			}
+//		}
+//	}
+//	if (num > max) max = num;
+//	cout << max;
+//	return 0;
+//}
+//
 
 int main() {
-	int n, m;
-	std::cout << "请输入 n 和 m：";
-	std::cin >> n >> m;
+	int H, W;
+	cin >> H >> W;
+	vector<vector<int>> A(H, vector<int>(W));
+	vector<vector<int>> B(H, vector<int>(W));
+	for (int i = 0; i < H; i++) {
+		for (int j = 0; j < W; j++) {
+			int x;
+			cin >> x;
 
-	printCombinations(n, m);
+			A[i][j] = x;
+		}
+	}
+	for (int i = 0; i < H; i++) {
+		for (int j = 0; j < W; j++) {
+			int x;
+			cin >> x;
+
+			B[i][j] = x;
+		}
+	}
+
+	int times = 0;
+	while (A != B) {
+		for (int i = 0; i < H; i++) {
+			for (int j = 0; j < W; j++) {
+				if (A[i][ j] != B[i][ j]) {
+					if (find(B.begin(), B.end(), A[i]) == B.end()) {
+						cout << '-1';
+						return 0;
+					}
+					for (int p = 0; p < H; p++) {
+						for (int q = 0; q < W; q++) {
+
+						}
+					}
+				}
+			}
+		}
+	}
 
 	return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
