@@ -10342,50 +10342,111 @@ using namespace std;
 //	return 0;
 //}
 //
+//
+//int main() {
+//	int H, W;
+//	cin >> H >> W;
+//	vector<vector<int>> A(H, vector<int>(W));
+//	vector<vector<int>> B(H, vector<int>(W));
+//	for (int i = 0; i < H; i++) {
+//		for (int j = 0; j < W; j++) {
+//			int x;
+//			cin >> x;
+//
+//			A[i][j] = x;
+//		}
+//	}
+//	for (int i = 0; i < H; i++) {
+//		for (int j = 0; j < W; j++) {
+//			int x;
+//			cin >> x;
+//
+//			B[i][j] = x;
+//		}
+//	}
+//
+//	int times = 0;
+//	while (A != B) {
+//		for (int i = 0; i < H; i++) {
+//			for (int j = 0; j < W; j++) {
+//				if (A[i][ j] != B[i][ j]) {
+//					if (find(B.begin(), B.end(), A[i]) == B.end()) {
+//						cout << '-1';
+//						return 0;
+//					}
+//					for (int p = 0; p < H; p++) {
+//						for (int q = 0; q < W; q++) {
+//
+//						}
+//					}
+//				}
+//			}
+//		}
+//	}
+//
+//	return 0;
+//}
+//
 
-int main() {
-	int H, W;
-	cin >> H >> W;
-	vector<vector<int>> A(H, vector<int>(W));
-	vector<vector<int>> B(H, vector<int>(W));
-	for (int i = 0; i < H; i++) {
-		for (int j = 0; j < W; j++) {
-			int x;
-			cin >> x;
 
-			A[i][j] = x;
-		}
-	}
-	for (int i = 0; i < H; i++) {
-		for (int j = 0; j < W; j++) {
-			int x;
-			cin >> x;
+//int main() {
+//	//char a[10], b[10];
+//	//int i, j;
+//	//fgets()
+//	char a = '\0';
+//	printf("%c", a);
+//
+//	return 0;
+//}
 
-			B[i][j] = x;
-		}
-	}
 
-	int times = 0;
-	while (A != B) {
-		for (int i = 0; i < H; i++) {
-			for (int j = 0; j < W; j++) {
-				if (A[i][ j] != B[i][ j]) {
-					if (find(B.begin(), B.end(), A[i]) == B.end()) {
-						cout << '-1';
-						return 0;
-					}
-					for (int p = 0; p < H; p++) {
-						for (int q = 0; q < W; q++) {
 
-						}
-					}
-				}
-			}
-		}
-	}
 
-	return 0;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
