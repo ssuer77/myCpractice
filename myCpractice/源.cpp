@@ -10398,51 +10398,1129 @@ using namespace std;
 //
 //	return 0;
 //}
+//void padleft(string s, int n, char x = ' ') {
+//	if (n <= s.size()) cout << s;
+//	else {
+//		int num = n - s.size();
+//		string t;
+//		while (num--) {
+//			t += x;
+//		}
+//		t += s;
+//		cout << t;
+//	}
+//}
+//
+//void padright(string s, int n, char x = ' ') {
+//	if (n <= s.size()) cout << s;
+//	else {
+//		int num = n - s.size();
+//		string t;
+//		while (num--) {
+//			t += x;
+//		}
+//		s += t;
+//		cout << s;
+//	}
+//}
+//
+//int main() {
+//	int N;
+//	while (cin >> N) {
+//		string s;
+//		int n;
+//		char x;
+//		cin >> s >> n;
+//		switch (N) {
+//		case 11: 
+//			padleft(s, n);
+//			break;
+//		case 12:
+//			cin >> x;
+//			padleft(s, n, x);
+//			break;
+//		case 21:
+//			padright(s, n);
+//			break;
+//		case 22:
+//			cin >> x;
+//			padright(s, n, x);
+//			break;
+//		}
+//		cout << endl;
+//	}
+//
+//	return 0;
+//}
+//string remove(string s, char x) {
+//	while (s.find(x) != string::npos) {
+//		s.erase(s.find(x), 1);
+//	}
+//	return s;
+//}
+//string remove(string s, int n) {
+//	if (n>=0&&n<=s.size()-1)
+//	s.erase(n, 1);
+//	return  s;
+//}
+//string remove(string s, int start, int ends) {
+//	if (start>=0&&start<=s.size()-1&&ends>=0&&ends<=s.size()-1&&start<=ends)
+//	s.erase(start, ends - start + 1);
+//	return  s;
+//}
+//
+//
+//int main()
+//{
+//	int num, index, startIndex, endIndex;
+//	char delChar;
+//	string src, dest;
+//
+//	while (cin >> num)
+//	{
+//		switch (num)
+//		{
+//		case 1:
+//			cin >> src >> delChar;
+//			cout << remove(src, delChar) << endl;
+//			break;
+//		case 2:
+//			cin >> src >> index;
+//			cout << remove(src, index) << endl;
+//			break;
+//		case 3:
+//			cin >> src >> startIndex >> endIndex;
+//			cout << remove(src, startIndex, endIndex) << endl;
+//			break;
+//		}
+//	}
+//	return 0;
+//}
 
-int a;
+//string cpy(string s) {
+//	return s;
+//}
+//string cpy(string s, int x) {
+//	if (x >= 0 && x <= s.size() - 1) return s.substr(x);
+//	string t = "";
+//		return t;
+//}
+//string cpy(string s, int begins, int ends) {
+//	if (begins>=0&&begins<=s.size()-1&&ends>=0&&ends<=s.size()-1&&begins<=ends)
+//	return s.substr(begins, ends - begins + 1);
+//	else
+//	{
+//		string t = "";
+//		return t;
+//	}
+//}
+//
+//
+//int main()
+//{
+//	int num, length, index, startIndex, endIndex;
+//	string src, dest;
+//
+//	while (cin >> num)
+//	{
+//		switch (num)
+//		{
+//		case 1:
+//			cin >> src;
+//			cout << cpy(src) << endl;
+//			break;
+//		case 2:
+//			cin >> src >> startIndex;
+//			cout << cpy(src, startIndex) << endl;
+//			break;
+//		case 3:
+//			cin >> src >> startIndex >> endIndex;
+//			cout << cpy(src, startIndex, endIndex) << endl;
+//			break;
+//		}
+//	}
+//	return 0;
+//}
+//
+
+//char* format(int n) {
+//	string s;
+//	s = to_string(n);
+//	reverse(s.begin(), s.end());
+//	string si;
+//	while (s.size() > 0) {
+//		if (s.size() >= 3) {
+//			
+//			si += s.substr(0, 3);
+//			s.erase(0, 3);
+//			if (s.size() > 0) si += ',';
+//		}
+//		else {
+//			si += s;
+//			break;
+//		}
+//	}
+//	reverse(si.begin(), si.end());
+//	//char* x = (char*)malloc(99999 * sizeof(char));
+//	char* x = new char[si.size() + 1];
+//
+//	strcpy(x, si.c_str());
+//	return x;
+//
+//}
+//
+//
+//
+//int main() {
+//
+//	int number;
+//
+//	while (cin >> number) {
+//
+//		char* s = format(number);
+//
+//		cout << s << endl;
+//
+//		delete[] s;
+//
+//	}
+//
+//	return 0;
+//
+//}
+//
+
+//void string_analysis(char str[100], int& total, int& cap, int& sma, int& num, int& oth) {
+//	int i = 0;
+//	while (*(str + i) != '\0') {
+//		total++;
+//		if (*(str + i) >= '0' && *(str + i) <= '9') num++;
+//		else if (*(str + i) >= 'a' && *(str + i) <= 'z') sma++;
+//		else if (*(str + i) >= 'A' && *(str + i) <= 'Z') cap++;
+//		else oth++;
+//		i++;
+//	}
+//
+//}
+//
+//
+//
+//
+//
+//
+//int main() {
+//
+//	char str[100];
+//
+//
+//
+//	int total, cap, sma, num, oth;
+//
+//	total = cap = sma = num = oth = 0;
+//
+//
+//
+//	cin.get(str, 100);
+//
+//	string_analysis(str, total, cap, sma, num, oth);
+//
+//
+//
+//	cout << cap << endl;
+//
+//	cout << sma << endl;
+//
+//	cout << num << endl;
+//
+//	cout << oth << endl;
+//
+//	cout << total << endl;
+//
+//
+//
+//	return 0;
+//
+//}
+
+//int myatoi(char str[100]) {
+//	int i = 0;
+//	string s;
+//	while (*(str + i) != '\0') {
+//		s += *(str + i);
+//		i++;
+//	}
+//	int x;
+//	x = stoi(s);
+//	return x;
+//}
+//
+//
+//
+//int main() {
+//
+//	char str[100];
+//
+//	while (cin >> str) {
+//
+//
+//
+//		cout << myatoi(str) << endl;
+//	}
+//	return 0;
+//
+//}
+//
+//
+//template <typename T>
+//T distance(T x1, T y1, T x2, T y2) {
+//	T x = x1 - x2;
+//	T y = y1 - y2;
+//	return sqrt(x * x + y * y);
+//}
+//
+//int main() {
+//
+//	int i_x1, i_y1, i_x2, i_y2;
+//
+//	double d_x1, d_y1, d_x2, d_y2;
+//
+//
+//
+//	cin >> i_x1 >> i_y1 >> i_x2 >> i_y2;
+//
+//	cin >> d_x1 >> d_y1 >> d_x2 >> d_y2;
+//
+//
+//
+//	cout << distance(i_x1, i_y1, i_x2, i_y2) << endl;
+//
+//
+//
+//	cout << distance(d_x1, d_y1, d_x2, d_y2) << endl;
+//
+//
+//
+//	return 0;
+//
+//}
+//
+//
+
+//typedef class Box {
+//private:
+//	int Length;
+//	int	Width;
+//	int Height;
+//public:
+//	void InitBox(int x, int y, int z) {
+//		Length = x;
+//		Width = y;
+//		Height = z;
+//	}
+//	void setVolume() {
+//		cout << Length * Width * Height << endl;
+//	}
+//	void setArea() {
+//		cout << 2 * Length * Width + 2 * Length * Height + 2 * Width * Height << endl;
+//	}
+//	void show() {
+//		cout << Length << ' ' << Width << ' ' << Height << endl;
+//	}
+//};
+//
+//
+//
+//
+//
+//
+//int main()
+//
+//{
+//
+//	int intLength, intWidth, intHeight;
+//
+//	Box box;
+//
+//	cin >> intLength;
+//
+//	cin >> intWidth;
+//
+//	cin >> intHeight;
+//
+//	box.InitBox(intLength, intWidth, intHeight);
+//	box.show();
+//
+//	box.setVolume();
+//
+//	box.setArea();
+//
+//
+//	return 0;
+//
+//}
+//
+//
+
+// class student {
+//public:
+//	student(){}
+//	string name;
+//	int Math;
+//	int English;
+//	int Total;
+//	student(string s, int m, int e) {
+//		name = s;
+//		English = e;
+//		Math = m;
+//		//calcTotal();
+//	}
+//	void calcTotal() {
+//		Total = Math + English;
+//	}
+//	string getName() {
+//		return  name;
+//	}
+//	int getMath() {
+//		return Math;
+//	}
+//	int getEnglish() {
+//		return  English;
+//	}
+//	int getTotal() {
+//		return Total;
+//	}
+//
+//};
+//
+//
+//bool cmp(student a, student b) {
+//	return a.Total > b.Total;
+//}
+//
+//
+//void sortStudent(student s[3], int n) {
+//	sort(s,s+n, cmp);
+//}
+//
+//
+//
+//
+//
+//
+//
+//int main()
+//
+//{
+//
+//	student s[3], temp;
+//
+//	string sName;//或char sName[20];
+//
+//	int sMath, sEnglish;
+//
+//	int i;
+//
+//
+//
+//	for (i = 0; i < 3; i++)
+//
+//	{
+//
+//		cin >> sName >> sMath >> sEnglish;
+//
+//		s[i] = student(sName, sMath, sEnglish);
+//
+//		s[i].calcTotal();
+//
+//	}
+//
+//	sortStudent(s, 3);
+//
+//	for (i = 0; i < 3; i++)
+//
+//	{
+//
+//		cout << s[i].getName() << " " << s[i].getMath() << " " << s[i].getEnglish() << " " << s[i].getTotal() << endl;
+//
+//	}
+//
+//	return 0;
+//
+//}
 
 
 
 
+//class Student{
+//
+//		private:
+//
+//		  int num;  //学号
+//
+//		  float score; //分数
+//
+//		public:  //成员函数仅给出原型，需自行设计
+//
+//			Student(int n) {
+//				num = n;
+//		   }
+//
+//			void SetScore(float x) {
+//				score = x;
+//		   }
+//
+//			int GetNum() {
+//				return num;
+//		   }
+//
+//			float GetScore() {
+//				return score;
+//			}
+//
+//	  };
+//
+//
+//void  maxs(vector<Student>& stu, int n) {
+//	float maxscore = -1;
+//	int maxindex = -1;
+//	for (int i = 0; i < n; i++) {
+//		if (stu[i].GetScore() > maxscore) {
+//			maxscore = stu[i].GetScore();
+//			maxindex = i;
+//		}
+//	}
+//	vector<int> numse;
+//	vector<int> scores;
+//
+//	for (int i = 0; i < n; i++) {
+//		if (stu[i].GetScore() == maxscore) {
+//			numse.push_back(stu[i].GetNum());
+//			scores.push_back(stu[i].GetScore());
+//		}
+//	}
+//
+//	for (int i = 0; i < numse.size(); i++) {
+//		cout << numse[i] << ' ' << scores[i] << endl;
+//	}
+//
+//}
+//
+//int main()
+//
+//{
+//
+//	int i, n, num;
+//
+//	float score;
+//
+//	cin >> n;
+//
+//	//Student stu[n];
+//	vector<Student> stu;
+//
+//	for (i = 0; i < n; i++)
+//	{
+//
+//		cin >> num >> score;
+//
+//		Student s(num);
+//		//stu[i] = Student(num);
+//		s.SetScore(score);
+//		//stu[i].SetScore(score);
+//		stu.push_back(s);
+//
+//	}
+//
+//	maxs(stu, n);
+//
+//	return 0;
+//
+//}
 
+//class Student {
+//private:
+//	int number;
+//	string name;
+//	double math, chinese;
+//	double average;
+//
+//public:
+//	Student(int n, string  na) {
+//		number = n;
+//		name = na;
+//	}
+//	void setChinese(double c) {
+//		if (c>=0&&c<=100)
+//		chinese = c;
+//		else {
+//			chinese = 0;
+//		}
+//	}
+//	void setMath(double m) {
+//		if (m>=0&&m<=100)
+//		math = m;
+//		else {
+//			math = 0;
+//		}
+//		calcave();
+//	}
+//	void calcave() {
+//		average = (math + chinese) / 2.0;
+//	}
+//	string getname() {
+//		return name;
+//	}
+//	int getnum() {
+//		return number;
+//	}
+//	double getchi() {
+//		return chinese;
+//	}
+//	double getma() {
+//		return math;
+//	}
+//	double getave() {
+//		return average;
+//	}
+//};
+//
+//void findStudent(vector<Student> stu, int n, string searchName) {
+//	vector<int> target;
+//	for (int i = 0; i < n; i++) {
+//		if (stu[i].getname().find(searchName) != string::npos) {
+//			target.push_back(i);
+//		}
+//	}
+//	if (target.size() == 0) {
+//		cout << "Not found.";
+//	}
+//	for (int i = 0; i < target.size(); i++) {
+//		cout << stu[target[i]].getnum() << ' ' << stu[target[i]].getname() << ' ' << stu[target[i]].getchi() << ' ' << stu[target[i]].getma() << ' ' << stu[target[i]].getave() << endl;
+//	}
+//
+//	
+//
+//}
+//
+//
+//int main()
+//{
+//
+//	int n, i;
+//
+//	int number;
+//
+//	string name, searchName;
+//
+//	double math, chinese;
+//
+//	cin >> n;
+//
+//	//Student stu[n];
+//	vector<Student> stu;
+//
+//	for (i = 0; i < n; i++)
+//	{
+//
+//		cin >> number >> name >> chinese >> math;
+//
+//		//stu[i] = Student(number, name);
+//
+//		Student s(number, name);
+//		stu.push_back(s);
+//		stu[i].setChinese(chinese);
+//		stu[i].setMath(math);
+//
+//
+//		
+//	}
+//
+//	cin >> searchName;  //输入需要查找的姓名
+//
+//	findStudent(stu, n, searchName);  //调用函数，查找学生，输出信息
+//
+//	return 0;
+//
+//}
+//
+//
 
+//
+//class Point {
+//private:
+//	int x, y;
+//
+//public:
+//	Point(){}
+//	Point(int xi, int yi) {
+//		x = xi;
+//		y = yi;
+//	}
+//	int getx() {
+//		return x;
+//	}
+//	int gety() {
+//		return y;
+//	}
+//};
+//
+//class RRectangle {
+//private:
+//	int num;
+//	Point topleft;
+//	int width;
+//	int height;
+//public:
+//	RRectangle(int nums, int x, int y, int widths, int heights) {
+//		num = nums;
+//	    topleft=Point(x, y);
+//		width = widths;
+//		height = heights;
+//	}
+//	RRectangle(){}
+//	int getarea() {
+//		return width * height;
+//	}
+//	bool isin(Point t) {
+//		if (t.getx() >= topleft.getx() && t.getx() <= topleft.getx() + width && t.gety() >= topleft.gety() && t.gety() <= topleft.gety() + height) {
+//			return 1;
+//		}
+//		return 0;
+//	}
+//	int getnum() {
+//		return num;
+//	}
+//};
+//
+//class RectangleCollection {
+//private:
+//	RRectangle x[100];
+//	int count;
+//	
+//public:
+//	RectangleCollection() {
+//		count = 0;
+//	}
+//	void addRectangle(RRectangle r) {
+//		x[count++] = r;
+//	}
+//	void deleteRectangle(int num) {
+//		for (int i = 0; i < count; i++) {
+//			if (x[i].getnum() == num) {
+//				for (int j = i; j < count - 1; j++) {
+//					x[j] = x[j + 1];
+//				}
+//				count--;
+//				break;
+//			}
+//		}
+//	}
+//	int inRects(Point p) {
+//		int sum = 0;
+//		for (int i = 0; i < count; i++) {
+//			if (x[i].isin(p)) sum += x[i].getarea();
+//		}
+//		return sum;
+//	}
+//
+//};
+//
+//
+//
+//
+//
+//int main()
+//{
+//	int num, topLeftX, topLeftY, width, height;
+//	int px, py;
+//	int op;
+//	RectangleCollection rc;
+//	RRectangle r;
+//	Point p;
+//
+//	while (cin >> op)
+//	{
+//		switch (op)
+//		{
+//		case 1:
+//			cin >> num >> topLeftX >> topLeftY >> width >> height;
+//			r = RRectangle(num, topLeftX, topLeftY, width, height);
+//			rc.addRectangle(r);
+//			break;
+//		case 2:
+//			cin >> num;
+//			rc.deleteRectangle(num);
+//			break;
+//		case 3:
+//			cin >> px >> py;
+//			p = Point(px, py);
+//			cout << rc.inRects(p) << endl;
+//			break;
+//		}
+//	}
+//	return 0;
+//}
 
+//
+//
+//
+//
+//#include <iostream>
+//using namespace std;
+//
+//class Point {
+//private:
+//    int x, y;
+//
+//public:
+//    Point() {}
+//    Point(int xi, int yi) {
+//        x = xi;
+//        y = yi;
+//    }
+//    int getx() {
+//        return x;
+//    }
+//    int gety() {
+//        return y;
+//    }
+//};
+//
+//class RRectangle {
+//private:
+//    int num;
+//    Point topLeft;
+//    int width;
+//    int height;
+//
+//public:
+//    RRectangle() {}
+//    RRectangle(int nums, int x, int y, int widths, int heights) {
+//        num = nums;
+//        topLeft = Point(x, y);
+//        width = widths;
+//        height = heights;
+//    }
+//    int getArea() {
+//        return width * height;
+//    }
+//    bool isIn(Point p) {
+//        if (p.getx() > topLeft.getx() && p.getx() < topLeft.getx() + width && p.gety() > topLeft.gety() && p.gety() < topLeft.gety() + height) {
+//            return true;
+//        }
+//        return false;
+//    }
+//    int getNum() {
+//        return num;
+//    }
+//};
+//
+//class RectangleCollection {
+//private:
+//    RRectangle rects[100];
+//    int count;
+//
+//public:
+//    RectangleCollection() {
+//        count = 0;
+//    }
+//    void addRectangle(RRectangle r) {
+//        rects[count++] = r;
+//    }
+//    void deleteRectangle(int num) {
+//        for (int i = 0; i < count; i++) {
+//            if (rects[i].getNum() == num) {
+//                for (int j = i; j < count - 1; j++) {
+//                    rects[j] = rects[j + 1];
+//                }
+//                count--;
+//                break;
+//            }
+//        }
+//    }
+//    int inRects(Point p) {
+//        int sum = 0;
+//        for (int i = 0; i < count; i++) {
+//            if (rects[i].isIn(p)) {
+//                sum += rects[i].getArea();
+//            }
+//        }
+//        return sum;
+//    }
+//};
+//
+//int main() {
+//    int num, topLeftX, topLeftY, width, height;
+//    int px, py;
+//    int op;
+//    RectangleCollection rc;
+//    RRectangle r;
+//    Point p;
+//
+//    while (cin >> op) {
+//        switch (op) {
+//        case 1:
+//            cin >> num >> topLeftX >> topLeftY >> width >> height;
+//            r = RRectangle(num, topLeftX, topLeftY, width, height);
+//            rc.addRectangle(r);
+//            break;
+//        case 2:
+//            cin >> num;
+//            rc.deleteRectangle(num);
+//            break;
+//        case 3:
+//            cin >> px >> py;
+//            p = Point(px, py);
+//            cout << rc.inRects(p) << endl;
+//            break;
+//        }
+//    }
+//    return 0;
+//}
+//
+//
+//
+//
+//
+//
 
+//
+//class Date {
+//
+//	int year;
+//
+//	int month;
+//
+//	int day;
+//
+//public:
+//
+//	Date(int y, int m, int d) :year(y), month(m), day(d) {};
+//
+//	int getYear() const { return year; }
+//
+//	int getMonth() const { return month; }
+//
+//	int getDay() const { return day; }
+//
+//
+//
+//};
+//bool is_leapyear(int y) {
+//	if (y % 4 == 0 && y % 100 != 0 || y % 400 == 0) return true;
+//	return false;
+//}
+//int countdate(int y, int m, int d) {
+//	int days[12] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
+//	if (is_leapyear) days[1] = 29;
+//	int sum = 0;
+//	for (int i = 0; i < m - 1; i++) {
+//		sum += days[i];
+//	}
+//	sum += d;
+//	return sum;
+//}
+//int yearday(int y) {
+//	return is_leapyear ? 366 : 365;
+//}
+//int main() {
+//
+//	int y1, m1, d1, y2, m2, d2;
+//
+//	cin >> y1 >> m1 >> d1;
+//
+//	cin >> y2 >> m2 >> d2;
+//
+//	if (y1 == y2) {
+//		cout << countdate(y2, m2, d2) - countdate(y1, m1, d1);
+//	}
+//	else if (y1+1==y2){
+//		cout << yearday(y1) - countdate(y1, m1, d1) + countdate(y2, m2, d2);
+//	}
+//	else {
+//		int middays = 0;
+//		for (int i = y1 + 1; i < y2; i++) {
+//			middays += yearday(i);
+//		}
+//		cout << yearday(y1) - countdate(y1, m1, d1) + middays + countdate(y2, m2, d2);
+//	}
+//
+//	return 0;
+//
+//}
+//
+//
+//
+////
+//
+//
+//
+//bool is_leapyear(int y) {
+//	if (y % 4 == 0 && y % 100 != 0 || y % 400 == 0) return true;
+//	return false;
+//}
+//
+//int countdate(int y, int m, int d) {
+//	int days[12] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
+//	if (is_leapyear(y)) days[1] = 29;
+//	int sum = 0;
+//	for (int i = 0; i < m - 1; i++) {
+//		sum += days[i];
+//	}
+//	sum += d;
+//	return sum;
+//}
+//
+//int yearday(int y) {
+//	return is_leapyear(y) ? 366 : 365;
+//}
+//
+//int main() {
+//	int y1, m1, d1, y2, m2, d2;
+//
+//	cin >> y1 >> m1 >> d1;
+//	cin >> y2 >> m2 >> d2;
+//
+//	int totalDays = 0;
+//
+//	if (y1 == y2) {
+//		totalDays = countdate(y2, m2, d2) - countdate(y1, m1, d1);
+//	}
+//	else if (y1 + 1 == y2) {
+//		totalDays = yearday(y1) - countdate(y1, m1, d1) + countdate(y2, m2, d2);
+//	}
+//	else {
+//		int middays = 0;
+//		for (int i = y1 + 1; i < y2; i++) {
+//			middays += yearday(i);
+//		}
+//		totalDays = yearday(y1) - countdate(y1, m1, d1) + middays + countdate(y2, m2, d2);
+//	}
+//
+//	cout << totalDays << endl;
+//
+//	return 0;
+//}
+//
+//class Student {
+//
+//public:
+//
+//	void Set_StuNum(int); //自行设计
+//
+//	int Get_StudNum();  //自行设计
+//
+//	void Set_Score(float); //自行设计
+//
+//	float Get_Score();  //自行设计
+//
+//private:
+//
+//	int stu_num; //学号
+//
+//	float score; //分数   
+//
+//};
+//
+//int main() {
+//
+//	int n, stu_num, max_stu_num;
+//
+//	float score, max_score;
+//
+//	cin >> n;
+//
+//
+//
+//	Student stu[n];
+//
+//	for (int i = 0; i < n; i++) {
+//
+//		cin >> stu_num >> score;
+//
+//		stu[i].Set_StuNum(stu_num);
+//
+//		stu[i].Set_Score(score);
+//
+//	}
+//
+//
+//
+//	max(stu, n, max_stu_num, max_score);
+//
+//
+//
+//	cout << max_stu_num << " " << max_score;
+//
+//	return 1;
+//
+//}
+//
+//
+//
+//string judge(double x) {
+//	if (x >= 90) return "优";
+//	else if (x >= 80 && x < 90) return "良";
+//	else if (x >= 70 && x < 80) return "中";
+//	else if (x >= 60 && x < 70)return "及格";
+//	else return "不及格";
+//}
+//
+//int main() {
+//	int n;
+//	cin >> n;
+//	vector<int> nums;
+//	vector<double> grades;
+//	int num;
+//	double grade;
+//	for (int i = 0; i < n; i++) {
+//		cin >> num >> grade;
+//		nums.push_back(num);
+//		grades.push_back(grade);
+//	}
+//	for (int i = 0; i < n; i++) {
+//		cout << nums[i] << ' ' << judge(grades[i]) << endl;
+//	}
+//	return 0;
+//}
+//
+//
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//typedef struct Student {
+//	string name;
+//	double norm, ex, final;
+//	int overall;
+//
+//};
+//bool cmp(Student a, Student b) {
+//	return a.overall > b.overall;
+//}
+//
+//int main() {
+//	int n;
+//	cin >> n;
+//	vector<Student> stus;
+//	string names;
+//	double norms, exs, finals, overalls;
+//	for (int i = 0; i < n; i++) {
+//		cin >> names >> norms >> exs >> finals;
+//		Student s;
+//		s.name = names;
+//		s.norm = norms;
+//		s.ex = exs;
+//		s.final = finals;
+//		if (s.final < 50) s.overall = s.final;
+//		else
+//		s.overall = 0.2 * norms + 0.25 * exs + 0.55 * finals + 0.5;
+//		stus.push_back(s);
+//	}
+//	sort(stus.begin(), stus.end(), cmp);
+//	for (int i = 0; i < stus.size(); i++) {
+//		cout << stus[i].name << ' ' << stus[i].norm << ' ' << stus[i].ex << ' ' << stus[i].final << ' ' << stus[i].overall << endl;
+//	}
+//	return 0;
+//}
+//
 
 
 
