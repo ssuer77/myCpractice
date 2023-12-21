@@ -11523,6 +11523,689 @@ using namespace std;
 //
 
 
+//
+//int main() {
+//	int n;
+//	vector<string> ids;
+//	cin >> n;
+//	for (int i = 0; i < n; i++) {
+//		string t;
+//		cin >> t;
+//		ids.push_back(t);
+//	}
+//	for (int i = 0; i < n; i++) {
+//		if (i != 0) {
+//			cout << endl;
+//		}
+//		cout << ids[i] << endl;
+//		int year, month, date;
+//		year = stoi(ids[i].substr(6, 4));
+//		month = stoi(ids[i].substr(10, 2));
+//		date = stoi(ids[i].substr(12, 2));
+//		printf("%d.%d.%d\n", year, month, date);
+//		char sex;
+//		if ((stoi(ids[i].substr(16, 1)) & 1) == 1) {
+//			sex = 'M';
+//		}
+//		else sex = 'F';
+//		cout << sex << endl;
+//		char Y;
+//		if (sex == 'M') {
+//			if (year > 1980) Y = 'Y';
+//			else if (year < 1980) Y = 'N';
+//			else {
+//				if (month >= 10) Y = 'Y';
+//				else  Y = 'N';
+//				
+//			}
+//		}
+//		if (sex == 'F') {
+//			if (year > 1975) Y = 'Y';
+//			else if (year < 1975) Y = 'N';
+//			else {
+//				if (month >= 10) Y = 'Y';
+//				else  Y = 'N';
+//
+//			}
+//		}
+//		cout << Y << endl;
+//	}
+//
+//	return 0;
+//}
+//
+//
+//int main() {
+//	int x1, x2, x3, x4, y1, y2, y3, y4, x, y;
+//	cin >> x1 >> y1 >> x2 >> y2 >> x3 >> y3 >> x4 >> y4 >> x >> y;
+//	int length, height;
+//	length = x4 - x1;
+//	height = y4 - y1;
+//	bool is_xing = false;
+//	if (y1 == y2 && x1 == x3 && x4 == x2 && y4 == y3)
+//		is_xing = true;
+//	if (is_xing == true)
+//		cout << length * height << endl;
+//	else cout << 0;
+//
+//	if (x > x1 && x<x4 && y>y1 && y < y4&&is_xing==true) cout << "In"<<endl;
+//	else cout << "Not in";
+//	return 0;
+//}
+
+//typedef struct Event {
+//	string things;
+//	int year;
+//	int month;
+//	int date;
+//	int hour;
+//	int mini;
+//	int sec;
+//};
+//bool cmp(Event a,Event b){
+//	if (a.year != b.year) return a.year < b.year;
+//	else if (a.month != b.month) return a.month < b.month;
+//	else if (a.date != b.date) return a.date < b.date;
+//	else if (a.hour != b.hour) return a.hour < b.hour;
+//	else if (a.mini != b.mini) return a.mini < b.mini;
+//	else if (a.sec != b.sec) return a.sec < b.sec;
+//	else return false;
+//}
+//
+//int main() {
+//	int n;
+//	vector<Event> datas;
+//	int num = 0;
+//	while (cin >> n) {
+//		getchar();
+//		switch (n) {
+//		case 1: {
+//			num++;
+//			string s, year, month, date, hour, mini, sec, event;
+//			getline(cin, s, '\n');
+//			istringstream iss(s);
+//			iss >> year >> month >> date >> hour >> mini >> sec;
+//			getline(iss, event);
+//			Event a;
+//			a.year = stoi(year);
+//			a.month = stoi(month);
+//			a.date = stoi(date);
+//			a.hour = stoi(hour);
+//			a.mini = stoi(mini);
+//			a.sec = stoi(sec);
+//			string ta;
+//			ta += year;
+//			ta += '-';
+//			if (month.size() == 1) {
+//				string tmp;
+//				tmp = "0";
+//				tmp += month;
+//				month = tmp;
+//			}
+//			ta += month;
+//			ta += '-';
+//			if (date.size() == 1) {
+//				string tmp;
+//				tmp = "0";
+//				tmp += date;
+//				date = tmp;
+//			}
+//			ta += date;
+//			ta += ' ';
+//			if (hour.size() == 1) {
+//				string tmp;
+//				tmp = "0";
+//				tmp += hour;
+//				hour = tmp;
+//			}
+//			ta += hour;
+//			ta += ':';
+//			if (mini.size() == 1) {
+//				string tmp;
+//				tmp = "0";
+//				tmp += mini;
+//				mini = tmp;
+//			}
+//			ta += mini;
+//			ta += ':';
+//			if (sec.size() == 1) {
+//				string tmp;
+//				tmp = "0";
+//				tmp += sec;
+//				sec = tmp;
+//			}
+//			ta += sec;
+//			ta += ' ';
+//			ta += event;
+//			a.things = ta;
+//			datas.push_back(a);
+//			sort(datas.begin(), datas.end(), cmp);
+//			break;
+//		}
+//		case 2:{
+//			cout << datas[0].things << endl;
+//			datas.erase(datas.begin());
+//			num--;
+//			break;
+//		
+//		}
+//		case 3: {
+//			cout << num << ' ' << "notes:" << endl;
+//			for (int i = 0; i < datas.size(); i++) {
+//				cout << datas[i].things << endl;
+//			}
+//		}
+//			
+//
+//
+//
+//
+//	
+//
+//				
+//
+//		}
+//	}
+//
+//
+//	return 0;
+//}
+//bool is_su(int x) {
+//	if (x == 1) {
+//		return false;
+//	}
+//	else if (x == 2) {
+//		return true;
+//	}
+//	for (int i = 2; i < x; i++) {
+//		if (x % i == 0) return false;
+//	}
+//	return true;
+//}
+//
+//int main() {
+//	int T;
+//	cin >> T;
+//	while (T--) {
+//		int n;
+//		int num = 0;
+//		cin >> n;
+//		for (int i = 1; i < n / 2; i++) {
+//			if (is_su(i) && is_su(n - i)) num++;
+//		}
+//		cout << num << endl;
+//	}
+//
+//	return 0;
+//}
+
+//bool judge(string s) {
+//	int num1 = 0, num2 = 0, num3 = 0, num4 = 0;
+//	for (int i = 0; i < s.size(); i++) {
+//		if (s[i] >= 'A' && s[i] <= 'Z') {
+//			num1 = 1;
+//		}
+//		else if (s[i] >= 'a' && s[i] <= 'z') {
+//			num2 = 1;
+//		}
+//		else if (s[i] >= '0' && s[i] <= '9') {
+//			num3 = 1;
+//		}
+//		else if (s[i] == '~' || s[i] == '!' || s[i] == '@' || s[i] == '#' || s[i] == '$' || s[i] == '%' || s[i] == '^') num4 = 1;
+//	}
+//	if (num1 + num2 + num3 + num4 >= 3 && s.size() >= 8 && s.size() <= 16) return true;
+//	return false;
+//
+//
+//}
+//
+//
+//int main() {
+//
+//	string code;  //»òchar code[1000];
+//
+//	int num;
+//
+//
+//
+//	cin >> num;
+//
+//	for (int i = 0; i < num; i++) {
+//
+//		cin >> code;
+//
+//		if (judge(code)) cout << 1 << endl;
+//
+//		else cout << 0 << endl;
+//
+//	}
+//
+//
+//
+//	return 0;
+//
+//}
+//
+
+//
+//bool is_su(int x) {
+//	if (x == 1) {
+//		return false;
+//	}
+//	else if (x == 2) {
+//		return true;
+//	}
+//	for (int i = 2; i < sqrt(x); i++) {
+//		if (x % i == 0) return false;
+//	}
+//	return true;
+//}
+//
+//int main() {
+//	long long num = 0;
+//	int left, right;
+//	while (cin >> left >> right) {
+//		num = 0;
+//		for (int i = left; i <= right; i++) {
+//			if (is_su(i)) num++;
+//		}
+//		cout << num << endl;
+//	}
+//
+//	return 0;
+//}
+//
+
+
+//
+//bool is_su(int x) {
+//	if (x == 1) {
+//		return false;
+//	}
+//	else if (x == 2) {
+//		return true;
+//	}
+//	for (int i = 2; i <= sqrt(x); i++) {
+//		if (x % i == 0) return false;
+//	}
+//	return true;
+//}
+//
+//int main() {
+//	int T;
+//	cin >> T;
+//	while (T--) {
+//		int n;
+//		//int num = 0;
+//		cin >> n;
+//		for (int i = 1; i < n / 2; i++) {
+//			if (is_su(i) && is_su(n - i)) {
+//				cout << i << ' ' << n - i << endl;
+//				break;
+//			}
+//		}
+//		//cout << num << endl;
+//	}
+//
+//	return 0;
+//}
+//
+//
+
+//int main() {
+//	int T;
+//	cin >> T;
+//	vector<int> arr;
+//	while (T--) {
+//		int x;
+//		cin >> x;
+//		arr.push_back(x);
+//
+//	}
+//	reverse(arr.begin(), arr.end());
+//	int n;
+//	cin >> n;
+//	while (n--) {
+//		arr.push_back(arr[0]);
+//		arr.erase(arr.begin());
+//	}
+//	reverse(arr.begin(), arr.end());
+//	for (int i = 0; i < arr.size(); i++) {
+//		if (i != 0) cout << ' ';
+//		cout << arr[i];
+//	}
+//
+//	return 0
+
+//
+//bool is_leapyear(int y) {
+//	if (y % 4 == 0 && y % 100 != 0 || y % 400 == 0) return true;
+//	return false;
+//
+//}
+//
+//typedef struct Date {
+//	int year;
+//	int month;
+//	int day;
+//
+//};
+//
+//int monthday(int y,int m) {
+//	vector<int> days = { 31,28,31,30,31,30,31,31,30,31,30,31 };
+//	if (is_leapyear(y)) days[1] = 29;
+//	return days[m - 1];
+//}
+//
+//Date next_date(Date da) {
+//	if (da.day < monthday(da.year,da.month)) da.day++;
+//	else {
+//		da.day = 1;
+//		if (da.month < 12) da.month++;
+//		else {
+//			da.month = 1;
+//			da.year++;
+//		}
+//	}
+//	return da;
+//}
+//
+//void goon_date(Date da, int n) {
+//	while (n != 0) {
+//		da = next_date(da);
+//		n--;
+//	}
+//	cout << da.year << ' ' << da.month << ' ' << da.day;
+//}
+//
+//
+//int main() {
+//	int y, m, d, n;
+//	cin >> y >> m >> d >> n;
+//	Date da;
+//	da.day = d;
+//	da.year = y;
+//	da.month = m;
+//	goon_date(da,n);
+//
+//	return 0;
+//}
+//
+//
+//#include <stdio.h>
+//
+//void print_spaces(int count) {
+//	for (int i = 0; i < count; i++) {
+//		printf(" ");
+//	}
+//}
+//
+//void print_diamond_line(int N, int current_line) {
+//	if (current_line <= N) {
+//		int spaces_before = N - current_line;
+//		print_spaces(spaces_before);
+//
+//		char first_char = 'Z' - current_line + 1;
+//		printf("%c", first_char);
+//
+//		if (current_line > 1) {
+//			int spaces_between = 2 * current_line - 3;
+//			print_spaces(spaces_between);
+//
+//			char second_char = first_char + 1;
+//			printf("%c", second_char);
+//		}
+//		printf("\n");
+//	}
+//	else {
+//		int symmetrical_line = 2 * N - current_line;
+//		print_diamond_line(N, symmetrical_line);
+//	}
+//}
+//
+//void print_diamond(int N) {
+//	int total_lines = 2 * N - 1;
+//	for (int i = 1; i <= total_lines; i++) {
+//		print_diamond_line(N, i);
+//		if (i < total_lines) {
+//			printf("\n");
+//		}
+//	}
+//}
+//
+//int main() {
+//	int n;
+//	int first = 1;
+//
+//	while (scanf("%d", &n) != EOF) {
+//		if (!first) {
+//			printf("\n\n");
+//		}
+//		print_diamond(n);
+//		first = 0;
+//	}
+//
+//	return 0;
+//}
+//
+
+//int main() {
+//	int N;
+//	int is_fir = 1;
+//	while (cin >> N) {
+//		if (is_fir == 0) cout << endl;
+//		is_fir = 0;
+//		int num = 0;
+//		for (int i = 0; i < N; i++) {
+//			for (int j = 0; j < N - 1 - i; j++) {
+//				cout << ' ';
+//			}
+//			if (i == 0) {
+//				cout << 'Z';
+//				num++;
+//			}
+//			else {
+//				printf("%c", 'Z' - num);
+//				num++;
+//				for (int j = 0; j < 2*i-1; j++) {
+//					cout << ' ';
+//				}
+//				printf("%c", 'Z' - num);
+//
+//				num++;
+//			}
+//			cout << endl;
+//		}
+//		for (int i = N-2; i >=0; i--) {
+//			for (int j = 0; j < N - 1 - i; j++) {
+//				cout << ' ';
+//			}
+//			if (i == 0) {
+//				printf("%c", 'Z' - num);
+//
+//			}
+//			else {
+//				printf("%c", 'Z' - num);
+//
+//				num++;
+//				for (int j = 0; j < 2*i-1; j++) {
+//					cout << ' ';
+//				}
+//				printf("%c", 'Z' - num);
+//
+//				num++;
+//			}
+//			cout << endl;
+//		}
+//
+//
+//	}
+//
+//	return 0;
+//}
+//
+//
+//
+//
+//
+//
+//
+//#include <iostream>
+//#include <vector>
+//#include <algorithm>
+//
+//bool isVowel(char c) {
+//	return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
+//}
+//
+//void generateCodes(const vector<char>& letters, string& code, int L, int pos, int vowelCount, int consonantCount, vector<std::string>& result) {
+//	if (code.length() == L) {
+//		if (vowelCount >= 1 && consonantCount >= 2) {
+//			result.push_back(code);
+//		}
+//		return;
+//	}
+//
+//	for (int i = pos; i < letters.size(); ++i) {
+//		code.push_back(letters[i]);
+//		generateCodes(letters, code, L, i + 1, vowelCount + isVowel(letters[i]), consonantCount + !isVowel(letters[i]), result);
+//		code.pop_back();
+//	}
+//}
+//
+//int main() {
+//	int L, C;
+//	while (cin >> L >> C) {
+//		vector<char> letters(C);
+//		for (int i = 0; i < C; ++i) {
+//			cin >> letters[i];
+//		}
+//
+//		sort(letters.begin(), letters.end()); // Sort the letters to maintain lexical order
+//
+//		vector<string> result;
+//		string code;
+//		generateCodes(letters, code, L, 0, 0, 0, result);
+//
+//		sort(result.begin(), result.end(),greater<string>()); // Sort the result to print in lexical order
+//		for (const auto& str : result) {
+//			std::cout << str << '\n';
+//		}
+//		std::cout << result.size() << '\n';
+//
+//		// Print an empty line between test cases, but not after the last one
+//		if (!std::cin.eof()) {
+//			std::cout << '\n';
+//		}
+//	}
+//	return 0;
+//}
+//
+//
+//
+//vector<int> check(string s) {
+//	vector<int> a(26,0);
+//	for (int i = 0; i < s.size(); i++) {
+//		a[s[i] - 97]++;
+//	}
+//	return a;
+//
+//}
+//
+//int main() {
+//
+//	string s1, s2;
+//	getline(cin, s1);
+//	istringstream iss1(s1);
+//	vector<string> e1;
+//	string tmp;
+//	while (iss1 >> tmp) {
+//		e1.push_back(tmp);
+//	}
+//	getchar();
+//	getline(cin, s2);
+//	istringstream iss2(s2);
+//	vector<string> e2;
+//	while (iss2 >> tmp) {
+//		e2.push_back(tmp);
+//	}
+//	vector<string> result;
+//	for (int i = 0; i < e2.size(); i++) {
+//		for (int j = 0; j < e1.size(); j++) {
+//			if (check(e2[i]) == check(e1[j])) {
+//				if (find(result.begin(), result.end(), e1[j]) == result.end()) {
+//					result.push_back(e1[j]);
+//				}
+//			}
+//		}
+//	}
+//	int is_fir = 1;
+//	for (int i = 0; i < e1.size(); i++) {
+//		if (find(result.begin(), result.end(), e1[i]) != result.end()) {
+//			if (is_fir == 0) cout << ' ';
+//			cout << e1[i];
+//			is_fir = 0;
+//		}
+//	}
+//	//for (int i = 0; i < result.size(); i++) {
+//	//	if (i != 0) cout << ' ';
+//	//	cout << result[i];
+//	//}
+//
+//	return 0;
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
