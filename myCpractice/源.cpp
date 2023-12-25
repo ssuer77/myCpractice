@@ -13187,8 +13187,52 @@ using namespace std;
 //
 
 
+class Rational {
+private:
+	int num;
+	int den;
+	void ReductFraction();
+public:
+	void create(int n, int d) {
+		num = n;
+		den = d;
+		ReductFraction();
+	}
+	void add(Rational r2);
+	void multi(Rational r2);
+	void display() {
+		cout << num << '/' << den << endl;
+	}
 
-
+};
+void Rational::add(Rational r2) {
+	num = num * r2.den + r2.num * den;
+	den *= r2.den;
+	ReductFraction();
+}
+void Rational::multi(Rational r2) {
+	num *= r2.num;
+	den *= r2.den;
+	ReductFraction();
+}
+void Rational::ReductFraction() {
+	int tmp = (num > den) ? den : num;
+	for (; tmp > 1; tmp--) {
+		if (num % tmp == 0 && den % tmp == 0) {
+			num /= tmp;
+			den /= tmp;
+			break;
+		}
+	}
+}
+int main() {
+	Rational r1, r2;
+	r1.create(1, 2);
+	r2.create(4, 6);
+	r1.add(r2); r1.display();
+	r1.multi(r2); r1.display();
+	return 0;
+}
 
 
 
