@@ -13187,63 +13187,101 @@ using namespace std;
 //
 
 
-class Rational {
-private:
-	int num;
-	int den;
-	void ReductFraction();
-public:
-	void create(int n, int d) {
-		num = n;
-		den = d;
-		ReductFraction();
-	}
-	void add(Rational r2);
-	void multi(Rational r2);
-	void display() {
-		cout << num << '/' << den << endl;
-	}
+//class Rational {
+//private:
+//	int num;
+//	int den;
+//	void ReductFraction();
+//public:
+//	void create(int n, int d) {
+//		num = n;
+//		den = d;
+//		ReductFraction();
+//	}
+//	void add(Rational r2);
+//	void multi(Rational r2);
+//	void display() {
+//		cout << num << '/' << den << endl;
+//	}
+//
+//};
+//void Rational::add(Rational r2) {
+//	num = num * r2.den + r2.num * den;
+//	den *= r2.den;
+//	ReductFraction();
+//}
+//void Rational::multi(Rational r2) {
+//	num *= r2.num;
+//	den *= r2.den;
+//	ReductFraction();
+//}
+//void Rational::ReductFraction() {
+//	int tmp = (num > den) ? den : num;
+//	for (; tmp > 1; tmp--) {
+//		if (num % tmp == 0 && den % tmp == 0) {
+//			num /= tmp;
+//			den /= tmp;
+//			break;
+//		}
+//	}
+//}
+//int main() {
+//	Rational r1, r2;
+//	r1.create(1, 2);
+//	r2.create(4, 6);
+//	r1.add(r2); r1.display();
+//	r1.multi(r2); r1.display();
+//	Rational r3;
+//	r3.
+//	return 0;
+//}
+//
+//
+//
 
-};
-void Rational::add(Rational r2) {
-	num = num * r2.den + r2.num * den;
-	den *= r2.den;
-	ReductFraction();
-}
-void Rational::multi(Rational r2) {
-	num *= r2.num;
-	den *= r2.den;
-	ReductFraction();
-}
-void Rational::ReductFraction() {
-	int tmp = (num > den) ? den : num;
-	for (; tmp > 1; tmp--) {
-		if (num % tmp == 0 && den % tmp == 0) {
-			num /= tmp;
-			den /= tmp;
-			break;
-		}
-	}
-}
-int main() {
-	Rational r1, r2;
-	r1.create(1, 2);
-	r2.create(4, 6);
-	r1.add(r2); r1.display();
-	r1.multi(r2); r1.display();
-	return 0;
-}
+//void fun(int x) {
+//	cout << x;
+//	x = x / 2;
+//	if (x > 0) {
+//		fun(x);
+//	}
+//	cout << x;
+//}
+//int main() {
+//	
+//	fun(4);
+//}
 
+//int f(int a[], int n) {
+//	if (n > 1)
+//		return a[0] + f(a - 1, n - 1);
+//	else
+//		return a[0];
+//}
+//int main() {
+//	int aa[10] = { 1,2,3,4,5,6,7,8,9,10 }, s;
+//	s = f(aa + 9, 3);
+//	cout << s;
+//
+//}
 
-
-
-
-
-
-
-
-
-
+//void f(int n, int* r) {
+//	int r1 = 0;
+//	if (n % 3 == 0)
+//		r1 = n / 3;
+//	else if (n % 5 == 0)
+//		r1 = n / 5;
+//	else
+//		f(--n, &r1);
+//	*r = r1;
+//}
+//int main() {
+//	int m = 7, r;
+//	f(m, &r);
+//	cout << r;
+//}
+//
+//
 
 
 
