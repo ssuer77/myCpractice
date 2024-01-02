@@ -13283,7 +13283,15 @@ using namespace std;
 //
 //
 
+int main() {
+	int a = 1;
+	if (a = 5) {
+		cout << 8;
+	}
+	cout << a;
 
+	return 0;
+}
 
 
 
