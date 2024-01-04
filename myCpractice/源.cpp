@@ -13283,35 +13283,64 @@ using namespace std;
 //
 //
 
-int main() {
-	int a = 1;
-	if (a = 5) {
-		cout << 8;
-	}
-	cout << a;
+//int main() {
+//	int a = 1;
+//	if (a = 5) {
+//		cout << 8;
+//	}
+//	cout << a;
+//
+//	return 0;
+//}
+//
+//
 
-	return 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//#include <iostream>
+//#include <string>
+//#include <vector>
+//#include <algorithm>
+//using namespace std;
+//
+//int longestSubstringRecursive(const string& s, int start, int end, int k) {
+//	if (end < k) return 0;
+//
+//	vector<int> count(26, 0);
+//
+//	// Count the frequency of each character in the current substring.
+//	for (int i = start; i < end; i++) {
+//		count[s[i] - 'a']++;
+//	}
+//
+//	// For every character in the current substring.
+//	for (int i = start; i < end; i++) {
+//		// If this character's frequency is less than k, it can't be part of the substring.
+//		if (count[s[i] - 'a'] < k) {
+//			int j = i + 1;
+//			while (j < end && count[s[j] - 'a'] < k) j++;
+//			// Recursively find the longest substring for the left and right parts.
+//			return max(longestSubstringRecursive(s, start, i, k), longestSubstringRecursive(s, j, end, k));
+//		}
+//	}
+//
+//	// If every character in the substring occurs at least k times, return the length of the substring.
+//	return end - start;
+//}
+//
+//int longestSubstring(string s, int k) {
+//	int n = s.length();
+//	return longestSubstringRecursive(s, 0, n, k);
+//}
+//
+//int main() {
+//	string s;
+//	int k;
+//	getline(cin, s);
+//	cin >> k;
+//	cout << longestSubstring(s, k) << endl;
+//	return 0;
+//}
+//
+//
 
 
 
