@@ -13341,20 +13341,118 @@ using namespace std;
 //}
 //
 //
+//int fibs(int n) {
+//	if (n == 0 || n == 1) return 0;
+//	else if (n == 2) return 1;
+//	else {
+//		return fibs(n - 1) + fibs(n - 2) + fibs(n - 3);
+//	}
+//}
+//
+//int sims(int n){
+//	int num = 0;
+//	for (int i=0;i<n;i++){
+//		int x = fibs(i);
+//		num += x*x;
+//	}
+//	return num;
+//}
+//
+//int main() {
+//	int n;
+//	cin >> n;
+//	cout << sims(n);
+//	return 0;
+//}
+//
+//int main() {
+//	int n;
+//	cin >> n;
+//	vector<char> arr;
+//	for (int i = 0; i < n; i++) {
+//		char x;
+//		cin >> x;
+//		arr.push_back(x);
+//	}
+//	char index = 58;
+//	int i = arr.size()-1;
+//	int is_fir = 1;
+//	while (index == 58) {
+//		if (is_fir==1)
+//		++arr[i];
+//		is_fir = 0;
+//		if (arr[i] == 58) {
+//			arr[i] = 48;
+//
+//			if (i == 0) {
+//				cout << 1;
+//				goto endsa;
+//			}
+//			else {
+//				arr[i - 1]++;
+//			}
+//			i--;
+//		}
+//		index = arr[i ];
+//	}
+//	endsa:
+//	for (int i = 0; i <arr.size(); i++) {
+//		cout << arr[i];
+//	}
+//	return 0;
+//}
+//
+//
+//
+//
+//
 
 
-d
 
 
+#include <iostream>
+#include <bits/stdc++.h>
 
+using namespace std;
 
+int main()
+{
+	int sum = 0;
+	vector<int> arr1(4, 0);
+	for (int i = 0; i < 4; i++) {
+		int x;
+		cin >> x;
+		arr1.push_back(x);
+	}
 
-
-
-
-
-
-
+	for (int i = 0; i < 4; i++) {
+		vector<int> arr;
+		for (int j = 0; j < arr1[i]; j++) {
+			int x;
+			cin >> x;
+			arr.push_back(x);
+		}
+		sort(arr.begin(), arr.end(), greater<int>());
+		int ends = arr[0];
+		int othera = arr[1];
+		for (int k = 2; k < arr1[i]; k++) {
+			int temp = othera + arr[k];
+			if (temp > ends) {
+				othera = ends;
+				ends = temp;
+			}
+			else if (temp == ends) {
+				othera = ends;
+			}
+			else {
+				othera = temp;
+			}
+		}
+		sum += ends;
+	}
+	cout << sum;
+	return 0;
+}
 
 
 
