@@ -13407,52 +13407,52 @@ using namespace std;
 //
 //
 
-
-
-
-#include <iostream>
-#include <bits/stdc++.h>
-
-using namespace std;
-
-int main()
-{
-	int sum = 0;
-	vector<int> arr1(4, 0);
-	for (int i = 0; i < 4; i++) {
-		int x;
-		cin >> x;
-		arr1.push_back(x);
-	}
-
-	for (int i = 0; i < 4; i++) {
-		vector<int> arr;
-		for (int j = 0; j < arr1[i]; j++) {
-			int x;
-			cin >> x;
-			arr.push_back(x);
-		}
-		sort(arr.begin(), arr.end(), greater<int>());
-		int ends = arr[0];
-		int othera = arr[1];
-		for (int k = 2; k < arr1[i]; k++) {
-			int temp = othera + arr[k];
-			if (temp > ends) {
-				othera = ends;
-				ends = temp;
-			}
-			else if (temp == ends) {
-				othera = ends;
-			}
-			else {
-				othera = temp;
-			}
-		}
-		sum += ends;
-	}
-	cout << sum;
-	return 0;
-}
+//
+//
+//
+//#include <iostream>
+//#include <bits/stdc++.h>
+//
+//using namespace std;
+//
+//int main()
+//{
+//	int sum = 0;
+//	vector<int> arr1(4, 0);
+//	for (int i = 0; i < 4; i++) {
+//		int x;
+//		cin >> x;
+//		arr1.push_back(x);
+//	}
+//
+//	for (int i = 0; i < 4; i++) {
+//		vector<int> arr;
+//		for (int j = 0; j < arr1[i]; j++) {
+//			int x;
+//			cin >> x;
+//			arr.push_back(x);
+//		}
+//		sort(arr.begin(), arr.end(), greater<int>());
+//		int ends = arr[0];
+//		int othera = arr[1];
+//		for (int k = 2; k < arr1[i]; k++) {
+//			int temp = othera + arr[k];
+//			if (temp > ends) {
+//				othera = ends;
+//				ends = temp;
+//			}
+//			else if (temp == ends) {
+//				othera = ends;
+//			}
+//			else {
+//				othera = temp;
+//			}
+//		}
+//		sum += ends;
+//	}
+//	cout << sum;
+//	return 0;
+//}
 
 
 
