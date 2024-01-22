@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+ï»¿#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>
 #include <iostream>
@@ -17,11 +17,11 @@ using namespace std;
 //int main()
 //{
 //	int line = 0;
-//	printf("¼ÓÈë±ÈÌØ\n");
+//	printf("åŠ å…¥æ¯”ç‰¹\n");
 //
 //	while (line < 20000)
 //	{
-//		printf("Ğ´´úÂë:%d\n", line);
+//		printf("å†™ä»£ç :%d\n", line);
 //		line++;
 //
 //	}
@@ -170,7 +170,7 @@ using namespace std;
 //int main()
 //{
 //	double a, b, c, x1, x2, dlt;
-//	cout << "ÇëÊäÈë·½³ÌµÄÈı¸öÏµÊı£º" << endl;
+//	cout << "è¯·è¾“å…¥æ–¹ç¨‹çš„ä¸‰ä¸ªç³»æ•°ï¼š" << endl;
 //	cin >> a >> b >> c;
 //	dlt = b * b - 4 * a * c;
 //	x1 = (-b + sqrt(dlt)) / (2 * a);
@@ -272,7 +272,7 @@ using namespace std;
 //		printf("weekend");
 //		break;
 //	default:
-//		printf("±¨´í");
+//		printf("æŠ¥é”™");
 //		break;
 //	}  
 //	return 0;
@@ -297,14 +297,14 @@ using namespace std;
 //}
 //int main()
 //{
-//	printf("ÇëÊäÈëÃÜÂë£º");
+//	printf("è¯·è¾“å…¥å¯†ç ï¼š");
 //	char password[20];
 //	scanf("%s", password);
 //	//getchar();
 //	int k;
 //	while ((k = getchar()) != '\n')
 //		getchar();
-//	printf("ÇëÈ·ÈÏÃÜÂë£¨Y/N£©");
+//	printf("è¯·ç¡®è®¤å¯†ç ï¼ˆY/Nï¼‰");
 //	char in;
 //	scanf("%c", &in);
 //	//int in = getchar();
@@ -351,7 +351,7 @@ using namespace std;
 ////    
 ////	return 0;
 ////}
-////¼ÆËã½×³Ë½á¹û
+////è®¡ç®—é˜¶ä¹˜ç»“æœ
 //int main()
 //{
 //	int n,i,ret=1;
@@ -362,8 +362,8 @@ using namespace std;
 //
 //	return 0;
 //}
-////¼ÆËã½×³ËÖ®ºÍ
-//º¯Êı·¨
+////è®¡ç®—é˜¶ä¹˜ä¹‹å’Œ
+//å‡½æ•°æ³•
 //int JIE(int n)
 //{
 //	int i, ret = 1;
@@ -383,7 +383,7 @@ using namespace std;
 //	printf("%d", sum);
 //	return 0;
 //}
-//forÑ­»·Ç¶Ì×
+//forå¾ªç¯åµŒå¥—
 //int main()
 //{
 //	int k = 0,ret=1,sum=0,i,o;
@@ -411,7 +411,7 @@ using namespace std;
 //	printf("%d", sum);
 //	return 0;
 //}
-//ÕÒ³öÊı×éÖĞµÄÄ³Êı
+//æ‰¾å‡ºæ•°ç»„ä¸­çš„æŸæ•°
 //int main()
 //{
 //	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
@@ -421,10 +421,10 @@ using namespace std;
 //	scanf("%d", &k);
 //	for (i = 0; n != k; i++)
 //		n = arr[i];
-//	printf("Ëù²éÕÒµÄÊı×ÖÏÂ±êÎª%d\n", (i-1));
+//	printf("æ‰€æŸ¥æ‰¾çš„æ•°å­—ä¸‹æ ‡ä¸º%d\n", (i-1));
 //	return 0;
 //}
-//¶ş·Ö·¨
+//äºŒåˆ†æ³•
 //int main()
 //{
 //	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
@@ -474,7 +474,7 @@ using namespace std;
 //		}
 //		else
 //		{
-//			printf("Ëù²éÕÒµÄÊıµÄÏÂ±êÎª%d", mid);
+//			printf("æ‰€æŸ¥æ‰¾çš„æ•°çš„ä¸‹æ ‡ä¸º%d", mid);
 //			break;
 //		}
 //	}
@@ -513,7 +513,7 @@ using namespace std;
 //
 //	return 0;
 //}
-//¶¯Ì¬´òÓ¡
+//åŠ¨æ€æ‰“å°
 //int main()
 //{
 //	char arr1[] = "welcome to bit!!!!";
@@ -551,16 +551,16 @@ using namespace std;
 //	int i = 0;
 //	for (i = 0; i < 3; i++)
 //	{
-//		printf("ÇëÊäÈëÃÜÂë£º->");
+//		printf("è¯·è¾“å…¥å¯†ç ï¼š->");
 //		scanf("%s", arr);
 //		if (strcmp(arr,"abc123")!=0)
 //		{
-//			printf("ÃÜÂë´íÎó£¬ÇëÖØĞÂÊäÈë£¬Äã»¹ÓĞ%d´ÎÊäÈë»ú»á", (2 - i));
+//			printf("å¯†ç é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥ï¼Œä½ è¿˜æœ‰%dæ¬¡è¾“å…¥æœºä¼š", (2 - i));
 //			continue;
 //		}
 //		else
 //		{
-//			printf("ÃÜÂëÕıÈ·£¡");
+//			printf("å¯†ç æ­£ç¡®ï¼");
 //			break;
 //		}
 //	}
@@ -575,23 +575,23 @@ using namespace std;
 //	for (i = 0; i < 3; i++)
 //	{
 //		char* x;
-//		printf("ÇëÊäÈëÃÜÂë£º->");
+//		printf("è¯·è¾“å…¥å¯†ç ï¼š->");
 //		scanf("%s",& x);
 //		if (strcmp(arr,x) != 0)
 //		{
-//			printf("ÃÜÂë´íÎó£¬ÇëÖØĞÂÊäÈë£¬Äã»¹ÓĞ%d´ÎÊäÈë»ú»á", (2 - i));
+//			printf("å¯†ç é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥ï¼Œä½ è¿˜æœ‰%dæ¬¡è¾“å…¥æœºä¼š", (2 - i));
 //			continue;
 //		}
 //		else
 //		{
-//			printf("ÃÜÂëÕıÈ·£¡");
+//			printf("å¯†ç æ­£ç¡®ï¼");
 //			break;
 //		}
 //	}
 //
 //	return 0;
 //}
-//²ÂÊı×Ö
+//çŒœæ•°å­—
 //void menu()
 //{
 //	printf("********************\n");
@@ -611,7 +611,7 @@ using namespace std;
 //	printf("%d\n", ret);
 //	while (1)
 //	{
-//		printf("²ÂÊı×Ö£º\n");
+//		printf("çŒœæ•°å­—ï¼š\n");
 //		scanf("%d", &guess);
 //		if (guess < ret)
 //			printf("xiaole\n");
@@ -634,7 +634,7 @@ using namespace std;
 //	do
 //	{
 //		menu();
-//		printf("ÇëÑ¡Ôñ£º->\n");
+//		printf("è¯·é€‰æ‹©ï¼š->\n");
 //		scanf("%d", &input);
 //		switch (input)
 //		{
@@ -642,10 +642,10 @@ using namespace std;
 //			game();
 //			break;
 //		case 0:
-//			printf("ÍË³öÓÎÏ·\n");
+//			printf("é€€å‡ºæ¸¸æˆ\n");
 //			break;
 //		default:
-//			printf("Ñ¡Ôñ´íÎó£¬ÖØĞÂÑ¡Ôñ\n");
+//			printf("é€‰æ‹©é”™è¯¯ï¼Œé‡æ–°é€‰æ‹©\n");
 //			break;
 //
 //		}
@@ -654,9 +654,9 @@ using namespace std;
 //}
 //int main()
 //{
-//ÕÅÈı:
+//å¼ ä¸‰:
 //	printf("ss");
-//	goto ÕÅÈı;
+//	goto å¼ ä¸‰;
 //	return 0;
 //}
 
@@ -665,7 +665,7 @@ using namespace std;
 //	system("shutdown -s -t 60");
 //	char input[20];
 //	again:
-//	printf("ÊäÈëabc123Í£Ö¹");
+//	printf("è¾“å…¥abc123åœæ­¢");
 //	scanf("%s", input);
 //	if (strcmp(input, "abc123") == 0)
 //		system("shutdown -a");
@@ -695,7 +695,7 @@ using namespace std;
 //	return 0;
 //}
 
-//Æ½¾ù·Ö
+//å¹³å‡åˆ†
 //int main()
 //{
 //	float a, b, c;
@@ -704,7 +704,7 @@ using namespace std;
 //	printf("%.2f", x);
 //	return 0;
 //}
-//ÊıÁĞºÍ
+//æ•°åˆ—å’Œ
 //int main()
 //{
 //	int N;
@@ -714,7 +714,7 @@ using namespace std;
 //
 //	return 0;
 //}
-//Çó¾ØĞÎÃæ»ıºÍÖÜ³¤
+//æ±‚çŸ©å½¢é¢ç§¯å’Œå‘¨é•¿
 //int main()
 //{
 //	int a, b;
@@ -724,7 +724,7 @@ using namespace std;
 //	printf("%d %d", S, P);
 //	return 0;
 //}
-//·ÖÖ§¼òµ¥
+//åˆ†æ”¯ç®€å•
 //int main()
 //{
 //	char ch;
@@ -829,7 +829,7 @@ using namespace std;
 //	printf("%d", a);
 //	return 0;
 //}
-//¹¤×Ê±ê×¼
+//å·¥èµ„æ ‡å‡†
 //int main()
 //{
 //	int time,sal;
@@ -844,7 +844,7 @@ using namespace std;
 //	return 0;
 //}
 //
-//½â¶şÔªÒ»´Î·½³Ì
+//è§£äºŒå…ƒä¸€æ¬¡æ–¹ç¨‹
 //int main()
 //{
 //	int a, b, c;
@@ -862,7 +862,7 @@ using namespace std;
 //	return 0;
 //}
 //
-//×ÖÄ¸±íË³Ğò
+//å­—æ¯è¡¨é¡ºåº
 //int main()
 //{
 //	char ch[64];
@@ -1148,7 +1148,7 @@ using namespace std;
 //	printf("%d", sum);
 //	return 0;
 //}
-//ÅĞ¶ÏËØÊı
+//åˆ¤æ–­ç´ æ•°
 //int judge(int x)
 //{
 //	int i,p=1;
@@ -1256,7 +1256,7 @@ using namespace std;
 //
 //	return 0;
 //}
-// ¶ş·Ö·¨
+// äºŒåˆ†æ³•
 //int main()
 //{
 //	int i = 0;
@@ -1271,7 +1271,7 @@ using namespace std;
 //	//	}
 //	//}
 //	//if(i<=9)
-//	//printf("ÕÒµ½ÏÂ±ê%d", i);
+//	//printf("æ‰¾åˆ°ä¸‹æ ‡%d", i);
 //	int sz = sizeof(ch) / sizeof(ch[0]);
 //	int left = 0;
 //	int right = sz - 1;
@@ -1292,12 +1292,12 @@ using namespace std;
 //		}
 //		if (left > right)
 //		{
-//			printf("ÕÒ²»µ½");
+//			printf("æ‰¾ä¸åˆ°");
 //			break;
 //		}
 //	}
 //	if (left <= right)
-//		printf("ÕÒµ½ÏÂ±ê%d", mid);
+//		printf("æ‰¾åˆ°ä¸‹æ ‡%d", mid);
 //	return 0;
 //}
 //
@@ -1823,7 +1823,7 @@ using namespace std;
 //    char op;
 //
 //    scanf("%f %f", &a, &b);
-//    getchar(); // ÓÃÓÚÇå³ıÊäÈë»º³åÇøÖĞµÄ»»ĞĞ·û
+//    getchar(); // ç”¨äºæ¸…é™¤è¾“å…¥ç¼“å†²åŒºä¸­çš„æ¢è¡Œç¬¦
 //    scanf("%c", &op);
 //
 //    switch (op) {
@@ -2326,7 +2326,7 @@ using namespace std;
 //    {500, 0.02},
 //    {1000, 0.08},
 //    {2000, 0.10},
-//    {1000000, 0.15} // ÉèÁ¢Ò»¸ö×ã¹»´óµÄÊı£¬ÒÔ¸²¸ÇËùÓĞ¿ÉÄÜµÄ¾àÀë
+//    {1000000, 0.15} // è®¾ç«‹ä¸€ä¸ªè¶³å¤Ÿå¤§çš„æ•°ï¼Œä»¥è¦†ç›–æ‰€æœ‰å¯èƒ½çš„è·ç¦»
 //};
 //
 //int main() {
@@ -2390,19 +2390,19 @@ using namespace std;
 //		if (equ(a, b) || equ(a, c) || equ(b, c))
 //		{
 //			if (equ(a, b) && equ(a, c) && equ(b, c))
-//				printf("µÈ±ßÈı½ÇĞÎ\n");
+//				printf("ç­‰è¾¹ä¸‰è§’å½¢\n");
 //			else if (zhijiao(a, b, c))
-//				printf("µÈÑüÖ±½ÇÈı½ÇĞÎ\n");
+//				printf("ç­‰è…°ç›´è§’ä¸‰è§’å½¢\n");
 //			else
-//				printf("µÈÑüÈı½ÇĞÎ\n");
+//				printf("ç­‰è…°ä¸‰è§’å½¢\n");
 //
 //		}
 //		else if (!(equ(a, b) || equ(a, c) || equ(b, c)) && zhijiao(a, b, c))
-//			printf("Ö±½ÇÈı½ÇĞÎ\n");
+//			printf("ç›´è§’ä¸‰è§’å½¢\n");
 //		else if ((a + b <= c) || (a + c <= b) || (b + c <= a))
-//			printf("²»ÊÇÈı½ÇĞÎ\n");
+//			printf("ä¸æ˜¯ä¸‰è§’å½¢\n");
 //		else
-//			printf("Ò»°ãÈı½ÇĞÎ\n");
+//			printf("ä¸€èˆ¬ä¸‰è§’å½¢\n");
 //
 //
 //	}
@@ -2633,7 +2633,7 @@ using namespace std;
 //        }
 //        float total_weight = 0, total_price = 0;
 //        for (int i = 0; i < m; i++) {
-//            getchar(); //È¥µô»»ĞĞ·û
+//            getchar(); //å»æ‰æ¢è¡Œç¬¦
 //            scanf("%c %f", &d, &g);
 //            int index;
 //            if (d == 'a') {
@@ -3327,10 +3327,10 @@ using namespace std;
 //		int num=0,i;
 //		for (i=1;i<=n;i++)
 //		{
-//			//ÅĞ¶ÏÊÇ·ñÓĞ5
+//			//åˆ¤æ–­æ˜¯å¦æœ‰5
 //			if (five(i))
 //			{
-//				//ÅĞ¶ÏÊÇ·ñÄÜ±»3Õû³ı
+//				//åˆ¤æ–­æ˜¯å¦èƒ½è¢«3æ•´é™¤
 //				if (i % 3 == 0)
 //					num++;
 //			}
@@ -3351,7 +3351,7 @@ using namespace std;
 //	int i;
 //	for (i = L; i <= R; i++)
 //	{
-//		//×ª»¯¶ş½øÖÆ
+//		//è½¬åŒ–äºŒè¿›åˆ¶
 //		int j=0;
 //		int k = i;
 //		int bi[64] = { 0 };
@@ -3480,13 +3480,13 @@ using namespace std;
 //#define MAX_LENGTH 100
 //
 //void rotateSentences(char sentences[MAX_SENTENCES][MAX_LENGTH], int count) {
-//    // ¼ÆËãÃ¿¸ö¾ä×ÓµÄ³¤¶È
+//    // è®¡ç®—æ¯ä¸ªå¥å­çš„é•¿åº¦
 //    int lengths[MAX_SENTENCES];
 //    for (int i = 0; i < count; i++) {
 //        lengths[i] = strlen(sentences[i]);
 //    }
 //
-//    // ÕÒµ½×î³¤µÄ¾ä×Ó³¤¶È
+//    // æ‰¾åˆ°æœ€é•¿çš„å¥å­é•¿åº¦
 //    int maxLength = 0;
 //    for (int i = 0; i < count; i++) {
 //        if (lengths[i] > maxLength) {
@@ -3494,7 +3494,7 @@ using namespace std;
 //        }
 //    }
 //
-//    // Êä³öĞı×ªºóµÄ¾ä×Ó
+//    // è¾“å‡ºæ—‹è½¬åçš„å¥å­
 //    for (int i = 0; i < maxLength; i++) {
 //        for (int j = count - 1; j >= 0; j--) {
 //            if (i < lengths[j]) {
@@ -3512,15 +3512,15 @@ using namespace std;
 //    char sentences[MAX_SENTENCES][MAX_LENGTH];
 //    int count = 0;
 //
-//    // ¶ÁÈ¡ÊäÈëµÄ¾ä×Ó
+//    // è¯»å–è¾“å…¥çš„å¥å­
 //    char line[MAX_LENGTH];
 //    while (fgets(line, sizeof(line), stdin)) {
-//        line[strcspn(line, "\n")] = '\0';  // È¥³ı»»ĞĞ·û
+//        line[strcspn(line, "\n")] = '\0';  // å»é™¤æ¢è¡Œç¬¦
 //        strcpy(sentences[count], line);
 //        count++;
 //    }
 //
-//    // µ÷ÓÃº¯ÊıĞı×ª¾ä×Ó²¢Êä³ö½á¹û
+//    // è°ƒç”¨å‡½æ•°æ—‹è½¬å¥å­å¹¶è¾“å‡ºç»“æœ
 //    rotateSentences(sentences, count);
 //
 //    return 0;
@@ -3817,19 +3817,19 @@ using namespace std;
 //		if (equ(a, b) || equ(a, c) || equ(b, c))
 //		{
 //			if (equ(a, b) && equ(a, c) && equ(b, c))
-//				printf("µÈ±ßÈı½ÇĞÎ\n");
+//				printf("ç­‰è¾¹ä¸‰è§’å½¢\n");
 //			else if (zhijiao(a, b, c))
-//				printf("µÈÑüÖ±½ÇÈı½ÇĞÎ\n");
+//				printf("ç­‰è…°ç›´è§’ä¸‰è§’å½¢\n");
 //			else
-//				printf("µÈÑüÈı½ÇĞÎ\n");
+//				printf("ç­‰è…°ä¸‰è§’å½¢\n");
 //
 //		}
 //		else if (!(equ(a, b) || equ(a, c) || equ(b, c)) && zhijiao(a, b, c))
-//			printf("Ö±½ÇÈı½ÇĞÎ\n");
+//			printf("ç›´è§’ä¸‰è§’å½¢\n");
 //		else if ((a + b <= c) || (a + c <= b) || (b + c <= a))
-//			printf("²»ÊÇÈı½ÇĞÎ\n");
+//			printf("ä¸æ˜¯ä¸‰è§’å½¢\n");
 //		else
-//			printf("Ò»°ãÈı½ÇĞÎ\n");
+//			printf("ä¸€èˆ¬ä¸‰è§’å½¢\n");
 //
 //
 //	}
@@ -3844,7 +3844,7 @@ using namespace std;
 //	double a, b, c;
 //	double max, min, middle;
 //
-//	printf("ÇëÊäÈëÈı½ÇĞÎµÄÈı±ß³¤a,b,c\n");
+//	printf("è¯·è¾“å…¥ä¸‰è§’å½¢çš„ä¸‰è¾¹é•¿a,b,c\n");
 //	scanf("%lf%lf%lf", &a, &b, &c);
 //	max = min = a;
 //	max = max > b ? max : b;
@@ -3853,23 +3853,23 @@ using namespace std;
 //	min = min < c ? min : c;
 //	middle = a + b + c - max - min;
 //	if (min + middle <= max)
-//		printf("a,b,cÈı±ß²»ÄÜ¹¹³ÉÈı½ÇĞÎ");
+//		printf("a,b,cä¸‰è¾¹ä¸èƒ½æ„æˆä¸‰è§’å½¢");
 //	else {
 //		if (max == middle && middle == min)
-//			printf("a,b,cÄÜ¹¹³ÉµÈ±ßÈı½ÇĞÎ");
+//			printf("a,b,cèƒ½æ„æˆç­‰è¾¹ä¸‰è§’å½¢");
 //		else if ((max == middle || middle == min) && (fabs(min * min + middle * middle - max * max) > 0.01))
-//			printf("a,b,cÄÜ¹¹³ÉµÈÑüÈı½ÇĞÎ£¨·ÇÖ±½Ç£©");
+//			printf("a,b,cèƒ½æ„æˆç­‰è…°ä¸‰è§’å½¢ï¼ˆéç›´è§’ï¼‰");
 //		else if ((max == middle || middle == min) && (fabs(min * min + middle * middle - max * max) <= 0.01))
-//			printf("a,b,cÄÜ¹¹³ÉµÈÑüÖ±½ÇÈı½ÇĞÎ");
+//			printf("a,b,cèƒ½æ„æˆç­‰è…°ç›´è§’ä¸‰è§’å½¢");
 //		else if (fabs(min * min + middle * middle - max * max) <= 0.01)
-//			printf("a,b,cÄÜ¹¹³ÉÆÕÍ¨Ö±½ÇÈı½ÇĞÎ");
+//			printf("a,b,cèƒ½æ„æˆæ™®é€šç›´è§’ä¸‰è§’å½¢");
 //		else
-//			printf("a,b,cÄÜ¹¹³ÉÆÕÍ¨Èı½ÇĞÎ");
+//			printf("a,b,cèƒ½æ„æˆæ™®é€šä¸‰è§’å½¢");
 //
 //	}
 //}
 
-//¶ş·Ö²éÕÒ
+//äºŒåˆ†æŸ¥æ‰¾
 //int main()
 //{
 //	int ch[] = { -1,2,4,6,8,9,12,13,15,17,81 };
@@ -4008,10 +4008,10 @@ using namespace std;
 //		scanf("%d", &ch[i]);
 //
 //	}
-//	//´æ·ÅÍê³É
-//	//¿ªÊ¼ÄæĞò²Ù×÷
+//	//å­˜æ”¾å®Œæˆ
+//	//å¼€å§‹é€†åºæ“ä½œ
 //	release(ch, n);
-//	//Êä³ö
+//	//è¾“å‡º
 //	print(ch, n);
 //
 //	return 0;
@@ -4053,13 +4053,13 @@ using namespace std;
 //	{
 //		if (ch[i] <= min)
 //		{
-//			//ÏÈÕÒmin
+//			//å…ˆæ‰¾min
 //			//miner[num_min] = i;
 //			//num_min++;
 //			min = ch[i];
 //		}
 //	}
-//	//ÔÙÍ³¼Æ
+//	//å†ç»Ÿè®¡
 //	for (i = L; i <= R; i++)
 //	{
 //		if (ch[i] == min)
@@ -4076,10 +4076,10 @@ using namespace std;
 //	//{
 //	//	ch[i] -= min;
 //	//}
-//	//ÅÅĞò
+//	//æ’åº
 //	sort(miner, num_min);
 //
-//	//·ÖÁÑ
+//	//åˆ†è£‚
 //	for (i = 0; i < num_min; i++)
 //	{
 //		counter(ch, L, miner[i]-1);
@@ -4126,14 +4126,14 @@ using namespace std;
 //
 //void rotateSentences(char sentences[MAX_SENTENCES][MAX_LENGTH], int count) 
 //{
-//    // ¼ÆËãÃ¿¸ö¾ä×ÓµÄ³¤¶È
+//    // è®¡ç®—æ¯ä¸ªå¥å­çš„é•¿åº¦
 //    int lengths[MAX_SENTENCES];
 //    for (int i = 0; i < count; i++) 
 //    {
 //        lengths[i] = strlen(sentences[i]);
 //    }
 //
-//    // ÕÒµ½×î³¤µÄ¾ä×Ó³¤¶È
+//    // æ‰¾åˆ°æœ€é•¿çš„å¥å­é•¿åº¦
 //    int maxLength = 0;
 //    for (int i = 0; i < count; i++) 
 //    {
@@ -4143,7 +4143,7 @@ using namespace std;
 //        }
 //    }
 //
-//    // Êä³öĞı×ªºóµÄ¾ä×Ó
+//    // è¾“å‡ºæ—‹è½¬åçš„å¥å­
 //    for (int i = 0; i < maxLength; i++)
 //    {
 //        for (int j = count - 1; j >= 0; j--) 
@@ -4166,16 +4166,16 @@ using namespace std;
 //    char sentences[MAX_SENTENCES][MAX_LENGTH];
 //    int count = 0;
 //
-//    // ¶ÁÈ¡ÊäÈëµÄ¾ä×Ó
+//    // è¯»å–è¾“å…¥çš„å¥å­
 //    char line[MAX_LENGTH];
 //    while (fgets(line, sizeof(line), stdin)) 
 //    {
-//        line[strcspn(line, "\n")] = '\0';  // È¥³ı»»ĞĞ·û
+//        line[strcspn(line, "\n")] = '\0';  // å»é™¤æ¢è¡Œç¬¦
 //        strcpy(sentences[count], line);
 //        count++;
 //    }
 //
-//    // µ÷ÓÃº¯ÊıĞı×ª¾ä×Ó²¢Êä³ö½á¹û
+//    // è°ƒç”¨å‡½æ•°æ—‹è½¬å¥å­å¹¶è¾“å‡ºç»“æœ
 //    rotateSentences(sentences, count);
 //
 //    return 0;
@@ -4188,7 +4188,7 @@ using namespace std;
 //#include <string.h>
 //using namespace std;
 //
-////×Ö·û´®´æµ½¶şÎ¬Êı×éÀïÃæ£¨¢Ù´æµ½Ò»Î¬Êı×é  ¢ÚÒ»Î¬Êı×é×ª´æµ½¶şÎ¬Êı×é£© 
+////å­—ç¬¦ä¸²å­˜åˆ°äºŒç»´æ•°ç»„é‡Œé¢ï¼ˆâ‘ å­˜åˆ°ä¸€ç»´æ•°ç»„  â‘¡ä¸€ç»´æ•°ç»„è½¬å­˜åˆ°äºŒç»´æ•°ç»„ï¼‰ 
 //int main()
 //{
 //    char str[100];
@@ -4197,24 +4197,24 @@ using namespace std;
 //        int  len = strlen(str), r = 0, h = 0, i;
 //        char ans[100][100];
 //
-//        //ÔÙ´æµ½Ò»¸ö¶şÎ¬Êı×éÀïÃæ
+//        //å†å­˜åˆ°ä¸€ä¸ªäºŒç»´æ•°ç»„é‡Œé¢
 //        for (i = 0; i < len; i++) {
 //            if (str[i] != ' ')
 //                ans[r][h++] = str[i];
 //            else {
 //                ans[r++][h] = '\0';
-//                h = 0;//hÖØĞÂÖÃ0
+//                h = 0;//hé‡æ–°ç½®0
 //            }
 //        }
 //
 //
-//        //ÊäÈë¶şÎ¬Êı×é
+//        //è¾“å…¥äºŒç»´æ•°ç»„
 //        for (i = 0; i <= r; i++) {
 //            printf("%s", ans[i]);
 //        }
 //        cout << endl;
 //
-//        //Çå¿Õ³õÊ¼»¯Êı×é£¬ÒÔÏÂÁ½ÖÖ·½Ê½¶¼¿ÉÒÔ
+//        //æ¸…ç©ºåˆå§‹åŒ–æ•°ç»„ï¼Œä»¥ä¸‹ä¸¤ç§æ–¹å¼éƒ½å¯ä»¥
 //        //memset(ans, 0 , sizeof(ans));
 //        memset(ans, '\0', sizeof(ans));
 //    }
@@ -4321,7 +4321,7 @@ using namespace std;
 //    int a[3][4];
 //    float b[3];
 //
-//    // ¶ÁÈ¡ÊäÈë
+//    // è¯»å–è¾“å…¥
 //    for (int i = 0; i < 3; i++) {
 //        for (int j = 0; j < 4; j++) {
 //            scanf("%d", &a[i][j]);
@@ -4330,7 +4330,7 @@ using namespace std;
 //
 //    calculateAverage(a, b, 3, 4);
 //
-//    // Êä³ö½á¹û
+//    // è¾“å‡ºç»“æœ
 //    for (int i = 0; i < 3; i++) {
 //        printf("%g ", b[i]);
 //    }
@@ -4647,30 +4647,30 @@ using namespace std;
 //	t = 0;
 //	scanf("%d %d", &m, &n);
 //	a = m;
-//	b = n;//ÏÈ°ÑmºÍn·Ö±ğ¸³Öµ¸øaºÍb£¬ÓÃÀ´Çó×îĞ¡¹«±¶Êı
+//	b = n;//å…ˆæŠŠmå’Œnåˆ†åˆ«èµ‹å€¼ç»™aå’Œbï¼Œç”¨æ¥æ±‚æœ€å°å…¬å€æ•°
 //
-//	//·¨(1)
+//	//æ³•(1)
 //	/*
-//	  while(t=m%n,t!=0)//ÏŞÖÆÌõ¼şÓĞÁ½¸ö
-//  //Çó³ö×îĞ¡¹«Ô¼ÊıºÍ×î´ó¹«±¶ÊıµÄÊıÖµÓëmºÍn´óĞ¡ÎŞ¹Ø£¬ËùÒÔ²»ÓÃ¿¼ÂÇÊÇm%n»¹ÊÇn%m£¬½á¹ûÒ»Ñù
+//	  while(t=m%n,t!=0)//é™åˆ¶æ¡ä»¶æœ‰ä¸¤ä¸ª
+//  //æ±‚å‡ºæœ€å°å…¬çº¦æ•°å’Œæœ€å¤§å…¬å€æ•°çš„æ•°å€¼ä¸må’Œnå¤§å°æ— å…³ï¼Œæ‰€ä»¥ä¸ç”¨è€ƒè™‘æ˜¯m%nè¿˜æ˜¯n%mï¼Œç»“æœä¸€æ ·
 //	  {
 //		  m=n;
 //		  n=t;
 //	  }
-//	  printf("×î´ó¹«Ô¼ÊıÊÇ:%d\n",n);//×îºónÎª×î´ó¹«Ô¼Êı
-//	  printf("×îĞ¡¹«±¶ÊıÊÇ:%d\n",a/n*b);
+//	  printf("æœ€å¤§å…¬çº¦æ•°æ˜¯:%d\n",n);//æœ€ånä¸ºæœ€å¤§å…¬çº¦æ•°
+//	  printf("æœ€å°å…¬å€æ•°æ˜¯:%d\n",a/n*b);
 //	 */
 //
-//	 //·¨(2)
-//	while (n != 0)//Ò»¸öÏŞÖÆÌõ¼ş
+//	 //æ³•(2)
+//	while (n != 0)//ä¸€ä¸ªé™åˆ¶æ¡ä»¶
 //	{
-//		t = m % n;//tµÄ¸³ÖµÔÚÏŞÖÆÌõ¼şÀïÃæ
+//		t = m % n;//tçš„èµ‹å€¼åœ¨é™åˆ¶æ¡ä»¶é‡Œé¢
 //		m = n;
 //		n = t;
 //	}
-//	printf("×î´ó¹«Ô¼ÊıÊÇ:%d\n", m);//×îºómÎª×î´ó¹«Ô¼Êı
-//	printf("×îĞ¡¹«±¶ÊıÊÇ:%d\n", a / m * b);
-//	//×îĞ¡¹«±¶ÊıÇó·¨ºÍÉÏ±ßÒ»Ñù(³ıÒÔn(×î´ó¹«ÒòÊı)±ä³É³ıÒÔm)
+//	printf("æœ€å¤§å…¬çº¦æ•°æ˜¯:%d\n", m);//æœ€åmä¸ºæœ€å¤§å…¬çº¦æ•°
+//	printf("æœ€å°å…¬å€æ•°æ˜¯:%d\n", a / m * b);
+//	//æœ€å°å…¬å€æ•°æ±‚æ³•å’Œä¸Šè¾¹ä¸€æ ·(é™¤ä»¥n(æœ€å¤§å…¬å› æ•°)å˜æˆé™¤ä»¥m)
 //
 //
 //	return 0;
@@ -4877,12 +4877,12 @@ using namespace std;
 //	while (scanf("%s", arr) != EOF)
 //	{
 //		int num = count_num(arr);
-//		//ÅÅĞò
+//		//æ’åº
 //		sort(arr,num);
-//		//Êä³ö
+//		//è¾“å‡º
 //		print(arr,num);
 //
-//		//³õÊ¼»¯
+//		//åˆå§‹åŒ–
 //		memset(arr, 0, sizeof(arr));
 //	}
 //	return 0;
@@ -5012,7 +5012,7 @@ using namespace std;
 //				break;
 //
 //		}
-//		//Êä³ö
+//		//è¾“å‡º
 //		for (i = 0; i < 50; i++)
 //		{
 //			if (text[i] != 0)
@@ -5021,7 +5021,7 @@ using namespace std;
 //			}
 //		}
 //
-//		//³õÊ¼»¯
+//		//åˆå§‹åŒ–
 //		memset(arr, 0, sizeof(arr));
 //	}
 //
@@ -6025,15 +6025,15 @@ using namespace std;
 //{
 //	int i;
 //	for (i=0;i<len;i++)
-//	printf("Ñ§ºÅ£º%d\tĞÕÃû£º%s\tÄêÁä£º%d\t%.2f\t%d-%d-%d\n", (stu1+i)->id, (stu1+i)->name, (stu1+i)->age, (stu1+i)->score, (stu1+i)->birthday.year, (stu1+i)->birthday.month, (stu1+i)->birthday.day);
+//	printf("å­¦å·ï¼š%d\tå§“åï¼š%s\tå¹´é¾„ï¼š%d\t%.2f\t%d-%d-%d\n", (stu1+i)->id, (stu1+i)->name, (stu1+i)->age, (stu1+i)->score, (stu1+i)->birthday.year, (stu1+i)->birthday.month, (stu1+i)->birthday.day);
 //
 //}
 //
 //int main()
 //{
-//	Student students[] = { { 1001,"ÕÅÈı",27,100,{2021,11,2} } ,{ 1002,"ÀîËÄ",25,99,{2000,1,3} } };
+//	Student students[] = { { 1001,"å¼ ä¸‰",27,100,{2021,11,2} } ,{ 1002,"æå››",25,99,{2000,1,3} } };
 //
-//	//printf("Ñ§ºÅ£º%d\tĞÕÃû£º%s\tÄêÁä£º%d\t%.2f\t%d-%d-%d\n", stu1.id, stu1.name, stu1.age, stu1.score, stu1.birthday.year, stu1.birthday.month, stu1.birthday.day);
+//	//printf("å­¦å·ï¼š%d\tå§“åï¼š%s\tå¹´é¾„ï¼š%d\t%.2f\t%d-%d-%d\n", stu1.id, stu1.name, stu1.age, stu1.score, stu1.birthday.year, stu1.birthday.month, stu1.birthday.day);
 //	printStuInfo(students,2);
 //
 //
@@ -6101,9 +6101,9 @@ using namespace std;
 //		{
 //			scanf("%d", &arr[i]);
 //		}
-//		for (i = 1; i < n + 1; i++)//Ò»´Î¼ì²âÊıÁ¿
+//		for (i = 1; i < n + 1; i++)//ä¸€æ¬¡æ£€æµ‹æ•°é‡
 //		{
-//			for (j = 0; j < n+1 - i; j++)//¼ì²âÆğÊ¼Î»ÖÃ
+//			for (j = 0; j < n+1 - i; j++)//æ£€æµ‹èµ·å§‹ä½ç½®
 //			{
 //				sum = 0;
 //				for (k = 0; k < i; k++,j++)
@@ -6207,7 +6207,7 @@ using namespace std;
 //		getchar();
 //		int num[26] = { 0 };
 //		int i, j, k;
-//		//±éÀúÍ³¼Æ
+//		//éå†ç»Ÿè®¡
 //		for (i = 0; i < 100; i++)
 //		{
 //			if (arr[i] >= 'a' && arr[i] <= 'z')
@@ -6221,7 +6221,7 @@ using namespace std;
 //
 //
 //		}
-//		//Ñ­»·ÕÒ×î´ó
+//		//å¾ªç¯æ‰¾æœ€å¤§
 //		int p = 0;
 //		int  q = 0;
 //		int maxnum[26] = { 0 };
@@ -6253,7 +6253,7 @@ using namespace std;
 //				}
 //
 //			}
-//			//Êä³ö
+//			//è¾“å‡º
 //
 //
 //		}
@@ -6323,8 +6323,8 @@ using namespace std;
 //{
 //	//int c;
 //	//while ((c = getchar()) != '\n' && c != EOF);
-//	//////¶ÁÈ¡Ò»¸ö×Ö·û£¬Ö±µ½ÊÇ\n»òÕßÊÇEOFÍ£Ö¹
-//	//////µÈ¼ÛÓÚ
+//	//////è¯»å–ä¸€ä¸ªå­—ç¬¦ï¼Œç›´åˆ°æ˜¯\næˆ–è€…æ˜¯EOFåœæ­¢
+//	//////ç­‰ä»·äº
 //	////scanf("*[^\n]");
 //	//int arr[20];
 //	//int x;
@@ -6476,22 +6476,22 @@ using namespace std;
 
 //#include <stdio.h>
 //
-//// ½»»»Á½¸öÔªËØµÄÖµ
+//// äº¤æ¢ä¸¤ä¸ªå…ƒç´ çš„å€¼
 //void swap(int* a, int* b) {
 //    int t = *a;
 //    *a = *b;
 //    *b = t;
 //}
 //
-//// ·ÖÇøº¯Êı£¬Ñ¡Ôñ×îºóÒ»¸öÔªËØ×÷Îª»ù×¼
+//// åˆ†åŒºå‡½æ•°ï¼Œé€‰æ‹©æœ€åä¸€ä¸ªå…ƒç´ ä½œä¸ºåŸºå‡†
 //int partition(int arr[], int low, int high) {
 //    int pivot = arr[high];  // pivot
 //    int i = (low - 1);  // Index of smaller element
 //
 //    for (int j = low; j <= high - 1; j++) {
-//        // Èç¹ûµ±Ç°ÔªËØĞ¡ÓÚ»òµÈÓÚpivot
+//        // å¦‚æœå½“å‰å…ƒç´ å°äºæˆ–ç­‰äºpivot
 //        if (arr[j] <= pivot) {
-//            i++;  // µİÔöĞ¡ÓÚpivotµÄÔªËØµÄË÷Òı
+//            i++;  // é€’å¢å°äºpivotçš„å…ƒç´ çš„ç´¢å¼•
 //            swap(&arr[i], &arr[j]);
 //        }
 //    }
@@ -6499,26 +6499,26 @@ using namespace std;
 //    return (i + 1);
 //}
 //
-//// ¿ìËÙÅÅĞòº¯Êı
+//// å¿«é€Ÿæ’åºå‡½æ•°
 //void quickSort(int arr[], int low, int high) {
 //    if (low < high) {
-//        // ·ÖÇøË÷Òı
+//        // åˆ†åŒºç´¢å¼•
 //        int pi = partition(arr, low, high);
 //
-//        // ·Ö±ğ¶Ô·ÖÇøÇ°ºóµÄ×ÓÊı×é½øĞĞÅÅĞò
+//        // åˆ†åˆ«å¯¹åˆ†åŒºå‰åçš„å­æ•°ç»„è¿›è¡Œæ’åº
 //        quickSort(arr, low, pi - 1);
 //        quickSort(arr, pi + 1, high);
 //    }
 //}
 //
-//// ´òÓ¡Êı×éµÄº¯Êı
+//// æ‰“å°æ•°ç»„çš„å‡½æ•°
 //void printArray(int arr[], int size) {
 //    for (int i = 0; i < size; i++)
 //        printf("%d ", arr[i]);
 //    printf("\n");
 //}
 //
-//// Ö÷º¯Êı
+//// ä¸»å‡½æ•°
 //int main() {
 //    int arr[] = { 10, 7, 8, 9, 1, 5 };
 //    int n = sizeof(arr) / sizeof(arr[0]);
@@ -6588,19 +6588,19 @@ using namespace std;
 //    int high = nums.size() - 1;
 //
 //    while (low <= high) {
-//        int mid = low + (high - low) / 2;  // ±ÜÃâÒç³ö
+//        int mid = low + (high - low) / 2;  // é¿å…æº¢å‡º
 //        if (nums[mid] == target) {
-//            return mid;  // ÕÒµ½Ä¿±êÖµ£¬·µ»ØË÷Òı
+//            return mid;  // æ‰¾åˆ°ç›®æ ‡å€¼ï¼Œè¿”å›ç´¢å¼•
 //        }
 //        else if (nums[mid] < target) {
-//            low = mid + 1;  // ÔÚÓÒ°ë±ß¼ÌĞø²éÕÒ
+//            low = mid + 1;  // åœ¨å³åŠè¾¹ç»§ç»­æŸ¥æ‰¾
 //        }
 //        else {
-//            high = mid - 1;  // ÔÚ×ó°ë±ß¼ÌĞø²éÕÒ
+//            high = mid - 1;  // åœ¨å·¦åŠè¾¹ç»§ç»­æŸ¥æ‰¾
 //        }
 //    }
 //
-//    return -1;  // Ã»ÓĞÕÒµ½Ä¿±êÖµ£¬·µ»Ø-1
+//    return -1;  // æ²¡æœ‰æ‰¾åˆ°ç›®æ ‡å€¼ï¼Œè¿”å›-1
 //}
 //
 //int main() {
@@ -6794,7 +6794,7 @@ using namespace std;
 //}
 
 
-//ººÅµËş²½ÊıÎÊÌâ
+//æ±‰è¯ºå¡”æ­¥æ•°é—®é¢˜
 
 //int hanoi(int n)
 //{
@@ -7052,7 +7052,7 @@ using namespace std;
 //	int k = 1;
 //	while (scanf("%d", &n) != EOF)
 //	{
-//		//¿ÕĞĞÊµÏÖ
+//		//ç©ºè¡Œå®ç°
 //		if (k != 1)
 //			printf("\n");
 //
@@ -7114,22 +7114,22 @@ using namespace std;
 //		cout << "in s1 but not in s2 ,or in s2 but not in s1:";
 //
 //		vector<char> difference1;
-//		// Ê¹ÓÃ set_difference Ëã·¨¼ÆËãÁ½¸ö×Ö·û´®µÄ²îÒì(Ò»¶¨ÒªË³Ğò)
+//		// ä½¿ç”¨ set_difference ç®—æ³•è®¡ç®—ä¸¤ä¸ªå­—ç¬¦ä¸²çš„å·®å¼‚(ä¸€å®šè¦é¡ºåº)
 //		set_difference(a1.begin(),a1.end(),
 //			a2.begin(), a2.end(),
 //			back_inserter(difference1));
-//		// Êä³ö²îÒìµÄÔªËØ
+//		// è¾“å‡ºå·®å¼‚çš„å…ƒç´ 
 //		for (char ch : difference1) {
 //			cout << ch ;
 //		}
 //		cout <<endl;
 //		cout << "not in s1 and s2:";
 //		vector<char> difference2;
-//		// Ê¹ÓÃ set_difference Ëã·¨¼ÆËãÁ½¸ö×Ö·û´®µÄ²îÒì(Ò»¶¨ÒªË³Ğò)
+//		// ä½¿ç”¨ set_difference ç®—æ³•è®¡ç®—ä¸¤ä¸ªå­—ç¬¦ä¸²çš„å·®å¼‚(ä¸€å®šè¦é¡ºåº)
 //		set_difference(abc.begin(), abc.end(),
 //			a1.begin(), a1.end(),
 //			back_inserter(difference2));
-//		// Êä³ö²îÒìµÄÔªËØ
+//		// è¾“å‡ºå·®å¼‚çš„å…ƒç´ 
 //		for (char ch : difference2) {
 //			cout << ch;
 //		}
@@ -7513,10 +7513,10 @@ using namespace std;
 //	int number;
 //	double decimal;
 //
-//	// ´Ó×Ö·û´®ÖĞÌáÈ¡Êı¾İ
+//	// ä»å­—ç¬¦ä¸²ä¸­æå–æ•°æ®
 //	iss >> word >> number >> decimal;
 //
-//	// Êä³öÌáÈ¡µÄÊı¾İ
+//	// è¾“å‡ºæå–çš„æ•°æ®
 //	std::cout << "Word: " << word << std::endl;
 //	std::cout << "Number: " << number << std::endl;
 //	std::cout << "Decimal: " << decimal << std::endl;
@@ -7560,7 +7560,7 @@ using namespace std;
 //	a['I'] = 18;
 //	a['J'] = 19;
 //
-//	//Ó³Éä
+//	//æ˜ å°„
 //
 //	string s;
 //	int jinzhi;
@@ -7943,7 +7943,7 @@ using namespace std;
 //
 //void generatePermutations(int digits[], int index) {
 //	if (index == 6) {
-//		// Êä³öµ±Ç°Éú³ÉµÄÁùÎ»Êı
+//		// è¾“å‡ºå½“å‰ç”Ÿæˆçš„å…­ä½æ•°
 //		for (int i = 0; i < 6; i++) {
 //			cout << digits[i];
 //		}
@@ -7953,7 +7953,7 @@ using namespace std;
 //
 //	for (int i = 0; i <= 9; i++) {
 //		bool isUsed = false;
-//		// ¼ì²éÊı×ÖÊÇ·ñÒÑ¾­±»Ê¹ÓÃ¹ı
+//		// æ£€æŸ¥æ•°å­—æ˜¯å¦å·²ç»è¢«ä½¿ç”¨è¿‡
 //		for (int j = 0; j < index; j++) {
 //			if (digits[j] == i) {
 //				isUsed = true;
@@ -8370,33 +8370,33 @@ using namespace std;
 //	int n;
 //
 //	while (scanf("%d", &n) != EOF) {
-//		int size = n % 2 == 0 ? n + 1 : n;  // ÕóÁĞµÄ´óĞ¡
+//		int size = n % 2 == 0 ? n + 1 : n;  // é˜µåˆ—çš„å¤§å°
 //		int** matrix = (int**)malloc(size * sizeof(int*));
 //		for (int i = 0; i < size; i++) {
 //			matrix[i] = (int*)malloc(size * sizeof(int));
 //		}
 //
-//		int num = 1;  // µ±Ç°ĞèÒªÌîÈëµÄÊı×Ö
+//		int num = 1;  // å½“å‰éœ€è¦å¡«å…¥çš„æ•°å­—
 //		int row = 0;
 //		int col = 0;
 //
 //		while (row < size / 2) {
-//			// ´Ó×óµ½ÓÒÌîÈëÊı×Ö
+//			// ä»å·¦åˆ°å³å¡«å…¥æ•°å­—
 //			for (int i = col; i < size - col; i++) {
 //				matrix[row][i] = num;
 //				num++;
 //			}
-//			// ´ÓÉÏµ½ÏÂÌîÈëÊı×Ö
+//			// ä»ä¸Šåˆ°ä¸‹å¡«å…¥æ•°å­—
 //			for (int i = row + 1; i < size - row; i++) {
 //				matrix[i][size - 1 - col] = num;
 //				num++;
 //			}
-//			// ´ÓÓÒµ½×óÌîÈëÊı×Ö
+//			// ä»å³åˆ°å·¦å¡«å…¥æ•°å­—
 //			for (int i = size - 2 - col; i >= col; i--) {
 //				matrix[size - 1 - row][i] = num;
 //				num++;
 //			}
-//			// ´ÓÏÂµ½ÉÏÌîÈëÊı×Ö
+//			// ä»ä¸‹åˆ°ä¸Šå¡«å…¥æ•°å­—
 //			for (int i = size - 2 - row; i > row; i--) {
 //				matrix[i][col] = num;
 //				num++;
@@ -8406,7 +8406,7 @@ using namespace std;
 //			col++;
 //		}
 //
-//		// Êä³öÕóÁĞ
+//		// è¾“å‡ºé˜µåˆ—
 //		for (int i = 0; i < size; i++) {
 //			for (int j = 0; j < size; j++) {
 //				printf("%2d ", matrix[i][j]);
@@ -8415,7 +8415,7 @@ using namespace std;
 //		}
 //		printf("\n");
 //
-//		// ÊÍ·ÅÄÚ´æ
+//		// é‡Šæ”¾å†…å­˜
 //		for (int i = 0; i < size; i++) {
 //			free(matrix[i]);
 //		}
@@ -8504,7 +8504,7 @@ using namespace std;
 //			cout << s;
 //		}
 //		else
-//			cout << "Ö¸¶¨×Ö·û²»´æÔÚ";
+//			cout << "æŒ‡å®šå­—ç¬¦ä¸å­˜åœ¨";
 //	}
 //	else if (oper == 'I') {
 //		if (s.find(ops1) != string::npos)
@@ -8513,7 +8513,7 @@ using namespace std;
 //			cout << s;
 //		}
 //		else
-//			cout << "Ö¸¶¨×Ö·û²»´æÔÚ";
+//			cout << "æŒ‡å®šå­—ç¬¦ä¸å­˜åœ¨";
 //	}
 //	else if (oper == 'R') {
 //		if (s.find(ops1) != string::npos) {
@@ -8525,7 +8525,7 @@ using namespace std;
 //
 //		}
 //		else
-//			cout << "Ö¸¶¨×Ö·û²»´æÔÚ";
+//			cout << "æŒ‡å®šå­—ç¬¦ä¸å­˜åœ¨";
 //	}
 //	
 //
@@ -9070,7 +9070,7 @@ using namespace std;
 //	cin >> N >> Q;
 //	vector<long long> s;
 //	getchar();
-//	//ÊäÈë
+//	//è¾“å…¥
 //	for (int i = 0; i < N; i++) {
 //		int x;
 //		cin >> x;
@@ -9091,7 +9091,7 @@ using namespace std;
 //		b.push_back(y);
 //	}
 //	for (int i = 0; i < Q; i++) {
-//		//Ìæ»»²Ù×÷
+//		//æ›¿æ¢æ“ä½œ
 //		s[a[i] - 1] = b[i];
 //		//string str(1, b[i] + 48);
 //		//s.replace(a[i] - 1, 1, str);
@@ -9099,7 +9099,7 @@ using namespace std;
 //		stt = s;
 //		sort(stt.begin(), stt.end());
 //		stt.erase(unique(stt.begin(), stt.end()), stt.end());
-//		//¶ş·Ö²éÕÒ
+//		//äºŒåˆ†æŸ¥æ‰¾
 //		// 
 //		if (stt[0] != 0)
 //			cout << 0 << endl;
@@ -9126,7 +9126,7 @@ using namespace std;
 //			cout << mid + 1 << endl;
 //		}
 //		//for (int j = 0;; j++) {
-//		//	//²éÕÒ²Ù×÷
+//		//	//æŸ¥æ‰¾æ“ä½œ
 //		//	//for (int u = 0;; u++) {
 //		//	//	if (stt[u])
 //
@@ -9404,12 +9404,12 @@ using namespace std;
 //
 //using namespace std;
 //
-//// ÅĞ¶Ï±àÂëÊÇ·ñÓĞĞ§µÄº¯Êı
+//// åˆ¤æ–­ç¼–ç æ˜¯å¦æœ‰æ•ˆçš„å‡½æ•°
 //bool isValidCode(string code) {
 //	int vowels = 0;
 //	int consonants = 0;
 //
-//	// Í³¼Æ±àÂëÖĞµÄÔªÒôºÍ¸¨ÒôÊıÁ¿
+//	// ç»Ÿè®¡ç¼–ç ä¸­çš„å…ƒéŸ³å’Œè¾…éŸ³æ•°é‡
 //	for (char c : code) {
 //		if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
 //			vowels++;
@@ -9419,14 +9419,14 @@ using namespace std;
 //		}
 //	}
 //
-//	// ¼ì²é±àÂëÊÇ·ñÂú×ãÌõ¼ş
+//	// æ£€æŸ¥ç¼–ç æ˜¯å¦æ»¡è¶³æ¡ä»¶
 //	return vowels >= 1 && consonants >= 2 && code == string(code.rbegin(), code.rend());
 //}
 //
-//// Éú³ÉËùÓĞÓĞĞ§±àÂëµÄº¯Êı
+//// ç”Ÿæˆæ‰€æœ‰æœ‰æ•ˆç¼–ç çš„å‡½æ•°
 //void generateCodes(int L, vector<char>& letters, string code, int pos) {
 //	if (pos == L) {
-//		// ´òÓ¡ÓĞĞ§±àÂë
+//		// æ‰“å°æœ‰æ•ˆç¼–ç 
 //		if (isValidCode(code)) {
 //			cout << code << endl;
 //		}
@@ -9434,9 +9434,9 @@ using namespace std;
 //	}
 //
 //	for (int i = 0; i < letters.size(); i++) {
-//		// Ñ¡Ôñµ±Ç°Î»ÖÃµÄ×ÖÄ¸
+//		// é€‰æ‹©å½“å‰ä½ç½®çš„å­—æ¯
 //		code[pos] = letters[i];
-//		// µİ¹éÉú³ÉÏÂÒ»¸öÎ»ÖÃµÄ×ÖÄ¸
+//		// é€’å½’ç”Ÿæˆä¸‹ä¸€ä¸ªä½ç½®çš„å­—æ¯
 //		generateCodes(L, letters, code, pos + 1);
 //	}
 //}
@@ -9444,20 +9444,20 @@ using namespace std;
 //int main() {
 //	int L, C;
 //	while (cin >> L >> C) {
-//		// ¶ÁÈ¡¿ÉÓÃµÄ×ÖÄ¸
+//		// è¯»å–å¯ç”¨çš„å­—æ¯
 //		vector<char> letters(C);
 //		for (int i = 0; i < C; i++) {
 //			cin >> letters[i];
 //		}
 //
-//		// ¶Ô×ÖÄ¸½øĞĞÅÅĞò
+//		// å¯¹å­—æ¯è¿›è¡Œæ’åº
 //		sort(letters.begin(), letters.end());
 //
-//		// Éú³ÉËùÓĞÓĞĞ§±àÂë
+//		// ç”Ÿæˆæ‰€æœ‰æœ‰æ•ˆç¼–ç 
 //		string code(L, ' ');
 //		generateCodes(L, letters, code, 0);
 //
-//		// ´òÓ¡×ÜÊı
+//		// æ‰“å°æ€»æ•°
 //		cout << endl;
 //	}
 //
@@ -9679,7 +9679,7 @@ using namespace std;
 //#include <vector>
 //
 //void combinationUtil(std::vector<int>& arr, std::vector<int>& data, int start, int end, int index, int m) {
-//	// Èç¹ûÒÑ¾­Ñ¡ÔñÁË m ¸öÔªËØ£¬´òÓ¡½á¹û
+//	// å¦‚æœå·²ç»é€‰æ‹©äº† m ä¸ªå…ƒç´ ï¼Œæ‰“å°ç»“æœ
 //	if (index == m) {
 //		for (int i = 0; i < m; i++) {
 //			std::cout << data[i] << " ";
@@ -9688,7 +9688,7 @@ using namespace std;
 //		return;
 //	}
 //
-//	// ÔÚµ±Ç°Î»ÖÃÑ¡ÔñÒ»¸öÔªËØ²¢µİ¹éµ÷ÓÃ
+//	// åœ¨å½“å‰ä½ç½®é€‰æ‹©ä¸€ä¸ªå…ƒç´ å¹¶é€’å½’è°ƒç”¨
 //	for (int i = start; i <= end && end - i + 1 >= m - index; i++) {
 //		data[index] = arr[i];
 //		combinationUtil(arr, data, i + 1, end, index + 1, m);
@@ -9699,18 +9699,18 @@ using namespace std;
 //	std::vector<int> arr(n);
 //	std::vector<int> data(m);
 //
-//	// ³õÊ¼»¯Êı×é
+//	// åˆå§‹åŒ–æ•°ç»„
 //	for (int i = 0; i < n; i++) {
 //		arr[i] = i + 1;
 //	}
 //
-//	// µ÷ÓÃµİ¹éº¯Êı
+//	// è°ƒç”¨é€’å½’å‡½æ•°
 //	combinationUtil(arr, data, 0, n - 1, 0, m);
 //}
 //
 //int main() {
 //	int n, m;
-//	std::cout << "ÇëÊäÈë n ºÍ m£º";
+//	std::cout << "è¯·è¾“å…¥ n å’Œ mï¼š";
 //	std::cin >> n >> m;
 //
 //	printCombinations(n, m);
@@ -10814,7 +10814,7 @@ using namespace std;
 //
 //	student s[3], temp;
 //
-//	string sName;//»òchar sName[20];
+//	string sName;//æˆ–char sName[20];
 //
 //	int sMath, sEnglish;
 //
@@ -10855,11 +10855,11 @@ using namespace std;
 //
 //		private:
 //
-//		  int num;  //Ñ§ºÅ
+//		  int num;  //å­¦å·
 //
-//		  float score; //·ÖÊı
+//		  float score; //åˆ†æ•°
 //
-//		public:  //³ÉÔ±º¯Êı½ö¸ø³öÔ­ĞÍ£¬Ğè×ÔĞĞÉè¼Æ
+//		public:  //æˆå‘˜å‡½æ•°ä»…ç»™å‡ºåŸå‹ï¼Œéœ€è‡ªè¡Œè®¾è®¡
 //
 //			Student(int n) {
 //				num = n;
@@ -11035,9 +11035,9 @@ using namespace std;
 //		
 //	}
 //
-//	cin >> searchName;  //ÊäÈëĞèÒª²éÕÒµÄĞÕÃû
+//	cin >> searchName;  //è¾“å…¥éœ€è¦æŸ¥æ‰¾çš„å§“å
 //
-//	findStudent(stu, n, searchName);  //µ÷ÓÃº¯Êı£¬²éÕÒÑ§Éú£¬Êä³öĞÅÏ¢
+//	findStudent(stu, n, searchName);  //è°ƒç”¨å‡½æ•°ï¼ŒæŸ¥æ‰¾å­¦ç”Ÿï¼Œè¾“å‡ºä¿¡æ¯
 //
 //	return 0;
 //
@@ -11406,19 +11406,19 @@ using namespace std;
 //
 //public:
 //
-//	void Set_StuNum(int); //×ÔĞĞÉè¼Æ
+//	void Set_StuNum(int); //è‡ªè¡Œè®¾è®¡
 //
-//	int Get_StudNum();  //×ÔĞĞÉè¼Æ
+//	int Get_StudNum();  //è‡ªè¡Œè®¾è®¡
 //
-//	void Set_Score(float); //×ÔĞĞÉè¼Æ
+//	void Set_Score(float); //è‡ªè¡Œè®¾è®¡
 //
-//	float Get_Score();  //×ÔĞĞÉè¼Æ
+//	float Get_Score();  //è‡ªè¡Œè®¾è®¡
 //
 //private:
 //
-//	int stu_num; //Ñ§ºÅ
+//	int stu_num; //å­¦å·
 //
-//	float score; //·ÖÊı   
+//	float score; //åˆ†æ•°   
 //
 //};
 //
@@ -11459,11 +11459,11 @@ using namespace std;
 //
 //
 //string judge(double x) {
-//	if (x >= 90) return "ÓÅ";
-//	else if (x >= 80 && x < 90) return "Á¼";
-//	else if (x >= 70 && x < 80) return "ÖĞ";
-//	else if (x >= 60 && x < 70)return "¼°¸ñ";
-//	else return "²»¼°¸ñ";
+//	if (x >= 90) return "ä¼˜";
+//	else if (x >= 80 && x < 90) return "è‰¯";
+//	else if (x >= 70 && x < 80) return "ä¸­";
+//	else if (x >= 60 && x < 70)return "åŠæ ¼";
+//	else return "ä¸åŠæ ¼";
 //}
 //
 //int main() {
@@ -11762,7 +11762,7 @@ using namespace std;
 //
 //int main() {
 //
-//	string code;  //»òchar code[1000];
+//	string code;  //æˆ–char code[1000];
 //
 //	int num;
 //
@@ -12473,14 +12473,14 @@ using namespace std;
 //#include <stdio.h>
 //
 //int isLeapYear(int year) {
-//	// ÅĞ¶ÏÊÇ·ñÎªÈòÄêµÄº¯Êı
+//	// åˆ¤æ–­æ˜¯å¦ä¸ºé—°å¹´çš„å‡½æ•°
 //	return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
 //}
 //
 //int main() {
 //	int n, year;
-//	int daysOfWeek[7] = { 0 }; // ÓÃÓÚ´æ´¢ĞÇÆÚÁùµ½ĞÇÆÚÎåµÄ´ÎÊı
-//	int dayOfWeek = 0; // 1900Äê1ÔÂ1ÈÕÊÇĞÇÆÚÒ»£¬ËùÒÔĞÇÆÚÌìÊÇ0
+//	int daysOfWeek[7] = { 0 }; // ç”¨äºå­˜å‚¨æ˜ŸæœŸå…­åˆ°æ˜ŸæœŸäº”çš„æ¬¡æ•°
+//	int dayOfWeek = 0; // 1900å¹´1æœˆ1æ—¥æ˜¯æ˜ŸæœŸä¸€ï¼Œæ‰€ä»¥æ˜ŸæœŸå¤©æ˜¯0
 //	int daysInMonth[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 //
 //	scanf("%d", &n);
@@ -12488,21 +12488,21 @@ using namespace std;
 //	for (year = 1900; year < 1900 + n; year++) {
 //		int month;
 //		for (month = 0; month < 12; month++) {
-//			// ¸üĞÂĞÇÆÚÊı
+//			// æ›´æ–°æ˜ŸæœŸæ•°
 //			daysOfWeek[(dayOfWeek + 12) % 7]++;
 //
-//			// ÅĞ¶ÏÕâ¸öÔÂÓĞ¶àÉÙÌì
-//			if (month == 1 && isLeapYear(year)) { // ÈòÄêµÄ2ÔÂ
+//			// åˆ¤æ–­è¿™ä¸ªæœˆæœ‰å¤šå°‘å¤©
+//			if (month == 1 && isLeapYear(year)) { // é—°å¹´çš„2æœˆ
 //				dayOfWeek += 29;
 //			}
 //			else {
 //				dayOfWeek += daysInMonth[month];
 //			}
-//			dayOfWeek %= 7; // ¸üĞÂÎªÏÂÒ»¸öÔÂµÄµÚÒ»ÌìÊÇĞÇÆÚ¼¸
+//			dayOfWeek %= 7; // æ›´æ–°ä¸ºä¸‹ä¸€ä¸ªæœˆçš„ç¬¬ä¸€å¤©æ˜¯æ˜ŸæœŸå‡ 
 //		}
 //	}
 //
-//	// Êä³ö¸ñÊ½ÒªÇó´ÓĞÇÆÚÁù¿ªÊ¼
+//	// è¾“å‡ºæ ¼å¼è¦æ±‚ä»æ˜ŸæœŸå…­å¼€å§‹
 //	for (int i = 0; i < 7; i++) {
 //		if (i != 0) cout << ' ';
 //		printf("%d", daysOfWeek[(i + 5) % 7]);
@@ -12619,57 +12619,57 @@ using namespace std;
 //	int T;
 //	cin >> T;
 //	//T++;
-//	int G = 0;//Ã¿Ò»´ÎÊä³ö¿Õ³öÒ»ĞĞÊ±ÓÃÀ´¼ÆÊ±µÄ
+//	int G = 0;//æ¯ä¸€æ¬¡è¾“å‡ºç©ºå‡ºä¸€è¡Œæ—¶ç”¨æ¥è®¡æ—¶çš„
 //	while (T--) {
 //		getchar();
-//		scanf("%c", &ch);//ÊäÈë¿ò¼Ü
+//		scanf("%c", &ch);//è¾“å…¥æ¡†æ¶
 //		
-//			int i = 0, j = 0, k = 0, t = 0, m = 0, n = 0;//½«ÓÃµ½µÄ¼ÆÊı±äÁ¿¶¨Òåµ½whileº¯ÊıÖĞ¿ÉÃ¿´Î¶¼ÄÜ»Øµ½³õÊ¼Öµ
+//			int i = 0, j = 0, k = 0, t = 0, m = 0, n = 0;//å°†ç”¨åˆ°çš„è®¡æ•°å˜é‡å®šä¹‰åˆ°whileå‡½æ•°ä¸­å¯æ¯æ¬¡éƒ½èƒ½å›åˆ°åˆå§‹å€¼
 //			scanf("%d", &n);
 //			t = n;
-//			for (i = 0; i < n; i++)//¿ØÖÆĞĞÊıµÄÑ­»·
+//			for (i = 0; i < n; i++)//æ§åˆ¶è¡Œæ•°çš„å¾ªç¯
 //			{
-//				if (i == 0 && G != 0)//Ö´ĞĞÍêÒ»´ÎÈÎÎñ¾Í¿Õ³öÒ»ĞĞ£¬Ê×´ÎÊäÈëÊ±²»ĞèÒª¿ÕÒ»ĞĞ
+//				if (i == 0 && G != 0)//æ‰§è¡Œå®Œä¸€æ¬¡ä»»åŠ¡å°±ç©ºå‡ºä¸€è¡Œï¼Œé¦–æ¬¡è¾“å…¥æ—¶ä¸éœ€è¦ç©ºä¸€è¡Œ
 //				{
 //					printf("\n");
 //				}
 //
-//				t--;//Ã¿Ò»ĞĞ×îÇ°µÄ¿Õ¸ñÊıµİ¼õÖ±µ½ÎªÁã
+//				t--;//æ¯ä¸€è¡Œæœ€å‰çš„ç©ºæ ¼æ•°é€’å‡ç›´åˆ°ä¸ºé›¶
 //				for (j = 0; j < t; j++)
 //				{
 //					printf(" ");
 //				}
 //				printf("%c", ch);
-//				if (n - 1 > 1 && i < n - 1) //È·±£²»ÊÇµÚÒ»ĞĞºÍ×îºóÒ»ĞĞ£¬ÆäÓàĞĞµÄÁ½¸ö×Ö·ûÖĞ¼ä»¹ÓĞ¿Õ¸ñ
+//				if (n - 1 > 1 && i < n - 1) //ç¡®ä¿ä¸æ˜¯ç¬¬ä¸€è¡Œå’Œæœ€åä¸€è¡Œï¼Œå…¶ä½™è¡Œçš„ä¸¤ä¸ªå­—ç¬¦ä¸­é—´è¿˜æœ‰ç©ºæ ¼
 //				{
 //					if (i > 0)
 //					{
-//						for (m = 0; m < i * 2 - 1; m++)//¿Õ¸ñÊıÊÇÆæÊı
+//						for (m = 0; m < i * 2 - 1; m++)//ç©ºæ ¼æ•°æ˜¯å¥‡æ•°
 //						{
 //							printf(" ");
 //						}
 //					}
 //				}
-//				if (n - 1 > 1 && i == n - 1)//×îºóÒ»ĞĞÈ«ÊÇÓÉ×Ö·û×é³É£¬¿Õ¸ñ»»³É×Ö·û
+//				if (n - 1 > 1 && i == n - 1)//æœ€åä¸€è¡Œå…¨æ˜¯ç”±å­—ç¬¦ç»„æˆï¼Œç©ºæ ¼æ¢æˆå­—ç¬¦
 //				{
 //					for (m = 0; m < i * 2 - 1; m++)
 //					{
 //						printf("%c", ch);
 //					}
 //				}
-//				if (n - 1 == 1 && i == n - 1)//ÅĞ¶Ï½ö½öÁ½ĞĞµÄÈı½ÇĞÎ
+//				if (n - 1 == 1 && i == n - 1)//åˆ¤æ–­ä»…ä»…ä¸¤è¡Œçš„ä¸‰è§’å½¢
 //				{
 //					for (m = 0; m < i * 2 - 1; m++)
 //					{
 //						printf("%c", ch);
 //					}
 //				}
-//				if (i > 0)//µÚÒ»ĞĞ¾ÍÒ»¸ö×Ö·û£¬±ÜÃâ¶à³öÒ»¸ö×Ö·û
+//				if (i > 0)//ç¬¬ä¸€è¡Œå°±ä¸€ä¸ªå­—ç¬¦ï¼Œé¿å…å¤šå‡ºä¸€ä¸ªå­—ç¬¦
 //				{
 //					printf("%c", ch);
 //				}
-//				printf("\n");//Ã¿ĞĞÍêÊÂ»Ø³µ
-//				G++;//Ã¿¸öÊä³ö¿ÕÒ»ĞĞÊ±ÓÃµÄ£¬±ÜÃâµÚÒ»´ÎÊäÈëÊ±¾Í¿ªÊ¼¿ÕÒ»ĞĞ
+//				printf("\n");//æ¯è¡Œå®Œäº‹å›è½¦
+//				G++;//æ¯ä¸ªè¾“å‡ºç©ºä¸€è¡Œæ—¶ç”¨çš„ï¼Œé¿å…ç¬¬ä¸€æ¬¡è¾“å…¥æ—¶å°±å¼€å§‹ç©ºä¸€è¡Œ
 //			}
 //		
 //	}
@@ -13453,24 +13453,202 @@ using namespace std;
 //	cout << sum;
 //	return 0;
 //}
+// åŸºç±»Building
 
+// åŸºç±»Building
 
+//#include <iostream>
+//
+//using namespace std;
+//
+//class A
+//
+//{
+//
+//public:
+//
+//	A()
+//
+//	{
+//
+//		cout << "A1" << " ";
+//
+//	}
+//
+//	A(int i)
+//
+//	{
+//
+//		x = i;
+//
+//		cout << "A2" << " ";
+//
+//	}
+//
+//	void dispa()
+//
+//	{
+//
+//		cout << x << " ";
+//
+//	}
+//
+//private:
+//
+//	int x;
+//
+//};
+//
+//class B : public A
+//
+//{
+//
+//public:
+//
+//	B() {}
+//
+//	B(int i) : A(i + 10)
+//
+//	{
+//
+//		x = i;
+//
+//	}
+//
+//	void dispb()
+//
+//	{
+//
+//		dispa();
+//
+//		cout << x << " ";
+//
+//	}
+//
+//private:
+//
+//	int x;
+//
+//};
+//
+//int main()
+//
+//{
+//
+//	B b(2);
+//
+//	B bArr[3];
+//
+//	b.dispb();
+//
+//	return 0;
+//
+//}
+//
+//
+//
+//
+//
 
+//int main() {
+//	int N;
+//	cin >> N;
+//	while (N--) {
+//		int M;
+//		cin >> M;
+//		int sum = 0;
+//		while (M--) {
+//			int x;
+//			cin >> x;
+//			sum += x;
+//		}
+//		cout << sum << endl << endl;
+//	}
+//	return 0;
+//}
+//
+//
+//
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//int main() {
+//	set<int> arr;
+//	int n, k;
+//	cin >> n >> k;
+//	while (n--) {
+//		int x;
+//		cin >> x;
+//		arr.insert(x);
+//	}
+//	vector<int> ARR;
+//	for (int x : arr) {
+//		ARR.push_back(x);
+//	}
+//	if (k<1 && k>ARR.size()) cout << "NO RESULT";
+//	else
+//	cout << ARR[k - 1];
+//
+//
+//
+//	return 0;
+//}
+//
+//
+//typedef struct {
+//	string name;
+//	int chi;
+//	int math;
+//	int eng;
+//	int sum;
+//}Student;
+//
+//bool cmp(Student a,Student b){
+//	return a.sum > b.sum;
+//}
+//
+//int main() {
+//	int N;
+//	vector<Student> stus;
+//	cin >> N;
+//	while (N--) {
+//		Student x;
+//		string s;
+//		int c, m, e;
+//		cin >> s >> c >> m >> e;
+//		x.chi = c;
+//		x.math = m;
+//		x.eng = e;
+//		x.sum = c + m + e;
+//		x.name = s;
+//		stus.push_back(x);
+//	}
+//	sort(stus.begin(), stus.end(), cmp);
+//	cout << stus[0].name << " " << stus[0].chi << " " << stus[0].math << " " << stus[0].eng;
+//
+//
+//
+//	return 0;
+//}
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//#include <iostream>
+//#include <algorithm>
+//using namespace std;
+//int main()
+//{
+//	int num[3] = { 1,2,3 };
+//	do
+//	{
+//		cout << num[0] << " " << num[1] << " " << num[2] << endl;
+//	} while (next_permutation(num, num + 3));
+//	return 0;
+//}
 
 
 
