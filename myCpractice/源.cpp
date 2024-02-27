@@ -9,6 +9,7 @@
 #include <ctype.h>
 #include <vector>
 #include <stack>
+#include <unordered_set>
 #include <queue>
 #include <set>
 #include <bits/stdc++.h>
@@ -13651,6 +13652,1571 @@ using namespace std;
 //}
 
 
+//int main() {
+//	int n;
+//	cin >> n;
+//	vector<int> arr;
+//	for (int i = 1; i <= n; i++) {
+//		arr.push_back(i);
+//	}
+//	int is_new = 1;
+//	do {
+//		if (is_new == 0) cout << endl;
+//		is_new = 0;
+//		for (int i = 0; i < arr.size(); i++) {
+//			cout << setw(5) << arr[i];
+//		}
+//	} while (next_permutation(arr.begin(), arr.end()));
+//	return 0;
+////}
+//
+//int main() {
+//	int n;
+//	cin >> n;
+//	int maxer = n;
+//
+//	for (int i = n; i >= 0; i--) {
+//		int x;
+//		cin >> x;
+//		if (i == 0) {
+//			if (maxer == 0) {
+//				if (x > 0) {
+//
+//					
+//					cout << x;
+//
+//				}
+//				else if (x < 0) {
+//					cout << "-";
+//					cout << -1 * x;
+//
+//				}
+//				else continue;
+//
+//			}
+//
+//
+//		else {
+//			if (x > 0) {
+//
+//				cout << "+";
+//				cout << x;
+//
+//			}
+//			else if (x < 0) {
+//				cout << "-";
+//				cout << -1 * x;
+//
+//			}
+//			else continue;
+//		}
+//		}
+//		else if (i == 1) {
+//			if (i == maxer && x > 0) {
+//				if (x != 1) cout << x;
+//				cout << "x" ;
+//			}
+//			else if (i == maxer && x == 0) {
+//				maxer--;
+//				continue;
+//			}
+//			else {
+//				if (x > 0) {
+//
+//					cout << "+";
+//					if (x != 1) cout << x;
+//					cout << "x" ;
+//				}
+//				else if (x < 0) {
+//					cout << "-";
+//					if (x != -1) cout << -1 * x;
+//					cout << "x" ;
+//				}
+//				else continue;
+//			}
+//
+//		}
+//		else {
+//			if (i == maxer && x > 0) {
+//				if (x != 1) cout << x;
+//				cout << "x^" << n;
+//			}
+//			else if (i == maxer && x == 0) {
+//				maxer--;
+//				continue;
+//			}
+//			else {
+//				if (x > 0) {
+//
+//					cout << "+";
+//					if (x != 1) cout << x;
+//					cout << "x^" << i;
+//				}
+//				else if (x < 0) {
+//					cout << "-";
+//					if (x != -1) cout << -1 * x;
+//					cout << "x^" << i;
+//				}
+//				else continue;
+//			}
+//		}
+//	}
+//
+//	return 0;
+//}
+
+//
+//int main() {
+//	int n;
+//	int ok = 0;
+//	cin >> n;
+//	vector<vector<int>> arr;
+//	for (int i = 0; i < n; i++) {
+//		vector<int> x;
+//		for (int j = 0; j < 4; j++) {
+//			int t;
+//			cin >> t;
+//			x.push_back(t);
+//		}
+//		arr.push_back(x);
+//	}
+//	int x, y;
+//	cin >> x >> y;
+//	for (int i = arr.size() - 1; i >= 0; i--) {
+//		if (x >= arr[i][0] && x <= arr[i][0] + arr[i][2] && y >= arr[i][1] && y <= arr[i][1] + arr[i][3]) {
+//			cout << i + 1;
+//			ok = 1;
+//			break;
+//		}
+//	}
+//	if (ok == 0) cout << -1;
+//
+//	return 0;
+//}
+//
+//
+//int main() {
+//	int a, b;
+//	while (cin >> a >> b) {
+//		cout << a + b << endl;
+//	}
+//	return 0;
+//}
+
+//int main() {
+//	int n, q;
+//	cin >> n >> q;
+//	vector<vector<pair<int, int>>> guizi(n+1);
+//	while (q--) {
+//		int answer, i, j, k;
+//		cin >> answer >> i >> j;
+//		if (answer == 1) {
+//			int have_in = 0;
+//			for (int m = 0; m < guizi[i].size(); m++) {
+//				if (j == guizi[i][m].first) {
+//					have_in = 1;
+//					break;
+//				}
+//			}
+//			if (have_in == 0) {
+//				cin >> k;
+//				pair<int, int> x;
+//				x.first = j;
+//				x.second = k;
+//				guizi[i].push_back(x);
+//			}
+//			else {
+//				cin >> k;
+//				guizi[i][j].second = k;
+//			}
+//		}
+//		else {
+//			for (int m = 0; m < guizi[i].size(); m++) {
+//				if (j == guizi[i][m].first) cout << guizi[i][m].second << endl;
+//			}
+//		}
+//	}
+//	return 0;
+//}
+
+
+//int main() {
+//	int n, q;
+//	cin >> n >> q;
+//	map<int, map<int, int>> guizi;
+//	while (q--) {
+//		int answer, i, j, k;
+//		cin >> answer >> i >> j;
+//		if (answer == 1) {
+//			cin >> k;
+//			guizi[i][j] = k;
+//		}
+//		else {
+//			cout << guizi[i][j] << endl;
+//		}
+//	}
+//	return 0;
+//}
+//
+
+//int main() {
+//	int N;
+//	cin >> N;
+//	while (N--) {
+//		unordered_set<int> a;
+//
+//		int M;
+//		cin >> M;
+//		while (M--) {
+//			int x;
+//			cin >> x;
+//			a.insert(x);
+//		}
+//		int is_fir = 1;
+//		for (auto it = a.begin(); it != a.end(); it++) {
+//			if (is_fir == 0) cout << " ";
+//			is_fir = 0;
+//			cout << *it;
+//		}
+//		cout << endl;
+//	}
+//	return 0;
+//}
+//vector<int> processing_datas(vector<int>& datas) {
+//	unordered_set<int> store;
+//	vector<int> result;
+//	for (int xx : datas) {
+//		if (store.find(xx) == store.end()) {
+//			store.insert(xx);
+//			result.push_back(xx);
+//		}
+//	}
+//	return result;
+//}
+//
+//int main() {
+//	int N;
+//	cin >> N;
+//	while (N--) {
+//		int M;
+//		cin >> M;
+//		vector<int> datas;
+//		while (M--) {
+//			int x;
+//			cin >> x;
+//			datas.push_back(x);
+//		}
+//		datas = processing_datas(datas);
+//		int is_fir = 1;
+//		for (int mm : datas) {
+//			if (is_fir == 0) cout << " ";
+//			is_fir = 0;
+//			cout << mm;
+//		}
+//		cout << endl;
+//	}
+//	return 0;
+//}
+
+
+//int main() {
+//	vector<int> days = { 0,31,29,31,30,31,30,31,31,30,31,30,31 };
+//	int begin, end;
+//	int count = 0;
+//	cin >> begin >> end;
+//	for (int month = 1; month <= 12; month++) {
+//		for (int day = 1; day <= days[month]; day++) {
+//			int x = 100 * month + day;
+//			string t = to_string(x);
+//			string s;
+//			if (month < 10) {
+//				s = "0";
+//				s += t;
+//				t = s;
+//			}
+//			else {
+//				s = t;
+//			}
+//			reverse(s.begin(), s.end());
+//			s += t;
+//			x = stoi(s);
+//			if (x >= begin && x <= end) count++;
+//		}
+//	}
+//	cout << count;
+//
+//	return 0;
+//}
+//
+//
+
+
+//int main() {
+//	string s;
+//	cin >> s;
+//	int is = 1;
+//	for (int i = 0; i < s.size(); i++) {
+//		if (i == 0) {
+//			if (s[i] < 'A' || s[i]>'Z') {
+//				is = 0;
+//				break;
+//			}
+//		}
+//		else {
+//			if (s[i] < 'a' || s[i]>'z') {
+//				is = 0;
+//				break;
+//			}
+//		}
+//	}
+//	if (is == 0) {
+//		cout << "No";
+//	}
+//	else {
+//		cout << "Yes";
+//	}
+//	return 0;
+//}
+
+//int main() {
+//	vector<int> frequency(26);
+//	string s;
+//	cin >> s;
+//	for (int i = 0; i < s.size(); i++) {
+//		frequency[s[i] - 97]++;
+//	}
+//	int maxin = 0;
+//	for (int i = 0; i < 26; i++) {
+//		if (frequency[i] > maxin) maxin = frequency[i];
+//	}
+//	vector<char> maxers;
+//	for (int i = 0; i < 26; i++) {
+//		if (frequency[i] == maxin) {
+//			cout << (char)(i + 97);
+//			break;
+//		}
+//	}
+//	return 0;
+//}
+//
+//
+//
+
+//int main() {
+//	int N;
+//	cin >> N;
+//	vector<int> dish(N);
+//	vector<int> A(N);
+//	vector<int> B(N);
+//	for (int i = 0; i < N;i++ ) {
+//		cin >> dish[i];
+//	}
+//	for (int i = 0; i < N; i++) {
+//		cin >> A[i];
+//	}
+//	for (int i = 0; i < N; i++) {
+//		cin >> B[i];
+//	}
+//	vector<int> processingdata(N);
+//	for (int i = 0; i < N; i++) {
+//		if (A[i] == 0) {
+//			processingdata[i] = 9999999999;
+//			continue;
+//		}
+//		processingdata[i] = dish[i] / A[i];
+//	}
+//	int minin = *min_element(processingdata.begin(), processingdata.end());
+//	int maxsum = 0;
+//	for (int i = 0; i <= minin; i++) {
+//		int minB = 9999999999;
+//		for (int j = 0; j < N; j++) {
+//			if (B[j] == 0) {
+//				continue;
+//			}
+//			int remaining = dish[j] - i * A[j];
+//			
+//			minB = min(minB, remaining / B[j]);
+//		}
+//		//vector<int> processingdatax(N);
+//		//for (int j = 0; j < N; j++) {
+//		//	processingdatax[j] = dishx[j] / B[j];
+//		//}
+//		//int mininx = processingdatax[0];
+//		//for (int j = 1; j < N; j++) {
+//		//	if (processingdatax[j] < mininx) {
+//		//		mininx = processingdatax[j];
+//		//	}
+//		//}
+//		maxsum = max(maxsum, i + minB);
+//
+//	}
+//	cout << maxsum;
+//
+//
+//	return 0;
+////}
+//
+//
+//int calway(int a, int b, int x,int N) {
+//	int maxer = max(a, b);
+//	int miner = min(a, b);
+//	if (miner <= x && maxer > x) return N - maxer + miner;
+//	else return maxer - miner;
+//}
+//
+//
+//int main() {
+//	int  M;
+//	int N;
+//	cin >>N >> M;
+//	vector<int> tours;
+//	for (int i=0;i<M;i++) {
+//		int x;
+//		cin >> x;
+//		tours.push_back(x);
+//	}
+//	int minway = 999999999;
+//	for (int i = 1; i <= N; i++) {
+//		int way = 0;
+//		for (int j = 0; j < M - 1; j++) {
+//			way += calway(tours[j], tours[j + 1], i,N);
+//		}
+//		minway = min(minway, way);
+//	}
+//	cout << minway;
+//	return 0;
+//}
+//
+
+//
+//
+//int main() {
+//	string s;
+//	cin >> s;
+//	vector<char> arr;
+//	int have_0 = 0;
+//	for (int i = 0; i < s.size(); i++) {
+//		if (s[i] == 48) {
+//			have_0 = 1;
+//		}
+//		arr.push_back(s[i]);
+//	}
+//	sort(arr.begin(), arr.end());
+//	if (have_0 == 0) {
+//		int is_fir = 1;
+//		for (char xx : arr) {
+//			
+//			is_fir = 0;
+//			cout << xx;
+//		}
+//	}
+//	else {
+//		int target;
+//		for (int i = 0; i < arr.size(); i++) {
+//			if (arr[i] != '0') {
+//				target = i;
+//				break;
+//			}
+//		}
+//		int is_fir = 1;
+//		cout << arr[target];
+//		for (int i = 0; i < arr.size(); i++) {
+//			
+//			is_fir = 0;
+//			if (i == target) continue;
+//			cout << arr[i];
+//		}
+//	}
+//
+//
+//	return 0;
+//}
+//
+//
+
+//int main() {
+//	string s;
+//	cin >> s;
+//	int size = s.size();
+//	if (size < 4) {
+//		cout << -1;
+//		goto ends;
+//	}
+//	//else if (size == 2) {
+//	//	if (s[0] == s[1]) {
+//	//		cout << -1;
+//	//		goto ends;
+//
+//	//	}
+//	//	else {
+//	//		cout << s[1] << s[0];
+//	//		goto ends;
+//	//	}
+//	//}
+//	else if (size % 2 == 1) {
+//		int mid = size / 2;
+//		int fir = 0, sec = 0;;
+//		char fi = s[0];
+//		for (int i = 1; i <= mid; i++) {
+//			if (s[i] != fi) {
+//				sec = i;
+//				break;
+//			}
+//		}
+//		if (sec == 0) {
+//			cout << -1;
+//			goto ends;
+//		}
+//		else {
+//			int temp = s[fir];
+//			s[fir] = s[sec];
+//			s[sec] = temp;
+//			temp = s[size-fir-1];
+//			s[size-fir-1] = s[size-sec-1];
+//			s[size-sec-1] = temp;
+//
+//		}
+//
+//	}
+//	else {
+//		int mid = size / 2;
+//		int fir = 0, sec = 0;;
+//		char fi = s[0];
+//		for (int i = 1; i <= mid; i++) {
+//			if (s[i] != fi) {
+//				sec = i; break;
+//			}
+//		}
+//		if (sec == 0) {
+//			cout << -1;
+//			goto ends;
+//		}
+//		else {
+//			int temp = s[fir];
+//			s[fir] = s[sec];
+//			s[sec] = temp;
+//			temp = s[size - fir - 1];
+//			s[size - fir - 1] = s[size - sec - 1];
+//			s[size - sec - 1] = temp;
+//
+//		}
+//
+//	}
+//	for (char x : s) {
+//		cout << x;
+//	}
+//	ends:
+//	return 0;
+//}
+
+//#include <iostream>
+//#include <string>
+//#include <algorithm>
+//
+//using namespace std;
+//
+//int main() {
+//	string s;
+//	cin >> s;
+//	int size = s.size();
+//
+//	// 如果字符串长度小于3，则无法形成一个新的回文串
+//	if (size < 3) {
+//		cout << -1;
+//		return 0;
+//	}
+//
+//	// 从字符串的第二个字符开始，寻找一个与第一个字符不同的字符
+//	int i = 1;
+//	while (i < size && s[i] == s[0]) {
+//		i++;
+//	}
+//
+//	// 如果找不到这样的字符（即字符串全由同一个字符组成），则无解
+//	if (i == size) {
+//		cout << -1;
+//		return 0;
+//	}
+//
+//	// 交换找到的字符到第一个位置，由于输入保证是回文串，对称位置的字符也要交换
+//	swap(s[0], s[i]);
+//	swap(s[size - 1], s[size - i - 1]);
+//
+//	// 输出交换后的字符串
+//	cout << s;
+//
+//	return 0;
+//}
+//
+////
+
+
+
+
+
+//int main() {
+//	int N, M;
+//	cin >> N >> M;
+//	vector<int> arr(100005);
+//	for (int i = 0; i < N; i++) {
+//		cin >> arr[i];
+//	}
+//	int sum = 0;
+//	for (int i = 0; i < M; i++) {
+//		int x;
+//		cin >> x;
+//
+//		sum += arr[x-1];
+//	}
+//	cout << sum;
+//
+//	return 0;
+//
+// 
+// 
+// }
+
+//int main() {
+//	int N, K;
+//	cin >> N >> K;
+//	int num = 0;
+//
+//	for (int i = 0; i < N; i++) {
+//		char x;
+//		cin >> x;
+//		if (x == 'x') {
+//			cout << 'x';
+//		}
+//		else {
+//			if (num < K) {
+//				cout << 'o';
+//				num++;
+//			}
+//			else cout << 'x';
+//		}
+//
+//	}
+//
+//	return 0;
+//}
+//
+//#include <iostream> // 用于 std::cin 和 std::cout
+//#include <set>      // 用于 std::set
+//
+//using namespace std;
+//
+//int main() {
+//	int N, K;
+//	cin >> N >> K;
+//	set<int> arr;
+//	for (int i = 0; i < N; i++) {
+//		int x;
+//		cin >> x;
+//		arr.insert(x);
+//	}
+//	int endin = 0;
+//	for (int i = 0; i < K; i++) {
+//		if (arr.find(i) == arr.end()) {
+//			endin = 1;
+//			cout << i;
+//			break;
+//		}
+//	}
+//	if (endin == 0) cout << K;
+//
+//	return 0;
+//}
+//
+
+//int main() {
+//	int T;
+//	cin >> T;
+//	while (T--) {
+//		int N, D, K;
+//		cin >> N >> D >> K;
+//		int num = 1;
+//		int index = 0;
+//		vector<int> arr(N, 0);
+//		arr[0] = 1;
+//		while (num < K) {
+//			int x = (index + D) %N;
+//			while (arr[x] == 1) x = (x + 1) % N;
+//			arr[x] = 1;
+//			num++;
+//			index = x;
+//		}
+//		cout << index << endl;
+//
+//	}
+//	return 0;
+//}
+
+//
+//int main() {
+//	int T;
+//	cin >> T;
+//	vector<vector<int>> arr(T+1, vector<int>(4, 0));
+//	for (int i = 0; i <  T; i++) {
+//		//int N, D, K;
+//		//cin >> N >> D >> K;
+//		cin >> arr[i][0] >> arr[i][1] >> arr[i][2];
+//	}
+//	int pointer = 0;
+//	int f=0, s=0;
+//	int begins = 0;
+//	int ends = 0;
+//	int lf = 0, ls = 0;
+//	int is_fir = 1;
+//	while (pointer<T) {
+//		if (pointer == T) goto theelse;
+//		lf = f;
+//		ls = s;
+//		
+//		f = arr[pointer][0];
+//		s = arr[pointer][1];
+//		if (is_fir == 1) {
+//			begins = pointer;
+//			is_fir = 0;
+//			pointer++;
+//			continue;
+//		}
+//		if (lf == f && ls == s) {
+//			pointer++;
+//		}
+//		else {
+//			theelse:
+//			ends = pointer - 1;
+//			is_fir = 1;
+//			int maxs = 0;
+//			for (int i = begins; i <= ends; i++) {
+//				if (arr[i][2] > maxs) {
+//					maxs = arr[i][2];
+//				}
+//			}
+//			int num = 1;
+//			int N, D, K;
+//			N = arr[begins][0];
+//			D = arr[begins][1];
+//			int index = 0;
+//			vector<int> arrt(N+1, 0);
+//			arrt[0] = 1;
+//			vector<int> his(maxs+1,0);
+//			while (num < maxs) {
+//				//int num = 1;
+//				
+//					int x = (index + D) % N;
+//					while (arrt[x] == 1) x = (x + 1) % N;
+//					arrt[x] = 1;
+//					his[num] = x;
+//					num++;
+//					index = x;
+//
+//			}
+//			for (int i = begins; i <= ends; i++) {
+//				cout << his[arr[i][2] - 1] << endl;
+//			}
+//			
+//
+//
+//
+//		}
+//
+//
+//	}
+//	ends = pointer - 1;
+//	is_fir = 1;
+//	int maxs = 0;
+//	for (int i = begins; i <= ends; i++) {
+//		if (arr[i][2] > maxs) {
+//			maxs = arr[i][2];
+//		}
+//	}
+//	int num = 1;
+//	int N, D, K;
+//	N = arr[begins][0];
+//	D = arr[begins][1];
+//	int index = 0;
+//	vector<int> arrt(N + 1, 0);
+//	arrt[0] = 1;
+//	vector<int> his(maxs + 1, 0);
+//	while (num < maxs) {
+//		//int num = 1;
+//
+//		int x = (index + D) % N;
+//		while (arrt[x] == 1) x = (x + 1) % N;
+//		arrt[x] = 1;
+//		his[num] = x;
+//		num++;
+//		index = x;
+//
+//	}
+//	for (int i = begins; i <= ends; i++) {
+//		cout << his[arr[i][2] - 1] << endl;
+//	}
+//
+//	endser:
+//	return 0;
+//}
+//
+//int main() {
+//	int N;
+//	cin >> N;
+//	while (N--) {
+//		int n;
+//		string ss;
+//		cin >> n;
+//		cin >> ss;
+//		int d = 0, f = 0, s = 0, D = 0, F = 0, S = 0;
+//		for (int i = 0; i < n; i++) {
+//			if (ss[i] == 'd') d = 1;
+//			if (ss[i] == 'f' && d == 1) f = 1;
+//			if (ss[i] == 's' && f == 1) s = 1;
+//			if (ss[i] == 'D') D = 1;
+//			if (ss[i] == 'F' && D == 1) F = 1;
+//			if (ss[i] == 'S' && F == 1) S = 1;
+//
+//		}
+//		if (D == 1 && F == 1 && S == 1) cout << 1<<' ';
+//		else cout << 0<<" ";
+//
+//		if (d == 1 && f == 1 && s == 1) cout << 1<<endl;
+//		else cout << 0 << endl;
+//	}
+//	return 0;
+//}
+
+//
+//int main() {
+//	int T;
+//	cin >> T;
+//	ends:
+//	while (T--) {
+//		int lon = 0, ron = 0;
+//		int down = 0;
+//		int dl = 0, dr = 0;
+//		int N;
+//		cin >> N;
+//		if (N == 0) {
+//			cout << 3 << endl;
+//			goto ends;
+//		}
+//		vector<pair<int, int>> plo;
+//		vector<pair<int, int>> pro;
+//		vector<pair<int, int>> prd;
+//		vector<pair<int, int>> pld;
+//
+//		for (int i = 0; i < N; i++) {
+//			pair<int, int> p;
+//			cin >> p.first >> p.second;
+//			if (p.first == 1 && p.second == 1) dr = 1;
+//			if (p.first == 1 && p.second == -1) dl = 1;
+//			if (p.first == 1 && p.second > 0) pro.push_back(p);
+//			else if (p.first == 1 && p.second < 0) plo.push_back(p);
+//			else if (p.first == 2 && p.second > 0) prd.push_back(p);
+//			else if (p.first == 2 && p.second < 0) pld.push_back(p);
+//			else down = 1;
+//
+//		}
+//		if (!pro.empty()) {
+//			if (!prd.empty()) {
+//				for (int i = 0; i < pro.size(); i++) {
+//					for (int j = 0; j < prd.size(); j++) {
+//						if (abs(pro[i].second - prd[j].second) <= 1) { ron = 1; }
+//					}
+//				}
+//			}
+//		}
+//		if (!plo.empty()) {
+//			if (!pld.empty()) {
+//				for (int i = 0; i < plo.size(); i++) {
+//					for (int j = 0; j < pld.size(); j++) {
+//						if (abs(plo[i].second - pld[j].second) <= 1) { lon = 1; }
+//					}
+//				}
+//			}
+//		}
+//		if (ron == 1 && lon == 1) { cout << 0 << endl; goto ends; }
+//		if (dl && !dr&&!down&&!lon&&!ron) {
+//			cout << 2<<endl;
+//			goto ends;
+//		}
+//		if (!dl && dr && !down && !lon && !ron) {
+//			cout << 2<<endl;
+//			goto ends;
+//		}
+//		if (dl && dr && !down && !lon && !ron) {
+//			cout << 1<<endl;
+//			goto ends;
+//		}
+//
+//		else {
+//			if (down) {
+//				if (dl) lon = 1;
+//				if (dr) ron = 1;
+//			}
+//			if (ron == 1 && lon == 1) {
+//				cout << 0<<endl; goto ends;
+//			}
+//			if (down) {
+//				if (lon || ron) cout << 1<<endl;
+//				else cout << 2<<endl;
+//			}
+//			else {
+//				if (lon) {
+//					if ((!prd.empty()) || (!pro.empty())) cout << 1<<endl;
+//					else cout << 2<<endl;
+//
+//				}
+//				else if (ron) {
+//					if ((!pld.empty()) || (!plo.empty())) cout << 1<<endl;
+//					else cout << 2<<endl;
+//
+//				}
+//				else {
+//					int num = 0;
+//					if ((!prd.empty()) || (!pro.empty())) num += 1;
+//					else num+=2;
+//					if ((!pld.empty()) || (!plo.empty())) num+=1;
+//					else num+=2;
+//					cout << num<<endl;
+//				}
+//			}
+//
+//		}
+//
+//	}
+//	
+//	return 0;
+//}
+
+//
+//int main() {
+//	int T;
+//	int n;
+//	cin >> T;
+//	while (T--) {
+//		cin >> n;
+//		int yv, zheng;
+//		yv = n % 6;
+//		zheng = n / 6;
+//		if (zheng == 0 || zheng == 1 && yv == 0) cout << 1 << endl;
+//		else {
+//			if (yv == 0) {
+//				cout << zheng << endl;
+//
+//			}
+//			else {
+//				cout<< 2*zheng << endl;
+//			}
+//		}
+//	}
+//	return 0;
+//}
+//
+//
+
+//
+//int main() {
+//	int T;
+//	cin >> T;
+//	while (T--) {
+//		int n, m;
+//		cin >> n >> m;
+//		vector<int> scores(n);
+//		for (int i = 0; i < n; i++) {
+//			cin >> scores[i];
+//		}
+//		vector<pair<int, int>> arr;
+//		for (int i = 0; i < m; i++) {
+//			int m, b;
+//			cin >> m >> b;
+//			if (m == 1 || b == 1) scores[0] += 3;
+//			else {
+//				pair<int, int> a;
+//				a.first = m, a.second = b;
+//				arr.push_back(a);
+//
+//			}
+//
+//		}
+//		for (int i = 0; i < arr.size(); i++) {
+//			if (scores[arr[i].first - 1] > scores[arr[i].second - 1]) scores[arr[i].second - 1] += 3;
+//			else scores[arr[i].first - 1] += 3;
+//		}
+//		int t = scores[0];
+//		sort(scores.begin(), scores.end(), greater<int>());
+//		int num = 1;
+//		for (int i = 0; i < scores.size(); i++) {
+//			if (scores[i] > t) num++;
+//			else break;
+//		}
+//		cout << num;
+//
+//	}
+//	return 0;
+//}
+
+
+//int main() {
+//	int T;
+//	cin >> T;
+//	while (T--) {
+//		int n, m;
+//		cin >> n >> m;
+//		vector<pair<int, int>> datas;
+//
+//		for (int i = 0; i < n; i++) {
+//			int a, b;
+//			cin >> a >> b;
+//			if (a <= b) m += b;
+//			else if (a - b <= m) m += b;
+//			else {
+//				pair<int, int> p;
+//				p.first = a, p.second = b;
+//				datas.push_back(p);
+//			}
+//
+//		}
+//		sort(datas.begin(), datas.end(), cmp);
+//		for (int i = 0; i < datas.size(); i++) {
+//			if (datas[i].first <= m) {
+//				m += datas[i].second;
+//			}
+//			else {
+//				break;
+//			}
+//		}
+//		cout << m << endl;
+//
+//	}
+//
+//	return 0;
+//}
+//bool cmp(pair<int, int> a, pair<int, int> b) {
+//	return a.first < b.first;
+//}
+//int main() {
+//	int T;
+//	cin >> T;
+//	while (T--) {
+//		int n, m;
+//		cin >> n >> m;
+//		vector<pair<int, int>> datas;
+//		for (int i = 0; i < n; i++) {
+//			int a, b;
+//			cin >> a >> b;
+//			if (a <= b) m += b;
+//			else if (a - b <= m) m += b;
+//			else {
+//				pair<int, int> p;
+//				p.first = a, p.second = b;
+//				datas.push_back(p);
+//			}
+//
+//		}
+//		sort(datas.begin(), datas.end(), cmp);
+//		int now = n, mon = m;
+//
+//		int maxs = m;
+//
+//		for (int i = 0; i < datas.size(); i++) {
+//			mon += datas[i].second;
+//			if (mon >= datas[i].first) maxs = mon;
+//		}
+//		cout << maxs << endl;
+//
+//	}
+//
+//	return 0;
+//}
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+//using namespace std;
+//
+//int n, m;
+//vector<int> points;
+//vector<pair<int, int>> matches;
+//
+//// 计算当前排名
+//int calculateRank() {
+//	vector<int> tempPoints = points;
+//	sort(tempPoints.rbegin(), tempPoints.rend());  // 降序排序
+//
+//	int rank = 1;
+//	for (int i = 1; i <= n; ++i) {
+//		if (tempPoints[i - 1] > points[0]) {
+//			rank++;
+//		}
+//		else {
+//			break;
+//		}
+//	}
+//	return rank;
+//}
+//
+//// 穷举所有比赛的结果，更新最高排名
+//int bestRank = n + 1;
+//void exhaust(int matchIdx) {
+//	if (matchIdx == m) {
+//		bestRank = min(bestRank, calculateRank());
+//		return;
+//	}
+//
+//	int u = matches[matchIdx].first - 1;
+//	int v = matches[matchIdx].second - 1;
+//
+//	// 假设u获胜
+//	points[u] += 3;
+//	exhaust(matchIdx + 1);
+//	points[u] -= 3;
+//
+//	// 假设v获胜
+//	points[v] += 3;
+//	exhaust(matchIdx + 1);
+//	points[v] -= 3;
+//
+//	// 假设战平
+//	points[u] += 1;
+//	points[v] += 1;
+//	exhaust(matchIdx + 1);
+//	points[u] -= 1;
+//	points[v] -= 1;
+//}
+//
+//int main() {
+//	while (cin >> n >> m) {
+//		points.resize(n);
+//		matches.resize(m);
+//
+//		for (int i = 0; i < n; ++i) {
+//			cin >> points[i];
+//		}
+//
+//		for (int i = 0; i < m; ++i) {
+//			cin >> matches[i].first >> matches[i].second;
+//		}
+//
+//		bestRank = n + 1;  // 重置最佳排名
+//		exhaust(0);
+//		cout << bestRank << endl;
+//	}
+//
+//	return 0;
+//}
+//
+
+
+//
+//int main() {
+//	int n, Q, tc;
+//	cin >> n >> Q >> tc;
+//	vector<int> arr(n);
+//	for (int i = 0; i < n; i++) {
+//		cin >> arr[i];
+//	}
+//	sort(arr.begin(), arr.end());
+//	for (int i = 0; i < Q; i++) {
+//		int M;
+//		cin >> M;
+//		int m = n;
+//		for (int j = 1; j <=n ; j++) {
+//			if (j * tc >= M) {
+//				m = j - 1;
+//				break;
+//			}
+//		}
+//		int num = tc;
+//		for (int j = 0; j < n - m; j++) {
+//			num += arr[j];
+//		}
+//		cout << num << endl;
+//	}
+//
+//
+//	return 0;
+//}
+//
+//
+//
+//
+//
+//
+//
+//
+//#include <iostream>
+//#include <string>
+//using namespace std;
+//
+//// Function to cyclically shift a substring
+//void cyclicShift(string& s, int l, int r, int k) {
+//	int len = r - l + 1;
+//	k %= len; // Calculate the effective number of shifts
+//	if (k == 0) return; // No shift needed
+//
+//	// Extract the substring to be shifted
+//	string toShift = s.substr(l - 1, len);
+//
+//	// Perform the cyclic shift
+//	string shifted = toShift.substr(len - k) + toShift.substr(0, len - k);
+//
+//	// Replace the original substring with the shifted one
+//	s.replace(l - 1, len, shifted);
+//}
+//
+//int main() {
+//	string s;
+//	cin >> s;
+//
+//	int m;
+//	cin >> m;
+//
+//	for (int i = 0; i < m; ++i) {
+//		int l, r, k;
+//		cin >> l >> r >> k;
+//		cyclicShift(s, l, r, k);
+//	}
+//
+//	cout << s << endl;
+//
+//	return 0;
+//}
+//
+//
+
+
+
+//
+//int main() {
+//	int N;
+//	cin >> N;
+//	while (N--) {
+//		int a, b, c;
+//		cin >> a >> b >> c;
+//		int num = 0;
+//		if (a == 150) num++;
+//		else if (a == 200)
+//			num += 2;
+//		if (b == 34 || b == 36 || b == 38 || b == 40) num++;
+//		else if (b == 45) num += 2;
+//		if (c == 34 || c == 36 || c == 38 || c == 40) num++;
+//		else if (c == 45) num += 2;
+//		cout << num << endl;
+//	}
+//	return 0;
+//}
+
+//
+//int main() {
+//	int n, m, k;
+//	cin >> n >> m >> k;
+//	int x = k;
+//
+//	int num = 0;
+//	vector<pair<int, int>> arr;
+//	while (k--) {
+//		pair<int, int> p;
+//		cin >> p.first >> p.second;
+//		arr.push_back(p);
+//	}
+//	for (int i = 0; i < arr.size(); i++) {
+//		for (int j = 0; j < arr.size(); j++) {
+//			if (arr[j].first - 1 == arr[i].first && arr[j].second == arr[i].second || arr[j].first + 1 == arr[i].first && arr[j].second == arr[i].second ||
+//				arr[j].first == arr[i].first && arr[j].second + 1 == arr[i].second || arr[j].first == arr[i].first && arr[j].second - 1 == arr[i].second) {
+//				num++;
+//
+//			}
+//		}
+//	}
+//	num /= 2;
+//	cout << 4 * x - num;
+//	return 0;
+//}
+
+//int main() {
+//	int n, m, k;
+//
+//	cin >> n >> m >> k;
+//	int t = k;
+//	int num = 0;
+//	vector<vector<int>> arr(300,vector<int>(300,0));
+//	vector<pair<int, int>> axx;
+//
+//	while (k--) {
+//		int x, y;
+//		cin >> x >> y;
+//		pair<int, int> p;
+//		p.first = x;
+//		p.second = y;
+//
+//		axx.push_back(p);
+//
+//		arr[x][y] = 1;
+//	}
+//	for (int i = 0; i < axx.size(); i++) {
+//		if (arr[axx[i].first+1][axx[i].second]) num++;
+//		if (arr[axx[i].first - 1][axx[i].second]) num++;
+//		if (arr[axx[i].first ][axx[i].second+1]) num++;
+//		if (arr[axx[i].first ][axx[i].second-1]) num++;
+//
+//	}
+//	num /= 2;
+//	cout << 4 * t - num;
+//	return 0;
+//
+//}
+//int
+//
+//
+//int main() {
+//	int T;
+//	cin >> T;
+//	while (T--) {
+//		int n;
+//		cin >> n;
+//		if (n == 1) {
+//			cout << 1<<endl;
+//			continue;
+//		}
+//		vector<pair<int, int>>  A;
+//		vector<pair<int, int>>  B;
+//
+//		for (int i = 0; i < n; i++) {
+//			pair<int, int> x;
+//			cin >> x.first;
+//			x.second = i;
+//			if (x.first == 1) A.push_back(x);
+//			if (x.first == 2) B.push_back(x);
+//			
+//		}
+//		int num = 0;
+//		int index = max(A[A.size() - 1].second, B[B.size() - 1].second);
+//		int indexA, indexB;
+//		while (1) {
+//			if (A.empty() && B.empty()) {
+//				break;
+//			}
+//			if (A.empty() ) {
+//				num += B.size();
+//			}
+//			if (B.empty()) {
+//				num += A.size();
+//			}
+//
+//			if (A[A.size() - 1].second > B[B.size() - 1].second) {
+//				int findit = 0;
+//				for (int i=index=	)
+//				int indexB = B[B.size() - 1].second;
+//				num++;
+//
+//
+//			}
+//		}
+//
+//	}
+//	return 0;
+//}
+//
+//
+
+//#include <iostream>
+//#include <vector>
+//#include <algorithm>
+//
+//using namespace std;
+//
+//int main() {
+//	int T;
+//	cin >> T;
+//	while (T--) {
+//		int n;
+//		cin >> n;
+//		vector<int> gems(n);
+//		for (int i = 0; i < n; ++i) {
+//			cin >> gems[i];
+//		}
+//
+//		if (n == 1) {
+//			// 只有一个宝石时，只需要一次操作
+//			cout << 1 << endl;
+//			continue;
+//		}
+//
+//		// 检查序列是否全是同一颜色的宝石
+//		bool all_same = true;
+//		for (int i = 1; i < n; ++i) {
+//			if (gems[i] != gems[0]) {
+//				all_same = false;
+//				break;
+//			}
+//		}
+//		if (all_same) {
+//			// 如果所有宝石都是一种颜色，只需要一次操作
+//			cout << 1 << endl;
+//			continue;
+//		}
+//
+//		// 如果开头和结尾的颜色相同，则至少需要2次操作
+//		if (gems[0] == gems[n - 1]) {
+//			cout << 2 << endl;
+//		}
+//		else {
+//			// 如果开头和结尾的颜色不同，则至少需要3次操作
+//			cout << 3 << endl;
+//		}
+//	}
+//	return 0;
+//}
+//
+//
+//
+//
+////
+//#include <bits/stdc++.h>
+//int main() {
+////
+////    
+////	cin > l >> m;
+////	fo (int    i =0;i< ; i+    ) {
+////		intx y
+////
+////		in > x          y;
+////	if (      x         y) wa(, );
+////          arr[x+;
+////		arr[y+ 1]-        
+////
+////	}
+////	in        cnt =0
+////	int         a      0;    
+////	for (n i =    0; i =l; i    +) {
+////		a =ar[];
+////	if ( ==        )cn++;
+////	}
+////        out < ct;
+////
+////}
+//using namespace std;
+//    
+////
+//    
+//
+//#include <bits/stdc++.h>
+//using namespace std;
+//struct ty {
+//	int x, y;
+//}a[1000];
+//
+//bool cmp(ty a, ty b) {
+//	if (a.x < b.x) return 1;
+//	return 0;
+//}
+//
+//int main() {
+//	int l, m;
+//
+//	cin >> l >> m;
+//	for (int i = 1; i <= m; i++) {
+//		cin >> a[i].x >> a[i].y;
+//
+//	}
+//	sort(a + 1, a + 1 + m, cmp);
+//	int cnt = l + 1;
+//	int le = a[1].x, ri = a[1].y;
+//	for (int i = 2; i <= m; i++) {
+//		if (a[i].x < ri) {
+//			ri = max(ri, a[i].y);
+//		}
+//		else {
+//			cnt -= (ri - le + 1);
+//			le = a[i].x;
+//			ri = a[i].y;
+//		}
+//	}
+//	cnt -= (ri - le + 1);
+//
+//
+//
+//	cout << cnt;
+//
+//
+//}
+//bool cmp(string a, string b) {
+//	//if (a+b>b+a)
+//	//return 1;
+//	//return 0;
+//	return a + b > b + a;
+//}
+//
+//int main() {
+//	int n;
+//	cin >> n;
+//	vector<string> nums(21);
+//	for (int i = 0; i < n; i++) {
+//		cin >> nums[i];
+//	}
+//	sort(nums.begin(), nums.end(), cmp);
+//	for (int i = 0; i < n; i++) cout << nums[i];
+//	return 0;
+//}
+
+//#include <bits/stdc++.h>
+//using namespace std;
+//int n, m, k, a[20][20];
+//int lie[20];
+//int cnt1 = 0;
+//int calc(int st) {
+//	int sum = 0;
+//	for (int i = 1; i <= n; i++) {
+//		if (st >> (i - 1) == 1) {
+//			for (int j = 1; j <= m; j++)
+//				sum += a[i][j];
+//			cnt1++;
+//		}
+//		else {
+//			for (int j = 1; j <= m; j++) {
+//				lie[j] += a[i][j];
+//			}
+//		}
+//	}
+//	return sum;
+//}
+//
+//int main() {
+//	cin >> n >> m >> k;
+//	long long sum1 = 0;
+//	for (int i = 1; i <= n; i++) {
+//		for (int j = 1; j <= m; j++) {
+//			cin >> a[i][j];
+//			sum1 += a[i][j];
+//		}
+//	}
+//	if (k >= m || k >= n) { cout << sum1; return 0; }
+//	int ans = 0;
+//	for (int st = 0; st <= ((1 << n) - 1); st++) {
+//		memset(lie, 0, sizeof(lie));
+//		long long sum = calc(st);
+//		if (cnt1 > k) continue;
+//		int rest = k - cnt1;
+//		sort(lie + 1, lie + 1 + m);
+//		for (int i = 1, j = m; i <= rest; i++, j--) {
+//			sum += lie[j];
+//			ans = max(ans, (int)sum);
+//
+//		}
+//		
+//	}
+//	cout << ans;
+//	return 0;
+//}
+//
 
 
 
@@ -13703,13 +15269,7 @@ using namespace std;
 
 
 
-
-
-
-
-
-
-
+    
 
 
 
