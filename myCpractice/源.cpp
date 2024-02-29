@@ -15218,57 +15218,403 @@ using namespace std;
 //}
 //
 
+//int a[100010];
+//int sum[100010][40];
+//
+//int main() {
+//	int n;
+//	cin >> n;
+//	for (int i = 1; i <= n; i++) {
+//		cin >> a[i];
+//	}
+//
+//	int q;
+//	cin >> q;
+//
+//	for (int j=0;j<31;j++)
+//		for (int i = 1; i <= n; i++) {
+//			if ((a[i] >> j) & 1)
+//				sum[i][j]++;
+//		}
+//	for (int i = 1; i <= q; i++)
+//	{
+//		int l, r;
+//		cin >> l >> r;
+//		int x = 0;
+//		for (int j = 0; j < 31; j++) {
+//			if (sum)
+//		}
+//	}
+//
+//
+//	return 0;
+//}
+//
+//
+//
 
 
 
 
+//int delta[100010] = { 0 };
+
+//int main() {
+//	int n;
+//	cin >> n;
+//	map<int, int> a;
+//	while (n--) {
+//		int x;
+//		char t;
+//		cin >> x >> t;
+//		switch (t) {
+//		case '.':
+//			a[x]++;
+//			a[x + 1]--;
+//			break;
+//		case '+':
+//			a[1]++;
+//			a[x + 1]--;
+//			break;
+//		case '-':
+//			a[x+1]++;
+//			break;
+//		}
+//	}
+//	int ans = 0, temp = 0;
+//	for (auto it:a) {
+//		temp += it.second;
+//		ans = max(ans, temp);
+//		
+//	}
+//	//int maxs = 0;
+//	//for (int i = 1; i <= 100009; i++) {
+//	//	if (data[i] > maxs) maxs = data[i];
+//	//}
+//	//int maxs = max_element(data + 1, data + 100009);
+//	cout << ans;
+//	return 0;
+//}
+//
+//
+//
+//
+
+//int check(long long mid, vector<long long> pos, long long N, long long M) {
+//	long long p = 0;
+//	long long num = 0;
+//	for (int i = 0; i < N; i++) {
+//		if (pos[i] - p < mid) {
+//			num++;
+//
+//
+//		}
+//		else if (pos[i] - p >= mid) {
+//			p = pos[i];
+//		}
+//	}
+//	if (num <= M) {
+//		return -1;
+//	}
+//	else if (num > M) return 1;
+//
+//
+//}
+//
+//
+//
+//
+//
+//int main() {
+//	long long L, N, M;
+//	cin >> L >> N >> M;
+//	vector<long long> pos(N);
+//	for (int i = 0; i < N; i++) {
+//		cin >> pos[i];
+//	}
+//	long long l = 0, r = L;
+//	long long mid = (l + r) / 2;
+//	while (l <= r) {
+//		switch (check(mid, pos, N, M)) {
+//		
+//		case 1:
+//			r = mid - 1;
+//			mid = (l + r) / 2;
+//			break;
+//		case -1:
+//			l = mid + 1;
+//			mid = (l + r) / 2;
+//			break;
+//		}
+//
+//	}
+//	cout << l - 1;
+//	return 0;
+//}
+//
+//
+
+//int check(int m,int mid,int n,vector<int> arr) {
+//	long long sum = 0;
+//	for (int i = 0; i < n; i++) {
+//		if (arr[i] < mid) sum += (mid - arr[i]);
+//	}
+//
+//	if (sum <= m &&sum<=mid) return 1;
+//	return 0;
+//
+//
+//}
+//
+//
+//
+//int main() {
+//	int n, m;
+//	cin >> n >> m;
+//	vector<int> arr(n);
+//	long long sum = 0;
+//	for (int i = 0; i < n; i++) {
+//		cin >> arr[i];
+//		sum += arr[i];
+//	}
+//	int l = 0, r = 9;
+//	int mid = (l + r) / 2;
+//	while (l <= r) {
+//		if (check(m,mid,n,arr)) {
+//			l = mid + 1;
+//			mid = (l + r) / 2;
+//
+//		}
+//		else {
+//			r = mid - 1;
+//			mid = (l + r) / 2;
+//		}
+//
+//	}
+//	cout << l - 1;
+//	return 0;
+//}
+//
+//
+//
+
+//bool check(int mid,vector<pair<int,int>> arr,int n,int k) {
+//	vector<long long> datas(n);
+//	long long sum = 0;
+//	for (int i = 0; i < n; i++) {
+//		datas[i] = arr[i].second - mid * arr[i].first;
+//	}
+//	sort(datas.begin(), datas.end(), greater<double>());
+//	for (int i = 0; i < k; i++) {
+//		sum += datas[i];
+//	}
+//	if (sum >= 0) return 1;
+//	return 0;
+//
+//
+//
+//
+//}
+//
+//int main() {
+//	int T;
+//	cin >> T;
+//	while (T--) {
+//		int n, k;
+//		cin >> n >> k;
+//		vector<pair<int, int>> arr(n);
+//		for (int i = 0; i < n; i++) {
+//			cin >> arr[i].first >> arr[i].second;
+//
+//		}
+//		int l = 0, r = 1e4;
+//		int mid = (l + r) / 2;
+//		int ans = 0;
+//		while (l <= r) {
+//			if (check(mid,arr,n,k)) {
+//				l = mid + 1;
+//				mid = (l + r) / 2;
+//
+//			}
+//			else {
+//				r = mid - 1;
+//				mid = (l + r) / 2;
+//			}
+//		}
+//		cout << l-1;
+//
+//	}
+//	return 0;
+//}
 
 
 
+//int main() {
+//	stack<int> st;
+//	int n;
+//	cin >> n;
+//	vector<int> a(n);
+//
+//	for (int i = 1; i < n; i++) {
+//		cin >> a[i];
+//	}
+//	int j = 1;
+//	for (int i = 1; i <= n; i++) {
+//		st.push(i);
+//		while (!st.empty() && a[j] == st.top()) {
+//			st.pop();
+//			j++;
+//		}
+//	}
+//
+//	return 0;
+//}
+//
+//
+//
+//int main() {
+//	int n;
+//	cin >> n;
+//	vector<int> arr(n);
+//	for (int i = 0; i < n; i++) {
+//		cin >> arr[i];
+//	}
+//	stack<int> st;
+//	for (int i = 0; i < n; i++) {
+//		while (st.top() == n) {
+//			cout << n << ' ';
+//			st.pop();
+//			n--;
+//		}
+//		if (!st.empty())
+//		st.push(arr[i]);
+//		else 
+//	}
+//
+//		return 0;
+//}
+//
+//
 
+//int main() {
+//	int n;
+//	stack<int> st;
+//	cin >> n;
+//	vector<int> arr(n);
+//	for (int i = 0; i < n; i++) {
+//		cin >> arr[i];
+//
+//	}
+//	vector<int> maxn(n + 1,0);
+//	for (int i = n-1,j=1; i >= 0; i--,j++) {
+//		maxn[j] = max(arr[i] ,maxn[j - 1]);
+//	}
+//	for (int i = 0; i < n; i++) {
+//		st.push(arr[i]);
+//		while (st.top() > maxn[n - 1 - i]) {
+//			cout << st.top() << ' ';
+//			st.pop();
+//			if (st.empty()) break;
+//			
+//		}
+//
+//	}
+//	return 0;
+//}
 
+//#include <bits/stdc++.h>
+//using namespace std;
+//int main() {
+//	int n;
+//	cin >> n;
+//	priority_queue<int> a;
+//	for (int i = 0; i < n; i++) {
+//		int x;
+//		cin >> x;
+//		a.push(-x);
+//	}
+//	int ans = 0;
+//	while (a.size()!=1) {
+//		int tmp = 0;
+//		tmp+= -a.top();
+//		a.pop();
+//		tmp += -a.top();
+//		a.pop();
+//		ans += tmp;
+//		a.push(-tmp);
+//
+//
+//
+//	}
+//	cout << ans;
+//
+//	return 0;
+//}
+//
 
+//int main() {
+//	int n;
+//	cin >> n;
+//	vector<int> a(n);
+//	vector<int> b;
+//
+//	for (int i = 0; i < n; i++) {
+//		cin >> a[i];
+//	}
+//	int index=n, tar=n,m=a[n-1];
+//	b.push_back(0);
+//	for (int i = n - 2; i >= 0; i--,index--) {
+//		if (a[i] > m) {
+//			m = a[i];
+//			tar = i + 1;
+//			b.push_back(0);
+//		}
+//		else {
+//			b.push_back(tar);
+//		}
+//	}
+//	for (int i = b.size() - 1; i >= 0; i--) {
+//		cout << b[i] << endl;
+//	}
+//	return 0;
+//}
+//
+//
+//
 
+int main() {
+	int n;
+	cin >> n;
+	vector<int> a(n);
+	for (int i = 0; i < n; i++) {
+		cin >> a[i];
+	}
+	stack<int> st;
+	stack<int> index;
+	vector<int> ans;
+	for (int i = 0; i < n; i++) {
+		if (i == 0) {
+			st.push(a[n - 1 - i]);
+			index.push(n - i);
+			ans.push_back(0);
+		}
+		else {
+			while (a[n - 1 - i] > st.top()) {
+				st.pop();
+				index.pop();
+				if (st.empty()) break;
+			}
+			if (st.empty()) ans.push_back(0);
+			else {
+				ans.push_back(index.top());
+			}
+			st.push(a[n - 1 - i]);
+			index.push(n - i);
+		}
+	}
+	for (int i = n - 1; i >= 0; i--) cout << ans[i] << endl;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	return 0;
+}
     
 
 
