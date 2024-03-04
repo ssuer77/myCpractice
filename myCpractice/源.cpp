@@ -16796,33 +16796,275 @@ using namespace std;
 
 
 
+//
+//bool cmp(pair<long long,long long> a, pair<long long,long long> b) {
+//	return a.second < b.second;
+//}
+//
+//
+//
+//int main() {
+//	vector<pair<long long, long long>> a;
+//	int n;
+//	cin >> n;
+//	for (int i = 0; i < n; i++) {
+//		pair<long long, long long> x;
+//		cin >> x.first >> x.second;
+//		a.push_back(x);
+//	}
+//	sort(a.begin(), a.end(), cmp);
+//	int cut = 0;
+//	int lit = 0;
+//	priority_queue<long long> b;
+//	for (int i = 0; i < n; i++) {
+//		lit = a[i].second;
+//		if (cut + a[i].first <= lit) {
+//			b.push(a[i].first);
+//			cut += a[i].first;
+//		}
+//		else {
+//			if (b.top() > a[i].first) {
+//				cut -= b.top();
+//				b.pop();
+//				b.push(a[i].first);
+//				cut += b.top();
+//			}		
+//		}
+//	}
+//	cout << b.size();
+//	return 0;
+//}
 
 
+//int fa[1000005];
+//int n, m;
+//map<string, int> mp;
+//
+//int find(int x) {
+//	return fa[x] == x ? x : fa[x] = find(fa[x]);
+//}
+//
+//void merge(int a, int b) {
+//	fa[a] = find(fa[b]);
+//}
+//
+//
+//int main() {
+//	cin >> n >> m;
+//	for (int i = 1; i <= n;i++) {
+//		string s;
+//		cin >> s;
+//		mp[s] = i;
+//		fa[i] = i;
+//	}
+//
+//	while (m--) {
+//		int opt;
+//		cin >> opt;
+//		string s1, s2;
+//		cin >> s1 >> s2;
+//		if (opt == 1) {
+//			merge(mp[s1], mp[s2]);
+//		}
+//		else {
+//			if (find(mp[s1]) != find(mp[s2])) cout << 0 << endl;
+//			else cout << 1 << endl;
+//		}
+//	}
+//
+//	return 0;
+//}
 
+//int n=5;
+//int a[10];
+//int vis[10];
+//void dfs(int dep) {
+//	if (dep > n) {
+//		for (int i = 1; i <= n; i++) {
+//			cout << a[i] << ' ';
+//		}
+//		cout << endl;
+//		return;
+//	}
+//	for (int i = 1; i <= n; i++) {
+//		if (vis[i]) continue;
+//		a[dep] = i; vis[i] = 1;
+//		dfs(dep + 1);
+//		a[dep] = 0;
+//		vis[i] = 0;
+//
+//	}
+//}
+//
+//
+//int main() {
+//	dfs(1);
+//	return 0;
+//}
+//
+//
+//
 
+////int diev[20][20] = { 0 };
+//int num = 0;
+//int ttt = 0;
+//void solve(int  n,int cnt,vector<vector<int>> arr,vector<int> ans) {
+//	if (cnt == n+1) { num++; 
+//	if (ttt < 3) {
+//		for (int i = n; i < 2 * n ; i++) {
+//			if (i != n) cout << ' ';
+//			cout << ans[i];
+//		}
+//		ttt++;
+//		cout << endl;
+//	}
+//
+//	return; }
+//	else {
+//		int ok = 0;
+//		for (int i = 1; i <= n; i++) {
+//			if (arr[cnt][i] == 0) {
+//				ok = 1;
+//				ans.push_back(i);	
+//				vector<vector<int>> att = arr;
+//				for (int j = 1; j <= n; j++) att[cnt][j] = 1;
+//				for (int j = 1; j <= n; j++) att[j][i] = 1;
+//				int p = cnt, q = i;
+//				do {
+//					att[p][q] = 1;
+//					p++;
+//					q--;
+//				} while (p <= n && q >= 1);
+//				 p = cnt, q = i;
+//				do {
+//					att[p][q] = 1;
+//					p++;
+//					q++;
+//				} while (p <= n && q <=n);
+//				 p = cnt, q = i;
+//				do {
+//					att[p][q] = 1;
+//					p--;
+//					q--;
+//				} while (p >=1 && q >= 1);
+//				 p = cnt, q = i;
+//				do {
+//					att[p][q] = 1;
+//					p--;
+//					q++;
+//				} while (p >=1 && q <=n);
+//
+//				cnt++;
+//
+//				solve(n, cnt, att,ans);
+//				ans.pop_back();
+//				cnt--;
+//
+//			}
+//		}
+//		if (ok == 0) return;
+//		
+//	}
+//}
+//
+//
+//int main() {
+//	int n;
+//	cin >> n;
+//	vector<vector<int>> arr(20,vector<int>(20,0));
+//	int cnt = 1;
+//	vector<int> ans(n);
+//	solve( n,cnt,arr,ans);
+//	cout << num;
+//	return 0;
+//}
 
+//#include <iostream>
+//#include <vector>
+//using namespace std;
+//
+//void solve(int n, int row, vector<int>& ans, int& num, int& ttt, vector<bool>& cols, vector<bool>& diag1, vector<bool>& diag2) {
+//	if (row == n) {
+//		num++;
+//		if (ttt < 3) {
+//			for (int i = 0; i < n; i++) {
+//				if (i != 0) cout << ' ';
+//				cout << ans[i] + 1;
+//			}
+//			ttt++;
+//			cout << endl;
+//		}
+//		return;
+//	}
+//
+//	for (int col = 0; col < n; col++) {
+//		if (!cols[col] && !diag1[row + col] && !diag2[row - col + n - 1]) {
+//			cols[col] = diag1[row + col] = diag2[row - col + n - 1] = true;
+//			ans[row] = col;
+//			solve(n, row + 1, ans, num, ttt, cols, diag1, diag2);
+//			cols[col] = diag1[row + col] = diag2[row - col + n - 1] = false;
+//		}
+//	}
+//}
+//
+//int main() {
+//	int n;
+//	cin >> n;
+//	vector<int> ans(n);
+//	int num = 0, ttt = 0;
+//	vector<bool> cols(n, false), diag1(2 * n - 1, false), diag2(2 * n - 1, false);
+//	solve(n, 0, ans, num, ttt, cols, diag1, diag2);
+//	cout << num;
+//	return 0;
+//}
+//
 
+int n, m;
+int a[10][10];
+int dis[10][10];
+queue<int> q;
+const int dir[4][2] = { 0,1,1,0,0,-1,-1,0 };
 
+int inmap(int x, int y) {
+	return x >= 0 && y >= 0 && x < n && y < n;
+}
 
+void bfs(int x, int y) {
+	memset(dis, -1, sizeof(dis));
+	dis[x][y] = 0;
+	q.push(x * m + y);
+	while (!q.empty()) {
+		int tmp = q.front();
+		int x = tmp / m;
+		int y = tmp % m;
+		q.pop();
+		for (int i = 0; i < 4; i++) {
+			int dx = x + dir[i][0];
+			int dy = y + dir[i][1];
+			if (inmap(dx, dy) &&a[dx][dy]==1&& dis[dx][dy] == -1) {
+				dis[dx][dy] = dis[x][y] + 1;
+				q.push(dx * m + dy);
+			}
+		}
+	}
+}
 
+int main() {
+	cin >> n >> m;
+	for (int i=0;i<n;i++)
+		for (int j = 0; j < m; j++) {
+			scanf("%d", &a[i][j]);
+		}
+	bfs(0, 0);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < m; j++) {
+			cout << setw(4) << left << dis[i][j];
+		}
+		cout << endl;
+	}
+	return 0;
+}
 
 
 
