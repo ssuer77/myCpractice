@@ -17018,59 +17018,117 @@ using namespace std;
 //	return 0;
 //}
 //
-
+//
+//int n, m;
+//int a[10][10];
+//int dis[10][10];
+//queue<int> q;
+//const int dir[4][2] = { 0,1,1,0,0,-1,-1,0 };
+//
+//int inmap(int x, int y) {
+//	return x >= 0 && y >= 0 && x < n && y < n;
+//}
+//
+//void bfs(int x, int y) {
+//	memset(dis, -1, sizeof(dis));
+//	dis[x][y] = 0;
+//	q.push(x * m + y);
+//	while (!q.empty()) {
+//		int tmp = q.front();
+//		int x = tmp / m;
+//		int y = tmp % m;
+//		q.pop();
+//		for (int i = 0; i < 4; i++) {
+//			int dx = x + dir[i][0];
+//			int dy = y + dir[i][1];
+//			if (inmap(dx, dy) &&a[dx][dy]==1&& dis[dx][dy] == -1) {
+//				dis[dx][dy] = dis[x][y] + 1;
+//				q.push(dx * m + dy);
+//			}
+//		}
+//	}
+//}
+//
+//int main() {
+//	cin >> n >> m;
+//	for (int i=0;i<n;i++)
+//		for (int j = 0; j < m; j++) {
+//			scanf("%d", &a[i][j]);
+//		}
+//	bfs(0, 0);
+//
+//	for (int i = 0; i < n; i++) {
+//		for (int j = 0; j < m; j++) {
+//			cout << setw(4) << left << dis[i][j];
+//		}
+//		cout << endl;
+//	}
+//	return 0;
+////}
+//long long arr[55] = { 0 };
+//
+//long long F(int n) {
+//	if (arr[n]!=0) return arr[n];
+//	else return (arr[n]=F(n-1)+F(n-2));
+//}
+//
+//int main() {
+//	int n;
+//	arr[1] = 1;
+//	arr[2] = 2;
+//
+//	cin >> n;
+//	cout << F(n);
+//	return 0;
+//}
+//
+int ans = 0;
 int n, m;
-int a[10][10];
-int dis[10][10];
-queue<int> q;
-const int dir[4][2] = { 0,1,1,0,0,-1,-1,0 };
 
-int inmap(int x, int y) {
-	return x >= 0 && y >= 0 && x < n && y < n;
+bool is_legal(int x, int y,int arr[20][20]) {
+	if (x >= 1 && x <= n && y >= 1 && y <= m && arr[x][y] == 0) return 1;
+	return 0;
 }
 
-void bfs(int x, int y) {
-	memset(dis, -1, sizeof(dis));
-	dis[x][y] = 0;
-	q.push(x * m + y);
-	while (!q.empty()) {
-		int tmp = q.front();
-		int x = tmp / m;
-		int y = tmp % m;
-		q.pop();
-		for (int i = 0; i < 4; i++) {
-			int dx = x + dir[i][0];
-			int dy = y + dir[i][1];
-			if (inmap(dx, dy) &&a[dx][dy]==1&& dis[dx][dy] == -1) {
-				dis[dx][dy] = dis[x][y] + 1;
-				q.push(dx * m + dy);
+void dfs(int arr[20][20], int n, int m,int x,int y) {
+	int ful = 1;
+	for (int i = 1; i <= n; i++) {
+		for (int j = 1; j <= m; j++) {
+			if (arr[i][j] == 0) {
+				ful = 0;
+				goto next;
 			}
 		}
+	}
+next:
+	if (ful == 1) {
+		ans++;
+		return;
+	}
+	else {
+		int txt[4][2];
+		for (int i = 0; i < 4; i++) {
+			int dx = x + txt[i][0];
+			int dy = y + txt[i][1];
+			if (is_legal(dx, dy,arr)) {
+				arr[dx][dy] = 1;
+				dfs(arr, n, m, dx, dy);
+				arr[dx][dy] = 0;
+			}
+		}
+
 	}
 }
 
 int main() {
 	cin >> n >> m;
-	for (int i=0;i<n;i++)
-		for (int j = 0; j < m; j++) {
-			scanf("%d", &a[i][j]);
-		}
-	bfs(0, 0);
-
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < m; j++) {
-			cout << setw(4) << left << dis[i][j];
-		}
-		cout << endl;
-	}
+	int arr[20][20];
+	memset(arr, 0, sizeof(arr));
+	arr[n][1] = 1;
+	dfs(arr, n, m,n,1);
+	cout << ans;
 	return 0;
 }
-
-
-
-
-
-
 
 
 
