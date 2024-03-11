@@ -17082,53 +17082,598 @@ using namespace std;
 //	return 0;
 //}
 //
-int ans = 0;
-int n, m;
+//int ans = 0;
+//int n, m;
+//
+//bool is_legal(int x, int y) {
+//	if (x >= 1 && x <= n && y >= 1 && y <= m ) return 1;
+//	return 0;
+//}
+//
+//void dfs( int n, int m,int x,int y) {
+//	if (x == 1 && y == m) {
+//		ans++;
+//		return;
+//	}
+//
+//	else {
+//		int txt[4][2] = { 1,2,-1,2,2,1,-2,1 };
+//		for (int i = 0; i < 4; i++) {
+//			int dx = x + txt[i][0];
+//			int dy = y + txt[i][1];
+//			if (is_legal(dx, dy)) {
+//				//arr[dx][dy] = 1;
+//				dfs( n, m, dx, dy);
+//				//arr[dx][dy] = 0;
+//			}
+//		}
+//
+//	}
+//}
+//
+//int main() {
+//	cin >> n >> m;
+//	//int arr[20][20];
+//	//memset(arr, 0, sizeof(arr));
+//	//arr[n][1] = 1;
+//	dfs( n, m,n,1);
+//	cout << ans;
+//	return 0;
+//}
+////
+//int h, w;
+//
+//char mp[505][505];
+//struct P {
+//	int loc=-1;
+//	int p = 0;
+//	int ans = 0;
+//};
+//queue<P> q;
+//
+////void bfs(P t) {
+////	int x, y;
+////	x = t.loc / w+1;
+////	y = t.loc % w;
+////	int txt[4][2] = { 1,0,-1,0,0,1,0,-1 };
+////	for (int i = 0; i < 4; i++) {
+////		int dx = x + txt[i][0];
+////		int dy = y + txt[i][1];
+////		if (legal(dx, dy)) {
+////			P lx;
+////			lx.loc = (dx - 1) * w + dy;
+////			if (t.p == 1)lx.p = 1;
+////			if (mp[dx][dy] == 'K') lx.p = 1;
+////			lx.ans = t.ans + 1;
+////			
+////		}
+////	}
+////}
+//int legal(int x, int y, P t) {
+//	if (t.p == 0) {
+//		return (x >= 1 && x <= h && y >= 1 && y <= w && mp[x][y] != 'W' && mp[x][y] != 'D');
+//	}
+//	else 
+//		return (x >= 1 && x <= h && y >= 1 && y <= w && mp[x][y] != 'W' );
+//
+//}
+//
+//int main() {
+//	int s;
+//	cin >> h >> w;
+//	int t = 1;
+//	for (int i = 1; i <= h; i++) {
+//		for (int j = 1; j <= w; j++) {
+//			t++;
+//			scanf(" %c", &mp[i][j]);
+//			if (mp[i][j] == 'S') s = t;
+//		}
+//	}
+//	P xxx;
+//	xxx.loc = s;
+//	q.push(xxx);
+//	long long ww = 1e18;
+//	while (ww--) {
+//		int x, y;
+//		if (q.empty()) break;
+//		x = q.front().loc / w + 1;
+//		y = q.front().loc % w;
+//		int txt[4][2] = { 1,0,-1,0,0,1,0,-1 };
+//		for (int i = 0; i < 4; i++) {
+//			int dx = x + txt[i][0];
+//			int dy = y + txt[i][1];
+//			if (legal(dx, dy,q.front())) {
+//				if (mp[dx][dy] == 'E') {
+//					cout << q.front().ans + 1; goto ens;
+//				}
+//				if (mp[dx][dy] != 'K')
+//				q.push({ (dx - 1) * w + dy ,q.front().p,q.front().ans + 1 });
+//				else q.push({ (dx - 1) * w + dy ,1,q.front().ans + 1 });
+//
+//				//P lx;
+//				//lx.loc = (dx - 1) * w + dy;
+//				//if (q.front().p == 1)lx.p = 1;
+//				//lx.ans = q.front().ans + 1;
+//				//
+//				//q.push(lx);
+//			}
+//		}
+//		q.pop();
+//
+//	}
+//	ens:
+//
+//	return 0;
+//}
+//
+//
+//int v, n;
+//int a[40];
+//int f[2][20020];
+//int main() {
+//	cin >> v >> n;
+//	for (int i = 0; i < n; i++) {
+//		cin >> a[i];
+//	}
+//	memset(f, 0, sizeof(f));
+//	f[0][0] = 1;
+//	for (int i = 1; i <= n; i++) {
+//		for (int j = 0; j <= v; j++) {
+//			if (j >= a[i])
+//				f[i % 2][j] = f[(i - 1) % 2][j] || f[(i - 1) % 2][j-a[i]];
+//			else 
+//				f[i % 2][j] = f[(i - 1) % 2][j] ;
+//
+//		}
+//	}
+//	int ans = 0;
+//	for (int i = v; i >= 0; i--) {
+//		if (f[n % 2][i] == 1) {
+//			ans = i;
+//			break;
+//		}
+//	}
+//	cout << ans;
+//	return 0;
+//}
+//
+//
 
-bool is_legal(int x, int y,int arr[20][20]) {
-	if (x >= 1 && x <= n && y >= 1 && y <= m && arr[x][y] == 0) return 1;
-	return 0;
-}
 
-void dfs(int arr[20][20], int n, int m,int x,int y) {
-	int ful = 1;
-	for (int i = 1; i <= n; i++) {
-		for (int j = 1; j <= m; j++) {
-			if (arr[i][j] == 0) {
-				ful = 0;
-				goto next;
-			}
-		}
-	}
-next:
-	if (ful == 1) {
-		ans++;
-		return;
-	}
-	else {
-		int txt[4][2];
-		for (int i = 0; i < 4; i++) {
-			int dx = x + txt[i][0];
-			int dy = y + txt[i][1];
-			if (is_legal(dx, dy,arr)) {
-				arr[dx][dy] = 1;
-				dfs(arr, n, m, dx, dy);
-				arr[dx][dy] = 0;
-			}
-		}
 
-	}
-}
+////01背包
+//int T, M;
+//
+//int main() {
+//	//memset(bag, -1e9, sizeof(bag));
+//	cin >> T >> M;
+//	map<long long, long long> bag;
+//
+//	bag[0] = 0;
+//	for (int i = 0; i < M; i++) {
+//		int t, m;
+//		cin >> t >> m;
+//		auto j = bag.end();
+//		j--;
+//		auto tt = bag.begin();
+//		tt--;
+//		for (; j !=tt ; j--) {
+//			bag[j->first + t] =j->second+ m;
+//		}
+//	}
+//	int ans = 0;
+//	for (auto it=bag.begin(); it->first <= T&&it!=bag.end(); it++) {
+//		//if (it->second>ans)
+//		//ans = it->second;
+//		ans = max(ans, it->second);
+//	}
+//	cout << ans;
+//	return 0;
+//}
 
-int main() {
-	cin >> n >> m;
-	int arr[20][20];
-	memset(arr, 0, sizeof(arr));
-	arr[n][1] = 1;
-	dfs(arr, n, m,n,1);
-	cout << ans;
-	return 0;
-}
+
+////01背包
+//#include <bits/stdc++.h>
+//using namespace std;
+//
+//int T, M;
+//
+//int main() {
+//	//memset(bag, -1e9, sizeof(bag));
+//	cin >> T >> M;
+//	map<int, int> bag;
+//
+//	bag[0] = 0;
+//	for (int i = 0; i < M; i++) {
+//		int t, m;
+//		cin >> t >> m;
+//		auto j = bag.end();
+//		j--;
+//		auto tt = bag.begin();
+//		tt--;
+//		for (; j != tt; j--) {
+//				bag[j->first + t] = max(bag[j->first + t], j->second + t*m);
+//
+//		}
+//	}
+//	int ans = 0;
+//	for (auto it = bag.begin(); it->first <= T && it != bag.end(); it++) {
+//		//if (it->second>ans)
+//		//ans = it->second;
+//		ans = max(ans, it->second);
+//	}
+//	cout << ans;
+//	return 0;
+//}
+//
+//
+//
+//
+//int main() {
+//	int n, m;
+//	cin >> n >> m;
+//	int dp[105][10005];
+//	//memset(dp, 0, sizeof(dp));
+//	dp[0][0] = 0;
+//	int cnt = -0;
+//
+//	for (int i = 1; i <= n; i++) {
+//		int w;
+//		cin >> w;
+//		cnt += w;
+//		for (int j = 0; j <= cnt; j++) {
+//			dp[i][j] = dp[i - 1][j];
+//			dp[i][j] = max(dp[i-1][abs(j - w)]+w , dp[i][j]);
+//			dp[i][j] = max(dp[i-1][j +w] + w, dp[i][j]);
+//
+//		}
+//	}
+//	int ans = 0;
+//	for (int i = 0; i <= m; i++) {
+//		ans = max(ans, dp[n][i]);
+//	}
+//	cout << ans;
+//	return 0;
+//}
+
+//int main() {
+//	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+//	int l = 0;
+//	int r = 9;
+//	int mid = (l + r) / 2;
+//	while (l < r) {
+//
+//	}
+//
+//
+//
+//
+//	return 0;
+//}
+//
+
+typedef long long ll;
+
+
+//int main() {
+//	int t;
+//	cin >> t;
+//	while (t--) {
+//		int n;
+//		cin >> n;
+//		int ans = n;
+//		vector<int> a(n);
+//		for (int i = 0; i < n; i++) {
+//			scanf("%d", &a[i]);
+//		}
+//		sort(a.begin(), a.end());
+//		//map<int,int> dp;
+//		int dp[30000] = { 0 };
+//		dp[0] = 1;
+//		for (int i = 0; i < n; i++) {
+//			if (dp[a[i]] == 1) ans--;
+//			for (int j=0; j<=25000; j++) {
+//				if (dp[j] == 1) dp[j + a[i]] = 1;
+//			}
+//
+//		}
+//	
+//		cout << ans << endl;
+//	}
+//
+//
+//	return 0;
+//}
+//
+//
+//
+//
+//int main() {
+//	int n, t;
+//	cin >> n >> t;
+//	vector<int> w;
+//	vector<int> v;
+//	for (int i = 0; i < n; i++) {
+//		int xx, ww, vv;
+//		cin >> xx >> ww >> vv;
+//		int o = 0;
+//		for (int i = 0;; i++) {
+//			if ((1 << i)-1 > xx) {
+//				o = i - 2;
+//				break;
+//			}
+//		}
+//		int sum = 0;
+//		//int sumv = 0;
+//		for (int i = 0; i <= o + 1; i++) {
+//			if (i != o + 1) {
+//				w.push_back((1 << i) * ww);
+//				v.push_back((1 << i) * vv);
+//				sum += (1 << i) ;
+//				
+//
+//			}
+//			else {
+//				w.push_back((xx - sum) * ww);
+//				v.push_back((xx - sum) * vv);
+//			}
+//		}
+//	}
+//	int dp[100005] ;
+//	memset(dp, 0, sizeof(dp));
+//	dp[0] = 0;
+//	int cnt = 0;
+//	for (int i = 1;i<=w.size(); i++) {
+//		cnt += w[i - 1];
+//		for (int j =cnt ; j >=0; j--) {
+//			dp[j+w[i-1]] = max(dp[j+w[i-1]], dp[j ] + v[i - 1]);
+//		
+//		}
+//	}
+//	int ans = 0;
+//	for (int i = 0; i <= t; i++) {
+//		ans = max(ans, dp[i]);
+//	}
+//	cout << ans;
+//
+//	return 0;
+//}
+//
+//
+//
+//const long long mod = 1e9 + 7;
+//int main() {
+//	string s;
+//	cin >> s;
+//	int len = s.size();
+//	int t = (1 << len) ;
+//	long long ans = 0;
+//	while (t--) {
+//		string x="";
+//		for (int i = 0; i < len; i++) {
+//			if (((t >> i)&1) == 1) {
+//				x += s[i];
+//			}
+//		}
+//		if (x.size() == 0) continue;
+//		int g = stol(x);
+//		if (g % 3 == 0) ans++;
+//		ans %= mod;
+//
+//	}
+//	cout << ans;
+//	return 00;
+//}
+//
+
+//int mod = 1e9 + 7;
+//int main() {
+//	char s[55];
+//	cin >> s;
+//	long long len = sizeof(s);
+//	vector<long long> dp(5, 0);
+//	for (int i = 1; i <= len; i++) {
+//		long long x = s[i] - 48;
+//		long long x0 = dp[0];
+//		long long x1 = dp[1];
+//		long long x2 = dp[2];
+//		if (x % 3 == 0) {
+//			dp[0] = (2 * x0 + 1) % mod;
+//			//             dp[0]%=mod;
+//
+//			dp[1] = (2 * x1) % mod;
+//			//             dp[1]%=mod;
+//
+//			dp[2] = (2 * x2) % mod;
+//			//             dp[2]%=mod;
+//		}
+//		else if (x % 3 == 1) {
+//			dp[0] = (x0 + x2) % mod;
+//			//               dp[0]%=mod;
+//
+//			dp[1] = (x1 + x0 + 1) % mod;
+//			//             dp[1]%=mod;
+//
+//			dp[2] = (x2 + x1) % mod;
+//			//             dp[2]%=mod;
+//		}
+//		else {
+//			dp[0] = (x0 + x1) % mod;
+//			//               dp[0]%=mod;
+//
+//			dp[1] = (x1 + x2) % mod;
+//			//             dp[1]%=mod;
+//
+//			dp[2] = (x2 + x0 + 1) % mod;
+//			//             dp[2]%=mod;
+//		}
+//
+//	}
+//	//     dp[0]%=mod;
+//	cout << dp[0] % mod;
+//
+//	return 0;
+//}
+//
+//
+
+
+
+//int main() {
+//	char s[105], x[105];
+//	cin >> s >> x;
+//	int cnt = 0;
+//	for (int i = 0, j = 0; i < strlen(x); i++, j++) {
+//		while (x[i] != s[j]) {
+//			j += 2;
+//			if (j >= strlen(s)) {
+//				cout << "Impossible";
+//				goto ends;
+//			}
+//		}
+//
+//	}
+//	cout << "Possible";
+//ends:
+//	return 0;
+//}
+//
+
+
+//int main() {
+//	int v, n;
+//	cin >> v >> n;
+//	int dp[100005];
+//	memset(dp, 0, sizeof(dp));
+//	dp[0] = 1;
+//	int cnt = 0;
+//	while (n--) {
+//		int x;
+//		cin >> x;
+//		cnt += x;
+//		for (int i = cnt; i >= 0; i--) {
+//			if (dp[i] == 1) dp[i + x] = 1;
+//		}
+//
+//
+//	}
+//	int ans = 0;
+//	for (int i = v; i >= 0; i--) {
+//		if (dp[i] == 1) { ans = i; break }
+//	}
+//	cout << ans;
+//	return 0;
+//}
+//c
+
+//int arr[(unsigned long long)1e6 + 5];
+//int prefix[(unsigned long long)1e6 + 5];
+//
+//int main() {
+//	int cnt = 0;
+//	for (int i = 1; cnt <= 1e6 + 2; i++) {
+//		for (int j = 0; j < i&&cnt<=1e6+2; j++) {
+//			int num = 0;
+//			int x = i;
+//			while (x != 0) {
+//				x /= 10;
+//				num++;
+//			}
+//			x = i;
+//			vector<int> tt(num);
+//			for (int k = 0; k < num; k++) {
+//				tt[k] = x % 10;
+//				x /= 10;
+//			}
+//			num++;
+//			while (num--&&num) {
+//				arr[cnt] = tt[num - 1];
+//				cnt++;
+//			}
+//		}
+//	}
+//	prefix[0] = arr[0];
+//	for (int i = 0; i <= 1e6 + 5; i++) {
+//		prefix[i] = prefix[i - 1] + arr[i];
+//	}
+//	int t;
+//	cin >> t;
+//	while (t--) {
+//		int l, r;
+//		cin >> l >> r;
+//		cout << prefix[r - 1] - prefix[l - 2] << endl;
+//	}
+//	return 0;
+//}
+
+//int arr[(unsigned long long)1e6 + 5];
+//int prefix[(unsigned long long)1e6 + 5];
+//
+//int cal(int x) {
+//	int ans = 0;
+//	int num = 0;
+//	int t = x;
+//	while (t != 0) {
+//		t /= 10;
+//		num++;
+//	}
+//	t = x;
+//	vector<int> tt(num);
+//	for (int i = 0; i < num; i++) {
+//		tt[i] = t % 10;
+//		t /= 10;
+//	}
+//	for (int i = 0; i < num; i++) {
+//		switch (tt[i]) {
+//		case 1:
+//		case 2:
+//		case 3:
+//		case 5:
+//		case 7:
+//			break;
+//		case 4:
+//		case 6:
+//		case 9:
+//		case 0:
+//			ans += 1;
+//			break;
+//		case 8:
+//			ans += 2;
+//			break;
+//		}
+//	}
+//	return ans;
+//}
+//
+//int main() {
+//	for (int i = 1;i<=1e6+2; i++) {
+//		arr[i] = cal(i);
+//	}
+//	for (int i = 1; i <= 1e6 + 2; i++) {
+//		prefix[i] = prefix[i - 1] + arr[i];
+//	}
+//	int t;
+//	cin >> t;
+//	while (t--) {
+//		int l, r;
+//		cin >> l >> r;
+//		cout << prefix[r] - prefix[l - 1] << endl;
+//	}
+//
+//
+//	return 0;
+//}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
